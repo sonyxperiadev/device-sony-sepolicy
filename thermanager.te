@@ -1,4 +1,4 @@
-type thermanager, domain;
+type thermanager, domain, domain_deprecated;
 type thermanager_exec, exec_type, file_type;
 
 # Started by init
