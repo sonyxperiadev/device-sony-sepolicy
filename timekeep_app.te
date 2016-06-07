@@ -4,8 +4,6 @@ app_domain(timekeep_app)
 
 allow timekeep_app timekeep_app_data_file:dir create_dir_perms;
 
-set_prop(timekeep_app, timekeep_prop)
-
 r_dir_file(timekeep_app, sysfs_timekeep)
 
 allow timekeep_app activity_service:service_manager find;
