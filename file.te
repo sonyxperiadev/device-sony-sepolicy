@@ -74,3 +74,6 @@ type sysfs_rmt_storage, fs_type, sysfs_type;
 type sysfs_subsys, sysfs_type, fs_type;
 type sysfs_timekeep, fs_type, sysfs_type;
 type sysfs_video, fs_type, sysfs_type;
+
+type sysfs_thermal, sysfs_type, fs_type;
+type sysfs_uio, sysfs_type, fs_type;

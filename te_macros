@@ -40,3 +40,12 @@ define(`rw_dir_file', `
 allow $1 $2:dir rw_dir_perms;
 allow $1 $2:{ file lnk_file } rw_file_perms;
 ')
+
+#####################################
+# get_prop(sourcedomain, targetproperty)
+# Allows source domain to read the
+# targetproperty.
+#
+define(`get_prop', `
+allow $1 $2:file r_file_perms;
+')
