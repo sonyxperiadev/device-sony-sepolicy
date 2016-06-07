@@ -1,0 +1,11 @@
+type timekeep, domain;
+type timekeep_exec, exec_type, file_type;
+
+# Started by init
+init_daemon_domain(timekeep)
+
+allow timekeep self:capability sys_time;
+
+set_prop(timekeep, timekeep_prop)
+
+r_dir_file(timekeep, sysfs_timekeep)
