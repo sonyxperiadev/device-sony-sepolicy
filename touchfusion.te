@@ -2,3 +2,15 @@ type touchfusion, domain;
 type touchfusion_exec, exec_type, file_type;
 
 init_daemon_domain(touchfusion)
+domain_auto_trans(kernel, touchfusion_exec, touchfusion);
+
+allow touchfusion self:capability { setgid setuid sys_nice net_admin };
+allow touchfusion self:netlink_socket create_socket_perms;
+
+allow touchfusion cgroup:dir { create add_name };
+
+allow touchfusion graphics_device:chr_file rw_file_perms;
+allow touchfusion graphics_device:dir r_dir_perms;
+
+allow touchfusion kmsg_device:chr_file rw_file_perms;
+
