@@ -37,6 +37,8 @@ allow netmgrd system_file:file x_file_perms;
 
 allow netmgrd self:socket create_socket_perms;
 
+allow netmgrd sysfs_pronto:file r_file_perms;
+
 #Allow communication with netd
 allow netmgrd netd_socket:sock_file w_file_perms;
 r_dir_file(netmgrd, net_data_file)
