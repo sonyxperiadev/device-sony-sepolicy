@@ -1,1 +1,1 @@
-allow installd timekeep_app_data_file:dir { create_dir_perms relabelfrom relabelto };
+allow installd system_app_data_file:dir { create_dir_perms relabelfrom relabelto };
