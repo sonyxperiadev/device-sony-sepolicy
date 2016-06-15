@@ -7,6 +7,8 @@ domain_auto_trans(kernel, touchfusion_exec, touchfusion);
 allow touchfusion self:capability { setgid setuid sys_nice net_admin };
 allow touchfusion self:netlink_socket create_socket_perms;
 
+allow touchfusion device:dir rw_dir_perms;
+
 allow touchfusion cgroup:dir { create add_name };
 
 allow touchfusion graphics_device:chr_file rw_file_perms;
