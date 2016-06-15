@@ -176,12 +176,14 @@
 # Subsystem
 /sys/devices(/soc\.0)?/fe200000\.qcom,lpass/subsys1/name                                 u:object_r:sysfs_subsys:s0
 /sys/devices(/soc\.0)?/fc880000\.qcom,mss/subsys2/name                                   u:object_r:sysfs_subsys:s0
+/sys/devices(/soc\.0)?/fc880000\.qcom,mss/subsys3/name                                   u:object_r:sysfs_subsys:s0
 /sys/devices(/soc\.0)?/fdce0000\.qcom,venus/subsys0/name                                 u:object_r:sysfs_subsys:s0
 
 # Thermal
 /sys/devices(/soc\.0)?/02-qcom,qpnp-smbcharger/power_supply/battery/charging_enabled     u:object_r:sysfs_thermal:s0
 /sys/devices(/soc\.0)?/02-qcom,qpnp-smbcharger/power_supply/battery/system_temp_level    u:object_r:sysfs_thermal:s0
 /sys/devices(/soc\.0)?/f9200000\.ssusb/power_supply/usb/current_max                      u:object_r:sysfs_thermal:s0
+/sys/devices(/soc\.0)?/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk                      u:object_r:sysfs_thermal:s0
 /sys/devices(/soc\.0)?/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk                  u:object_r:sysfs_thermal:s0
 
 # Timekeep

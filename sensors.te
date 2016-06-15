@@ -48,5 +48,7 @@ binder_call(sensors, per_mgr)
 #Rules for sensors to talk to peripheral manager
 use_per_mgr(sensors);
 
+r_dir_file(sensors, sysfs_pronto)
 r_dir_file(sensors, sysfs_socinfo)
+r_dir_file(sensors, sysfs_subsys)
 r_dir_file(sensors, system_file)
