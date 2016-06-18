@@ -1,5 +1,9 @@
 #For sdcard
 allow init tmpfs:lnk_file create_file_perms;
+allow init tmpfs:file create_file_perms;
+allow init tmpfs:dir create_dir_perms;
+
+allow init self:process { setcurrent };
 
 allow init proc_kernel_sched:file write;
 
