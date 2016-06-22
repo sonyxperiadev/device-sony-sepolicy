@@ -1,0 +1,1 @@
+allow lmkd sysfs_lowmemorykiller:dir search;
