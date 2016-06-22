@@ -16,6 +16,7 @@ netmgr_socket(rild);
 use_per_mgr(rild);
 
 allow rild sysfs_pronto:file r_file_perms;
+allow rild mediaserver_service:service_manager find;
 
 r_dir_file(rild, sysfs_socinfo)
 r_dir_file(rild, sysfs_subsys)
