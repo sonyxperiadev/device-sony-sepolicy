@@ -36,6 +36,7 @@
 /dev/subsys_modem                               u:object_r:subsys_modem_device:s0
 /dev/tfa98xx                                    u:object_r:audio_device:s0
 /dev/ttyHS0                                     u:object_r:hci_attach_dev:s0
+/dev/usb_ext_chg                                u:object_r:hvdcp_device:s0
 
 ###################################
 # Dev block nodes
@@ -104,6 +105,7 @@
 ###################################
 # System files
 #
+/system/bin/hvdcp                               u:object_r:hvdcp_exec:s0
 /system/bin/macaddrsetup                        u:object_r:addrsetup_exec:s0
 /system/bin/thermanager                         u:object_r:thermanager_exec:s0
 /system/bin/timekeep                            u:object_r:timekeep_exec:s0
@@ -188,8 +190,10 @@
 /sys/devices(/soc\.0)?/00-qcom,pm(8941|8994)_rtc/rtc/rtc0/since_epoch                    u:object_r:sysfs_timekeep:s0
 
 # USB & Power
-/sys/devices/msm_dwc3/power_supply/usb/type                                              u:object_r:sysfs_usb_supply:s0
-/sys/devices/msm_dwc3/power_supply/usb/device                                            u:object_r:sysfs_usb_supply:s0
+/sys/devices/msm_dwc3/power_supply/usb(/.*)?                                             u:object_r:sysfs_usb_supply:s0
+/sys/devices/f9200000.*/power_supply/usb(/.*)?                                           u:object_r:sysfs_usb_supply:s0
+/sys/devices/msm_otg/power_supply/usb(/.*)?                                              u:object_r:sysfs_usb_supply:s0
+/sys/devices/qpnp-charger.*/power_supply/battery(/.*)?                                   u:object_r:sysfs_battery_supply:s0
 
 # Video
 /sys/devices(/soc\.0)?/fd8c0000\.qcom,msm-cam/video4linux/video0/name                    u:object_r:sysfs_video:s0
