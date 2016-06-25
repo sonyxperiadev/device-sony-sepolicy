@@ -1,5 +1,9 @@
-qmux_socket(rild);
+binder_call(rild, mediaserver)
 binder_use(rild)
+binder_service(rild)
+
+qmux_socket(rild);
+
 
 r_dir_file(rild, sysfs_ssr)
 
@@ -13,3 +17,5 @@ use_per_mgr(rild);
 
 r_dir_file(rild, sysfs_socinfo)
 r_dir_file(rild, sysfs_subsys)
+
+allow rild mediaserver_service:service_manager find;
