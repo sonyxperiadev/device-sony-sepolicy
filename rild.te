@@ -18,3 +18,4 @@ use_per_mgr(rild);
 r_dir_file(rild, sysfs_socinfo)
 r_dir_file(rild, sysfs_subsys)
 
+allow rild mediaserver_service:service_manager find;
