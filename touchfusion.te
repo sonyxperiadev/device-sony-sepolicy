@@ -8,6 +8,7 @@ allow touchfusion self:capability { setgid setuid sys_nice net_admin };
 allow touchfusion self:netlink_socket create_socket_perms;
 
 allow touchfusion device:dir rw_dir_perms;
+allow touchfusion device:file create_file_perms;
 
 allow touchfusion cgroup:dir { create add_name };
 
