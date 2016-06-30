@@ -13,3 +13,6 @@ allow ueventd {
     sysfs_usb_supply
     sysfs_socinfo
 }:file w_file_perms;
+
+allow ueventd tmpfs:file create_file_perms;
+allow ueventd tmpfs:dir create_dir_perms;
