@@ -1,10 +1,18 @@
-allow kernel tmpfs:file rw_file_perms;
+allow kernel tmpfs:file create_file_perms;
+allow kernel tmpfs:dir create_dir_perms;
 allow kernel rootfs:file rx_file_perms;
 allow kernel block_device:blk_file rw_file_perms;
 
 userdebug_or_eng(`
-  allow kernel self:capability { dac_read_search dac_override net_admin };
+  allow kernel self:capability { 
+    dac_read_search
+    dac_override
+    net_admin
+    setgid
+    setuid
+  };
   allow kernel self:socket create_socket_perms;
+  allow kernel self:netlink_socket create_socket_perms;
 ')
 
 # Access firmware_file
