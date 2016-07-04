@@ -26,4 +26,5 @@ binder_call(per_mgr, sensors);
 
 allow per_mgr subsys_modem_device:chr_file { open read };
 
+r_dir_file(per_mgr, sysfs_pronto)
 r_dir_file(per_mgr, sysfs_subsys)
