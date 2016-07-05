@@ -15,6 +15,8 @@ use_per_mgr(system_server);
 
 allow system_server system_app_data_file:dir r_dir_perms;
 
+allow system_server sysfs_pronto:file r_file_perms;
+
 r_dir_file(system_server, sysfs_addrsetup)
 r_dir_file(system_server, sysfs_socinfo)
 r_dir_file(system_server, sysfs_subsys)
