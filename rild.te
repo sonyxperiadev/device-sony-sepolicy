@@ -15,6 +15,7 @@ netmgr_socket(rild);
 # Rule for RILD to talk to peripheral manager
 use_per_mgr(rild);
 
+allow rild system_health_monitor_device:chr_file r_file_perms;
 allow rild sysfs_pronto:file r_file_perms;
 allow rild mediaserver_service:service_manager find;
 allow rild mediaserver:binder call;
