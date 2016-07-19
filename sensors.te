@@ -36,6 +36,7 @@ allow sensors sensors_persist_file:file create_file_perms;
 wakelock_use(sensors)
 
 allow sensors self:socket { bind create ioctl read write };
+allow sensors { sysfs_subsys sysfs_pronto }:file r_file_perms;
 
 # Access to other devices
 allow sensors smem_log_device:chr_file rw_file_perms;
