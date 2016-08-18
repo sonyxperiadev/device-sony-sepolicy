@@ -5,3 +5,5 @@ type qti_init_shell, domain;
 domain_auto_trans(init, shell_exec, qti_init_shell)
 
 allow qti_init_shell bluetooth_prop:property_service set;
+allow qti_init_shell property_socket:sock_file write;
+allow qti_init_shell init:unix_stream_socket connectto;
