@@ -4,3 +4,4 @@ allow bluetooth sysfs:file w_file_perms;
 r_dir_file(bluetooth, addrsetup_data_file)
 
 allow bluetooth smd_device:chr_file rw_file_perms;
+allow bluetooth bluetooth_prop:property_service set;
