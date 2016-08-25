@@ -219,6 +219,7 @@
 /data/misc/fm(/.*)?                                                 u:object_r:fm_data_file:s0
 /data/audio/acdbdata(/.*)?                                          u:object_r:acdb_data_file:s0
 /data/etc(/.*)?                                                     u:object_r:addrsetup_data_file:s0
+/data/time(/.*)?                                                    u:object_r:timekeep_data_file:s0
 
 ###################################
 # persist files
