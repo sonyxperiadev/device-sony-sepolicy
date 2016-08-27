@@ -198,6 +198,7 @@
 # USB & Power
 /sys/devices/msm_dwc3/power_supply/usb/type                                              u:object_r:sysfs_usb_supply:s0
 /sys/devices/msm_dwc3/power_supply/usb/device                                            u:object_r:sysfs_usb_supply:s0
+/sys/devices/00-qcom,charger/power_supply/battery/capacity                               u:object_r:sysfs_batteryinfo:s0
 
 # Video
 /sys/devices(/soc\.0)?/fd8c0000\.qcom,msm-cam/video4linux/video0/name                    u:object_r:sysfs_video:s0
