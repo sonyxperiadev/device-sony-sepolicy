@@ -178,6 +178,7 @@
 /sys/devices(/soc\.0)?/(fd80000|0)?\.qcom,rmtfs_sharedmem/uio/uio0/name                  u:object_r:sysfs_rmt_storage:s0
 /sys/devices(/soc\.0)?/(fd80000|0)?\.qcom,rmtfs_sharedmem/uio/uio0/version               u:object_r:sysfs_rmt_storage:s0
 /sys/devices(/soc\.0)?/(fd80000|0)?\.qcom,rmtfs_sharedmem/uio/uio0/maps/map0(/.*)?       u:object_r:sysfs_rmt_storage:s0
+/sys/kernel/debug/rmt_storage(/.*)?                                                      u:object_r:debugfs_rmt_storage:s0
 
 # Subsystem
 /sys/devices(/soc\.0)?/(fe200000|c200000)\.qcom,lpass/subsys1/name                       u:object_r:sysfs_subsys:s0

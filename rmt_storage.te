@@ -10,6 +10,9 @@ allow rmt_storage {
 }:blk_file rw_file_perms;
 
 allow rmt_storage block_device:dir r_dir_perms;
+allow rmt_storage debugfs_rmt_storage:file rw_file_perms;
+allow rmt_storage debugfs_rmt_storage:dir r_dir_perms;
+allow rmt_storage { debugfs debugfs_rmt_storage }:filesystem associate;
 allow rmt_storage { smem_log_device uio_device }:chr_file rw_file_perms;
 
 # sys_admin is needed for ioprio_set
