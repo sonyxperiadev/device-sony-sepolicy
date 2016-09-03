@@ -1,0 +1,25 @@
+type pad_controller, domain;
+type pad_controller_exec, exec_type, file_type;
+
+init_daemon_domain(pad_controller)
+
+unix_socket_connect(pad_controller, tad, tad)
+
+allow pad_controller init:unix_stream_socket { 
+    rw_socket_perms
+    connectto
+};
+
+allow pad_controller sys_pad_prop:property_service { set };
+
+allow pad_controller property_socket:sock_file write;
+
+allow pad_controller sysfs_force_calib:file rw_file_perms;
+allow pad_controller sysfs_obj_detect:file rw_file_perms;
+allow pad_controller sysfs_pad_set:file rw_file_perms;
+allow pad_controller sysfs_pad_num:file rw_file_perms;
+allow pad_controller sysfs_pad_data:file rw_file_perms;
+allow pad_controller sysfs_pad_offset:file rw_file_perms;
+allow pad_controller sysfs_sw_updata:file rw_file_perms;
+allow pad_controller sysfs_sw_ad7146_1_state:file rw_file_perms;
+allow pad_controller sysfs_sw_ad7146_2_state:file rw_file_perms;

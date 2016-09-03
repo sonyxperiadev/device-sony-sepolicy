@@ -9,3 +9,5 @@ type boot_animation_prop, property_type;
 
 type tee_prop, property_type;
 type timekeep_prop, property_type;
+
+type sys_pad_prop, property_type;
