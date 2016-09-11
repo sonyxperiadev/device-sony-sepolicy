@@ -1,0 +1,2 @@
+# Allow recovery to read the misc partition
+allow uncrypt misc_partition:blk_file rw_file_perms;
