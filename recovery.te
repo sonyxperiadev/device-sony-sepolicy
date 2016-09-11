@@ -1,0 +1,2 @@
+# Recovery needs access to syslog
+allow recovery self:capability2 syslog;
