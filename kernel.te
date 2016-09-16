@@ -5,6 +5,8 @@ allow kernel rootfs:file rx_file_perms;
 allow kernel block_device:blk_file rw_file_perms;
 allow kernel touchfusion_exec:file relabelto;
 
+allow kernel self:socket create;
+
 domain_auto_trans(kernel, touchfusion_exec, touchfusion)
 
 # Access firmware_file
