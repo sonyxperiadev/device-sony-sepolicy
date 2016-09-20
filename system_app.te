@@ -1,3 +1,6 @@
+# fm_radio app needes (open read ioctl) on fm_radio_device
+allow system_app fm_radio_device:chr_file r_file_perms;
+
 set_prop(system_app, timekeep_prop)
 allow system_app system_app_data_file:file x_file_perms;
 
