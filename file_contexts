@@ -174,10 +174,14 @@
 /sys/devices/virtual/switch/ad7146_2/state                          u:object_r:sysfs_pad_controller:s0
 
 # Fingerprint Kitakami
-/sys/bus/spi/devices/spi0.1/clk_enable                              u:object_r:sysfs_fingerprintd_writable:s0
-/sys/bus/spi/devices/spi0.1/spi_prepare                             u:object_r:sysfs_fingerprintd_writable:s0
-/sys/bus/spi/devices/spi0.1/wakeup_enable                           u:object_r:sysfs_fingerprintd_writable:s0
-/sys/bus/spi/devices/spi0.1/irq                                     u:object_r:sysfs_fingerprintd_writable:s0
+/sys/bus/spi/devices/spi0\.1/clk_enable                                  u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices/soc\.0/f9923000\.spi/spi_master/spi0/spi0\.1/clk_enable    u:object_r:sysfs_fingerprintd_writable:s0
+/sys/bus/spi/devices/spi0\.1/spi_prepare                                 u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices/soc\.0/f9923000\.spi/spi_master/spi0/spi0\.1/spi_prepare   u:object_r:sysfs_fingerprintd_writable:s0
+/sys/bus/spi/devices/spi0\.1/wakeup_enable                               u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices/soc\.0/f9923000\.spi/spi_master/spi0/spi0\.1/wakeup_enable u:object_r:sysfs_fingerprintd_writable:s0
+/sys/bus/spi/devices/spi0\.1/irq                                         u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices/soc\.0/f9923000\.spi/spi_master/spi0/spi0\.1/irq           u:object_r:sysfs_fingerprintd_writable:s0
 
 # Fingerprint Loire
 /sys/devices(/soc\.0)?/fpc1145_device/spi_prepare                   u:object_r:sysfs_fingerprintd_writable:s0
