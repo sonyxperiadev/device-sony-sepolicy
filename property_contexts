@@ -8,7 +8,7 @@ persist.sys.timeadjust     u:object_r:timekeep_prop:s0
 
 bluetooth.status           u:object_r:bluetooth_prop:s0
 
-adb.network.port              u:object_r:adbtcp_prop:s0
+adb.network.port.es           u:object_r:adbtcpes_prop:s0
 
 service.pad1.control.result   u:object_r:sys_pad_prop:s0
 service.pad2.control.result   u:object_r:sys_pad_prop:s0
