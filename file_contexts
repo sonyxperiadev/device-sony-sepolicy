@@ -160,10 +160,14 @@
 /sys/devices/soc0(/.*)?                                             u:object_r:sysfs_socinfo:s0
 
 # Fingerprint
-/sys/bus/spi/devices/spi0.1/clk_enable                              u:object_r:sysfs_fingerprintd_writable:s0
-/sys/bus/spi/devices/spi0.1/spi_prepare                             u:object_r:sysfs_fingerprintd_writable:s0
-/sys/bus/spi/devices/spi0.1/wakeup_enable                           u:object_r:sysfs_fingerprintd_writable:s0
-/sys/bus/spi/devices/spi0.1/irq                                     u:object_r:sysfs_fingerprintd_writable:s0
+/sys/bus/spi/devices/spi0\.1/clk_enable                                  u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices/soc\.0/f9923000\.spi/spi_master/spi0/spi0\.1/clk_enable    u:object_r:sysfs_fingerprintd_writable:s0
+/sys/bus/spi/devices/spi0\.1/spi_prepare                                 u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices/soc\.0/f9923000\.spi/spi_master/spi0/spi0\.1/spi_prepare   u:object_r:sysfs_fingerprintd_writable:s0
+/sys/bus/spi/devices/spi0\.1/wakeup_enable                               u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices/soc\.0/f9923000\.spi/spi_master/spi0/spi0\.1/wakeup_enable u:object_r:sysfs_fingerprintd_writable:s0
+/sys/bus/spi/devices/spi0\.1/irq                                         u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices/soc\.0/f9923000\.spi/spi_master/spi0/spi0\.1/irq           u:object_r:sysfs_fingerprintd_writable:s0
 
 # Modules
 /sys/module/cpu_boost(/.*)?                                         u:object_r:sysfs_devices_system_cpu:s0
