@@ -1,6 +1,6 @@
 type sensors_prop, property_type;
 type msm_irqbalance_prop, property_type;
-type camera_prop, property_type;
+type camera_prop, property_type, core_property_type;
 
 #properites for netd
 type netd_prop, property_type;
