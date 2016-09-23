@@ -119,6 +119,7 @@
 /system/vendor/bin/mm-qcamera-daemon            u:object_r:mm-qcamerad_exec:s0
 /system/vendor/bin/msm_irqbalance               u:object_r:msm_irqbalanced_exec:s0
 /system/vendor/bin/netmgrd                      u:object_r:netmgrd_exec:s0
+/system/vendor/bin/pad_controller               u:object_r:pad_controller_exec:s0
 /system/vendor/bin/pm-service                   u:object_r:per_mgr_exec:s0
 /system/vendor/bin/pm-proxy                     u:object_r:per_mgr_exec:s0
 /system/vendor/bin/qmuxd                        u:object_r:qmuxd_exec:s0
@@ -158,6 +159,17 @@
 /sys/bus/msm_subsys/devices/subsys3/restart_level                   u:object_r:sysfs_ssr_toggle:s0
 /sys/bus/msm_subsys/devices/subsys4/restart_level                   u:object_r:sysfs_ssr_toggle:s0
 /sys/devices/soc0(/.*)?                                             u:object_r:sysfs_socinfo:s0
+
+# AD7146 Proximity
+/sys/devices/virtual/cap_sensor/ad7146/force_calib                  u:object_r:sysfs_force_calib:s0
+/sys/devices/virtual/cap_sensor/ad7146/obj_detect                   u:object_r:sysfs_obj_detect:s0
+/sys/devices/virtual/cap_sensor/ad7146/pad_set                      u:object_r:sysfs_pad_set:s0
+/sys/devices/virtual/cap_sensor/ad7146/pad_num                      u:object_r:sysfs_pad_num:s0
+/sys/devices/virtual/cap_sensor/ad7146/pad_data                     u:object_r:sysfs_pad_data:s0
+/sys/devices/virtual/cap_sensor/ad7146/pad_offset                   u:object_r:sysfs_pad_offset:s0
+/sys/devices/virtual/cap_sensor/ad7146/sw_updata                    u:object_r:sysfs_sw_updata:s0
+/sys/devices/virtual/switch/ad7146_1/state                          u:object_r:sysfs_sw_ad7146_1_state:s0
+/sys/devices/virtual/switch/ad7146_2/state                          u:object_r:sysfs_sw_ad7146_2_state:s0
 
 # Fingerprint
 /sys/bus/spi/devices/spi0\.1/clk_enable                                  u:object_r:sysfs_fingerprintd_writable:s0
