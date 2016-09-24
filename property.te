@@ -11,3 +11,5 @@ type tee_prop, property_type;
 type timekeep_prop, property_type;
 
 type adbtcp_prop, property_type;
+
+type sys_pad_prop, property_type;

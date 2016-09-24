@@ -77,3 +77,6 @@ type sysfs_video, fs_type, sysfs_type;
 
 type sysfs_thermal, sysfs_type, fs_type;
 type sysfs_uio, sysfs_type, fs_type;
+
+# AD7146 sysfs
+type sysfs_pad_controller, sysfs_type, fs_type;
