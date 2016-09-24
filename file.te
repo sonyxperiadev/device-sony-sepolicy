@@ -79,12 +79,4 @@ type sysfs_timekeep, fs_type, sysfs_type;
 type sysfs_video, fs_type, sysfs_type;
 
 # AD7146 sysfs
-type sysfs_force_calib, sysfs_type, fs_type;
-type sysfs_obj_detect, sysfs_type, fs_type;
-type sysfs_pad_set, sysfs_type, fs_type;
-type sysfs_pad_num, sysfs_type, fs_type;
-type sysfs_pad_data, sysfs_type, fs_type;
-type sysfs_pad_offset, sysfs_type, fs_type;
-type sysfs_sw_updata, sysfs_type, fs_type;
-type sysfs_sw_ad7146_1_state, sysfs_type, fs_type;
-type sysfs_sw_ad7146_2_state, sysfs_type, fs_type;
+type sysfs_pad_controller, sysfs_type, fs_type;

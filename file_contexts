@@ -162,15 +162,15 @@
 /sys/devices/soc0(/.*)?                                             u:object_r:sysfs_socinfo:s0
 
 # AD7146 Proximity
-/sys/devices/virtual/cap_sensor/ad7146/force_calib                  u:object_r:sysfs_force_calib:s0
-/sys/devices/virtual/cap_sensor/ad7146/obj_detect                   u:object_r:sysfs_obj_detect:s0
-/sys/devices/virtual/cap_sensor/ad7146/pad_set                      u:object_r:sysfs_pad_set:s0
-/sys/devices/virtual/cap_sensor/ad7146/pad_num                      u:object_r:sysfs_pad_num:s0
-/sys/devices/virtual/cap_sensor/ad7146/pad_data                     u:object_r:sysfs_pad_data:s0
-/sys/devices/virtual/cap_sensor/ad7146/pad_offset                   u:object_r:sysfs_pad_offset:s0
-/sys/devices/virtual/cap_sensor/ad7146/sw_updata                    u:object_r:sysfs_sw_updata:s0
-/sys/devices/virtual/switch/ad7146_1/state                          u:object_r:sysfs_sw_ad7146_1_state:s0
-/sys/devices/virtual/switch/ad7146_2/state                          u:object_r:sysfs_sw_ad7146_2_state:s0
+/sys/devices/virtual/cap_sensor/ad7146/force_calib                  u:object_r:sysfs_pad_controller:s0
+/sys/devices/virtual/cap_sensor/ad7146/obj_detect                   u:object_r:sysfs_pad_controller:s0
+/sys/devices/virtual/cap_sensor/ad7146/pad_set                      u:object_r:sysfs_pad_controller:s0
+/sys/devices/virtual/cap_sensor/ad7146/pad_num                      u:object_r:sysfs_pad_controller:s0
+/sys/devices/virtual/cap_sensor/ad7146/pad_data                     u:object_r:sysfs_pad_controller:s0
+/sys/devices/virtual/cap_sensor/ad7146/pad_offset                   u:object_r:sysfs_pad_controller:s0
+/sys/devices/virtual/cap_sensor/ad7146/sw_updata                    u:object_r:sysfs_pad_controller:s0
+/sys/devices/virtual/switch/ad7146_1/state                          u:object_r:sysfs_pad_controller:s0
+/sys/devices/virtual/switch/ad7146_2/state                          u:object_r:sysfs_pad_controller:s0
 
 # Fingerprint
 /sys/bus/spi/devices/spi0\.1/clk_enable                                  u:object_r:sysfs_fingerprintd_writable:s0
