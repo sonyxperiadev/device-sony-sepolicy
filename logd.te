@@ -1,0 +1,2 @@
+allow logd urandom_device:file { getattr open read };
+
