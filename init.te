@@ -4,3 +4,6 @@ allow init tmpfs:lnk_file create_file_perms;
 allow init proc_kernel_sched:file write;
 
 allow init persist_file:dir mounton;
+
+#FM BCM
+allow init hci_attach_dev:chr_file rw_file_perms;
