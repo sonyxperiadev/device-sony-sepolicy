@@ -7,7 +7,7 @@ init_daemon_domain(addrsetup)
 # Connect to /dev/socket/tad
 unix_socket_connect(addrsetup, tad, tad)
 
-allow addrsetup self:capability dac_override;
+allow addrsetup { addrsetup self }:capability { chown dac_override fowner fsetid };
 
 type_transition addrsetup system_data_file:file addrsetup_data_file "bluetooth_bdaddr";
 allow addrsetup addrsetup_data_file:dir rw_dir_perms;
