@@ -1,0 +1,2 @@
+# zram0
+allow vold swap_block_device:blk_file r_file_perms;
