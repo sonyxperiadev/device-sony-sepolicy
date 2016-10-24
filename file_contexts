@@ -197,7 +197,6 @@
 /sys/module/msm_performance(/.*)?                                   u:object_r:sysfs_performance:s0
 
 # Bluetooth
-/sys/devices/platform/bcmdhd_wlan/macaddr                           u:object_r:sysfs_addrsetup:s0
 /sys/devices(/soc\.0)?/bluesleep\.(81|89)/rfkill/rfkill0/state      u:object_r:sysfs_bluetooth_writable:s0
 
 # Storage
