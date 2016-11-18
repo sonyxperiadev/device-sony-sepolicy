@@ -1,4 +1,4 @@
-type tfa_amp, domain;
+type tfa_amp, domain, domain_deprecated;
 type tfa_amp_exec, exec_type, file_type;
 
 # Started by init
