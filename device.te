@@ -18,7 +18,7 @@ type qdsp_device, dev_type, mlstrustedobject;
 type device_latency, dev_type;
 
 #Add for fm_radio device
-type  fm_radio_device, dev_type;
+type fm_radio_device, dev_type;
 
 #Add for storage pertitions for EFS partitions
 type modem_efs_partition_device, dev_type;
@@ -34,9 +34,6 @@ type ssr_device, dev_type;
 
 #Ramdump device
 type ramdump_device, dev_type;
-
-#Misc partition
-type misc_partition, dev_type;
 
 # Define IPA devices
 type ipa_dev, dev_type;
