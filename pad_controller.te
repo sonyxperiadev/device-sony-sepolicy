@@ -1,4 +1,4 @@
-type pad_controller, domain;
+type pad_controller, domain, domain_deprecated;
 type pad_controller_exec, exec_type, file_type;
 
 init_daemon_domain(pad_controller)
