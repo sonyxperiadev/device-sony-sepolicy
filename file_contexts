@@ -19,6 +19,7 @@
 /dev/media([0-9])+                              u:object_r:video_device:s0
 /dev/jpeg[0-9]*                                 u:object_r:video_device:s0
 /dev/v4l-subdev.*                               u:object_r:video_device:s0
+/dev/video.*                                    u:object_r:video_device:s0
 /dev/block/mmcblk1                              u:object_r:sd_device:s0
 /dev/block/mmcblk1p1                            u:object_r:sd_device:s0
 /dev/ramdump_.*                                 u:object_r:ramdump_device:s0
@@ -243,7 +244,6 @@
 # data files
 #
 /data/misc/sensors(/.*)?                                            u:object_r:sensors_data_file:s0
-/data/camera(/.*)?                                                  u:object_r:camera_socket:s0
 /data/nfc(/.*)?                                                     u:object_r:nfc_data_file:s0
 /data/misc/qsee(/.*)?                                               u:object_r:data_qsee_file:s0
 /data/misc/dts(/.*)?                                                u:object_r:dts_data_file:s0

@@ -1,2 +1,0 @@
-# Google Camera
-allow untrusted_app camera_prop:file r_file_perms;
