@@ -2,6 +2,7 @@
 # Dev nodes
 #
 /dev/adsprpc-smd                                u:object_r:qdsp_device:s0
+/dev/brcm_bt_drv                                u:object_r:hci_attach_dev:s0
 /dev/cpu_dma_latency                            u:object_r:device_latency:s0
 /dev/diag                                       u:object_r:diag_device:s0
 /dev/kgsl-3d0                                   u:object_r:gpu_device:s0
@@ -112,6 +113,7 @@
 ###################################
 # System files
 #
+/system/bin/brcm-uim-sysfs                      u:object_r:brcm_uim_exec:s0
 /system/bin/macaddrsetup                        u:object_r:addrsetup_exec:s0
 /system/bin/thermanager                         u:object_r:thermanager_exec:s0
 /system/bin/timekeep                            u:object_r:timekeep_exec:s0
@@ -173,6 +175,9 @@
 /sys/devices/virtual/switch/ad7146_1/state                          u:object_r:sysfs_pad_controller:s0
 /sys/devices/virtual/switch/ad7146_2/state                          u:object_r:sysfs_pad_controller:s0
 
+# BRCM BT FM
+/sys/bus/platform/drivers/bcm_ldisc/bcmbt_ldisc.93(/.*)?            u:object_r:brcm_ldisc_sysfs:s0
+
 # Fingerprint Kitakami
 /sys/bus/spi/devices/spi0\.1/clk_enable                                  u:object_r:sysfs_fingerprintd_writable:s0
 /sys/devices/soc\.0/f9923000\.spi/spi_master/spi0/spi0\.1/clk_enable    u:object_r:sysfs_fingerprintd_writable:s0
@@ -185,11 +190,11 @@
 
 # Fingerprint Loire
 /sys/devices(/soc\.0)?/fpc1145_device/spi_prepare                   u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0)?/fpc1145\.105/spi_prepare                     u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices(/soc\.0)?/fpc1145\.([0-9])+/spi_prepare                     u:object_r:sysfs_fingerprintd_writable:s0
 /sys/devices(/soc\.0)?/fpc1145_device/wakeup_enable                 u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0)?/fpc1145\.105/wakeup_enable                   u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices(/soc\.0)?/fpc1145\.([0-9])+/wakeup_enable                   u:object_r:sysfs_fingerprintd_writable:s0
 /sys/devices(/soc\.0)?/fpc1145_device/irq                           u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0)?/fpc1145\.105/irq                             u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices(/soc\.0)?/fpc1145\.([0-9])+/irq                             u:object_r:sysfs_fingerprintd_writable:s0
 
 # Modules
 /sys/module/cpu_boost(/.*)?                                         u:object_r:sysfs_devices_system_cpu:s0
@@ -198,6 +203,7 @@
 
 # Bluetooth
 /sys/devices(/soc\.0)?/bluesleep\.(81|89)/rfkill/rfkill0/state      u:object_r:sysfs_bluetooth_writable:s0
+/sys/devices(/soc\.0)?/bcm43xx.([0-9])+/rfkill/rfkill[0-9](/.*)?    u:object_r:sysfs_bluetooth_writable:s0
 
 # Storage
 /sys/devices(/soc\.0)?/(fd80000|0)?\.qcom,rmtfs_sharedmem/uio/uio0/name                  u:object_r:sysfs_rmt_storage:s0
