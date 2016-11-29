@@ -1,3 +1,4 @@
 # Allow NFC service to be found
 allow platform_app nfc_service:service_manager find;
+allow platform_app fm_radio_device:chr_file { open read };
 
