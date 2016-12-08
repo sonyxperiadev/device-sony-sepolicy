@@ -10,6 +10,9 @@ r_dir_file(ueventd, wifi_data_file)
 # For BT to access sysfs_bluetooth_writable
 rw_dir_file(ueventd, sysfs_bluetooth_writable)
 
+# For BT FM
+rw_dir_file(ueventd, brcm_ldisc_sysfs)
+
 allow ueventd {
     sysfs_battery_supply
     sysfs_thermal
