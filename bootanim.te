@@ -1,1 +1,3 @@
 set_prop(bootanim, boot_animation_prop)
+
+allow bootanim rootfs:lnk_file getattr;

@@ -1,3 +1,5 @@
-allow bluetooth sysfs:file w_file_perms;
+rw_dir_file(bluetooth, sysfs)
+rw_dir_file(bluetooth, sysfs_bluetooth_writable)
 
+allow bluetooth sysfs:file w_file_perms;
 allow bluetooth smd_device:chr_file rw_file_perms;
