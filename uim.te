@@ -7,3 +7,4 @@ rw_dir_file(uim, sysfs_bluetooth_writable)
 allow uim brcm_uim_exec:file { entrypoint getattr read execute };
 allow uim hci_attach_dev:chr_file { read write ioctl open };
 allow uim self:capability { net_admin dac_override };
+allow uim rootfs:lnk_file getattr;
