@@ -1,1 +1,3 @@
 r_dir_file(audioserver, sysfs)
+
+allow audioserver rootfs:lnk_file getattr;

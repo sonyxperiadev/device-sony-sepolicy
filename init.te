@@ -7,6 +7,6 @@ allow init persist_file:dir mounton;
 
 #FM BCM
 allow init hci_attach_dev:chr_file rw_file_perms;
-allow init brcm_uim_exec:file { execute getattr read open };
+allow init { debugfs brcm_uim_exec }:file rw_file_perms;
 allow init brcm_ldisc_sysfs:lnk_file { read };
 allow init uim:process { siginh noatsecure transition rlimitinh };
