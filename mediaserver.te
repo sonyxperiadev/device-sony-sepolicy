@@ -3,4 +3,7 @@ binder_call(mediaserver, rild)
 allow mediaserver self:socket create_socket_perms;
 allow mediaserver camera_data_file:sock_file w_file_perms;
 
+# HAL1 hack
+allow mediaserver mm-qcamerad:unix_dgram_socket sendto; 
+
 qmux_socket(mediaserver)

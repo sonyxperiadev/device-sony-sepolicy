@@ -17,3 +17,6 @@ allow mm-qcamerad camera_data_file:sock_file create_file_perms;
 allow mm-qcamerad { graphics_device video_device }:chr_file rw_file_perms;
 allow mm-qcamerad sysfs_video:file r_file_perms;
 allow mm-qcamerad { cameraserver surfaceflinger }:fd use;
+
+# HAL1 hack
+allow mm-qcamerad mediaserver:fd use;
