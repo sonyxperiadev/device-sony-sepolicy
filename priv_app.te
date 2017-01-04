@@ -1,0 +1,2 @@
+allow priv_app vfat:dir rw_dir_perms;
+allow priv_app vfat:file create;
