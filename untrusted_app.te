@@ -1,0 +1,2 @@
+allow untrusted_app vfat:dir rw_dir_perms;
+allow untrusted_app vfat:file create;
