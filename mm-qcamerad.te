@@ -17,3 +17,6 @@ allow mm-qcamerad camera_data_file:sock_file create_file_perms;
 allow mm-qcamerad { graphics_device video_device }:chr_file rw_file_perms;
 allow mm-qcamerad sysfs_video:file r_file_perms;
 allow mm-qcamerad { cameraserver surfaceflinger }:fd use;
+allow mm-qcamerad camera_prop:property_service set;
+allow mm-qcamerad property_socket:sock_file write;
+allow mm-qcamerad init:unix_stream_socket connectto;
