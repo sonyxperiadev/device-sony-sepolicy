@@ -48,6 +48,7 @@ allow netmgrd netmgrd_socket:dir create_dir_perms;
 allow netmgrd netmgrd_socket:sock_file create_file_perms;
 
 allow netmgrd shell_exec:file rx_file_perms;
+allow netmgrd default_prop:property_service set;
 
 #Allow netmgrd to use wakelock
 wakelock_use(netmgrd)

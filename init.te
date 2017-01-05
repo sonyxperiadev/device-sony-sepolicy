@@ -5,6 +5,7 @@ allow init proc_kernel_sched:file write;
 
 allow init persist_file:dir mounton;
 allow init debugfs:file w_file_perms;
+allow init sysfs:dir w_dir_perms;
 
 #FM BCM
 allow init hci_attach_dev:chr_file rw_file_perms;
