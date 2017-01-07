@@ -15,3 +15,5 @@ type timekeep_prop, property_type;
 type sys_pad_prop, property_type;
 
 type adbtcpes_prop, property_type;
+
+type xlat_prop, property_type;
