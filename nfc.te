@@ -1,0 +1,2 @@
+allow nfc media_rw_data_file:dir rw_dir_perms;
+allow nfc media_rw_data_file:file rename;
