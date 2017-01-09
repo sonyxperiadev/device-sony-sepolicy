@@ -226,6 +226,7 @@
 /sys/devices(/soc\.0)?/f9200000\.ssusb/power_supply/usb/current_max                      u:object_r:sysfs_thermal:s0
 /sys/devices(/soc\.0)?/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk                      u:object_r:sysfs_thermal:s0
 /sys/devices(/soc\.0)?/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk                  u:object_r:sysfs_thermal:s0
+/sys/devices(/soc\.0)?/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/reset_count                 u:object_r:sysfs_thermal:s0
 
 # Timekeep
 /sys/devices(/soc\.0)?/00-qcom,pm(8941|8950|8994)_rtc/rtc/rtc0/since_epoch               u:object_r:sysfs_timekeep:s0
