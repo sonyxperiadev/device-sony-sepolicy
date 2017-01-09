@@ -1,2 +1,5 @@
 allow untrusted_app vfat:dir rw_dir_perms;
 allow untrusted_app vfat:file create;
+
+allow untrusted_app sysfs_zram:dir r_dir_perms;
+allow untrusted_app sysfs_zram:file r_file_perms;
