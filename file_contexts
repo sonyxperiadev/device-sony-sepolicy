@@ -235,7 +235,7 @@
 # WiFi MAC address
 /sys/devices(/soc\.0)?/fb000000\.qcom,wcnss-wlan/wcnss_mac_addr                          u:object_r:sysfs_addrsetup:s0
 /sys/devices/platform/bcmdhd_wlan/macaddr                                                u:object_r:sysfs_addrsetup:s0
-/sys/devices(/soc\.0)?/bcmdhd_wlan.(90|114)/macaddr                                      u:object_r:sysfs_addrsetup:s0
+/sys/devices(/soc\.0)?/bcmdhd_wlan.(90|115)/macaddr                                      u:object_r:sysfs_addrsetup:s0
 /sys/devices(/soc\.0)?/(fb21b000|a21b000)\.qcom,pronto/subsys2/name                      u:object_r:sysfs_pronto:s0
 
 ###################################
