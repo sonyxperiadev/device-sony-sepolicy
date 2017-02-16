@@ -11,6 +11,9 @@ rw_dir_file(mediaserver, powerhal_data_file)
 
 set_prop(mediaserver, camera_prop)
 
+allow mediaserver camera_data_file:dir search;
+allow mediaserver mm-qcamerad:unix_dgram_socket sendto;
+
 qmux_socket(mediaserver)
 
 allow mediaserver surfaceflinger:unix_stream_socket rw_socket_perms;
