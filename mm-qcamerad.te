@@ -11,8 +11,8 @@ unix_socket_connect(mm-qcamerad, sensors, sensors)
 binder_call(mm-qcamerad, system_server);
 binder_use(mm-qcamerad);
 
-allow mm-qcamerad camera_data_file:dir rw_dir_perms;
-allow mm-qcamerad camera_data_file:file rw_file_perms;
+allow mm-qcamerad { graphics_device camera_data_file }:dir { add_name remove_name search write };
+allow mm-qcamerad camera_data_file:file { create getattr open read write };
 allow mm-qcamerad camera_data_file:sock_file create_file_perms;
 allow mm-qcamerad { graphics_device gpu_device video_device }:chr_file rw_file_perms;
 allow mm-qcamerad sysfs_video:file r_file_perms;
