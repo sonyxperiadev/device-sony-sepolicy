@@ -1,0 +1,1 @@
+allow uncrypt kmsg_device:chr_file { write };
