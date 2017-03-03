@@ -8,6 +8,7 @@ allow kernel block_device:blk_file rw_file_perms;
 allow kernel touchfusion_exec:file relabelto;
 allow kernel kernel:capability mknod;
 allow kernel self:socket create;
+allow kernel self:capability { mknod };
 
 domain_auto_trans(kernel, touchfusion_exec, touchfusion)
 
