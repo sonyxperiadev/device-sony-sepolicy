@@ -1,5 +1,5 @@
 allow kernel device:dir create_dir_perms;
-allow kernel device:chr_file { create setattr };
+allow kernel device:chr_file { create setattr getattr };
 allow kernel tmpfs:file create_file_perms;
 allow kernel tmpfs:dir create_dir_perms;
 allow kernel rootfs:file rx_file_perms;
