@@ -4,4 +4,4 @@ rw_dir_file(bluetooth, sysfs_bluetooth_writable)
 allow bluetooth smd_device:chr_file rw_file_perms;
 allow bluetooth bluetooth_prop:property_service set;
 
-allow bluetooth bluetooth:unix_stream_socket ioctl;
+allow bluetooth self:unix_stream_socket 0x7704;
