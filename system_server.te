@@ -18,13 +18,13 @@ allow system_server persist_file:file { getattr open write };
 allow system_server xlat_prop:file { getattr open read };
 allow system_server unlabeled:file unlink;
 
-allow system_server sensors_persist_file:dir search;
-allow system_server sensors_persist_file:file { open read };
+rw_dir_file(system_server, powerhal_data_file)
+allow system_server powerhal_data_file:sock_file create_file_perms;
 
 allow system_server media_rw_data_file:dir getattr;
 
-rw_dir_file(system_server, powerhal_data_file)
-allow system_server powerhal_data_file:sock_file create_file_perms;
+allow system_server sensors_persist_file:dir search;
+allow system_server sensors_persist_file:file { open read };
 
 r_dir_file(system_server, sysfs_addrsetup)
 r_dir_file(system_server, sysfs_pronto)
