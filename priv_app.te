@@ -1,2 +1,13 @@
 allow priv_app vfat:dir rw_dir_perms;
-allow priv_app vfat:file create;
+allow priv_app vfat:dir create;
+allow priv_app vfat:dir { setattr rmdir };
+allow priv_app vfat:file rw_file_perms;
+allow priv_app vfat:file { create getattr };
+
+allow priv_app block_device:dir { getattr };
+allow priv_app proc_sysrq:file { getattr };
+allow priv_app proc_iomem:file { getattr };
+
+allow priv_app sysfs:dir r_dir_perms;
+allow priv_app sysfs:file r_file_perms;
+
