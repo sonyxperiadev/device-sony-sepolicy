@@ -1,5 +1,14 @@
 allow untrusted_app vfat:dir rw_dir_perms;
+allow untrusted_app vfat:dir create;
+allow untrusted_app vfat:file rw_file_perms;
 allow untrusted_app vfat:file create;
+allow untrusted_app vfat:dir { setattr rmdir };
 
+allow untrusted_app block_device:dir { getattr };
+allow untrusted_app proc_sysrq:file { getattr };
+allow untrusted_app proc_iomem:file { getattr };
+
+allow untrusted_app sysfs:dir r_dir_perms;
+allow untrusted_app sysfs:file r_file_perms;
 allow untrusted_app sysfs_zram:dir r_dir_perms;
 allow untrusted_app sysfs_zram:file r_file_perms;
