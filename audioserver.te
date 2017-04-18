@@ -1,3 +1,4 @@
 r_dir_file(audioserver, sysfs)
 
 allow audioserver rootfs:lnk_file getattr;
+allow shell audioserver_exec:file { execute getattr };
