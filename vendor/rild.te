@@ -1,3 +1,8 @@
+vndbinder_use(rild)
+binder_call(rild, per_mgr)
+
+allow rild per_mgr_service:service_manager find;
+
 allow rild qmuxd_socket:dir w_dir_perms;
 allow rild qmuxd_socket:sock_file create_file_perms;
 unix_socket_connect(rild, qmuxd, qmuxd)

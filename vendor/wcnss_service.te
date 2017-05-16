@@ -4,7 +4,11 @@ type wcnss_service_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(wcnss_service)
 net_domain(wcnss_service)
 
-allow wcnss_service proc_net:file w_file_perms;
+vndbinder_use(wcnss_service)
+binder_call(wcnss_service, per_mgr)
+
+allow wcnss_service per_mgr_service:service_manager find;
+allow wcnss_service proc_net:file rw_file_perms;
 
 allow wcnss_service self:capability {
     net_admin
@@ -17,7 +21,6 @@ allowxperm wcnss_service self:udp_socket ioctl { SIOCIWFIRSTPRIV_05 SIOCSIFFLAGS
 allow wcnss_service self:netlink_generic_socket create_socket_perms_no_ioctl;
 allow wcnss_service self:netlink_socket create_socket_perms_no_ioctl;
 
-allow wcnss_service proc_net:file getattr;
 allow wcnss_service firmware_file:file { read open getattr };
 allow wcnss_service firmware_file:dir search;
 
