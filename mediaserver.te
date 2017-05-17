@@ -10,3 +10,5 @@ allow mediaserver cameraserver_service:service_manager add;
 allow mediaserver cameraproxy_service:service_manager find;
 
 qmux_socket(mediaserver)
+
+allow mediaserver surfaceflinger:unix_stream_socket rw_socket_perms;
