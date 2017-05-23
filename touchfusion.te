@@ -1,24 +1,21 @@
 type touchfusion, domain, domain_deprecated;
-
 type touchfusion_exec, exec_type, file_type;
 
 init_daemon_domain(touchfusion)
 
-domain_auto_trans(kernel, touchfusion_exec, touchfusion);
-
-allow touchfusion kmsg_device:chr_file rw_file_perms;
-
-allow touchfusion graphics_device:dir r_dir_perms;
-
-allow touchfusion self: { netlink_socket netlink_generic_socket } create_socket_perms;
-
-allow touchfusion graphics_device:chr_file rw_file_perms;
-
-allow touchfusion self:capability { setgid setuid };
-
 userdebug_or_eng(`
-allow touchfusion self:capability { sys_nice net_admin dac_override dac_read_search };
+  allow touchfusion self:capability {
+    dac_read_search
+    dac_override
+    net_admin
+    setgid
+    setuid
+    sys_nice
+  };
+  allow touchfusion self:socket create_socket_perms;
+  allow touchfusion self:netlink_socket create_socket_perms;
 ')
 
+allow touchfusion kmsg_device:chr_file rw_file_perms;
 allow touchfusion cgroup:dir create_dir_perms;
 allow touchfusion cgroup:file create_file_perms;

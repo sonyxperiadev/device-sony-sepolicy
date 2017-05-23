@@ -1,3 +1,5 @@
+binder_call(audioserver, rild)
+binder_call(rild, audioserver)
 binder_call(rild, mediaserver)
 binder_use(rild)
 binder_service(rild)
