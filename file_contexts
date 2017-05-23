@@ -46,62 +46,62 @@
 /dev/block/mmcblk0                                             u:object_r:root_block_device:s0
 /dev/block/mmcblk0rpmb                                         u:object_r:rpmb_device:s0
 
-/dev/block/platform/soc\.0/7824900\.sdhci/by-name/modemst1     u:object_r:modem_efs_partition_device:s0
-/dev/block/platform/soc\.0/f9824900\.sdhci/by-name/modemst1    u:object_r:modem_efs_partition_device:s0
-/dev/block/platform/msm_sdcc\.1/by-name/modemst1               u:object_r:modem_efs_partition_device:s0
-/dev/block/bootdevice/by-name/modemst1                         u:object_r:modem_efs_partition_device:s0
+/dev/block/platform(/soc\.0|/soc)?/7824900\.sdhci/by-name/modemst1     u:object_r:modem_efs_partition_device:s0
+/dev/block/platform(/soc\.0|/soc)?/f9824900\.sdhci/by-name/modemst1    u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/msm_sdcc\.1/by-name/modemst1                       u:object_r:modem_efs_partition_device:s0
+/dev/block/bootdevice/by-name/modemst1                                 u:object_r:modem_efs_partition_device:s0
 
-/dev/block/platform/soc\.0/7824900\.sdhci/by-name/modemst2     u:object_r:modem_efs_partition_device:s0
-/dev/block/platform/soc\.0/f9824900\.sdhci/by-name/modemst2    u:object_r:modem_efs_partition_device:s0
-/dev/block/platform/msm_sdcc\.1/by-name/modemst2               u:object_r:modem_efs_partition_device:s0
-/dev/block/bootdevice/by-name/modemst2                         u:object_r:modem_efs_partition_device:s0
+/dev/block/platform(/soc\.0|/soc)?/7824900\.sdhci/by-name/modemst2     u:object_r:modem_efs_partition_device:s0
+/dev/block/platform(/soc\.0|/soc)?/f9824900\.sdhci/by-name/modemst2    u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/msm_sdcc\.1/by-name/modemst2                       u:object_r:modem_efs_partition_device:s0
+/dev/block/bootdevice/by-name/modemst2                                 u:object_r:modem_efs_partition_device:s0
 
-/dev/block/platform/soc\.0/7824900\.sdhci/by-name/fsg          u:object_r:modem_efs_partition_device:s0
-/dev/block/platform/soc\.0/f9824900\.sdhci/by-name/fsg         u:object_r:modem_efs_partition_device:s0
-/dev/block/platform/msm_sdcc\.1/by-name/fsg                    u:object_r:modem_efs_partition_device:s0
-/dev/block/bootdevice/by-name/fsg                              u:object_r:modem_efs_partition_device:s0
+/dev/block/platform(/soc\.0|/soc)?/7824900\.sdhci/by-name/fsg          u:object_r:modem_efs_partition_device:s0
+/dev/block/platform(/soc\.0|/soc)?/f9824900\.sdhci/by-name/fsg         u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/msm_sdcc\.1/by-name/fsg                            u:object_r:modem_efs_partition_device:s0
+/dev/block/bootdevice/by-name/fsg                                      u:object_r:modem_efs_partition_device:s0
 
-/dev/block/platform/soc\.0/7824900\.sdhci/by-name/ssd          u:object_r:ssd_device:s0
-/dev/block/platform/soc\.0/f9824900\.sdhci/by-name/ssd         u:object_r:ssd_device:s0
-/dev/block/platform/msm_sdcc\.1/by-name/ssd                    u:object_r:ssd_device:s0
-/dev/block/bootdevice/by-name/ssd                              u:object_r:ssd_device:s0
+/dev/block/platform(/soc\.0|/soc)?/7824900\.sdhci/by-name/ssd          u:object_r:ssd_device:s0
+/dev/block/platform(/soc\.0|/soc)?/f9824900\.sdhci/by-name/ssd         u:object_r:ssd_device:s0
+/dev/block/platform/msm_sdcc\.1/by-name/ssd                            u:object_r:ssd_device:s0
+/dev/block/bootdevice/by-name/ssd                                      u:object_r:ssd_device:s0
 
-/dev/block/mmcblk0p1                                           u:object_r:trim_area_partition_device:s0
-/dev/block/platform/soc\.0/7824900\.sdhci/by-name/TA           u:object_r:trim_area_partition_device:s0
-/dev/block/platform/soc\.0/f9824900\.sdhci/by-name/TA          u:object_r:trim_area_partition_device:s0
-/dev/block/platform/msm_sdcc\.1/by-name/TA                     u:object_r:trim_area_partition_device:s0
-/dev/block/bootdevice/by-name/TA                               u:object_r:trim_area_partition_device:s0
+/dev/block/mmcblk0p1                                                   u:object_r:trim_area_partition_device:s0
+/dev/block/platform(/soc\.0|/soc)?/7824900\.sdhci/by-name/TA           u:object_r:trim_area_partition_device:s0
+/dev/block/platform(/soc\.0|/soc)?/f9824900\.sdhci/by-name/TA          u:object_r:trim_area_partition_device:s0
+/dev/block/platform/msm_sdcc\.1/by-name/TA                             u:object_r:trim_area_partition_device:s0
+/dev/block/bootdevice/by-name/TA                                       u:object_r:trim_area_partition_device:s0
 
-/dev/block/platform/soc\.0/7824900\.sdhci/by-name/userdata     u:object_r:userdata_block_device:s0
-/dev/block/platform/soc\.0/f9824900\.sdhci/by-name/userdata    u:object_r:userdata_block_device:s0
-/dev/block/platform/msm_sdcc\.1/by-name/userdata               u:object_r:userdata_block_device:s0
-/dev/block/bootdevice/by-name/userdata                         u:object_r:userdata_block_device:s0
+/dev/block/platform(/soc\.0|/soc)?/7824900\.sdhci/by-name/userdata     u:object_r:userdata_block_device:s0
+/dev/block/platform(/soc\.0|/soc)?/f9824900\.sdhci/by-name/userdata    u:object_r:userdata_block_device:s0
+/dev/block/platform/msm_sdcc\.1/by-name/userdata                       u:object_r:userdata_block_device:s0
+/dev/block/bootdevice/by-name/userdata                                 u:object_r:userdata_block_device:s0
 
-/dev/block/platform/soc\.0/7824900\.sdhci/by-name/boot         u:object_r:boot_block_device:s0
-/dev/block/platform/soc\.0/f9824900\.sdhci/by-name/boot        u:object_r:boot_block_device:s0
-/dev/block/platform/msm_sdcc\.1/by-name/boot                   u:object_r:boot_block_device:s0
-/dev/block/bootdevice/by-name/boot                             u:object_r:boot_block_device:s0
+/dev/block/platform(/soc\.0|/soc)?/7824900\.sdhci/by-name/boot         u:object_r:boot_block_device:s0
+/dev/block/platform(/soc\.0|/soc)?/f9824900\.sdhci/by-name/boot        u:object_r:boot_block_device:s0
+/dev/block/platform/msm_sdcc\.1/by-name/boot                           u:object_r:boot_block_device:s0
+/dev/block/bootdevice/by-name/boot                                     u:object_r:boot_block_device:s0
 
-/dev/block/platform/soc\.0/7824900\.sdhci/by-name/FOTAKernel   u:object_r:recovery_block_device:s0
-/dev/block/platform/soc\.0/f9824900\.sdhci/by-name/FOTAKernel  u:object_r:recovery_block_device:s0
-/dev/block/platform/msm_sdcc\.1/by-name/FOTAKernel             u:object_r:recovery_block_device:s0
-/dev/block/bootdevice/by-name/FOTAKernel                       u:object_r:recovery_block_device:s0
+/dev/block/platform(/soc\.0|/soc)?/7824900\.sdhci/by-name/FOTAKernel   u:object_r:recovery_block_device:s0
+/dev/block/platform(/soc\.0|/soc)?/f9824900\.sdhci/by-name/FOTAKernel  u:object_r:recovery_block_device:s0
+/dev/block/platform/msm_sdcc\.1/by-name/FOTAKernel                     u:object_r:recovery_block_device:s0
+/dev/block/bootdevice/by-name/FOTAKernel                               u:object_r:recovery_block_device:s0
 
-/dev/block/platform/soc\.0/7824900\.sdhci/by-name/cache        u:object_r:cache_block_device:s0
-/dev/block/platform/soc\.0/f9824900\.sdhci/by-name/cache       u:object_r:cache_block_device:s0
-/dev/block/platform/msm_sdcc\.1/by-name/cache                  u:object_r:cache_block_device:s0
-/dev/block/bootdevice/by-name/cache                            u:object_r:cache_block_device:s0
+/dev/block/platform(/soc\.0|/soc)?/7824900\.sdhci/by-name/cache        u:object_r:cache_block_device:s0
+/dev/block/platform(/soc\.0|/soc)?/f9824900\.sdhci/by-name/cache       u:object_r:cache_block_device:s0
+/dev/block/platform/msm_sdcc\.1/by-name/cache                          u:object_r:cache_block_device:s0
+/dev/block/bootdevice/by-name/cache                                    u:object_r:cache_block_device:s0
 
-/dev/block/platform/soc\.0/7824900\.sdhci/by-name/apps_log     u:object_r:misc_block_device:s0
-/dev/block/platform/soc\.0/f9824900\.sdhci/by-name/misc        u:object_r:misc_block_device:s0
-/dev/block/platform/msm_sdcc\.1/by-name/apps_log               u:object_r:misc_block_device:s0
-/dev/block/bootdevice/by-name/apps_log                         u:object_r:misc_block_device:s0
-/dev/block/bootdevice/by-name/misc                             u:object_r:misc_block_device:s0
+/dev/block/platform(/soc\.0|/soc)?/7824900\.sdhci/by-name/apps_log     u:object_r:misc_block_device:s0
+/dev/block/platform(/soc\.0|/soc)?/f9824900\.sdhci/by-name/misc        u:object_r:misc_block_device:s0
+/dev/block/platform/msm_sdcc\.1/by-name/apps_log                       u:object_r:misc_block_device:s0
+/dev/block/bootdevice/by-name/apps_log                                 u:object_r:misc_block_device:s0
+/dev/block/bootdevice/by-name/misc                                     u:object_r:misc_block_device:s0
 
-/dev/block/platform/soc\.0/7824900\.sdhci/by-name/persist      u:object_r:persist_block_device:s0
-/dev/block/platform/soc\.0/f9824900\.sdhci/by-name/persist     u:object_r:persist_block_device:s0
+/dev/block/platform(/soc\.0|/soc)?/7824900\.sdhci/by-name/persist      u:object_r:persist_block_device:s0
+/dev/block/platform(/soc\.0|/soc)?/f9824900\.sdhci/by-name/persist     u:object_r:persist_block_device:s0
 
-/dev/block/zram0                                               u:object_r:swap_block_device:s0
+/dev/block/zram0                                                       u:object_r:swap_block_device:s0
 
 ###################################
 # Dev socket nodes
@@ -184,25 +184,26 @@
 /sys/devices/virtual/switch/ad7146_2/state                          u:object_r:sysfs_pad_controller:s0
 
 # BRCM BT FM
+/sys/bus/platform/drivers/bcm_ldisc/soc\:bcmbt_ldisc(/.*)?          u:object_r:brcm_ldisc_sysfs:s0
 /sys/bus/platform/drivers/bcm_ldisc/bcmbt_ldisc.93(/.*)?            u:object_r:brcm_ldisc_sysfs:s0
 
 # Fingerprint Kitakami
-/sys/bus/spi/devices/spi0\.1/clk_enable                                        u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0)?/f9923000\.spi/spi_master/spi0/spi0\.1/clk_enable        u:object_r:sysfs_fingerprintd_writable:s0
-/sys/bus/spi/devices/spi0\.1/spi_prepare                                       u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0)?/f9923000\.spi/spi_master/spi0/spi0\.1/spi_prepare       u:object_r:sysfs_fingerprintd_writable:s0
-/sys/bus/spi/devices/spi0\.1/wakeup_enable                                     u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0)?/f9923000\.spi/spi_master/spi0/spi0\.1/wakeup_enable     u:object_r:sysfs_fingerprintd_writable:s0
-/sys/bus/spi/devices/spi0\.1/irq                                               u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0)?/f9923000\.spi/spi_master/spi0/spi0\.1/irq               u:object_r:sysfs_fingerprintd_writable:s0
+/sys/bus/spi/devices/spi0\.1/clk_enable                                             u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices(/soc\.0|/soc)?/f9923000\.spi/spi_master/spi0/spi0\.1/clk_enable        u:object_r:sysfs_fingerprintd_writable:s0
+/sys/bus/spi/devices/spi0\.1/spi_prepare                                            u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices(/soc\.0|/soc)?/f9923000\.spi/spi_master/spi0/spi0\.1/spi_prepare       u:object_r:sysfs_fingerprintd_writable:s0
+/sys/bus/spi/devices/spi0\.1/wakeup_enable                                          u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices(/soc\.0|/soc)?/f9923000\.spi/spi_master/spi0/spi0\.1/wakeup_enable     u:object_r:sysfs_fingerprintd_writable:s0
+/sys/bus/spi/devices/spi0\.1/irq                                                    u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices(/soc\.0|/soc)?/f9923000\.spi/spi_master/spi0/spi0\.1/irq               u:object_r:sysfs_fingerprintd_writable:s0
 
 # Fingerprint Loire
-/sys/devices(/soc\.0)?/fpc1145_device/spi_prepare                              u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0)?/fpc1145\.105/spi_prepare                                u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0)?/fpc1145_device/wakeup_enable                            u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0)?/fpc1145\.105/wakeup_enable                              u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0)?/fpc1145_device/irq                                      u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0)?/fpc1145\.105/irq                                        u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices(/soc\.0|/soc)?/fpc1145_device/spi_prepare                              u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices(/soc\.0|/soc)?/fpc1145\.105/spi_prepare                                u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices(/soc\.0|/soc)?/fpc1145_device/wakeup_enable                            u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices(/soc\.0|/soc)?/fpc1145\.105/wakeup_enable                              u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices(/soc\.0|/soc)?/fpc1145_device/irq                                      u:object_r:sysfs_fingerprintd_writable:s0
+/sys/devices(/soc\.0|/soc)?/fpc1145\.105/irq                                        u:object_r:sysfs_fingerprintd_writable:s0
 
 # Modules
 /sys/module/cpu_boost(/.*)?                                               u:object_r:sysfs_devices_system_cpu:s0
@@ -210,47 +211,48 @@
 /sys/module/msm_performance(/.*)?                                         u:object_r:sysfs_performance:s0
 
 # Bluetooth
-/sys/devices(/soc\.0)?/bluesleep\.(81|89)/rfkill/rfkill0/state            u:object_r:sysfs_bluetooth_writable:s0
-/sys/devices(/soc\.0)?/bcm43xx.([0-9])+/rfkill/rfkill[0-9](/.*)?          u:object_r:sysfs_bluetooth_writable:s0
+/sys/devices(/soc\.0|/soc)?/bluesleep\.(81|89)/rfkill/rfkill0/state            u:object_r:sysfs_bluetooth_writable:s0
+/sys/devices(/soc\.0|/soc)?/bcm43xx.([0-9])+/rfkill/rfkill[0-9](/.*)?          u:object_r:sysfs_bluetooth_writable:s0
 
 # Storage
-/sys/devices(/soc\.0)?/(fd80000|0)?\.qcom,rmtfs_sharedmem/uio/uio0/name                        u:object_r:sysfs_rmt_storage:s0
-/sys/devices(/soc\.0)?/(fd80000|0)?\.qcom,rmtfs_sharedmem/uio/uio0/version                     u:object_r:sysfs_rmt_storage:s0
-/sys/devices(/soc\.0)?/(fd80000|0)?\.qcom,rmtfs_sharedmem/uio/uio0/maps/map0(/.*)?             u:object_r:sysfs_rmt_storage:s0
-/sys/kernel/debug/rmt_storage(/.*)?                                                            u:object_r:debugfs_rmt_storage:s0
+/sys/devices(/soc\.0|/soc)?/(fd80000|0)?\.qcom,rmtfs_sharedmem/uio/uio0/name                        u:object_r:sysfs_rmt_storage:s0
+/sys/devices(/soc\.0|/soc)?/(fd80000|0)?\.qcom,rmtfs_sharedmem/uio/uio0/version                     u:object_r:sysfs_rmt_storage:s0
+/sys/devices(/soc\.0|/soc)?/(fd80000|0)?\.qcom,rmtfs_sharedmem/uio/uio0/maps/map0(/.*)?             u:object_r:sysfs_rmt_storage:s0
+/sys/kernel/debug/rmt_storage(/.*)?                                                                 u:object_r:debugfs_rmt_storage:s0
 
 # Subsystem
-/sys/devices(/soc\.0)?/(fe200000|c200000)\.qcom,lpass/subsys1/name                             u:object_r:sysfs_subsys:s0
-/sys/devices(/soc\.0)?/fc880000\.qcom,mss/subsys2/name                                         u:object_r:sysfs_subsys:s0
-/sys/devices(/soc\.0)?/(fc880000|4080000)\.qcom,mss/subsys3/name                               u:object_r:sysfs_subsys:s0
-/sys/devices(/soc\.0)?/(fdce0000|1de0000)\.qcom,venus/subsys0/name                             u:object_r:sysfs_subsys:s0
+/sys/devices(/soc\.0|/soc)?/(fe200000|c200000)\.qcom,lpass/subsys1/name                             u:object_r:sysfs_subsys:s0
+/sys/devices(/soc\.0|/soc)?/fc880000\.qcom,mss/subsys2/name                                         u:object_r:sysfs_subsys:s0
+/sys/devices(/soc\.0|/soc)?/(fc880000|4080000)\.qcom,mss/subsys3/name                               u:object_r:sysfs_subsys:s0
+/sys/devices(/soc\.0|/soc)?/(fdce0000|1de0000)\.qcom,venus/subsys0/name                             u:object_r:sysfs_subsys:s0
 
 # Thermal
-/sys/devices(/soc\.0)?/02-qcom,qpnp-smbcharger/power_supply/battery/charging_enabled           u:object_r:sysfs_thermal:s0
-/sys/devices(/soc\.0)?/02-qcom,qpnp-smbcharger/power_supply/battery/system_temp_level          u:object_r:sysfs_thermal:s0
-/sys/devices(/soc\.0)?/f9200000\.ssusb/power_supply/usb/current_max                            u:object_r:sysfs_thermal:s0
-/sys/devices(/soc\.0)?/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk                            u:object_r:sysfs_thermal:s0
-/sys/devices(/soc\.0)?/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk                        u:object_r:sysfs_thermal:s0
-/sys/devices(/soc\.0)?/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/reset_count                       u:object_r:sysfs_thermal:s0
+/sys/devices(/soc\.0|/soc)?/02-qcom,qpnp-smbcharger/power_supply/battery/charging_enabled           u:object_r:sysfs_thermal:s0
+/sys/devices(/soc\.0|/soc)?/02-qcom,qpnp-smbcharger/power_supply/battery/system_temp_level          u:object_r:sysfs_thermal:s0
+/sys/devices(/soc\.0|/soc)?/f9200000\.ssusb/power_supply/usb/current_max                            u:object_r:sysfs_thermal:s0
+/sys/devices(/soc\.0|/soc)?/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk                            u:object_r:sysfs_thermal:s0
+/sys/devices(/soc\.0|/soc)?/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk                        u:object_r:sysfs_thermal:s0
+/sys/devices(/soc\.0|/soc)?/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/reset_count                       u:object_r:sysfs_thermal:s0
 
 # Timekeep
-/sys/devices(/soc\.0)?/00-qcom,pm(8941|8950|8994)_rtc/rtc/rtc0/since_epoch                     u:object_r:sysfs_timekeep:s0
+/sys/devices(/soc\.0|/soc)?/00-qcom,pm(8941|8950|8994)_rtc/rtc/rtc0/since_epoch                     u:object_r:sysfs_timekeep:s0
 
 # USB & Power
 /sys/devices/msm_dwc3/power_supply/usb/type                                              u:object_r:sysfs_usb_supply:s0
 /sys/devices/msm_dwc3/power_supply/usb/device                                            u:object_r:sysfs_usb_supply:s0
 /sys/devices/00-qcom,charger/power_supply/battery/capacity                               u:object_r:sysfs_batteryinfo:s0
-/sys/devices(/soc\.0)?/02-qcom,qpnp-smbcharger/power_supply/battery/capacity             u:object_r:sysfs_batteryinfo:s0
+/sys/devices(/soc\.0|/soc)?/02-qcom,qpnp-smbcharger/power_supply/battery/capacity        u:object_r:sysfs_batteryinfo:s0
 
 # Video
-/sys/devices(/soc\.0)?/fd8c0000\.qcom,msm-cam/video4linux/video0/name                    u:object_r:sysfs_video:s0
-/sys/devices(/soc\.0)?/fd878000\.qcom,fd/video4linux/video1/name                         u:object_r:sysfs_video:s0
+/sys/devices(/soc\.0|/soc)?/fd8c0000\.qcom,msm-cam/video4linux/video0/name                    u:object_r:sysfs_video:s0
+/sys/devices(/soc\.0|/soc)?/fd878000\.qcom,fd/video4linux/video1/name                         u:object_r:sysfs_video:s0
 
 # WiFi MAC address
-/sys/devices(/soc\.0)?/fb000000\.qcom,wcnss-wlan/wcnss_mac_addr                          u:object_r:sysfs_addrsetup:s0
-/sys/devices/platform/bcmdhd_wlan/macaddr                                                u:object_r:sysfs_addrsetup:s0
-/sys/devices(/soc\.0)?/bcmdhd_wlan.(90|115)/macaddr                                      u:object_r:sysfs_addrsetup:s0
-/sys/devices(/soc\.0)?/(fb21b000|a21b000)\.qcom,pronto/subsys2/name                      u:object_r:sysfs_pronto:s0
+/sys/devices(/soc\.0|/soc)?/fb000000\.qcom,wcnss-wlan/wcnss_mac_addr                          u:object_r:sysfs_addrsetup:s0
+/sys/devices/platform/bcmdhd_wlan/macaddr                                                     u:object_r:sysfs_addrsetup:s0
+/sys/devices/soc/soc\:bcmdhd_wlan/macaddr                                                     u:object_r:sysfs_addrsetup:s0
+/sys/devices(/soc\.0|/soc)?/bcmdhd_wlan.(90|115)/macaddr                                      u:object_r:sysfs_addrsetup:s0
+/sys/devices(/soc\.0|/soc)?/(fb21b000|a21b000)\.qcom,pronto/subsys2/name                      u:object_r:sysfs_pronto:s0
 
 # Zram
 /sys/devices/virtual/block/zram0/mem_used_total                                          u:object_r:sysfs_zram:s0

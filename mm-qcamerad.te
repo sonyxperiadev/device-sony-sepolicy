@@ -11,6 +11,14 @@ unix_socket_connect(mm-qcamerad, sensors, sensors)
 binder_call(mm-qcamerad, system_server);
 binder_use(mm-qcamerad);
 
+allow mm-qcamerad fwmarkd_socket:sock_file write;
+allow mm-qcamerad netd:unix_stream_socket connectto;
+allow mm-qcamerad node:tcp_socket node_bind;
+allow mm-qcamerad self:tcp_socket { accept bind create listen read setopt write };
+
+allow netd mm-qcamerad:fd use;
+allow netd mm-qcamerad:tcp_socket { getopt read setopt write };
+
 allow mm-qcamerad { graphics_device camera_data_file }:dir { add_name remove_name search write };
 allow mm-qcamerad camera_data_file:file { create getattr open read write };
 allow mm-qcamerad camera_data_file:sock_file create_file_perms;

@@ -4,12 +4,11 @@ allow kernel tmpfs:file create_file_perms;
 allow kernel tmpfs:dir create_dir_perms;
 allow kernel rootfs:file rx_file_perms;
 allow kernel block_device:blk_file rw_file_perms;
+allow kernel touchfusion_exec:file relabelto;
 
-userdebug_or_eng(`
-  allow kernel self:capability { dac_read_search dac_override };
-  allow kernel self:capability { net_admin mknod };
-  allow kernel self: { socket netlink_socket } create_socket_perms;
-')
+allow kernel self:socket create;
+
+domain_auto_trans(kernel, touchfusion_exec, touchfusion)
 
 # Access firmware_file
 r_dir_file(kernel, firmware_file)
