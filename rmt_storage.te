@@ -14,6 +14,7 @@ allow rmt_storage debugfs_rmt_storage:file rw_file_perms;
 allow rmt_storage debugfs_rmt_storage:dir r_dir_perms;
 allow rmt_storage { debugfs debugfs_rmt_storage }:filesystem associate;
 allow rmt_storage { smem_log_device uio_device }:chr_file rw_file_perms;
+allow rmt_storage kmsg_device:chr_file { open write };
 
 # sys_admin is needed for ioprio_set
 allow rmt_storage self:capability {
