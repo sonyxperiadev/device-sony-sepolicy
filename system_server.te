@@ -17,6 +17,9 @@ allow system_server { persist_file system_app_data_file }:dir { open read search
 allow system_server persist_file:file { getattr open write };
 allow system_server xlat_prop:file { getattr open read };
 
+allow system_server sensors_persist_file:dir search;
+allow system_server sensors_persist_file:file { open read };
+
 r_dir_file(system_server, sysfs_addrsetup)
 r_dir_file(system_server, sysfs_pronto)
 r_dir_file(system_server, sysfs_socinfo)
