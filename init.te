@@ -7,6 +7,10 @@ allow init persist_file:dir mounton;
 allow init debugfs:file w_file_perms;
 allow init sysfs:dir w_dir_perms;
 
+# configFS
+allow init configfs:file write;
+allow init configfs:lnk_file { create unlink };
+
 #FM BCM
 allow init hci_attach_dev:chr_file rw_file_perms;
 allow init brcm_uim_exec:file { execute getattr read open };
