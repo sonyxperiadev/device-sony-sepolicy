@@ -4,3 +4,4 @@ allow vold fuse_device:dir { open read search write };
 allow vold logd:dir { open read getattr };
 allow vold logd:lnk_file { read getattr };
 
+allow vold tee_prop:file { r_file_perms };
