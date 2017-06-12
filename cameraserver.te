@@ -6,3 +6,7 @@ allow cameraserver gpu_device:chr_file rw_file_perms;
 allow cameraserver rootfs:lnk_file getattr;
 
 allow cameraserver surfaceflinger:unix_stream_socket { read write };
+
+allow cameraserver camera_prop:property_service set;
+allow cameraserver init:unix_stream_socket connectto;
+allow cameraserver property_socket:sock_file write;
