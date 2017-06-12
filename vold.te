@@ -5,3 +5,6 @@ allow vold logd:dir { open read getattr };
 allow vold logd:lnk_file { read getattr };
 
 allow vold tee_prop:file { r_file_perms };
+allow vold kernel:system module_request;
+
+allow vold block_device:blk_file { getattr ioctl };

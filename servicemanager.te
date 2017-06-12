@@ -1,0 +1,3 @@
+allow servicemanager cnss-daemon:dir search;
+allow servicemanager cnss-daemon:file { open read };
+allow servicemanager cnss-daemon:process getattr;

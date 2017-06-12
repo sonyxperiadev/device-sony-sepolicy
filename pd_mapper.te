@@ -1,0 +1,12 @@
+type pd_mapper, domain, domain_deprecated;
+
+type pd_mapper_exec, exec_type, file_type;
+init_daemon_domain(pd_mapper);
+
+qmux_socket(pd_mapper);
+
+allow pd_mapper firmware_file:dir { open read };
+allow pd_mapper firmware_file:file { open read };
+allow pd_mapper self:capability { net_bind_service setgid setpcap setuid };
+allow pd_mapper self:socket { bind create ioctl read write };
+
