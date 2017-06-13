@@ -1,6 +1,5 @@
 allow priv_app vfat:dir rw_dir_perms;
-allow priv_app vfat:dir create;
-allow priv_app vfat:dir { setattr rmdir };
+allow priv_app vfat:dir { create setattr rmdir rename };
 allow priv_app vfat:file rw_file_perms;
 allow priv_app vfat:file { create getattr };
 
