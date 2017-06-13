@@ -1,2 +1,2 @@
 allow radio system_app_data_file:dir getattr;
-allow radio media_rw_data_file:dir search;
+allow radio media_rw_data_file:dir { search write };
