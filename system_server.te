@@ -16,6 +16,7 @@ use_per_mgr(system_server);
 allow system_server { persist_file system_app_data_file }:dir { open read search };
 allow system_server persist_file:file { getattr open write };
 allow system_server xlat_prop:file { getattr open read };
+allow system_server unlabeled:file unlink;
 
 allow system_server sensors_persist_file:dir search;
 allow system_server sensors_persist_file:file { open read };
