@@ -22,6 +22,8 @@ allow system_server storage_stub_file:dir getattr;
 rw_dir_file(system_server, powerhal_data_file)
 allow system_server powerhal_data_file:sock_file create_file_perms;
 
+allow system_server media_rw_data_file:dir getattr;
+
 r_dir_file(system_server, sysfs_addrsetup)
 r_dir_file(system_server, sysfs_pronto)
 r_dir_file(system_server, sysfs_socinfo)
