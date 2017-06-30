@@ -26,8 +26,9 @@ allow netmgrd netmgrd:netlink_socket { write read create bind };
 allow netmgrd netmgrd:socket { create ioctl };
 allow netmgrd netmgrd:netlink_route_socket { setopt getattr write nlmsg_write };
 allow netmgrd self:netlink_generic_socket { bind create write};
-allow netmgrd system_data_file:dir { add_name write };
-allow netmgrd system_data_file:file { open };
+allow netmgrd netmgr_data_file:dir { add_name write };
+allow netmgrd netmgr_data_file:file { open create };
+
 rw_dir_file(netmgrd, netmgr_data_file)
 
 qmux_socket(netmgrd);
