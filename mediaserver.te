@@ -2,7 +2,15 @@ binder_call(mediaserver, rild)
 
 allow mediaserver self:socket create_socket_perms;
 allow mediaserver camera_data_file:sock_file w_file_perms;
+allow mediaserver powerhal_data_file:sock_file create_file_perms;
+allow mediaserver system_server:unix_stream_socket connectto;
+
+rw_dir_file(mediaserver, camera_data_file)
+rw_dir_file(mediaserver, powerhal_data_file)
+
+set_prop(mediaserver, camera_prop)
 
 qmux_socket(mediaserver)
 
 allow mediaserver surfaceflinger:unix_stream_socket rw_socket_perms;
+allow mediaserver cameraserver_service:service_manager { add };

@@ -11,6 +11,9 @@ r_dir_file(rild, sysfs_ssr)
 
 r_dir_file(rild, netmgrd)
 
+rw_dir_file(rild, powerhal_data_file)
+allow rild powerhal_data_file:sock_file create_file_perms;
+
 #Allow access to netmgrd socket
 netmgr_socket(rild);
 
