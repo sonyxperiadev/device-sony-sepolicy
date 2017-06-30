@@ -2,3 +2,7 @@ r_dir_file(audioserver, sysfs)
 
 allow audioserver rootfs:lnk_file getattr;
 allow shell audioserver_exec:file { execute getattr };
+
+rw_dir_file(audioserver, powerhal_data_file)
+allow audioserver powerhal_data_file:sock_file create_file_perms;
+allow audioserver system_server:unix_stream_socket connectto;

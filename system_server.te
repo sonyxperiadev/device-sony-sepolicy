@@ -22,6 +22,9 @@ allow system_server sensors_persist_file:file { open read };
 
 allow system_server media_rw_data_file:dir getattr;
 
+rw_dir_file(system_server, powerhal_data_file)
+allow system_server powerhal_data_file:sock_file create_file_perms;
+
 r_dir_file(system_server, sysfs_addrsetup)
 r_dir_file(system_server, sysfs_pronto)
 r_dir_file(system_server, sysfs_socinfo)
