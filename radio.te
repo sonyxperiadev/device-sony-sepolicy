@@ -1,2 +1,2 @@
 allow radio system_app_data_file:dir getattr;
-allow radio media_rw_data_file:dir { add_name search write };
+allow radio media_rw_data_file:dir r_dir_perms;
