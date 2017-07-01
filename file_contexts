@@ -137,6 +137,7 @@
 /system/bin/thermanager                         u:object_r:thermanager_exec:s0
 /system/bin/timekeep                            u:object_r:timekeep_exec:s0
 /system/bin/tfa9890_amp                         u:object_r:tfa_amp_exec:s0
+/system/vendor/bin/adsprpcd                     u:object_r:adsprpcd_exec:s0
 /system/vendor/bin/irsc_util                    u:object_r:irsc_util_exec:s0
 /system/vendor/bin/mlog_qmi_service             u:object_r:mlog_qmi_exec:s0
 /system/vendor/bin/mm-qcamera-daemon            u:object_r:mm-qcamerad_exec:s0
