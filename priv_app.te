@@ -1,8 +1,16 @@
-allow priv_app device:dir r_dir_perms;
-allow priv_app vfat:dir rw_dir_perms;
-allow priv_app vfat:dir { create setattr rmdir rename };
-allow priv_app vfat:file rw_file_perms;
-allow priv_app vfat:file { create getattr setattr };
+allow priv_app vfat:dir {
+    add_name
+    create
+    setattr
+    rmdir
+    rename
+    remove_name
+    write
+};
+
+allow priv_app vfat:file { create getattr setattr unlink };
+
+r_dir_file(priv_app, device)
 
 allow priv_app block_device:dir { getattr };
 allow priv_app proc_sysrq:file { getattr };
@@ -10,4 +18,3 @@ allow priv_app proc_iomem:file { getattr };
 
 allow priv_app sysfs:dir r_dir_perms;
 allow priv_app sysfs:file r_file_perms;
-
