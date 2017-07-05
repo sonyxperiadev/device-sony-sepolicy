@@ -8,7 +8,7 @@ allow priv_app vfat:dir {
     write
 };
 
-allow priv_app vfat:file { create getattr setattr };
+allow priv_app vfat:file { create getattr setattr unlink };
 
 r_dir_file(priv_app, device)
 
