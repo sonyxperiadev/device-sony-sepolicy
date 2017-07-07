@@ -3,3 +3,6 @@ allow mediacodec rootfs:lnk_file getattr;
 rw_dir_file(mediacodec, powerhal_data_file)
 allow mediacodec powerhal_data_file:sock_file create_file_perms;
 allow mediacodec system_server:unix_stream_socket connectto;
+
+#allow mediacodec to access adsprpcd
+r_dir_file(mediacodec, adsprpcd_file);
