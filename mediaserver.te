@@ -6,5 +6,7 @@ binder_call(mediaserver, rild)
 
 qmux_socket(mediaserver)
 allow mediaserver camera_data_file:sock_file w_file_perms;
+allow mediaserver qdsp_device:chr_file r_file_perms;
 
 allow mediaserver camera_prop:file r_file_perms;
+r_dir_file(mediaserver, adsprpcd_file);
