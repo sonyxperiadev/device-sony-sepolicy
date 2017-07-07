@@ -5,7 +5,11 @@ allow init proc_kernel_sched:file write;
 
 allow init kernel:system module_request;
 
-allow init persist_file:dir mounton;
+allow init {
+    adsprpcd_file
+    persist_file
+}:dir mounton;
+
 allow init debugfs:file w_file_perms;
 allow init sysfs:dir w_dir_perms;
 

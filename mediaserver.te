@@ -4,6 +4,7 @@ allow mediaserver self:socket create_socket_perms;
 allow mediaserver camera_data_file:sock_file w_file_perms;
 allow mediaserver powerhal_data_file:sock_file create_file_perms;
 allow mediaserver system_server:unix_stream_socket connectto;
+allow mediaserver qdsp_device:chr_file r_file_perms;
 
 rw_dir_file(mediaserver, camera_data_file)
 rw_dir_file(mediaserver, powerhal_data_file)
@@ -15,3 +16,7 @@ qmux_socket(mediaserver)
 allow mediaserver surfaceflinger:unix_stream_socket rw_socket_perms;
 allow mediaserver cameraserver_service:service_manager { add };
 allow mediaserver cameraproxy_service:service_manager { find };
+
+#allow mediaserver to access adsprpcd
+r_dir_file(mediaserver, adsprpcd_file);
+
