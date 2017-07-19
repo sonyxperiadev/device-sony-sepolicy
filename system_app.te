@@ -18,3 +18,5 @@ allow system_app fingerprintd:binder call;
 # ExtendedSettings props
 allow system_app adbtcpes_prop:property_service set;
 allow system_app camera_prop:property_service set;
+
+rw_dir_file(system_app, sysfs_graphics)
