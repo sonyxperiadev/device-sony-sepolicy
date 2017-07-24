@@ -83,6 +83,3 @@ type brcm_uim_exec, exec_type, file_type;
 
 # power hal
 type powerhal_data_file, file_type, data_file_type;
-
-# used for /dsp files
-type adsprpcd_file, file_type, mlstrustedobject;

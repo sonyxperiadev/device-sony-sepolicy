@@ -5,11 +5,7 @@ allow init tmpfs:dir create_dir_perms;
 
 allow init proc_kernel_sched:file write;
 
-allow init {
-    adsprpcd_file
-    persist_file
-}:dir mounton;
-
+allow init persist_file:dir mounton;
 allow init debugfs:file w_file_perms;
 allow init sysfs:dir w_dir_perms;
 
