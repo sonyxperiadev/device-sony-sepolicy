@@ -39,6 +39,7 @@
 /dev/tfa98xx                                    u:object_r:audio_device:s0
 /dev/ttyHS0                                     u:object_r:hci_attach_dev:s0
 
+###################################
 # Dev socket nodes
 #
 /dev/socket/msm_irqbalance                      u:object_r:msm_irqbalance_socket:s0

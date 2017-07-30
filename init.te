@@ -15,8 +15,6 @@ allow init sysfs:dir w_dir_perms;
 
 allow init kernel:system module_request;
 
-allow init persist_file:dir mounton;
-
 # configFS
 allow init configfs:file write;
 allow init configfs:lnk_file { create unlink };
