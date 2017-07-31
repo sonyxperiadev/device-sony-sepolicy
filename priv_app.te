@@ -18,6 +18,7 @@ allow priv_app {
     system_app_data_file
     nfc_data_file
     bluetooth_data_file
+    storage_stub_file
 }:dir getattr;
 
 allow priv_app {
