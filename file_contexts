@@ -179,11 +179,9 @@
 # Timekeep
 /sys/devices(/soc\.0|/soc)?/00-qcom,pm(8941|8950|8994)_rtc/rtc/rtc0/since_epoch                     u:object_r:sysfs_timekeep:s0
 
-# USB & Power
-/sys/devices/msm_dwc3/power_supply/usb/type                                              u:object_r:sysfs_usb_supply:s0
-/sys/devices/msm_dwc3/power_supply/usb/device                                            u:object_r:sysfs_usb_supply:s0
-/sys/devices/00-qcom,charger/power_supply/battery/capacity                               u:object_r:sysfs_batteryinfo:s0
-/sys/devices(/soc\.0|/soc)?/02-qcom,qpnp-smbcharger/power_supply/battery/capacity        u:object_r:sysfs_batteryinfo:s0
+# Power management
+/sys/class/power_supply/battery(/.*)?                                                         u:object_r:sysfs_battery_supply:s0
+/sys/class/power_supply/usb(/.*)?                                                             u:object_r:sysfs_usb_supply:s0
 
 # Video
 /sys/devices(/soc\.0|/soc)?/fd8c0000\.qcom,msm-cam/video4linux/video0/name                    u:object_r:sysfs_video:s0
