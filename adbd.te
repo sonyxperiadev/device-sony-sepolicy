@@ -1,1 +1,0 @@
-allow adbd security_file:dir search;
