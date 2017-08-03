@@ -1,2 +1,2 @@
-allow debuggerd urandom_device:file { getattr open read };
+allow debuggerd random_device:file { getattr open read };
 
