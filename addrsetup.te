@@ -14,4 +14,4 @@ allow addrsetup sysfs_addrsetup:file rw_file_perms;
 
 unix_socket_connect(addrsetup, tad, tad)
 
-allow addrsetup urandom_device:file read;
+allow addrsetup random_device:file read;
