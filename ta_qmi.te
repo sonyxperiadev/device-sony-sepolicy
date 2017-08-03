@@ -1,4 +1,4 @@
-type ta_qmi, domain, domain_deprecated;
+type ta_qmi, domain;
 type ta_qmi_exec, exec_type, file_type;
 
 # Started by init

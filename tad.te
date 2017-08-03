@@ -1,4 +1,4 @@
-type tad, domain, domain_deprecated;
+type tad, domain;
 type tad_exec, exec_type, file_type;
 
 # Started by init

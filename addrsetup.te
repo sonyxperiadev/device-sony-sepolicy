@@ -1,4 +1,4 @@
-type addrsetup, domain, domain_deprecated;
+type addrsetup, domain;
 type addrsetup_exec, exec_type, file_type;
 
 # Started by init
