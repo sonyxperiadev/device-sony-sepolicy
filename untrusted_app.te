@@ -1,6 +1,10 @@
 allow untrusted_app vfat:dir rw_dir_perms;
 allow untrusted_app vfat:file rw_file_perms;
-allow untrusted_app block_device:dir getattr;
+
+allow untrusted_app {
+    block_device
+    storage_stub_file
+}:dir getattr;
 
 allow untrusted_app {
     proc_iomem
