@@ -6,6 +6,7 @@ init_daemon_domain(mlog_qmi)
 
 allow mlog_qmi self:capability { net_raw };
 allow mlog_qmi self:socket create_socket_perms;
+allow mlog_qmi rootfs:lnk_file getattr;
 
 # Access to /dev/smem_log
 allow mlog_qmi smem_log_device:chr_file rw_file_perms;
