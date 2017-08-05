@@ -37,6 +37,7 @@ wakelock_use(sensors)
 
 allow sensors self:socket { bind create ioctl read write };
 allow sensors rootfs:lnk_file getattr;
+allow sensors sysfs:dir r_dir_perms;
 
 # Access to other devices
 allow sensors smem_log_device:chr_file rw_file_perms;
