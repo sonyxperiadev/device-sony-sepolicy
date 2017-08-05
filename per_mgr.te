@@ -1,3 +1,5 @@
+# Policy for /system/vendor/bin/pm-proxy
+# Policy for /system/vendor/bin/pm-service
 type per_mgr, domain;
 type per_mgr_exec, exec_type, file_type;
 
@@ -28,7 +30,7 @@ r_dir_file(per_mgr, sysfs_ssr)
 r_dir_file(per_mgr, firmware_file)
 
 # Needed by pm-proxy to talk to peripheral manager
-binder_call(per_mgr, per_proxy);
+binder_call(per_mgr, per_mgr);
 binder_call(per_mgr, sensors);
 
 allow per_mgr subsys_modem_device:chr_file { open read };
