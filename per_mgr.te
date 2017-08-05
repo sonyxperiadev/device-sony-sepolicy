@@ -9,6 +9,7 @@ binder_service(per_mgr);
 
 allow per_mgr self:socket create_socket_perms;
 allow per_mgr per_mgr_service:service_manager { add find };
+allow per_mgr rootfs:lnk_file getattr;
 
 # Needed by ipc_router
 allow per_mgr self:capability net_raw;
