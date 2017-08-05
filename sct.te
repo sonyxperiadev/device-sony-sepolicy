@@ -1,4 +1,4 @@
-type sct, domain, domain_deprecated;
+type sct, domain;
 type sct_exec, exec_type, file_type;
 
 # Started by init

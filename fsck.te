@@ -1,2 +1,2 @@
-allow fsck urandom_device:file getattr;
+allow fsck random_device:file getattr;
 allow fsck block_device:blk_file { getattr ioctl };

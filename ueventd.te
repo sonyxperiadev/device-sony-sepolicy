@@ -21,6 +21,6 @@ allow ueventd tmpfs:file create_file_perms;
 allow ueventd tmpfs:dir create_dir_perms;
 
 allow ueventd device:file relabelfrom;
-allow ueventd urandom_device:file { relabelto setattr };
+allow ueventd random_device:file { relabelto setattr };
 allow ueventd vfat:file { open read };
 
