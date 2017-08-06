@@ -1,4 +1,4 @@
-type pd_mapper, domain, domain_deprecated;
+type pd_mapper, domain;
 
 type pd_mapper_exec, exec_type, file_type;
 init_daemon_domain(pd_mapper);
