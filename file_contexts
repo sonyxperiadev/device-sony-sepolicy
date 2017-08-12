@@ -3,6 +3,7 @@
 #
 /dev/adsprpc-smd                                u:object_r:qdsp_device:s0
 /dev/brcm_bt_drv                                u:object_r:hci_attach_dev:s0
+/dev/btpower                                    u:object_r:btpower_device:s0
 /dev/cpu_dma_latency                            u:object_r:device_latency:s0
 /dev/diag                                       u:object_r:diag_device:s0
 /dev/kgsl-3d0                                   u:object_r:gpu_device:s0
@@ -164,9 +165,14 @@
 
 # Subsystem
 /sys/devices(/soc\.0|/soc)?/(fe200000|c200000)\.qcom,lpass/subsys1/name                             u:object_r:sysfs_subsys:s0
-/sys/devices(/soc\.0|/soc)?/fc880000\.qcom,mss/subsys2/name                                         u:object_r:sysfs_subsys:s0
+/sys/devices(/soc\.0|/soc)?/(fc880000|4080000)\.qcom,mss/subsys(2|6)/name                           u:object_r:sysfs_subsys:s0
+/sys/devices(/soc\.0|/soc)?/1d0101c\.qcom,spss/subsys2/name                                         u:object_r:sysfs_subsys:s0
 /sys/devices(/soc\.0|/soc)?/(fc880000|4080000)\.qcom,mss/subsys3/name                               u:object_r:sysfs_subsys:s0
-/sys/devices(/soc\.0|/soc)?/(fdce0000|1de0000)\.qcom,venus/subsys0/name                             u:object_r:sysfs_subsys:s0
+/sys/devices(/soc\.0|/soc)?/(fdce0000|1de0000|cce0000)\.qcom,venus/subsys(0|1)/name                 u:object_r:sysfs_subsys:s0
+/sys/devices(/soc\.0|/soc)?/soc\:qcom,ipa_fws@1e08000/subsys0/name                                  u:object_r:sysfs_subsys:s0
+/sys/devices(/soc\.0|/soc)?/soc\:qcom,kgsl-hyp/subsys3/name                                         u:object_r:sysfs_subsys:s0
+/sys/devices(/soc\.0|/soc)?/17300000\.qcom,lpass/subsys4/name                                       u:object_r:sysfs_subsys:s0
+/sys/devices(/soc\.0|/soc)?/5c00000\.qcom,ssc/subsys5/name                                          u:object_r:sysfs_subsys:s0
 
 # Thermal
 /sys/devices(/soc\.0|/soc)?/02-qcom,qpnp-smbcharger/power_supply/battery/charging_enabled           u:object_r:sysfs_thermal:s0

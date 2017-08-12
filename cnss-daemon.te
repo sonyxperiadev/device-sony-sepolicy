@@ -5,9 +5,6 @@ init_daemon_domain(cnss-daemon)
 
 allow cnss-daemon proc_net:file rw_file_perms;
 
-allow cnss-daemon sysfs:dir r_dir_perms;
-allow cnss-daemon sysfs:file { open read };
-
 allow cnss-daemon rootfs:lnk_file getattr;
 
 allow cnss-daemon per_mgr:binder { call transfer };
@@ -15,10 +12,11 @@ allow cnss-daemon per_mgr_service:service_manager find;
 
 allow cnss-daemon self:socket create_socket_perms;
 allow cnss-daemon self:capability { setgid setuid net_admin};
-allow cnss-daemon self:netlink_generic_socket { bind create getattr setopt };
-allow cnss-daemon self:netlink_route_socket { bind create read };
-allow cnss-daemon self:netlink_socket { bind create read };
-allow cnss-daemon self:udp_socket { create ioctl };
+allow cnss-daemon self:netlink_generic_socket { create_socket_perms };
+allow cnss-daemon self:netlink_route_socket { create_socket_perms };
+allow cnss-daemon self:netlink_socket { create_socket_perms };
+allow cnss-daemon self:udp_socket { create_socket_perms };
 
 allow cnss-daemon servicemanager:binder call;
 
+allow cnss-daemon sysfs_subsys:file { r_file_perms };
