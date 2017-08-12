@@ -17,3 +17,4 @@ allow start_hci_filter init:unix_stream_socket connectto;
 allow start_hci_filter property_socket:sock_file write;
 allow start_hci_filter rootfs:lnk_file getattr;
 allow start_hci_filter sysfs_wake_lock:file { append open };
+allow start_hci_filter bluetooth_prop:property_service set;

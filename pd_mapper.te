@@ -10,3 +10,5 @@ allow pd_mapper firmware_file:file { open read };
 allow pd_mapper self:capability { net_bind_service setgid setpcap setuid };
 allow pd_mapper self:socket { bind create ioctl read write };
 
+allow pd_mapper sysfs_subsys:file { r_file_perms };
+allow pd_mapper system_file:dir { r_dir_perms };
