@@ -39,6 +39,7 @@
 /dev/subsys_modem                               u:object_r:subsys_modem_device:s0
 /dev/tfa98xx                                    u:object_r:audio_device:s0
 /dev/ttyHS0                                     u:object_r:hci_attach_dev:s0
+/dev/ttyMSM0                                    u:object_r:hci_attach_dev:s0
 
 ###################################
 # Dev socket nodes
