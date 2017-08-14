@@ -20,3 +20,5 @@ allow cnss-daemon self:udp_socket { create_socket_perms };
 allow cnss-daemon servicemanager:binder call;
 
 allow cnss-daemon sysfs_subsys:file { r_file_perms };
+
+allow cnss-daemon wifi_data_file:dir search;
