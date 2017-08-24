@@ -21,8 +21,5 @@ allow init configfs:lnk_file { create unlink };
 
 allow init ipa_dev:chr_file write;
 
-#FM BCM
+# BT
 allow init hci_attach_dev:chr_file rw_file_perms;
-allow init brcm_uim_exec:file { execute getattr read open };
-allow init brcm_ldisc_sysfs:lnk_file { read };
-allow init uim:process { siginh noatsecure transition rlimitinh };

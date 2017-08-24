@@ -59,7 +59,6 @@
 ###################################
 # System files
 #
-/system/bin/brcm-uim-sysfs                      u:object_r:brcm_uim_exec:s0
 /system/bin/macaddrsetup                        u:object_r:addrsetup_exec:s0
 /system/bin/thermanager                         u:object_r:thermanager_exec:s0
 /system/bin/timekeep                            u:object_r:timekeep_exec:s0
@@ -112,10 +111,6 @@
 /sys/bus/msm_subsys/devices/subsys3/restart_level                   u:object_r:sysfs_ssr_toggle:s0
 /sys/bus/msm_subsys/devices/subsys4/restart_level                   u:object_r:sysfs_ssr_toggle:s0
 /sys/devices/soc0(/.*)?                                             u:object_r:sysfs_socinfo:s0
-
-# BRCM BT FM
-/sys/bus/platform/drivers/bcm_ldisc/soc\:bcmbt_ldisc(/.*)?          u:object_r:brcm_ldisc_sysfs:s0
-/sys/bus/platform/drivers/bcm_ldisc/bcmbt_ldisc.93(/.*)?            u:object_r:brcm_ldisc_sysfs:s0
 
 # Fingerprint Kitakami
 /sys/bus/spi/devices/spi0\.1/clk_enable                                             u:object_r:sysfs_fingerprintd_writable:s0
