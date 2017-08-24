@@ -1,12 +1,10 @@
 allow kernel device:dir create_dir_perms;
-allow kernel device:chr_file { create setattr getattr };
-allow kernel device:blk_file { create setattr getattr unlink };
+allow kernel device:blk_file rw_file_perms;
 allow kernel tmpfs:file create_file_perms;
 allow kernel tmpfs:dir create_dir_perms;
-allow kernel rootfs:file rx_file_perms;
 allow kernel block_device:blk_file rw_file_perms;
 allow kernel kernel:capability mknod;
-allow kernel self:socket create;
+allow kernel self:socket create_socket_perms_no_ioctl;
 allow kernel self:capability { mknod };
 
 # Access firmware_file

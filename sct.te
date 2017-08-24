@@ -6,7 +6,7 @@ init_daemon_domain(sct)
 
 allow sct self:capability net_raw;
 allow sct rootfs:lnk_file getattr;
-allow sct self:socket create_socket_perms;
+allow sct self:socket create_socket_perms_no_ioctl;
 
 # Access to /dev/smem_log
 allow sct smem_log_device:chr_file rw_file_perms;

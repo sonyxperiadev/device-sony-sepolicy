@@ -5,7 +5,7 @@ allow bluetooth sysfs:file w_file_perms;
 allow bluetooth smd_device:chr_file rw_file_perms;
 
 allow bluetooth device:chr_file { ioctl };
-allow bluetooth btpower_device:chr_file { rw_file_perms };
+allow bluetooth btpower_device:chr_file rw_file_perms;
 
 allow bluetooth start_hci_filter:unix_stream_socket connectto;
 allow bluetooth storage_stub_file:dir getattr;
