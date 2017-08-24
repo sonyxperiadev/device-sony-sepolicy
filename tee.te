@@ -1,4 +1,4 @@
-allow tee device:chr_file { ioctl setattr };
-allow tee device:dir { open read };
-allow tee self:capability { chown sys_rawio sys_admin };
+allow tee self:capability { chown setgid setuid sys_rawio sys_admin };
+
+allow tee device:dir r_dir_perms;
 allow tee sg_device:chr_file { ioctl open read setattr write };
