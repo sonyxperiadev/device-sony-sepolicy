@@ -1,5 +1,4 @@
 # communicate with camera
-allow cameraserver mm-qcamerad:unix_dgram_socket sendto;
 allow cameraserver camera_data_file:sock_file write;
 
 allow cameraserver gpu_device:chr_file rw_file_perms;

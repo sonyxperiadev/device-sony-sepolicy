@@ -67,7 +67,6 @@
 /system/vendor/bin/adsprpcd                     u:object_r:adsprpcd_exec:s0
 /system/vendor/bin/irsc_util                    u:object_r:irsc_util_exec:s0
 /system/vendor/bin/mlog_qmi_service             u:object_r:mlog_qmi_exec:s0
-/system/vendor/bin/mm-qcamera-daemon            u:object_r:mm-qcamerad_exec:s0
 /system/vendor/bin/msm_irqbalance               u:object_r:msm_irqbalanced_exec:s0
 /system/vendor/bin/netmgrd                      u:object_r:netmgrd_exec:s0
 /system/vendor/bin/pad_controller               u:object_r:pad_controller_exec:s0

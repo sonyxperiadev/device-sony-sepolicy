@@ -12,7 +12,6 @@ rw_dir_file(mediaserver, powerhal_data_file)
 set_prop(mediaserver, camera_prop)
 
 allow mediaserver camera_data_file:dir search;
-allow mediaserver mm-qcamerad:unix_dgram_socket sendto;
 
 allow mediaserver cameraserver_service:service_manager add;
 allow mediaserver cameraproxy_service:service_manager find;
