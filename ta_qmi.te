@@ -7,8 +7,10 @@ init_daemon_domain(ta_qmi)
 # XXX: What exactly is this needed for? - Need to investigate
 allow ta_qmi self:capability { dac_override net_raw };
 
-allow ta_qmi self:socket create_socket_perms_no_ioctl;
 allow ta_qmi rootfs:lnk_file getattr;
+
+allow ta_qmi self:socket create_socket_perms;
+allowxperm ta_qmi self:socket ioctl msm_sock_ipc_ioctls;
 
 # Connect to /dev/socket/tad
 unix_socket_connect(ta_qmi, tad, tad)

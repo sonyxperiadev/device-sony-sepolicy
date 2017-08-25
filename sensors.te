@@ -35,8 +35,10 @@ allow sensors sensors_persist_file:file create_file_perms;
 # Wake lock access
 wakelock_use(sensors)
 
-allow sensors self:socket create_socket_perms_no_ioctl;
 allow sensors rootfs:lnk_file getattr;
+
+allow sensors self:socket create_socket_perms;
+allowxperm sensors self:socket ioctl msm_sock_ipc_ioctls;
 
 allow sensors sysfs:dir r_dir_perms;
 allow sensors sysfs:file r_file_perms;

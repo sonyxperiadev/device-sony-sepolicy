@@ -1,0 +1,2 @@
+allow hal_keymaster_default tee_prop:file r_file_perms;
+

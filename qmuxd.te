@@ -28,6 +28,8 @@ r_dir_file(qmuxd, sysfs_ssr);
 allow qmuxd smem_log_device:chr_file rw_file_perms;
 allow qmuxd qmuxd:socket create_socket_perms_no_ioctl;
 
+allow qmuxd sysfs:dir r_dir_perms;
+
 r_dir_file(qmuxd, sysfs_pronto)
 r_dir_file(qmuxd, sysfs_socinfo)
 r_dir_file(qmuxd, sysfs_subsys)

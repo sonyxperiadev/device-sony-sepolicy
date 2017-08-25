@@ -22,8 +22,11 @@ allow rmt_storage { debugfs debugfs_rmt_storage }:filesystem associate;
 allow rmt_storage { smem_log_device uio_device }:chr_file rw_file_perms;
 allow rmt_storage rootfs:lnk_file getattr;
 allow rmt_storage kmsg_device:chr_file { open write };
-allow rmt_storage self:socket create_socket_perms_no_ioctl;
 allow rmt_storage uio_device:chr_file rw_file_perms;
+
+allow rmt_storage self:socket create_socket_perms;
+allowxperm rmt_storage self:socket ioctl msm_sock_ipc_ioctls;
+
 
 # sys_admin is needed for ioprio_set
 allow rmt_storage self:capability {
