@@ -27,6 +27,14 @@ allow system_server media_rw_data_file:dir r_dir_perms;
 allow system_server sensors_persist_file:dir search;
 allow system_server sensors_persist_file:file { open read };
 
+allow system_server self:socket create_socket_perms;
+allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;
+
+allow system_server audioserver:file w_file_perms;
+
+# kgsl
+allow system_server debugfs_kgsl:file { open read getattr };
+
 r_dir_file(system_server, sysfs_addrsetup)
 r_dir_file(system_server, sysfs_pronto)
 r_dir_file(system_server, sysfs_socinfo)
