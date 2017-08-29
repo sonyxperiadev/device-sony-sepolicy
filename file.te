@@ -86,7 +86,5 @@ type netmgr_data_file, file_type, data_file_type;
 # used for /dsp files
 type adsprpcd_file, file_type, mlstrustedobject;
 
-type sysfs_mdss_mdp_caps, sysfs_type, fs_type;
-
 # debugfs
 type debugfs_kgsl, debugfs_type, fs_type;
