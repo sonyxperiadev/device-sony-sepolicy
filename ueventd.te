@@ -25,4 +25,3 @@ allow ueventd random_device:file { relabelto setattr };
 allow ueventd vfat:file { open read };
 
 allow ueventd sysfs_subsys:file w_file_perms;
-

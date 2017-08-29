@@ -39,11 +39,6 @@ allow system_server cameraserver:file w_file_perms;
 allow system_server debugfs_kgsl:dir search;
 allow system_server debugfs_kgsl:file { open read getattr };
 
-allow system_server platform_app:file w_file_perms;;
-allow system_server priv_app:file w_file_perms;;
-allow system_server system_app:file w_file_perms;;
-allow system_server isolated_app:file w_file_perms;
-
 r_dir_file(system_server, sysfs_addrsetup)
 r_dir_file(system_server, sysfs_pronto)
 r_dir_file(system_server, sysfs_socinfo)
