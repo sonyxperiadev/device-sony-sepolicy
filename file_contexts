@@ -85,7 +85,6 @@
 ###################################
 # sysfs files
 #
-/sys/class/graphics/fb0/mdp/caps                                    u:object_r:sysfs_graphics:s0
 /sys/class/thermal(/.*)?                                            u:object_r:sysfs_thermal:s0
 /sys/class/uio(/.*)?                                                u:object_r:sysfs_uio:s0
 /sys/devices/system/cpu/cpu0/rq-stats/*                             u:object_r:sysfs_rqstats:s0
@@ -93,6 +92,7 @@
 /sys/devices/virtual/graphics/fb([0-2])+/mode(/.*)?                 u:object_r:sysfs_graphics:s0
 /sys/devices/virtual/graphics/fb([0-2])+/product_description        u:object_r:sysfs_graphics:s0
 /sys/devices/virtual/graphics/fb([0-2])+/vendor_name                u:object_r:sysfs_graphics:s0
+/sys/devices/virtual/graphics/fb([0-2])+/mdp/caps                   u:object_r:sysfs_graphics:s0
 /sys/devices/virtual/smdpkt/smdcntl1[0-9]/open_timeout              u:object_r:sysfs_smd_open_timeout:s0
 /sys/devices/virtual/smdpkt/smdcntl[0-9]/open_timeout               u:object_r:sysfs_smd_open_timeout:s0
 /sys/devices/virtual/thermal(/.*)?                                  u:object_r:sysfs_thermal:s0
@@ -103,6 +103,7 @@
 /sys/devices/virtual/graphics/fb([0-2])+/s3d_mode                   u:object_r:sysfs_graphics:s0
 /sys/class/graphics/fb([0-2])+/mdp/caps                             u:object_r:sysfs_graphics:s0
 /sys/class/graphics/fb([0-2])+/ad                                   u:object_r:sysfs_graphics:s0
+/sys/devices/soc/(1a00000|900000)\.qcom,mdss_mdp/caps               u:object_r:sysfs_graphics:s0
 /sys/bus/msm_subsys(/.*)?                                           u:object_r:sysfs_ssr:s0
 /sys/bus/msm_subsys/devices/subsys0/restart_level                   u:object_r:sysfs_ssr_toggle:s0
 /sys/bus/msm_subsys/devices/subsys1/restart_level                   u:object_r:sysfs_ssr_toggle:s0
@@ -110,7 +111,6 @@
 /sys/bus/msm_subsys/devices/subsys3/restart_level                   u:object_r:sysfs_ssr_toggle:s0
 /sys/bus/msm_subsys/devices/subsys4/restart_level                   u:object_r:sysfs_ssr_toggle:s0
 /sys/devices/soc0(/.*)?                                             u:object_r:sysfs_socinfo:s0
-/sys/devices/soc/900000\.qcom,mdss_mdp/caps                         u:object_r:sysfs_mdss_mdp_caps:s0
 
 # Fingerprint Kitakami
 /sys/bus/spi/devices/spi0\.1/clk_enable                                             u:object_r:sysfs_fingerprintd_writable:s0
