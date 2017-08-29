@@ -16,7 +16,10 @@ allow cnss-daemon self:netlink_generic_socket create_socket_perms_no_ioctl;
 allow cnss-daemon self:netlink_route_socket create_socket_perms_no_ioctl;
 allow cnss-daemon self:netlink_socket create_socket_perms_no_ioctl;
 allow cnss-daemon self:socket create_socket_perms;
+allow cnss-daemon self:udp_socket create_socket_perms;
+
 allowxperm cnss-daemon self:socket ioctl msm_sock_ipc_ioctls;
+allowxperm cnss-daemon self:udp_socket ioctl msm_sock_ipc_ioctls;
 
 allow cnss-daemon servicemanager:binder call;
 
