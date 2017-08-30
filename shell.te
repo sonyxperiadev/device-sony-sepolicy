@@ -5,3 +5,5 @@ get_prop(shell, mmc_prop)
 get_prop(shell, safemode_prop)
 get_prop(shell, tee_prop)
 get_prop(shell, timekeep_prop)
+
+allow shell serial_device:chr_file rw_file_perms;
