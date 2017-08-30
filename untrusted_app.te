@@ -15,3 +15,5 @@ allow untrusted_app sysfs:dir r_dir_perms;
 allow untrusted_app sysfs:file r_file_perms;
 allow untrusted_app sysfs_zram:dir r_dir_perms;
 allow untrusted_app sysfs_zram:file r_file_perms;
+
+allow untrusted_app camera_prop:file r_file_perms;
