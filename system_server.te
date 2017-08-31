@@ -34,6 +34,7 @@ allow system_server audioserver:file w_file_perms;
 allow system_server hal_audio_default:file w_file_perms;
 allow system_server radio:file w_file_perms;
 allow system_server cameraserver:file w_file_perms;
+allow system_server bluetooth:file w_file_perms;
 
 # kgsl
 allow system_server debugfs_kgsl:dir search;
