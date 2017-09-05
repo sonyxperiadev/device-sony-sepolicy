@@ -5,3 +5,5 @@ allow audioserver rootfs:lnk_file getattr;
 rw_dir_file(audioserver, powerhal_data_file)
 allow audioserver powerhal_data_file:sock_file create_file_perms;
 allow audioserver system_server:unix_stream_socket connectto;
+
+binder_call(audioserver, bootanim) 
