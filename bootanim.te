@@ -2,3 +2,4 @@ set_prop(bootanim, boot_animation_prop)
 
 allow bootanim rootfs:lnk_file getattr;
 allow bootanim debugfs_kgsl:dir search;
+allow bootanim system_data_file:dir r_dir_perms;
