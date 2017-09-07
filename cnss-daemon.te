@@ -5,8 +5,6 @@ init_daemon_domain(cnss-daemon)
 
 allow cnss-daemon proc_net:file rw_file_perms;
 
-allow cnss-daemon rootfs:lnk_file getattr;
-
 allow cnss-daemon per_mgr:binder { call transfer };
 allow cnss-daemon per_mgr_service:service_manager find;
 

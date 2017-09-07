@@ -14,10 +14,7 @@ allow timekeep self:capability {
 
 allow timekeep timekeep_data_file:file create_file_perms;
 allow timekeep timekeep_data_file:dir { create_dir_perms search };
-allow timekeep rootfs:lnk_file getattr;
-
 allow timekeep sysfs:file r_file_perms;
 
 set_prop(timekeep, timekeep_prop)
-
 r_dir_file(timekeep, sysfs_timekeep)

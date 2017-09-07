@@ -22,7 +22,6 @@ allow tad self:capability2 block_suspend;
 allow tad self:socket create_socket_perms_no_ioctl;
 allow tad sysfs_wake_lock:file { append open };
 allow tad persist_file:dir search;
-allow tad rootfs:lnk_file getattr;
 
 allow tad firmware_file:dir search;
 allow tad firmware_file:file { getattr open read };

@@ -32,7 +32,6 @@ allowxperm netmgrd self:udp_socket ioctl priv_sock_ioctls;
 
 allow netmgrd netmgr_data_file:dir rw_dir_perms;
 allow netmgrd netmgr_data_file:file { rw_file_perms create };
-allow netmgrd rootfs:lnk_file getattr;
 
 allow netmgrd system_file:file lock;
 
