@@ -3,5 +3,5 @@ allow hal_audio_default audio_data_file:dir rw_dir_perms;
 
 # PowerHAL
 allow hal_audio_default powerhal_data_file:sock_file w_file_perms;
-allow hal_audio_default system_server:unix_stream_socket connectto;
+allow hal_audio_default { hal_power_default system_server }:unix_stream_socket connectto;
 allow hal_audio_default powerhal_data_file:dir search;
