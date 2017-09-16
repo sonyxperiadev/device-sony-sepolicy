@@ -13,7 +13,7 @@ allow cameraserver property_socket:sock_file write;
 # PowerHAL
 allow cameraserver powerhal_data_file:dir search;
 allow cameraserver powerhal_data_file:sock_file write;
-allow cameraserver system_server:unix_stream_socket connectto;
+allow cameraserver { hal_power_default system_server }:unix_stream_socket connectto;
 
 allow cameraserver sysfs:file r_file_perms;
 allow cameraserver camera_prop:file r_file_perms;
