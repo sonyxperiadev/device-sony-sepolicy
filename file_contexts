@@ -138,6 +138,7 @@
 # Bluetooth
 /sys/devices(/soc\.0|/soc)?/bluesleep\.(81|89)/rfkill/rfkill0/state            u:object_r:sysfs_bluetooth_writable:s0
 /sys/devices(/soc\.0|/soc)?/bcm43xx.([0-9])+/rfkill/rfkill[0-9](/.*)?          u:object_r:sysfs_bluetooth_writable:s0
+/sys/devices(/soc\.0|/soc)?/soc:bcm43xx/rfkill/rfkill0/state                   u:object_r:sysfs_bluetooth_writable:s0
 
 # Storage
 /sys/devices(/soc\.0|/soc)?/(fd80000|0)?\.qcom,rmtfs_sharedmem/uio/uio0/name                        u:object_r:sysfs_rmt_storage:s0
