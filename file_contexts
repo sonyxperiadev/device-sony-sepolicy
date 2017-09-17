@@ -138,7 +138,7 @@
 # Bluetooth
 /sys/devices(/soc\.0|/soc)?/bluesleep\.(81|89)/rfkill/rfkill0/state            u:object_r:sysfs_bluetooth_writable:s0
 /sys/devices(/soc\.0|/soc)?/bcm43xx.([0-9])+/rfkill/rfkill[0-9](/.*)?          u:object_r:sysfs_bluetooth_writable:s0
-/sys/devices(/soc\.0|/soc)?/soc:bcm43xx/rfkill/rfkill0/state                   u:object_r:sysfs_bluetooth_writable:s0
+/sys/devices(/soc\.0|/soc)?/soc\:bcm43xx/rfkill/rfkill0/state                  u:object_r:sysfs_bluetooth_writable:s0
 
 # Storage
 /sys/devices(/soc\.0|/soc)?/(fd80000|0)?\.qcom,rmtfs_sharedmem/uio/uio0/name                        u:object_r:sysfs_rmt_storage:s0
@@ -151,6 +151,7 @@
 /sys/devices(/soc\.0|/soc)?/(fc880000|4080000)\.qcom,mss(/.*)?                                      u:object_r:sysfs_subsys:s0
 /sys/devices(/soc\.0|/soc)?/1d0101c\.qcom,spss(/.*)?                                                u:object_r:sysfs_subsys:s0
 /sys/devices(/soc\.0|/soc)?/(fdce0000|1de0000|cce0000)\.qcom,venus(/.*)?                            u:object_r:sysfs_subsys:s0
+/sys/devices(/soc\.0|/soc)?/soc\:qcom,cpubw(/.*)?                                                   u:object_r:sysfs_subsys:s0
 /sys/devices(/soc\.0|/soc)?/soc\:qcom,ipa_fws@1e08000(/.*)?                                         u:object_r:sysfs_subsys:s0
 /sys/devices(/soc\.0|/soc)?/soc\:qcom,kgsl-hyp(/.*)?                                                u:object_r:sysfs_subsys:s0
 /sys/devices(/soc\.0|/soc)?/5c00000\.qcom,ssc(/.*)?                                                 u:object_r:sysfs_subsys:s0
