@@ -35,3 +35,4 @@ allow priv_app unlabeled:dir r_dir_perms;
 allow priv_app unlabeled:file r_file_perms;
 
 allow priv_app debugfs_kgsl:dir search;
+allow priv_app hal_memtrack_hwservice:hwservice_manager find;
