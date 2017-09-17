@@ -180,6 +180,7 @@
 /sys/devices/soc/soc\:bcmdhd_wlan/macaddr                                                     u:object_r:sysfs_addrsetup:s0
 /sys/devices(/soc\.0|/soc)?/bcmdhd_wlan.(90|115)/macaddr                                      u:object_r:sysfs_addrsetup:s0
 /sys/devices(/soc\.0|/soc)?/(fb21b000|a21b000)\.qcom,pronto/subsys2/name                      u:object_r:sysfs_pronto:s0
+/sys/module/bcmdhd/parameters/firmware_path                                                   u:object_r:sysfs_wlan_fwpath:s0
 
 # Zram
 /sys/devices/virtual/block/zram0/mem_used_total                                          u:object_r:sysfs_zram:s0
