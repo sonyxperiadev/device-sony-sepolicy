@@ -1,2 +1,1 @@
 allow hal_drm_default vndbinder_device:chr_file rw_file_perms;
-allowxperm hal_drm_default vndbinder_device:chr_file ioctl msm_sock_ipc_ioctls;
