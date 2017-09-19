@@ -19,7 +19,7 @@ allow init kernel:system module_request;
 allow init configfs:file write;
 allow init configfs:lnk_file { create unlink };
 
-allow init ipa_dev:chr_file write;
+allow init ipa_dev:chr_file { open write };
 
 # BT
 allow init hci_attach_dev:chr_file rw_file_perms;
