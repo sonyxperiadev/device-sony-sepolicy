@@ -77,8 +77,8 @@ type sysfs_subsys, sysfs_type, fs_type;
 type sysfs_timekeep, fs_type, sysfs_type;
 type sysfs_video, fs_type, sysfs_type;
 
-# power hal
-type powerhal_data_file, file_type, data_file_type;
+# PowerHAL
+type powerhal_socket, file_type;
 
 # Netmgr
 type netmgr_data_file, file_type, data_file_type;

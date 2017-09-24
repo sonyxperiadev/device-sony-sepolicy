@@ -12,7 +12,7 @@ netmgr_socket(rild);
 # Rule for RILD to talk to peripheral manager
 use_per_mgr(rild);
 
-allow rild powerhal_data_file:sock_file create_file_perms;
+allow rild powerhal_socket:sock_file create_file_perms;
 
 allow rild self:socket create_socket_perms;
 allowxperm rild self:socket ioctl msm_sock_ipc_ioctls;
@@ -23,7 +23,7 @@ allow rild system_health_monitor_device:chr_file r_file_perms;
 
 allow rild vendor_file:file lock;
 
-rw_dir_file(rild, powerhal_data_file)
+rw_dir_file(rild, powerhal_socket)
 r_dir_file(rild, sysfs_socinfo)
 r_dir_file(rild, sysfs_subsys)
 r_dir_file(rild, sysfs_ssr)

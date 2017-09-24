@@ -46,6 +46,7 @@
 #
 /dev/socket/msm_irqbalance                      u:object_r:msm_irqbalance_socket:s0
 /dev/socket/netmgr(/.*)?                        u:object_r:netmgrd_socket:s0
+/dev/socket/powerhal(/.*)?                      u:object_r:powerhal_socket:s0
 /dev/socket/qmux_audio(/.*)?                    u:object_r:qmuxd_socket:s0
 /dev/socket/qmux_bluetooth(/.*)?                u:object_r:qmuxd_socket:s0
 /dev/socket/qmux_gps(/.*)?                      u:object_r:qmuxd_socket:s0
@@ -196,7 +197,6 @@
 /data/vendor/nfc(/.*)?                                              u:object_r:nfc_data_file:s0
 /data/misc/qsee(/.*)?                                               u:object_r:data_qsee_file:s0
 /data/misc/dts(/.*)?                                                u:object_r:dts_data_file:s0
-/data/misc/powerhal(/.*)?                                           u:object_r:powerhal_data_file:s0
 /data/misc/netmgr(/.*)?                                             u:object_r:netmgr_data_file:s0
 /data/misc/radio(/.*)?                                              u:object_r:radio_data_file:s0
 /data/misc/fm(/.*)?                                                 u:object_r:fm_data_file:s0
