@@ -1,5 +1,6 @@
 allow hal_audio_default audio_data_file:file create_file_perms;
 allow hal_audio_default audio_data_file:dir rw_dir_perms;
+allow hal_audio_default oemfs:dir search;
 
 # PowerHAL
 allow hal_audio_default powerhal_socket:sock_file w_file_perms;

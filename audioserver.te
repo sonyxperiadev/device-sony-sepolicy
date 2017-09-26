@@ -2,6 +2,7 @@ r_dir_file(audioserver, sysfs)
 
 allow audioserver rootfs:lnk_file getattr;
 allow audioserver system_server:unix_stream_socket connectto;
+allow audioserver oemfs:dir search;
 
 # PowerHAL
 rw_dir_file(audioserver, powerhal_socket)

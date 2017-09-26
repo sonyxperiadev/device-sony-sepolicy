@@ -1,4 +1,5 @@
 allow mediacodec rootfs:lnk_file getattr;
+allow mediacodec oemfs:dir search;
 
 # PowerHAL
 rw_dir_file(mediacodec, powerhal_socket)
