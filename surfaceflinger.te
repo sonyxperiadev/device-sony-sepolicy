@@ -1,3 +1,4 @@
 rw_dir_file(surfaceflinger, sysfs_graphics)
 
 allow surfaceflinger debugfs_kgsl:dir search;
+allow surfaceflinger oemfs:dir search;

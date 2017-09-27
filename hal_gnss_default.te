@@ -4,6 +4,8 @@ allow hal_gnss_default sysfs:file r_file_perms;
 allow hal_gnss_default self:socket { create read write ioctl };
 allowxperm hal_gnss_default self:socket ioctl { IPC_ROUTER_IOCTL_BIND_CONTROL_PORT
                                                 IPC_ROUTER_IOCTL_LOOKUP_SERVER };
+
+allow hal_gnss_default oemfs:dir search;
 allow hal_gnss_default self:netlink_generic_socket { create bind read };
 allow hal_gnss_default sysfs_subsys:dir search;
 allow hal_gnss_default netmgrd_socket:dir search;

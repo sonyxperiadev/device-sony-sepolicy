@@ -1,0 +1,1 @@
+allow healthd oemfs:dir search;
