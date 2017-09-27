@@ -9,7 +9,9 @@ allow hal_gnss_default sysfs_subsys:dir search;
 allow hal_gnss_default netmgrd_socket:dir search;
 allow hal_gnss_default sysfs_subsys:file r_file_perms;
 allow hal_gnss_default sysfs_subsys:dir r_dir_perms;
-allow hal_gnss_default qmuxd_socket:dir { search write };
+allow hal_gnss_default qmuxd_socket:dir { add_name search write };
+allow hal_gnss_default qmuxd_socket:sock_file { create write };
+allow hal_gnss_default qmuxd:unix_stream_socket connectto;
 
 # Most HALs are not allowed to use network sockets. Qcom library
 # libqdi is used across multiple processes which are clients of
