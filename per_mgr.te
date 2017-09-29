@@ -1,5 +1,5 @@
-# Policy for /system/vendor/bin/pm-proxy
-# Policy for /system/vendor/bin/pm-service
+# Policy for /odm/bin/pm-proxy
+# Policy for /odm/bin/pm-service
 type per_mgr, domain;
 type per_mgr_exec, exec_type, file_type;
 
