@@ -13,7 +13,7 @@ allow tad block_device:dir search;
 
 allow tad block_device:blk_file { ioctl };
 
-allow tad rfs_file:dir { getattr setattr open read search add_name remove_name write};
+allow tad rfs_file:dir { create getattr setattr open read search add_name remove_name write};
 allow tad rfs_file:file { getattr setattr create open read rename unlink write };
 allow tad rfs_file:lnk_file { getattr setattr };
 allow tad rfs_shared_hlos_file:dir { create_dir_perms };
