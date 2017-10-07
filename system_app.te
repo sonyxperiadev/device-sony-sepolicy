@@ -25,3 +25,4 @@ allow system_app adbtcpes_prop:property_service set;
 allow system_app camera_prop:property_service set;
 allow system_app boot_animation_prop:property_service set;
 rw_dir_file(system_app, sysfs_graphics)
+rw_dir_file(system_app, sysfs_pcc_profile)
