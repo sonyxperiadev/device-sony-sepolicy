@@ -88,3 +88,6 @@ type adsprpcd_file, file_type, mlstrustedobject;
 
 # debugfs
 type debugfs_kgsl, debugfs_type, fs_type;
+
+# PCC profile
+type sysfs_pcc_profile, sysfs_type, fs_type;

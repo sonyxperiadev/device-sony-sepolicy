@@ -104,6 +104,7 @@
 /sys/class/graphics/fb([0-2])+/mdp/caps                             u:object_r:sysfs_graphics:s0
 /sys/class/graphics/fb([0-2])+/ad                                   u:object_r:sysfs_graphics:s0
 /sys/devices/soc/(1a00000|900000)\.qcom,mdss_mdp/caps               u:object_r:sysfs_graphics:s0
+/sys/devices/mdss_dsi_panel/pcc_profile                             u:object_r:sysfs_pcc_profile:s0
 /sys/bus/msm_subsys(/.*)?                                           u:object_r:sysfs_ssr:s0
 /sys/bus/msm_subsys/devices/subsys0/restart_level                   u:object_r:sysfs_ssr_toggle:s0
 /sys/bus/msm_subsys/devices/subsys1/restart_level                   u:object_r:sysfs_ssr_toggle:s0
