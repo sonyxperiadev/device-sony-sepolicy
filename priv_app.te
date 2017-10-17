@@ -36,3 +36,5 @@ allow priv_app unlabeled:file r_file_perms;
 
 allow priv_app debugfs_kgsl:dir search;
 allow priv_app hal_memtrack_hwservice:hwservice_manager find;
+
+binder_call(priv_app, hal_memtrack_default)
