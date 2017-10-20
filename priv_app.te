@@ -37,4 +37,17 @@ allow priv_app unlabeled:file r_file_perms;
 allow priv_app debugfs_kgsl:dir search;
 allow priv_app hal_memtrack_hwservice:hwservice_manager find;
 
+allow priv_app drmserver_exec:file getattr;
+allow priv_app dumpstate_exec:file getattr;
+allow priv_app fsck_exec:file getattr;
+allow priv_app gatekeeperd_exec:file getattr;
+allow priv_app healthd_exec:file getattr;
+allow priv_app hwservicemanager_exec:file getattr;
+allow priv_app idmap_exec:file getattr;
+allow priv_app incident_exec:file getattr;
+allow priv_app incidentd_exec:file getattr;
+allow priv_app install_recovery_exec:file getattr;
+allow priv_app installd_exec:file getattr;
+allow priv_app keystore_exec:file getattr;
+
 binder_call(priv_app, hal_memtrack_default)
