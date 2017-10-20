@@ -62,6 +62,10 @@
 /system/vendor/bin/macaddrsetup       u:object_r:addrsetup_exec:s0
 /system/vendor/bin/thermanager        u:object_r:thermanager_exec:s0
 /system/vendor/bin/timekeep           u:object_r:timekeep_exec:s0
+
+###################################
+# ODM files
+#
 /odm/bin/adsprpcd                     u:object_r:adsprpcd_exec:s0
 /odm/bin/irsc_util                    u:object_r:irsc_util_exec:s0
 /odm/bin/mlog_qmi_service             u:object_r:mlog_qmi_exec:s0
