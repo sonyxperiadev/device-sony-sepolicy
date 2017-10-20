@@ -1,1 +1,1 @@
-allow mediaextractor sdcardfs:file read;
+allow mediaextractor sdcardfs:file { getattr read };
