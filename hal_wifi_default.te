@@ -1,1 +1,2 @@
 allow hal_wifi_default sysfs_wlan_fwpath:file w_file_perms;
+allow hal_wifi_supplicant_default rfkill_device:chr_file { open read };
