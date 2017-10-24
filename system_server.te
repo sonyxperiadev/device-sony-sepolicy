@@ -8,6 +8,7 @@ allow system_server {
     isolated_app
     platform_app
     priv_app
+    radio
     system_app
     untrusted_app
     untrusted_app_25
