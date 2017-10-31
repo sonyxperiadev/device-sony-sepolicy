@@ -65,3 +65,6 @@ type persist_block_device, dev_type;
 
 #Define Bluetooth device
 type bt_device, dev_type;
+
+# ramdump partition block device
+type rdimage_block_device, dev_type;
