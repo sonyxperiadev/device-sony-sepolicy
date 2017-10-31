@@ -64,3 +64,6 @@ type trim_area_partition_device, dev_type;
 type persist_block_device, dev_type;
 
 type btpower_device, dev_type;
+
+# ramdump partition block device
+type rdimage_block_device, dev_type;
