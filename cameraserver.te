@@ -15,5 +15,6 @@ allow cameraserver property_socket:sock_file write;
 allow cameraserver powerhal_data_file:dir search;
 allow cameraserver powerhal_data_file:sock_file write;
 allow cameraserver system_server:unix_stream_socket connectto;
+allow cameraserver socket_device:sock_file write;
 
 allow cameraserver sysfs:file { open read };
