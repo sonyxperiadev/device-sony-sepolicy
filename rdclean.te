@@ -1,6 +1,6 @@
 type rdclean_exec, exec_type, file_type;
 
-userdebug_or_eng(`
+userdebug_or_eng('
   type rdclean, domain;
 
   init_daemon_domain(rdclean);
