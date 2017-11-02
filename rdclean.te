@@ -7,5 +7,6 @@ userdebug_or_eng(`
 
   # make sure rdimage_block_device is defined in platform's contexts
   allow rdclean rdimage_block_device:blk_file rw_file_perms;
+  allow rdclean block_device:dir search;
   allow rdclean { shell_exec toolbox_exec }:file rx_file_perms;
 ')
