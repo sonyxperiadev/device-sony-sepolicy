@@ -1,2 +1,7 @@
 # Recovery needs access to syslog
 allow recovery self:capability2 syslog;
+
+allow recovery sysfs:file { read open };
+allow recovery rootfs:file { getattr read open };
+allow recovery tmpfs:dir search;
+allow recovery cache_file:dir search;
