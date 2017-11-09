@@ -9,6 +9,7 @@ allow system_server {
     platform_app
     priv_app
     radio
+    shell
     system_app
     untrusted_app
     untrusted_app_25
