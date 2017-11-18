@@ -1,0 +1,1 @@
+allow blkid proc:file { getattr open read };

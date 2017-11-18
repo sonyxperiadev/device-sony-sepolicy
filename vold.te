@@ -5,3 +5,4 @@ allow vold logd:lnk_file { read getattr };
 allow vold tee_prop:file r_file_perms;
 allow vold kernel:system module_request;
 allow vold oemfs:dir search;
+allow vold apk_data_file:dir getattr;
