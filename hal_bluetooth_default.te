@@ -4,3 +4,6 @@ allow hal_bluetooth_default start_hci_filter:unix_stream_socket connectto;
 allow hal_bluetooth_default bt_device:chr_file rw_file_perms;
 allow hal_bluetooth_default oemfs:dir search;
 allow hal_bluetooth_default serial_device:chr_file rw_file_perms;
+
+# Permit reading of bluetooth_bdaddr
+allow hal_bluetooth_default bluetooth_data_file:file r_file_perms;
