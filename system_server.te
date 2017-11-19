@@ -22,3 +22,9 @@ allow system_server debugfs_kgsl:file { open read getattr };
 # PowerHAL
 rw_dir_file(system_server, powerhal_socket)
 allow system_server powerhal_socket:sock_file create_file_perms;
+
+allow system_server netmgrd_socket:dir search;
+allow system_server netmgrd_socket:sock_file write;
+allow system_server netmgrd:unix_stream_socket connectto;
+allow system_server self:socket ioctl;
+allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;
