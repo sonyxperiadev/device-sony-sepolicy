@@ -8,8 +8,11 @@ dontaudit init kernel:system module_request;
 
 allow init proc_cmdline:file r_file_perms;
 
-#Allow triggering IPA FWs loading
-allow init ipa_dev:chr_file write;
+# Allow triggering IPA FWs loading
+allow init ipa_dev:chr_file { open write };
+
+allow init tty_device:chr_file { read open };
+allow init configfs:file write;
 
 # init_power.te
 allow init sysfs_devices_system_cpu:dir w_dir_perms;

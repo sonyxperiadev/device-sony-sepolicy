@@ -4,6 +4,7 @@
 /dev/kgsl-3d0                                   u:object_r:gpu_device:s0
 /dev/rtc0                                       u:object_r:rtc_device:s0
 /dev/smd.*                                      u:object_r:smd_device:s0
+/dev/ttyHS0                                     u:object_r:hci_attach_dev:s0
 # TODO: does ttyMSM0 need to be more specific
 /dev/ttyMSM0                                    u:object_r:tty_device:s0
 /dev/ipa                                        u:object_r:ipa_dev:s0
@@ -25,6 +26,7 @@
 /dev/sensors                                    u:object_r:sensors_device:s0
 /dev/pn54x                                      u:object_r:nfc_device:s0
 /dev/smem_log                                   u:object_r:smem_log_device:s0
+/dev/fingerprint                                u:object_r:fpc_device:s0
 
 # dev socket nodes
 /dev/socket/qmux_audio(/.*)?                    u:object_r:qmuxd_socket:s0
@@ -34,7 +36,6 @@
 /dev/socket/qmux_radio(/.*)?                    u:object_r:qmuxd_socket:s0
 /dev/socket/msm_irqbalance                      u:object_r:irqbalance_socket:s0
 /dev/socket/netmgr(/.*)?                        u:object_r:netmgrd_socket:s0
-/dev/ttyHS0                                     u:object_r:hci_attach_dev:s0
 /dev/socket/powerhal(/.*)?                      u:object_r:powerhal_socket:s0
 /dev/socket/tad                                 u:object_r:tad_socket:s0
 
@@ -45,7 +46,7 @@
 /system/vendor/bin/timekeep           u:object_r:timekeep_exec:s0
 
 # files in /vendor
-/vendor/firmware(/.*)?          u:object_r:vendor_firmware_file:s0
+/vendor/firmware(/.*)?                u:object_r:vendor_firmware_file:s0
 
 # files in /odm
 /odm/bin/adsprpcd                     u:object_r:adsprpcd_exec:s0
@@ -64,7 +65,7 @@
 /odm/bin/tad_static                   u:object_r:tad_exec:s0
 /odm/bin/ta_qmi_service               u:object_r:ta_qmi_exec:s0
 /odm/bin/tftp_server                  u:object_r:tad_exec:s0
-/odm/bin/wcnss_filter                 u:object_r:wcnss_filter_exec:s0
+/odm/bin/wcnss_filter                 u:object_r:start_hci_filter_exec:s0
 /odm/bin/wcnss_service                u:object_r:wcnss_service_exec:s0
 /odm/bin/cnss-daemon                  u:object_r:wcnss_service_exec:s0
 /odm/firmware(/.*)?                   u:object_r:vendor_firmware_file:s0
@@ -111,11 +112,11 @@
 /vendor/usr/idc(/.*)?                  u:object_r:idc_file:s0
 /vendor/usr/keylayout(/.*)?            u:object_r:keylayout_file:s0
 
-# /
-/dsp(/.*)?              u:object_r:qdsp_file:s0
+# /dsp
+/dsp(/.*)?                u:object_r:qdsp_file:s0
 
 # files in firmware
-/firmware(/.*)?         u:object_r:firmware_file:s0
+/firmware(/.*)?           u:object_r:firmware_file:s0
 
 # /persist
 /persist(/.*)?            u:object_r:persist_file:s0
