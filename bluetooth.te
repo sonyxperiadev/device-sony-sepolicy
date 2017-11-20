@@ -1,11 +1,2 @@
-rw_dir_file(bluetooth, sysfs)
-rw_dir_file(bluetooth, sysfs_bluetooth_writable)
-
-allow bluetooth sysfs:file w_file_perms;
-allow bluetooth smd_device:chr_file rw_file_perms;
-
-allow bluetooth device:chr_file { ioctl };
-allow bluetooth bt_device:chr_file rw_file_perms;
-
-allow bluetooth start_hci_filter:unix_stream_socket connectto;
-allow bluetooth storage_stub_file:dir getattr;
+# Allow access to net_admin ioctls
+allowxperm bluetooth self:udp_socket ioctl priv_sock_ioctls;

@@ -1,11 +1,4 @@
-r_dir_file(audioserver, sysfs)
-
-allow audioserver rootfs:lnk_file getattr;
-allow audioserver system_server:unix_stream_socket connectto;
-allow audioserver oemfs:dir search;
-
-# PowerHAL
-rw_dir_file(audioserver, powerhal_socket)
-allow audioserver powerhal_socket:sock_file create_file_perms;
-
 binder_call(audioserver, bootanim)
+
+allow audioserver sysfs_soc:file r_file_perms;
+allow audioserver sysfs_soc:dir search;

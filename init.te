@@ -1,25 +1,16 @@
-#For sdcard
-allow init tmpfs:lnk_file create_file_perms;
-allow init tmpfs:file create_file_perms;
-allow init tmpfs:dir create_dir_perms;
+# symlink /sdcard to backing block
+allow init tmpfs:lnk_file create;
+allow init configfs:lnk_file create;
 
-allow init proc_kernel_sched:file write;
+allow init persist_file:dir mounton;
 
-allow init {
-    adsprpcd_file
-    persist_file
-}:dir mounton;
+dontaudit init kernel:system module_request;
 
-allow init debugfs:file w_file_perms;
-allow init sysfs:dir w_dir_perms;
-allow init ipa_dev:chr_file rw_file_perms;
-allow init kernel:system module_request;
+allow init proc_cmdline:file r_file_perms;
 
-# configFS
-allow init configfs:file write;
-allow init configfs:lnk_file { create unlink };
+#Allow triggering IPA FWs loading
+allow init ipa_dev:chr_file write;
 
-# BT
-allow init hci_attach_dev:chr_file rw_file_perms;
-
-allow init sysfs_devices_system_cpu:dir { w_dir_perms relabelfrom };
+# init_power.te
+allow init sysfs_devices_system_cpu:dir w_dir_perms;
+allow init sysfs_devices_system_cpu:file w_file_perms;

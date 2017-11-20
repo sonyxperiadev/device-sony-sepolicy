@@ -1,4 +1,5 @@
-rw_dir_file(surfaceflinger, sysfs_graphics)
+dontaudit surfaceflinger firmware_file:dir search;
+dontaudit surfaceflinger kernel:system module_request;
+allow surfaceflinger debugfs_ion:dir search;
 
-allow surfaceflinger debugfs_kgsl:dir search;
-allow surfaceflinger oemfs:dir search;
+rw_dir_file(surfaceflinger, sysfs_graphics)

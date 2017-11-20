@@ -1,30 +1,17 @@
-allow system_server self:capability sys_module;
-
-# timerslack_ns
-allow system_server {
-    audioserver
-    cameraserver
-    hal_audio_default
-    isolated_app
-    platform_app
-    priv_app
-    radio
-    shell
-    system_app
-    untrusted_app
-    untrusted_app_25
-}:file write;
-
-# kgsl
-allow system_server debugfs_kgsl:dir search;
-allow system_server debugfs_kgsl:file { open read getattr };
-
-# PowerHAL
-rw_dir_file(system_server, powerhal_socket)
-allow system_server powerhal_socket:sock_file create_file_perms;
-
-allow system_server netmgrd_socket:dir search;
-allow system_server netmgrd_socket:sock_file write;
-allow system_server netmgrd:unix_stream_socket connectto;
 allow system_server self:socket ioctl;
 allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;
+
+binder_call(system_server, hal_camera_default)
+
+# input files
+r_dir_file(system_server, idc_file)
+r_dir_file(system_server, keylayout_file)
+
+# TODO(b/30675296): Remove following dontaudit's upon resolution of this bug
+# The timerslack_ns denials spam the system really horribly
+dontaudit system_server audioserver:file write;
+dontaudit system_server untrusted_app:file write;
+dontaudit system_server hal_audio_default:file write;
+dontaudit system_server appdomain:file write;
+
+allow system_server proc_cmdline:file r_file_perms;

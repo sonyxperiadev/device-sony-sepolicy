@@ -1,5 +1,4 @@
-allow netd netd:capability sys_module;
-allow netd kernel:system module_request;
-allow netd untrusted_app:unix_stream_socket { read write };
+allow netd sysfs_net:file w_file_perms;
 
-binder_use(netd);
+dontaudit netd kernel:system module_request;
+dontaudit netd self:capability sys_module;

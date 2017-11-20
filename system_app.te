@@ -1,29 +1,7 @@
-# fm_radio app needes (open read ioctl) on fm_radio_device
-allow system_app fm_radio_device:chr_file r_file_perms;
-
-set_prop(system_app, timekeep_prop)
-
-r_dir_file(system_app, sysfs_timekeep)
-
-allow system_app {
-   activity_service
-   connectivity_service
-   display_service
-   network_management_service
-}:service_manager find;
-
-allow system_app timekeep_data_file:dir { create_dir_perms search };
-allow system_app timekeep_data_file:file create_file_perms;
-allow system_app media_rw_data_file:dir r_dir_perms;
-allow system_app fuse_device:filesystem getattr;
-allow system_app fingerprintd:binder call;
-allow system_app debugfs_kgsl:dir search;
-allow system_app proc:file { read open getattr };
-
 # ExtendedSettings props
-allow system_app adbtcpes_prop:property_service set;
-allow system_app camera_prop:property_service set;
-allow system_app camera_prop:file r_file_perms;
-allow system_app boot_animation_prop:property_service set;
-rw_dir_file(system_app, sysfs_graphics)
 rw_dir_file(system_app, sysfs_pcc_profile)
+
+# TimeKeep Java service
+allow system_app timekeep_vendor_data_file:dir create_dir_perms;
+allow system_app timekeep_vendor_data_file:file create_file_perms;
+set_prop(system_app, timekeep_prop)

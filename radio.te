@@ -1,2 +1,1 @@
-allow radio system_app_data_file:dir getattr;
-allow radio media_rw_data_file:dir r_dir_perms;
+allow radio proc_cmdline:file r_file_perms;

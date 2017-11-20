@@ -1,1 +1,0 @@
-allow zygote oemfs:dir search;

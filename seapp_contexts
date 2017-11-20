@@ -1,2 +1,1 @@
-#Add new domain for Timekeep
 user=system seinfo=platform name=com.sony.timekeep domain=system_app type=system_app_data_file

@@ -1,4 +1,22 @@
-allow tee self:capability { chown setgid setuid sys_rawio sys_admin };
+allow tee self:capability { chown setgid setuid sys_admin sys_rawio };
 
 allow tee device:dir r_dir_perms;
-allow tee sg_device:chr_file { ioctl open read setattr write };
+
+set_prop(tee, tee_listener_prop)
+set_prop(tee, keymaster_prop)
+
+allow tee firmware_file:dir search;
+allow tee firmware_file:file r_file_perms;
+allow tee block_device:dir { getattr search };
+allow tee rpmb_block_device:blk_file rw_file_perms;
+allow tee ssd_block_device:blk_file rw_file_perms;
+allow tee sg_device:chr_file { rw_file_perms setattr };
+
+allow tee persist_file:dir r_dir_perms;
+allow tee persist_data_file:dir create_dir_perms;
+allow tee persist_data_file:file create_file_perms;
+
+allow tee system_data_file:dir r_dir_perms;
+
+allow tee fingerprintd_data_file:dir rw_dir_perms;
+allow tee fingerprintd_data_file:file create_file_perms;

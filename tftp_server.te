@@ -1,4 +1,0 @@
-type tftp_server, domain;
-type tftp_server_exec, exec_type, file_type;
-
-init_daemon_domain(tftp_server)

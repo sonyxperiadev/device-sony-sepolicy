@@ -1,28 +1,71 @@
 type tad, domain;
 type tad_exec, exec_type, file_type;
 
-# Started by init
 init_daemon_domain(tad)
 
-# Read /proc/stat
-allow tad proc:file r_file_perms;
+allow tad block_device:dir { getattr search };
+allow tad ta_block_device:blk_file rw_file_perms;
 
-# Allow tad to work it's magic
-allow tad trim_area_partition_device:blk_file rw_file_perms;
-allow tad block_device:dir search;
+allow tad proc_cmdline:file r_file_perms;
 
-allow tad block_device:blk_file { ioctl };
+###################
+### tftp_server ###
+###################
 
-allow tad rfs_file:dir { create getattr setattr open read search add_name remove_name write};
-allow tad rfs_file:file { getattr setattr create open read rename unlink write };
-allow tad rfs_file:lnk_file { getattr setattr };
-allow tad rfs_shared_hlos_file:dir { create_dir_perms };
-allow tad self:capability { chown dac_override net_bind_service setgid setpcap setuid };
-allow tad self:capability2 block_suspend;
+#The files created by tftp_server process in the /data folder will have type rfs_file
+type_transition tad system_data_file:{ dir file } rfs_file;
+type_transition tad system_data_file:dir rfs_shared_hlos_file "hlos_rfs";
+
+#The files created by tftp_server process in the /persist folder will have type persist_rfs_file
+type_transition tad persist_rfs_file:{ dir file } persist_rfs_file;
+type_transition tad persist_rfs_file:dir persist_rfs_file "hlos_rfs";
+
+#For QMI sockets and IPCR Sockets
 allow tad self:socket create_socket_perms_no_ioctl;
-allow tad sysfs_wake_lock:file { append open };
-allow tad persist_file:dir search;
-allow tad rootfs:lnk_file getattr;
 
-allow tad firmware_file:dir search;
-allow tad firmware_file:file { getattr open read };
+#For Wakelocks
+wakelock_use(tad)
+
+#To create the folders in /data
+allow tad system_data_file:dir create_dir_perms;
+
+#To create the folders in /persist
+allow tad persist_file:dir create_dir_perms;
+
+#For system folder entries
+r_dir_file(tad, rfs_system_file)
+allow tad rfs_system_file:lnk_file r_file_perms;
+
+#For data folder entries
+allow tad rfs_file:dir create_dir_perms;
+allow tad rfs_file:file create_file_perms;
+
+allow tad rfs_shared_hlos_file:dir create_dir_perms;
+allow tad rfs_shared_hlos_file:file create_file_perms;
+
+allow tad persist_rfs_file:dir create_dir_perms;
+allow tad persist_rfs_file:file create_file_perms;
+
+#For firmware entries in /firmware to read NHLOS.bin files ( only perms to read and get attributes).
+r_dir_file(tad, firmware_file)
+
+#For dropping permisions from root and wakelock
+allow tad self:capability {
+    setuid
+    setgid
+    setpcap
+    net_bind_service
+};
+
+# RFS UID and GIDs were changed and moved from old values to new ones OEM range.
+# The below permissions are required to recursively update the folder ownership
+# to the new values in the OEM range.
+
+allow tad self:capability { dac_read_search chown dac_override };
+
+#For access to the kmsg device
+allow tad kmsg_device:chr_file w_file_perms;
+
+#Prevent other domains from accessing RFS data files.
+neverallow { domain -tad -kernel -recovery -init userdebug_or_eng(`-su') } rfs_file:dir create_dir_perms;
+neverallow { domain -tad -kernel -recovery -init userdebug_or_eng(`-su') } rfs_file:file create_file_perms;

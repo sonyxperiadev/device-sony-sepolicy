@@ -2,28 +2,32 @@ type cnss-daemon, domain;
 type cnss-daemon_exec, exec_type, file_type;
 
 init_daemon_domain(cnss-daemon)
+net_domain(cnss-daemon)
 
-allow cnss-daemon proc_net:file rw_file_perms;
+binder_use(cnss-daemon)
+binder_call(cnss-daemon, per_mgr)
 
-allow cnss-daemon rootfs:lnk_file getattr;
-
-allow cnss-daemon per_mgr:binder { call transfer };
 allow cnss-daemon per_mgr_service:service_manager find;
 
-allow cnss-daemon self:capability { setgid setuid net_admin};
+allow cnss-daemon proc_net:file w_file_perms;
 
-allow cnss-daemon self:netlink_generic_socket create_socket_perms_no_ioctl;
-allow cnss-daemon self:netlink_route_socket create_socket_perms_no_ioctl;
-allow cnss-daemon self:netlink_socket create_socket_perms_no_ioctl;
+allow cnss-daemon self:capability {
+    net_admin
+    net_bind_service
+};
+
 allow cnss-daemon self:socket create_socket_perms;
-allow cnss-daemon self:udp_socket create_socket_perms;
-
 allowxperm cnss-daemon self:socket ioctl msm_sock_ipc_ioctls;
-allowxperm cnss-daemon self:udp_socket ioctl msm_sock_ipc_ioctls;
+allowxperm cnss-daemon self:udp_socket ioctl { SIOCIWFIRSTPRIV_05 SIOCSIFFLAGS };
+allow cnss-daemon self:netlink_generic_socket create_socket_perms_no_ioctl;
+allow cnss-daemon self:netlink_socket create_socket_perms_no_ioctl;
 
-allow cnss-daemon servicemanager:binder call;
+allow cnss-daemon proc_net:file getattr;
 
-allow cnss-daemon sysfs_subsys:dir search;
-allow cnss-daemon sysfs_subsys:file r_file_perms;
+r_dir_file(cnss-daemon, sysfs_msm_subsys)
 
-allow cnss-daemon wifi_data_file:dir search;
+allow cnss-daemon sysfs_soc:dir search;
+allow cnss-daemon sysfs_soc:file r_file_perms;
+
+# request_firmware causes a denial for /firmware. It can be safely ignored
+dontaudit cnss-daemon firmware_file:dir search;

@@ -1,79 +1,60 @@
-###################################
-# Dev nodes
-#
-/dev/adsprpc-smd                                u:object_r:qdsp_device:s0
-/dev/brcm_bt_drv                                u:object_r:hci_attach_dev:s0
+# dev nodes
 /dev/btpower                                    u:object_r:bt_device:s0
-/dev/cpu_dma_latency                            u:object_r:device_latency:s0
 /dev/diag                                       u:object_r:diag_device:s0
 /dev/kgsl-3d0                                   u:object_r:gpu_device:s0
-/dev/msm_.*                                     u:object_r:audio_device:s0
-/dev/msm_dsps                                   u:object_r:sensors_device:s0
-/dev/msm_thermal_query                          u:object_r:thermal_device:s0
-/dev/qseecom                                    u:object_r:tee_device:s0
-/dev/radio0                                     u:object_r:fm_radio_device:s0
 /dev/rtc0                                       u:object_r:rtc_device:s0
-/dev/sensors                                    u:object_r:sensors_device:s0
 /dev/smd.*                                      u:object_r:smd_device:s0
-/dev/smem_log                                   u:object_r:smem_log_device:s0
-/dev/ttyHSL0                                    u:object_r:console_device:s0
-/dev/ttyMSM0                                    u:object_r:console_device:s0
-/dev/ttyHS[0-9]*                                u:object_r:serial_device:s0
-/dev/media([0-9])+                              u:object_r:video_device:s0
-/dev/jpeg[0-9]*                                 u:object_r:video_device:s0
-/dev/v4l-subdev.*                               u:object_r:video_device:s0
-/dev/video.*                                    u:object_r:video_device:s0
-/dev/ramdump_.*                                 u:object_r:ramdump_device:s0
+# TODO: does ttyMSM0 need to be more specific
+/dev/ttyMSM0                                    u:object_r:tty_device:s0
 /dev/ipa                                        u:object_r:ipa_dev:s0
 /dev/wwan_ioctl                                 u:object_r:ipa_dev:s0
 /dev/ipaNatTable                                u:object_r:ipa_dev:s0
+/dev/cpu_dma_latency                            u:object_r:latency_device:s0
 /dev/rmnet_ctrl.*                               u:object_r:rmnet_device:s0
-/dev/dpl_ctrl                                   u:object_r:rmnet_device:s0
-/dev/pta                                        u:object_r:pta_device:s0
-/dev/voice_svc                                  u:object_r:voice_device:s0
+/dev/video([0-9])+                              u:object_r:video_device:s0
+/dev/media([0-9])+                              u:object_r:video_device:s0
+/dev/v4l-subdev.*                               u:object_r:video_device:s0
+/dev/qseecom                                    u:object_r:tee_device:s0
+/dev/jpeg[0-9]*                                 u:object_r:video_device:s0
+/dev/adsprpc-smd                                u:object_r:qdsp_device:s0
+/dev/msm_.*                                     u:object_r:audio_device:s0
 /dev/avtimer                                    u:object_r:avtimer_device:s0
+/dev/subsys_.*                                  u:object_r:ssr_device:s0
+/dev/ramdump_.*                                 u:object_r:ramdump_device:s0
 /dev/sg[0-9]+                                   u:object_r:sg_device:s0
-/dev/system_health_monitor                      u:object_r:system_health_monitor_device:s0
-/dev/qce                                        u:object_r:qce_device:s0
-/dev/msm-rng                                    u:object_r:rng_device:s0
+/dev/sensors                                    u:object_r:sensors_device:s0
 /dev/pn54x                                      u:object_r:nfc_device:s0
-/dev/subsys_modem                               u:object_r:subsys_modem_device:s0
-/dev/tfa98xx                                    u:object_r:audio_device:s0
+/dev/smem_log                                   u:object_r:smem_log_device:s0
 
-###################################
-# Dev socket nodes
-#
-/dev/socket/msm_irqbalance                      u:object_r:msm_irqbalance_socket:s0
-/dev/socket/netmgr(/.*)?                        u:object_r:netmgrd_socket:s0
-/dev/socket/powerhal(/.*)?                      u:object_r:powerhal_socket:s0
+# dev socket nodes
 /dev/socket/qmux_audio(/.*)?                    u:object_r:qmuxd_socket:s0
 /dev/socket/qmux_bluetooth(/.*)?                u:object_r:qmuxd_socket:s0
 /dev/socket/qmux_gps(/.*)?                      u:object_r:qmuxd_socket:s0
-/dev/socket/qmux_radio(/.*)?                    u:object_r:qmuxd_socket:s0
 /dev/socket/qmux_nfc(/.*)?                      u:object_r:qmuxd_socket:s0
-/dev/socket/rild2                               u:object_r:rild_socket:s0
-/dev/socket/rild-debug2                         u:object_r:rild_debug_socket:s0
-/dev/socket/sensor_ctl_socket                   u:object_r:sensors_socket:s0
+/dev/socket/qmux_radio(/.*)?                    u:object_r:qmuxd_socket:s0
+/dev/socket/msm_irqbalance                      u:object_r:irqbalance_socket:s0
+/dev/socket/netmgr(/.*)?                        u:object_r:netmgrd_socket:s0
+/dev/ttyHS0                                     u:object_r:hci_attach_dev:s0
+/dev/socket/powerhal(/.*)?                      u:object_r:powerhal_socket:s0
 /dev/socket/tad                                 u:object_r:tad_socket:s0
 
-###################################
-# System files
-#
+# files in /system
+/system/rfs.*                         u:object_r:rfs_system_file:s0
 /system/vendor/bin/macaddrsetup       u:object_r:addrsetup_exec:s0
 /system/vendor/bin/thermanager        u:object_r:thermanager_exec:s0
 /system/vendor/bin/timekeep           u:object_r:timekeep_exec:s0
-/(vendor|system/vendor)/bin/rdclean.sh          u:object_r:rdclean_exec:s0
 
-###################################
-# ODM files
-#
+# files in /vendor
+/vendor/firmware(/.*)?          u:object_r:vendor_firmware_file:s0
+
+# files in /odm
 /odm/bin/adsprpcd                     u:object_r:adsprpcd_exec:s0
 /odm/bin/irsc_util                    u:object_r:irsc_util_exec:s0
 /odm/bin/mlog_qmi_service             u:object_r:mlog_qmi_exec:s0
 /odm/bin/msm_irqbalance               u:object_r:msm_irqbalanced_exec:s0
 /odm/bin/netmgrd                      u:object_r:netmgrd_exec:s0
 /odm/bin/pm-service                   u:object_r:per_mgr_exec:s0
-/odm/bin/pm-proxy                     u:object_r:per_mgr_exec:s0
+/odm/bin/pm-proxy                     u:object_r:per_proxy_exec:s0
 /odm/bin/pd-mapper                    u:object_r:pd_mapper_exec:s0
 /odm/bin/qmuxd                        u:object_r:qmuxd_exec:s0
 /odm/bin/qseecomd                     u:object_r:tee_exec:s0
@@ -83,152 +64,64 @@
 /odm/bin/tad_static                   u:object_r:tad_exec:s0
 /odm/bin/ta_qmi_service               u:object_r:ta_qmi_exec:s0
 /odm/bin/tftp_server                  u:object_r:tad_exec:s0
-/odm/bin/wcnss_filter                 u:object_r:start_hci_filter_exec:s0
+/odm/bin/wcnss_filter                 u:object_r:wcnss_filter_exec:s0
 /odm/bin/wcnss_service                u:object_r:wcnss_service_exec:s0
-/odm/bin/cnss-daemon                  u:object_r:cnss-daemon_exec:s0
-/odm/firmware(/.*)?                   u:object_r:firmware_file:s0
+/odm/bin/cnss-daemon                  u:object_r:wcnss_service_exec:s0
+/odm/firmware(/.*)?                   u:object_r:vendor_firmware_file:s0
 
-###################################
-# sysfs files
+###############################################
+# same-process HAL files and their dependencies
 #
-/sys/class/thermal(/.*)?                                            u:object_r:sysfs_thermal:s0
-/sys/class/uio(/.*)?                                                u:object_r:sysfs_uio:s0
-/sys/devices/system/cpu/cpu0/rq-stats/*                             u:object_r:sysfs_rqstats:s0
-/sys/devices/virtual/graphics/fb([0-2])+/idle_time                  u:object_r:sysfs_graphics:s0
-/sys/devices/virtual/graphics/fb([0-2])+/mode(/.*)?                 u:object_r:sysfs_graphics:s0
-/sys/devices/virtual/graphics/fb([0-2])+/product_description        u:object_r:sysfs_graphics:s0
-/sys/devices/virtual/graphics/fb([0-2])+/vendor_name                u:object_r:sysfs_graphics:s0
-/sys/devices/virtual/graphics/fb([0-2])+/mdp/caps                   u:object_r:sysfs_graphics:s0
-/sys/devices/virtual/smdpkt/smdcntl1[0-9]/open_timeout              u:object_r:sysfs_smd_open_timeout:s0
-/sys/devices/virtual/smdpkt/smdcntl[0-9]/open_timeout               u:object_r:sysfs_smd_open_timeout:s0
-/sys/devices/virtual/thermal(/.*)?                                  u:object_r:sysfs_thermal:s0
-/sys/module/msm_thermal(/.*)?                                       u:object_r:sysfs_thermal:s0
-/sys/module/msm_thermal/core_control/cpus_offlined                  u:object_r:sysfs_mpdecision:s0
-/sys/devices/virtual/graphics/fb([0-2])+/hpd                        u:object_r:sysfs_graphics:s0
-/sys/devices/virtual/graphics/fb([0-2])+/res_info                   u:object_r:sysfs_graphics:s0
-/sys/devices/virtual/graphics/fb([0-2])+/s3d_mode                   u:object_r:sysfs_graphics:s0
-/sys/class/graphics/fb([0-2])+/mdp/caps                             u:object_r:sysfs_graphics:s0
-/sys/class/graphics/fb([0-2])+/ad                                   u:object_r:sysfs_graphics:s0
-/sys/devices/soc/(c900000|1a00000|900000)\.qcom,mdss_mdp/caps       u:object_r:sysfs_graphics:s0
-/sys/devices/mdss_dsi_panel/pcc_profile                             u:object_r:sysfs_pcc_profile:s0
-/sys/bus/msm_subsys(/.*)?                                           u:object_r:sysfs_ssr:s0
-/sys/bus/msm_subsys/devices/subsys0/restart_level                   u:object_r:sysfs_ssr_toggle:s0
-/sys/bus/msm_subsys/devices/subsys1/restart_level                   u:object_r:sysfs_ssr_toggle:s0
-/sys/bus/msm_subsys/devices/subsys2/restart_level                   u:object_r:sysfs_ssr_toggle:s0
-/sys/bus/msm_subsys/devices/subsys3/restart_level                   u:object_r:sysfs_ssr_toggle:s0
-/sys/bus/msm_subsys/devices/subsys4/restart_level                   u:object_r:sysfs_ssr_toggle:s0
-/sys/devices/soc0(/.*)?                                             u:object_r:sysfs_socinfo:s0
+/(odm|vendor)/lib(64)?/hw/gralloc\.msm89(52|98)\.so     u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/libqdMetaData\.so                u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/libqservice\.so                  u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/libqdutils\.so                   u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/libadreno_utils\.so              u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/libgsl\.so                       u:object_r:same_process_hal_file:s0
 
-# Fingerprint Kitakami
-/sys/bus/spi/devices/spi0\.1/clk_enable                                             u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0|/soc)?/f9923000\.spi/spi_master/spi0/spi0\.1/clk_enable        u:object_r:sysfs_fingerprintd_writable:s0
-/sys/bus/spi/devices/spi0\.1/spi_prepare                                            u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0|/soc)?/f9923000\.spi/spi_master/spi0/spi0\.1/spi_prepare       u:object_r:sysfs_fingerprintd_writable:s0
-/sys/bus/spi/devices/spi0\.1/wakeup_enable                                          u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0|/soc)?/f9923000\.spi/spi_master/spi0/spi0\.1/wakeup_enable     u:object_r:sysfs_fingerprintd_writable:s0
-/sys/bus/spi/devices/spi0\.1/irq                                                    u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0|/soc)?/f9923000\.spi/spi_master/spi0/spi0\.1/irq               u:object_r:sysfs_fingerprintd_writable:s0
+/(odm|vendor)/lib(64)?/hw/vulkan\.msm89(52|98)\.so      u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/(egl/)?libEGL_adreno\.so         u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/(egl/)?libGLESv1_CM_adreno\.so   u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/(egl/)?libGLESv2_adreno\.so      u:object_r:same_process_hal_file:s0
 
-# Fingerprint Loire
-/sys/devices(/soc\.0|/soc)?/fpc1145_device/spi_prepare                              u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0|/soc)?/fpc1145\.105/spi_prepare                                u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0|/soc)?/fpc1145_device/wakeup_enable                            u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0|/soc)?/fpc1145\.105/wakeup_enable                              u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0|/soc)?/fpc1145_device/irq                                      u:object_r:sysfs_fingerprintd_writable:s0
-/sys/devices(/soc\.0|/soc)?/fpc1145\.105/irq                                        u:object_r:sysfs_fingerprintd_writable:s0
+/(odm|vendor)/lib(64)?/libdrmutils\.so                  u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/libdrm\.so                       u:object_r:same_process_hal_file:s0
 
-# Modules
-/sys/module/cpu_boost(/.*)?                                                         u:object_r:sysfs_devices_system_cpu:s0
-/sys/module/lpm_levels/parameters/sleep_disabled                                    u:object_r:sysfs_power_management:s0
-/sys/module/msm_performance(/.*)?                                                   u:object_r:sysfs_performance:s0
+# RenderScript dependencies.
+# To test: run cts -m CtsRenderscriptTestCases
+/(odm|vendor)/lib(64)?/libRSDriver_adreno\.so           u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/libCB\.so                        u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/libllvm-qgl\.so                  u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/libbccQTI\.so                    u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/libllvm-qcom\.so                 u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/librs_adreno\.so                 u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/librs_adreno_sha1\.so            u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/libqti-perfd-client\.so          u:object_r:same_process_hal_file:s0
 
-# Bluetooth
-/sys/devices(/soc\.0|/soc)?/bluesleep\.(81|89)/rfkill/rfkill0/state                 u:object_r:sysfs_bluetooth_writable:s0
-/sys/devices(/soc\.0|/soc)?/bcm43xx.([0-9])+/rfkill/rfkill[0-9](/.*)?               u:object_r:sysfs_bluetooth_writable:s0
-/sys/devices(/soc\.0|/soc)?/soc\:bcm43xx/rfkill/rfkill0/state                       u:object_r:sysfs_bluetooth_writable:s0
-/sys/devices/bt_wcn3990/rfkill/rfkill0/state                                        u:object_r:sysfs_bluetooth_writable:s0
-/sys/devices/bt_wcn3990/extldo                                                      u:object_r:sysfs_bluetooth_writable:s0
-
-# Storage
-/sys/devices(/soc\.0|/soc)?/(fd80000|0)?\.qcom,rmtfs_sharedmem/uio/uio0/name                        u:object_r:sysfs_rmt_storage:s0
-/sys/devices(/soc\.0|/soc)?/(fd80000|0)?\.qcom,rmtfs_sharedmem/uio/uio0/version                     u:object_r:sysfs_rmt_storage:s0
-/sys/devices(/soc\.0|/soc)?/(fd80000|0)?\.qcom,rmtfs_sharedmem/uio/uio0/maps/map0(/.*)?             u:object_r:sysfs_rmt_storage:s0
-/sys/kernel/debug/rmt_storage(/.*)?                                                                 u:object_r:debugfs_rmt_storage:s0
-
-# Subsystem
-/sys/devices(/soc\.0|/soc)?/(17300000|fe200000|c200000)\.qcom,lpass(/.*)?                           u:object_r:sysfs_subsys:s0
-/sys/devices(/soc\.0|/soc)?/(fc880000|4080000)\.qcom,mss(/.*)?                                      u:object_r:sysfs_subsys:s0
-/sys/devices(/soc\.0|/soc)?/1d0101c\.qcom,spss(/.*)?                                                u:object_r:sysfs_subsys:s0
-/sys/devices(/soc\.0|/soc)?/(fdce0000|1de0000|cce0000)\.qcom,venus(/.*)?                            u:object_r:sysfs_subsys:s0
-/sys/devices(/soc\.0|/soc)?/soc\:qcom,cpubw(/.*)?                                                   u:object_r:sysfs_subsys:s0
-/sys/devices(/soc\.0|/soc)?/soc\:qcom,ipa_fws@1e08000(/.*)?                                         u:object_r:sysfs_subsys:s0
-/sys/devices(/soc\.0|/soc)?/soc\:qcom,kgsl-hyp(/.*)?                                                u:object_r:sysfs_subsys:s0
-/sys/devices(/soc\.0|/soc)?/5c00000\.qcom,ssc(/.*)?                                                 u:object_r:sysfs_subsys:s0
-
-# Thermal
-/sys/devices(/soc\.0|/soc)?/02-qcom,qpnp-smbcharger/power_supply/battery/charging_enabled           u:object_r:sysfs_thermal:s0
-/sys/devices(/soc\.0|/soc)?/02-qcom,qpnp-smbcharger/power_supply/battery/system_temp_level          u:object_r:sysfs_thermal:s0
-/sys/devices(/soc\.0|/soc)?/f9200000\.ssusb/power_supply/usb/current_max                            u:object_r:sysfs_thermal:s0
-/sys/devices(/soc\.0|/soc)?/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk                            u:object_r:sysfs_thermal:s0
-/sys/devices(/soc\.0|/soc)?/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk                        u:object_r:sysfs_thermal:s0
-/sys/devices(/soc\.0|/soc)?/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/reset_count                       u:object_r:sysfs_thermal:s0
-
-# Timekeep
-/sys/devices(/soc\.0|/soc)?/00-qcom,pm(8941|8950|8994)_rtc/rtc/rtc0/since_epoch                     u:object_r:sysfs_timekeep:s0
-
-# Power management
-/sys/class/power_supply/battery(/.*)?                                                               u:object_r:sysfs_battery_supply:s0
-/sys/class/power_supply/usb(/.*)?                                                                   u:object_r:sysfs_usb_supply:s0
-
-# Video
-/sys/devices(/soc\.0|/soc)?/fd8c0000\.qcom,msm-cam/video4linux/video0/name                          u:object_r:sysfs_video:s0
-/sys/devices(/soc\.0|/soc)?/fd878000\.qcom,fd/video4linux/video1/name                               u:object_r:sysfs_video:s0
-
-# WiFi MAC address
-/sys/devices(/soc\.0|/soc)?/fb000000\.qcom,wcnss-wlan/wcnss_mac_addr                                u:object_r:sysfs_addrsetup:s0
-/sys/devices/platform/bcmdhd_wlan/macaddr                                                           u:object_r:sysfs_addrsetup:s0
-/sys/devices/soc/soc\:bcmdhd_wlan/macaddr                                                           u:object_r:sysfs_addrsetup:s0
-/sys/devices(/soc\.0|/soc)?/bcmdhd_wlan.(90|115)/macaddr                                            u:object_r:sysfs_addrsetup:s0
-/sys/devices(/soc\.0|/soc)?/(fb21b000|a21b000)\.qcom,pronto/subsys2/name                            u:object_r:sysfs_pronto:s0
-/sys/module/bcmdhd/parameters/firmware_path                                                         u:object_r:sysfs_wlan_fwpath:s0
-
-# Zram
-/sys/devices/virtual/block/zram0/mem_used_total                                                     u:object_r:sysfs_zram:s0
-
-###################################
 # data files
-#
-/data/misc/sensors(/.*)?                                            u:object_r:sensors_data_file:s0
-/data/nfc(/.*)?                                                     u:object_r:nfc_data_file:s0
-/data/vendor/nfc(/.*)?                                              u:object_r:nfc_data_file:s0
-/data/misc/qsee(/.*)?                                               u:object_r:data_qsee_file:s0
-/data/misc/dts(/.*)?                                                u:object_r:dts_data_file:s0
-/data/misc/netmgr(/.*)?                                             u:object_r:netmgr_data_file:s0
-/data/misc/radio(/.*)?                                              u:object_r:radio_data_file:s0
-/data/misc/fm(/.*)?                                                 u:object_r:fm_data_file:s0
-/data/audio/acdbdata(/.*)?                                          u:object_r:acdb_data_file:s0
-/data/time(/.*)?                                                    u:object_r:timekeep_data_file:s0
+# TODO: Modify binaries to use /data/vendor/*
+/data/nfc(/.*)?                        u:object_r:nfc_data_file:s0
+/data/misc/netmgr(/.*)?                u:object_r:netmgr_data_file:s0
+/data/misc/radio(/.*)?                 u:object_r:radio_vendor_data_file:s0
+/data/misc/sensors(/.*)?               u:object_r:sensors_vendor_data_file:s0
+/data/vendor/nfc(/.*)?                 u:object_r:nfc_vendor_data_file:s0
+/data/vendor/time(/.*)?                       u:object_r:timekeep_vendor_data_file:s0
 
-###################################
-# persist files
-#
-/persist(/.*)?                                                      u:object_r:persist_file:s0
-/persist/sensors(/.*)?                                              u:object_r:sensors_persist_file:s0
-/persist/data(/.*)?                                                 u:object_r:persist_drm_file:s0
-/persist/data/tz(/.*)?                                              u:object_r:persist_drm_file:s0
-/persist/data/sfs(/.*)?                                             u:object_r:persist_drm_file:s0
-/persist/hlos_rfs(/.*)?                                             u:object_r:rfs_shared_hlos_file:s0
-/persist/display(/.*)?                                              u:object_r:persist_display_file:s0
-/persist/rfs.*                                                      u:object_r:rfs_file:s0
+# input files
+/vendor/usr/idc(/.*)?                  u:object_r:idc_file:s0
+/vendor/usr/keylayout(/.*)?            u:object_r:keylayout_file:s0
 
-###################################
-# proc files
-#
-/proc/bluetooth/sleep/proto                                         u:object_r:sysfs_bluetooth_writable:s0
-/proc/bluetooth/sleep/lpm                                           u:object_r:sysfs_bluetooth_writable:s0
-/proc/bluetooth/sleep/btwrite                                       u:object_r:sysfs_bluetooth_writable:s0
+# /
+/dsp(/.*)?              u:object_r:qdsp_file:s0
 
-###################################
-# adsp files
-#
-/dsp(/.*)?                                                          u:object_r:adsprpcd_file:s0
+# files in firmware
+/firmware(/.*)?         u:object_r:firmware_file:s0
+
+# /persist
+/persist(/.*)?            u:object_r:persist_file:s0
+/persist/data(/.*)?       u:object_r:persist_data_file:s0
+/persist/display(/.*)?    u:object_r:persist_display_file:s0
+/persist/drm(/.*)?        u:object_r:persist_drm_file:s0
+/persist/hlos_rfs(/.*)?   u:object_r:persist_rfs_file:s0
+/persist/rfs(/.*)?        u:object_r:persist_rfs_file:s0
+/persist/sensors(/.*)?    u:object_r:persist_sensors_file:s0
