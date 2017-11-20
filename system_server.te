@@ -15,3 +15,8 @@ dontaudit system_server hal_audio_default:file write;
 dontaudit system_server appdomain:file write;
 
 allow system_server proc_cmdline:file r_file_perms;
+allow system_server netmgrd_socket:dir search;
+allow system_server netmgrd_socket:sock_file write;
+allow system_server netmgrd:unix_stream_socket connectto;
+allow system_server self:socket ioctl;
+allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;
