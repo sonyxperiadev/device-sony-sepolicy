@@ -86,6 +86,7 @@
 /odm/bin/wcnss_filter                 u:object_r:start_hci_filter_exec:s0
 /odm/bin/wcnss_service                u:object_r:wcnss_service_exec:s0
 /odm/bin/cnss-daemon                  u:object_r:cnss-daemon_exec:s0
+/odm/firmware(/.*)?                   u:object_r:firmware_file:s0
 
 ###################################
 # sysfs files
