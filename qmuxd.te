@@ -1,35 +1,17 @@
 type qmuxd, domain;
-type qmuxd_exec, exec_type, file_type;
+type qmuxd_exec, exec_type, vendor_file_type, file_type;
 
 net_domain(qmuxd)
 init_daemon_domain(qmuxd)
+allow qmuxd qmuxd_socket:dir w_dir_perms;
+allow qmuxd qmuxd_socket:sock_file create_file_perms;
 
-qmux_socket(qmuxd);
+allow qmuxd smd_device:chr_file rw_file_perms;
 
-#Allow logging
-allow qmuxd {
-    smd_device
-    smem_log_device
-}:chr_file rw_file_perms;
+allow qmuxd self:socket create_socket_perms;
+allowxperm qmuxd self:socket ioctl msm_sock_ipc_ioctls;
 
-#Allow qmuxd to operate in platform specific transports
-allow qmuxd {
-    sysfs_smd_open_timeout
-}:file w_file_perms;
-
-allow qmuxd self:capability { setuid setpcap };
-
-#Allow qmuxd to have the CAP_BLOCK_SUSPEND capability
 wakelock_use(qmuxd)
 
-r_dir_file(qmuxd, sysfs_ssr);
-
-#Allow qmuxd to access to IPC router
-allow qmuxd smem_log_device:chr_file rw_file_perms;
-allow qmuxd qmuxd:socket create_socket_perms_no_ioctl;
-
-allow qmuxd sysfs:dir r_dir_perms;
-
-r_dir_file(qmuxd, sysfs_pronto)
-r_dir_file(qmuxd, sysfs_socinfo)
-r_dir_file(qmuxd, sysfs_subsys)
+r_dir_file(qmuxd, sysfs_soc)
+rw_dir_file(qmuxd, sysfs_msm_subsys)

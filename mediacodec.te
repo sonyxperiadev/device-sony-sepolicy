@@ -1,10 +1,5 @@
-allow mediacodec rootfs:lnk_file getattr;
-allow mediacodec oemfs:dir search;
+allow mediacodec hal_power_default:unix_stream_socket connectto;
+allow mediacodec powerhal_socket:sock_file write;
 
-# PowerHAL
-rw_dir_file(mediacodec, powerhal_socket)
-allow mediacodec powerhal_socket:sock_file create_file_perms;
-allow mediacodec { hal_power_default system_server }:unix_stream_socket connectto;
-
-#allow mediacodec to access adsprpcd
-r_dir_file(mediacodec, adsprpcd_file);
+allow mediacodec sysfs_soc:file r_file_perms;
+allow mediacodec sysfs_soc:dir search;

@@ -1,17 +1,7 @@
 persist.camera.            u:object_r:camera_prop:s0
-debug.sf.nobootanimation   u:object_r:boot_animation_prop:s0
-
-sys.keymaster.loaded       u:object_r:tee_prop:s0
-sys.listeners.registered   u:object_r:tee_prop:s0
+sys.keymaster.loaded       u:object_r:keymaster_prop:s0
+net.r_rmnet_data0          u:object_r:net_rmnet_prop:s0
+persist.net.doxlat         u:object_r:net_radio_prop:s0
+sys.listeners.registered   u:object_r:tee_listener_prop:s0
+wc_transport.              u:object_r:wc_prop:s0
 persist.sys.timeadjust     u:object_r:timekeep_prop:s0
-persist.net.doxlat         u:object_r:xlat_prop:s0
-
-service.pad1.control.result   u:object_r:sys_pad_prop:s0
-service.pad2.control.result   u:object_r:sys_pad_prop:s0
-ril.pad.force_calib.start     u:object_r:radio_prop:s0
-ril.pad.force_calib.result    u:object_r:radio_prop:s0
-
-wc_transport.                 u:object_r:bluetooth_prop:s0
-persist.bluetooth.a4wp        u:object_r:bluetooth_prop:s0
-
-adb.network.port.es           u:object_r:adbtcpes_prop:s0

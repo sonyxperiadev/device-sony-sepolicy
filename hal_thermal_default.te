@@ -1,1 +1,0 @@
-allow hal_thermal_default oemfs:dir search;

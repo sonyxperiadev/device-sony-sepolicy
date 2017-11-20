@@ -1,2 +1,0 @@
-allow logd random_device:file { getattr open read };
-

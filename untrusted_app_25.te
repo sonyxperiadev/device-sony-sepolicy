@@ -1,2 +1,0 @@
-# kgsl
-allow untrusted_app_25 debugfs_kgsl:dir search;

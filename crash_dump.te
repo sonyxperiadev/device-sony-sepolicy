@@ -1,1 +1,0 @@
-allow crash_dump app_data_file:dir search;
