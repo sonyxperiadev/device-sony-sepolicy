@@ -3,12 +3,13 @@ allow init tmpfs:lnk_file create;
 allow init configfs:lnk_file create;
 
 allow init persist_file:dir mounton;
+allow init configfs:file w_file_perms;
 
 dontaudit init kernel:system module_request;
 
 allow init proc_cmdline:file r_file_perms;
 
-#Allow triggering IPA FWs loading
+# Allow triggering IPA FWs loading
 allow init ipa_dev:chr_file write;
 
 # init_power.te
