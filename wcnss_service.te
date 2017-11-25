@@ -1,9 +1,33 @@
 type wcnss_service, domain;
-type wcnss_service_exec, exec_type, vendor_file_type, file_type;
+type wcnss_service_exec, exec_type, file_type;
 
 init_daemon_domain(wcnss_service)
 net_domain(wcnss_service)
 
 binder_use(wcnss_service)
-vndbinder_use(wcnss_service)
 binder_call(wcnss_service, per_mgr)
+
+allow wcnss_service per_mgr_service:service_manager find;
+
+allow wcnss_service proc_net:file w_file_perms;
+
+allow wcnss_service self:capability {
+    net_admin
+    net_bind_service
+};
+
+allow wcnss_service self:socket create_socket_perms;
+allowxperm wcnss_service self:socket ioctl msm_sock_ipc_ioctls;
+allowxperm wcnss_service self:udp_socket ioctl { SIOCIWFIRSTPRIV_05 SIOCSIFFLAGS };
+allow wcnss_service self:netlink_generic_socket create_socket_perms_no_ioctl;
+allow wcnss_service self:netlink_socket create_socket_perms_no_ioctl;
+
+allow wcnss_service proc_net:file getattr;
+
+r_dir_file(wcnss_service, sysfs_msm_subsys)
+
+allow wcnss_service sysfs_soc:dir search;
+allow wcnss_service sysfs_soc:file r_file_perms;
+
+# request_firmware causes a denial for /firmware. It can be safely ignored
+dontaudit wcnss_service firmware_file:dir search;
