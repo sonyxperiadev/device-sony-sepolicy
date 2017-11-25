@@ -6,7 +6,11 @@ init_daemon_domain(wcnss_filter)
 set_prop(wcnss_filter, wc_prop)
 set_prop(wcnss_filter, bluetooth_prop)
 
+allow wcnss_filter bluetooth_data_file:file rw_file_perms;
 allow wcnss_filter hci_attach_dev:chr_file rw_file_perms;
 
 #allow wakelock
 wakelock_use(wcnss_filter)
+
+# request_firmware causes a denial. It can be safely ignored
+dontaudit wcnss_filter bt_firmware_file:file r_file_perms;
