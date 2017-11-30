@@ -6,7 +6,8 @@ init_daemon_domain(wcnss_filter)
 set_prop(wcnss_filter, wc_prop)
 set_prop(wcnss_filter, bluetooth_prop)
 
-allow wcnss_filter bluetooth_data_file:file rw_file_perms;
+allow wcnss_filter bluetooth_data_file:file create_file_perms;
+allow wcnss_filter bluetooth_data_file:dir rw_dir_perms;
 allow wcnss_filter hci_attach_dev:chr_file rw_file_perms;
 
 #allow wakelock
