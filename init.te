@@ -1,6 +1,7 @@
 # symlink /sdcard to backing block
 allow init tmpfs:lnk_file create;
 allow init configfs:lnk_file create;
+allow init configfs:file rw_file_perms;
 
 allow init persist_file:dir mounton;
 
