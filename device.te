@@ -24,13 +24,13 @@ type device_latency, dev_type;
 type fm_radio_device, dev_type;
 
 #Add for storage pertitions for EFS partitions
-type modem_efs_partition_device, dev_type;
+type modem_block_device, dev_type;
 
 #Define device for partition links
-type ssd_device, dev_type;
+type ssd_block_device, dev_type;
 type rpmb_device, dev_type;
 
-type sd_device, dev_type;
+type sd_block_device, dev_type;
 
 #SSR device
 type ssr_device, dev_type;
@@ -60,10 +60,10 @@ type system_health_monitor_device, dev_type;
 type avtimer_device, dev_type;
 
 type subsys_modem_device, dev_type;
-type trim_area_partition_device, dev_type;
+type ta_block_device, dev_type;
 type persist_block_device, dev_type;
 
 type btpower_device, dev_type;
 
 # ramdump partition block device
-type rdimage_block_device, dev_type;
+type ramdump_block_device, dev_type;

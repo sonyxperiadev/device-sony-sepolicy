@@ -10,9 +10,9 @@ r_dir_file(rmt_storage, sysfs_rmt_storage)
 r_dir_file(rmt_storage, sysfs_uio)
 
 allow rmt_storage {
-    modem_efs_partition_device
+    modem_block_device
     root_block_device
-    ssd_device
+    ssd_block_device
 }:blk_file rw_file_perms;
 
 allow rmt_storage block_device:dir r_dir_perms;
