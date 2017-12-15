@@ -4,3 +4,4 @@ allow mediacodec powerhal_socket:dir { open read search };
 
 allow mediacodec sysfs_soc:file r_file_perms;
 allow mediacodec sysfs_soc:dir search;
+allow mediacodec system_server:fifo_file { append write };
