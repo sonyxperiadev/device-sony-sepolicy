@@ -66,6 +66,9 @@
 /system/vendor/bin/tfa9890_amp                  u:object_r:tfa_amp_exec:s0
 /(vendor|system/vendor)/bin/rdclean.sh          u:object_r:rdclean_exec:s0
 
+# files in /vendor
+/vendor/firmware(/.*)?                          u:object_r:firmware_file:s0
+
 ###################################
 # ODM files
 #
@@ -91,6 +94,7 @@
 /odm/bin/wcnss_filter                           u:object_r:start_hci_filter_exec:s0
 /odm/bin/wcnss_service                          u:object_r:wcnss_service_exec:s0
 /odm/bin/cnss-daemon                            u:object_r:cnss-daemon_exec:s0
+/odm/firmware(/.*)?                             u:object_r:firmware_file:s0
 
 ###################################
 # sysfs files
@@ -222,6 +226,12 @@
 /data/misc/fm(/.*)?                                                 u:object_r:fm_data_file:s0
 /data/audio/acdbdata(/.*)?                                          u:object_r:acdb_data_file:s0
 /data/time(/.*)?                                                    u:object_r:timekeep_data_file:s0
+
+###################################
+# firmware files
+#
+/firmware(/.*)?                                                     u:object_r:firmware_file:s0
+/bt_firmware(/.*)?                                                  u:object_r:bt_firmware_file:s0
 
 ###################################
 # persist files
