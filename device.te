@@ -28,7 +28,7 @@ type modem_block_device, dev_type;
 
 #Define device for partition links
 type ssd_block_device, dev_type;
-type rpmb_device, dev_type;
+type rpmb_block_device, dev_type;
 
 type sd_block_device, dev_type;
 

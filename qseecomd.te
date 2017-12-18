@@ -7,7 +7,7 @@ allow tee self:capability {
 # Need to directly manipulate certain block devices
 # for anti-rollback protection
 allow tee block_device:dir r_dir_perms;
-allow tee rpmb_device:blk_file rw_file_perms;
+allow tee rpmb_block_device:blk_file rw_file_perms;
 
 # Provide tee access to ssd partition for HW FDE
 allow tee ssd_block_device:blk_file rw_file_perms;
