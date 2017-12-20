@@ -40,11 +40,11 @@
 /dev/socket/tad                                 u:object_r:tad_socket:s0
 
 # files in /system
-/system/rfs.*                         u:object_r:rfs_system_file:s0
-/system/vendor/bin/macaddrsetup       u:object_r:addrsetup_exec:s0
-/system/vendor/bin/thermanager        u:object_r:thermanager_exec:s0
-/system/vendor/bin/timekeep           u:object_r:timekeep_exec:s0
-/system/vendor/bin/odmcheck           u:object_r:odmcheck_exec:s0
+/(system|vendor)/rfs.*                         u:object_r:rfs_system_file:s0
+/(system/vendor|vendor)/bin/macaddrsetup       u:object_r:addrsetup_exec:s0
+/(system/vendor|vendor)/bin/thermanager        u:object_r:thermanager_exec:s0
+/(system/vendor|vendor)/bin/timekeep           u:object_r:timekeep_exec:s0
+/(system/vendor|vendor)/bin/odmcheck           u:object_r:odmcheck_exec:s0
 
 # files in /vendor
 /vendor/firmware(/.*)?          u:object_r:vendor_firmware_file:s0
