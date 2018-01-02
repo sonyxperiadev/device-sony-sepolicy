@@ -26,6 +26,8 @@ type debugfs_rmt_storage, debugfs_type, fs_type;
 type debugfs_mdp, debugfs_type, fs_type;
 type debugfs_icnss, debugfs_type, fs_type;
 
+type location_data_file, file_type, data_file_type;
+
 type qmuxd_socket, file_type;
 type netmgrd_socket, file_type;
 type powerhal_socket, file_type;

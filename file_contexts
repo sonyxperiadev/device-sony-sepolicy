@@ -111,6 +111,9 @@
 /data/vendor/time(/.*)?                u:object_r:timekeep_vendor_data_file:s0
 /data/time(/.*)?                       u:object_r:timekeep_vendor_data_file:s0
 
+# Location
+/data/vendor/location(/.*)?            u:object_r:location_data_file:s0
+
 # input files
 /vendor/usr/idc(/.*)?                  u:object_r:idc_file:s0
 /vendor/usr/keylayout(/.*)?            u:object_r:keylayout_file:s0
