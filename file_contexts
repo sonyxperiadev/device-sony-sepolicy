@@ -66,6 +66,7 @@
 /odm/bin/tad_static                   u:object_r:tad_exec:s0
 /odm/bin/ta_qmi_service               u:object_r:ta_qmi_exec:s0
 /odm/bin/tftp_server                  u:object_r:tad_exec:s0
+/odm/bin/xtra-daemon                  u:object_r:location_exec:s0
 /odm/bin/wcnss_filter                 u:object_r:wcnss_filter_exec:s0
 /odm/bin/wcnss_service                u:object_r:wcnss_service_exec:s0
 /odm/bin/cnss-daemon                  u:object_r:wcnss_service_exec:s0
@@ -109,6 +110,9 @@
 /data/vendor/nfc(/.*)?                 u:object_r:nfc_vendor_data_file:s0
 /data/vendor/time(/.*)?                u:object_r:timekeep_vendor_data_file:s0
 /data/time(/.*)?                       u:object_r:timekeep_vendor_data_file:s0
+
+# Location
+/data/vendor/location(/.*)?            u:object_r:location_data_file:s0
 
 # input files
 /vendor/usr/idc(/.*)?                  u:object_r:idc_file:s0
