@@ -75,14 +75,14 @@
 ###############################################
 # same-process HAL files and their dependencies
 #
-/(odm|vendor)/lib(64)?/hw/gralloc\.msm89(52|98)\.so     u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/hw/gralloc\.msm89(52|96|98)\.so  u:object_r:same_process_hal_file:s0
 /(odm|vendor)/lib(64)?/libqdMetaData\.so                u:object_r:same_process_hal_file:s0
 /(odm|vendor)/lib(64)?/libqservice\.so                  u:object_r:same_process_hal_file:s0
 /(odm|vendor)/lib(64)?/libqdutils\.so                   u:object_r:same_process_hal_file:s0
 /(odm|vendor)/lib(64)?/libadreno_utils\.so              u:object_r:same_process_hal_file:s0
 /(odm|vendor)/lib(64)?/libgsl\.so                       u:object_r:same_process_hal_file:s0
 
-/(odm|vendor)/lib(64)?/hw/vulkan\.msm89(52|98)\.so      u:object_r:same_process_hal_file:s0
+/(odm|vendor)/lib(64)?/hw/vulkan\.msm89(52|96|98)\.so   u:object_r:same_process_hal_file:s0
 /(odm|vendor)/lib(64)?/(egl/)?libEGL_adreno\.so         u:object_r:same_process_hal_file:s0
 /(odm|vendor)/lib(64)?/(egl/)?libGLESv1_CM_adreno\.so   u:object_r:same_process_hal_file:s0
 /(odm|vendor)/lib(64)?/(egl/)?libGLESv2_adreno\.so      u:object_r:same_process_hal_file:s0
