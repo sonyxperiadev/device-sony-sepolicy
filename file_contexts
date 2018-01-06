@@ -47,7 +47,7 @@
 /(system/vendor|vendor)/bin/odmcheck           u:object_r:odmcheck_exec:s0
 
 # files in /vendor
-/vendor/firmware(/.*)?          u:object_r:vendor_firmware_file:s0
+/vendor/firmware(/.*)?                u:object_r:vendor_firmware_file:s0
 
 # files in /odm
 /odm/bin/adsprpcd                     u:object_r:adsprpcd_exec:s0
@@ -67,8 +67,6 @@
 /odm/bin/ta_qmi_service               u:object_r:ta_qmi_exec:s0
 /odm/bin/tftp_server                  u:object_r:tad_exec:s0
 /odm/bin/xtra-daemon                  u:object_r:location_exec:s0
-/odm/bin/wcnss_filter                 u:object_r:wcnss_filter_exec:s0
-/odm/bin/wcnss_service                u:object_r:wcnss_service_exec:s0
 /odm/bin/cnss-daemon                  u:object_r:wcnss_service_exec:s0
 /odm/firmware(/.*)?                   u:object_r:vendor_firmware_file:s0
 
