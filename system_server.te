@@ -28,4 +28,5 @@ unix_socket_connect(system_server, qmuxd, qmuxd)
 
 # xtra
 allow system_server location_data_file:sock_file write;
+allow system_server location_data_file:dir search;
 allow system_server location:unix_stream_socket connectto;
