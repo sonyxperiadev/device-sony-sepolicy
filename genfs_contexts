@@ -1,6 +1,5 @@
 genfscon proc /irq                                    u:object_r:proc_irq:s0
 genfscon proc /cmdline                                u:object_r:proc_cmdline:s0
-genfscon proc /version                                u:object_r:proc_version:s0
 
 genfscon sysfs /devices/soc/soc:qcom,cpubw            u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/soc/soc:qcom,mincpubw         u:object_r:sysfs_msm_subsys:s0

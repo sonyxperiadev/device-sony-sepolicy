@@ -24,7 +24,6 @@ allow odmcheck input_device:chr_file r_file_perms;
 allow odmcheck tty_device:chr_file rw_file_perms;
 allow odmcheck ashmem_device:chr_file execute;
 allow odmcheck self:process execmem;
-allow odmcheck proc_version:file r_file_perms;
 
 # Read from /sys/class/leds/lcd-backlight/max_brightness and write to /s/c/l/l/brightness to
 # control backlight brightness.
