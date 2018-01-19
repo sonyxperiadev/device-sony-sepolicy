@@ -7,8 +7,6 @@ allow init { persist_file qdsp_file }:dir mounton;
 
 dontaudit init kernel:system module_request;
 
-allow init proc_cmdline:file r_file_perms;
-
 #Allow triggering IPA FWs loading
 allow init ipa_dev:chr_file write;
 

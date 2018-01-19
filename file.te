@@ -72,5 +72,3 @@ typeattribute sysfs_batteryinfo mlstrustedobject;
 type proc_irq, fs_type;
 type sysfs_irq, fs_type;
 type irqbalance_socket, file_type;
-
-type proc_cmdline, fs_type;
