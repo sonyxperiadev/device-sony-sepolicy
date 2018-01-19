@@ -4,5 +4,3 @@ userdebug_or_eng(`
 ')
 
 dontaudit kernel kernel:system module_request;
-
-allow kernel proc_cmdline:file r_file_perms;
