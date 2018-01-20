@@ -2,6 +2,7 @@ allow hal_bluetooth_default bt_device:chr_file rw_file_perms;
 allow hal_bluetooth_default persist_file:dir search;
 allow hal_bluetooth_default bt_firmware_file:dir search;
 allow hal_bluetooth_default bt_firmware_file:file r_file_perms;
+allow hal_bluetooth_default serial_device:chr_file rw_file_perms;
 
 set_prop(hal_bluetooth_default, wc_prop)
 set_prop(hal_bluetooth_default, bluetooth_prop)

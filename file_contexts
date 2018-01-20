@@ -4,8 +4,8 @@
 /dev/kgsl-3d0                                   u:object_r:gpu_device:s0
 /dev/rtc0                                       u:object_r:rtc_device:s0
 /dev/smd.*                                      u:object_r:smd_device:s0
-# TODO: does ttyMSM0 need to be more specific
-/dev/ttyMSM0                                    u:object_r:tty_device:s0
+/dev/ttyHS0                                     u:object_r:serial_device:s0
+/dev/ttyMSM0                                    u:object_r:console_device:s0
 /dev/ipa                                        u:object_r:ipa_dev:s0
 /dev/wwan_ioctl                                 u:object_r:ipa_dev:s0
 /dev/ipaNatTable                                u:object_r:ipa_dev:s0
@@ -35,7 +35,6 @@
 /dev/socket/qmux_radio(/.*)?                    u:object_r:qmuxd_socket:s0
 /dev/socket/msm_irqbalance                      u:object_r:irqbalance_socket:s0
 /dev/socket/netmgr(/.*)?                        u:object_r:netmgrd_socket:s0
-/dev/ttyHS0                                     u:object_r:hci_attach_dev:s0
 /dev/socket/powerhal(/.*)?                      u:object_r:powerhal_socket:s0
 /dev/socket/tad                                 u:object_r:tad_socket:s0
 
