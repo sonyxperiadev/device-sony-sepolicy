@@ -20,5 +20,4 @@ allow hal_camera_default powerhal_socket:sock_file write;
 
 allow hal_camera_default sysfs_msm_subsys:dir rw_dir_perms;
 allow hal_camera_default sysfs_msm_subsys:file r_file_perms;
-allow hal_camera_default sysfs_soc:dir search;
-allow hal_camera_default sysfs_soc:file r_file_perms;
+r_dir_file(hal_camera_default, sysfs_soc)
