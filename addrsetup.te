@@ -12,10 +12,6 @@ allow addrsetup bluetooth_data_file:file create_file_perms;
 allow addrsetup rootfs:lnk_file getattr;
 allow addrsetup sysfs_addrsetup:file rw_file_perms;
 
-# Permit creation of wlan_mac.bin
-allow addrsetup wifi_data_file:dir rw_dir_perms;
-allow addrsetup wifi_data_file:file create_file_perms;
-
 unix_socket_connect(addrsetup, tad, tad)
 
 allow addrsetup random_device:file read;
