@@ -4,5 +4,6 @@ type thermanager_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(thermanager)
 
 rw_dir_file(thermanager, sysfs_devices_system_cpu)
-rw_dir_file(thermanager, sysfs_thermal)
+rw_dir_file(thermanager, sysfs_leds)
 rw_dir_file(thermanager, sysfs_msm_subsys)
+rw_dir_file(thermanager, sysfs_thermal)
