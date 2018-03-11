@@ -45,3 +45,7 @@ genfscon debugfs /msm_ipc_router                      u:object_r:debugfs_ipc:s0
 genfscon debugfs /mdp                                 u:object_r:debugfs_mdp:s0
 genfscon debugfs /rmt_storage                         u:object_r:debugfs_rmt_storage:s0
 genfscon debugfs /icnss                               u:object_r:debugfs_icnss:s0
+
+# Filesystem tools
+genfscon exfat /                                      u:object_r:vfat:s0
+genfscon fuseblk /                                    u:object_r:fuse:s0
