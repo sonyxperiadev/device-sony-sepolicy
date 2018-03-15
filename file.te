@@ -72,3 +72,6 @@ typeattribute sysfs_batteryinfo mlstrustedobject;
 type proc_irq, fs_type;
 type sysfs_irq, fs_type;
 type irqbalance_socket, file_type;
+
+# /sys/kernel/boot_wlan/boot_wlan
+type sysfs_boot_wlan, fs_type, sysfs_type;
