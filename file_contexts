@@ -38,6 +38,9 @@
 /dev/socket/powerhal(/.*)?                      u:object_r:powerhal_socket:s0
 /dev/socket/tad                                 u:object_r:tad_socket:s0
 
+# sysfs files
+/sys/kernel/boot_wlan/boot_wlan                 u:object_r:sysfs_boot_wlan:s0
+
 # files in /system
 /(system|vendor)/rfs.*                         u:object_r:rfs_system_file:s0
 /(system/vendor|vendor)/bin/macaddrsetup       u:object_r:addrsetup_exec:s0
