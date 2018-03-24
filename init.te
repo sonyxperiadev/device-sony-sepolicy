@@ -7,9 +7,6 @@ allow init { firmware_file bt_firmware_file persist_file qdsp_file }:dir mounton
 
 dontaudit init kernel:system module_request;
 
-#Allow triggering IPA FWs loading
-allow init ipa_dev:chr_file write;
-
 # init_power.te
 allow init sysfs_devices_system_cpu:dir w_dir_perms;
 allow init sysfs_devices_system_cpu:file w_file_perms;
