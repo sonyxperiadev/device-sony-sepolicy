@@ -33,6 +33,7 @@ genfscon sysfs /module/msm_performance                                  u:object
 
 genfscon sysfs /module/diagchar                                         u:object_r:sysfs_diag:s0
 genfscon sysfs /kernel/irq_helper/irq_blacklist_on                      u:object_r:sysfs_irq:s0
+genfscon sysfs /kernel/boot_wlan/boot_wlan                              u:object_r:sysfs_boot_wlan:s0
 
 genfscon debugfs /kgsl/proc                           u:object_r:debugfs_kgsl:s0
 genfscon debugfs /clk/debug_suspend                   u:object_r:debugfs_clk:s0
