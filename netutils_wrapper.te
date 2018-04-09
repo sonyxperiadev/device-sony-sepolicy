@@ -1,6 +1,7 @@
 # For netutils to be able to write their stdout stderr to the pipes opened by netmgrd
 allow netutils_wrapper netmgrd:fd use;
 allow netutils_wrapper netmgrd:fifo_file { getattr read write append };
+allow netutils_wrapper netmgrd:file r_file_perms;
 
 allow netutils_wrapper netmgrd:unix_stream_socket rw_socket_perms;
 
