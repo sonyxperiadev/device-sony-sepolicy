@@ -10,7 +10,6 @@ binder_use(per_mgr)
 
 binder_call(per_mgr, per_mgr)
 binder_call(per_mgr, per_proxy)
-binder_call(per_mgr, cnss-daemon)
 binder_call(per_mgr, rild)
 binder_call(per_mgr, sensors)
 binder_call(per_mgr, wcnss_service)
