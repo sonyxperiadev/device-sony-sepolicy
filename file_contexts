@@ -5,6 +5,7 @@
 /dev/rtc0                                       u:object_r:rtc_device:s0
 /dev/smd.*                                      u:object_r:smd_device:s0
 /dev/ttyHS0                                     u:object_r:serial_device:s0
+/dev/ttyHS1                                     u:object_r:serial_device:s0
 /dev/ttyMSM0                                    u:object_r:console_device:s0
 /dev/ipa                                        u:object_r:ipa_dev:s0
 /dev/wwan_ioctl                                 u:object_r:ipa_dev:s0
@@ -69,6 +70,7 @@
 /(system/vendor|vendor)/bin/rdclean\.sh                                                      u:object_r:rdclean_exec:s0
 /(system/vendor|vendor)/bin/init\.qcom\.devstart\.sh                                         u:object_r:init-qcom-devstart-sh_exec:s0
 /(system/vendor|vendor)/bin/init\.qcom\.ipastart\.sh                                         u:object_r:init-qcom-ipastart-sh_exec:s0
+/(system/vendor|vendor)/bin/initlight                                                        u:object_r:initlight_exec:s0
 /(system/vendor|vendor)/bin/thermanager                                                      u:object_r:thermanager_exec:s0
 /(system/vendor|vendor)/bin/timekeep                                                         u:object_r:timekeep_exec:s0
 /(system/vendor|vendor)/bin/odmcheck                                                         u:object_r:odmcheck_exec:s0
