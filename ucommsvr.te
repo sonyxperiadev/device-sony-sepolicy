@@ -3,4 +3,4 @@ type ucommsvr_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(ucommsvr)
 
-allow initlight serial_device:chr_file rw_file_perms;
+allow ucommsvr serial_device:chr_file rw_file_perms;
