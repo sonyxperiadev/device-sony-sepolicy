@@ -76,3 +76,6 @@ type irqbalance_socket, file_type;
 
 # /sys/kernel/boot_wlan/boot_wlan
 type sysfs_boot_wlan, fs_type, sysfs_type;
+
+# ToF sensor
+type sysfs_tof_sensor, fs_type, sysfs_type;

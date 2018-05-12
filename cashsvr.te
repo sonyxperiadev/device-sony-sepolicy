@@ -5,3 +5,12 @@ init_daemon_domain(cashsvr)
 
 allow cashsvr cashsvr_socket:dir rw_dir_perms;
 allow cashsvr cashsvr_socket:sock_file create_file_perms;
+
+allow cashsvr sysfs_msm_subsys:dir search;
+allow cashsvr sysfs_msm_subsys:file r_file_perms;
+
+allow cashsvr input_device:dir search;
+allow cashsvr input_device:chr_file r_file_perms;
+
+allow cashsvr sysfs_tof_sensor:file rw_file_perms;
+allow cashsvr sysfs:file r_file_perms;

@@ -83,6 +83,10 @@
 /(system/vendor|vendor)/bin/hw/android\.hardware\.gnss@1\.0-service-qti                      u:object_r:hal_gnss_qti_exec:s0
 /(system/vendor|vendor)/bin/hw/android\.hardware\.light@2\.0-service\.sony                   u:object_r:hal_light_default_exec:s0
 
+# sysfs paths
+/sys/devices/virtual/input/input[0-9]+/enable_ps_sensor                                      u:object_r:sysfs_tof_sensor:s0
+/sys/devices/virtual/input/input[0-9]+/set_use_case                                          u:object_r:sysfs_tof_sensor:s0
+
 ###############################################
 # same-process HAL files and their dependencies
 #
