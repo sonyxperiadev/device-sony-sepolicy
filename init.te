@@ -4,6 +4,7 @@ allow init configfs:file rw_file_perms;
 allow init configfs:lnk_file { create unlink };
 
 allow init { firmware_file bt_firmware_file persist_file qdsp_file }:dir mounton;
+allow init proc_irq:file w_file_perms;
 
 dontaudit init kernel:system module_request;
 
