@@ -39,6 +39,7 @@
 /dev/socket/netmgr(/.*)?                        u:object_r:netmgrd_socket:s0
 /dev/socket/powerhal(/.*)?                      u:object_r:powerhal_socket:s0
 /dev/socket/tad                                 u:object_r:tad_socket:s0
+/dev/socket/cashsvr(/.*)?                       u:object_r:cashsvr_socket:s0
 
 # files in /odm
 /odm/bin/hw/android\.hardware\.keymaster@3\.0-service-qti u:object_r:hal_keymaster_qti_exec:s0
@@ -74,6 +75,7 @@
 /(system/vendor|vendor)/bin/init\.qcom\.ipastart\.sh                                         u:object_r:init-qcom-ipastart-sh_exec:s0
 /(system/vendor|vendor)/bin/initlight                                                        u:object_r:initlight_exec:s0
 /(system/vendor|vendor)/bin/ucommsvr                                                         u:object_r:ucommsvr_exec:s0
+/(system/vendor|vendor)/bin/cashsvr                                                          u:object_r:cashsvr_exec:s0
 /(system/vendor|vendor)/bin/thermanager                                                      u:object_r:thermanager_exec:s0
 /(system/vendor|vendor)/bin/timekeep                                                         u:object_r:timekeep_exec:s0
 /(system/vendor|vendor)/bin/odmcheck                                                         u:object_r:odmcheck_exec:s0
