@@ -31,6 +31,7 @@ type location_data_file, file_type, data_file_type;
 type qmuxd_socket, file_type;
 type netmgrd_socket, file_type;
 type powerhal_socket, file_type;
+type cashsvr_socket, file_type;
 type qdsp_file, file_type, mlstrustedobject;
 type tad_socket, file_type;
 
@@ -75,3 +76,6 @@ type irqbalance_socket, file_type;
 
 # /sys/kernel/boot_wlan/boot_wlan
 type sysfs_boot_wlan, fs_type, sysfs_type;
+
+# ToF sensor
+type sysfs_tof_sensor, fs_type, sysfs_type;

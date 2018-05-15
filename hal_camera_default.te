@@ -18,6 +18,10 @@ allow hal_camera_default hal_power_default:unix_stream_socket connectto;
 allow hal_camera_default powerhal_socket:dir search;
 allow hal_camera_default powerhal_socket:sock_file write;
 
+unix_socket_connect(hal_camera_default, cashsvr, cashsvr)
+allow hal_camera_default cashsvr_socket:dir search;
+allow hal_camera_default cashsvr_socket:sock_file write;
+
 allow hal_camera_default sysfs_msm_subsys:dir rw_dir_perms;
 allow hal_camera_default sysfs_msm_subsys:file r_file_perms;
 r_dir_file(hal_camera_default, sysfs_soc)
