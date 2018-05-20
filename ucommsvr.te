@@ -5,9 +5,6 @@ init_daemon_domain(ucommsvr)
 
 allow ucommsvr serial_device:chr_file rw_file_perms;
 
-allow cashsvr sysfs_msm_subsys:dir search;
-allow cashsvr sysfs_msm_subsys:file r_file_perms;
-
 allow ucommsvr input_device:dir search;
 allow ucommsvr input_device:chr_file r_file_perms;
 
