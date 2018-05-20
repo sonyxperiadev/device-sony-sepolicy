@@ -3,4 +3,12 @@ type ucommsvr_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(ucommsvr)
 
+allow ucommsvr self:capability { chown setuid };
+
 allow ucommsvr serial_device:chr_file rw_file_perms;
+
+allow ucommsvr input_device:dir search;
+allow ucommsvr input_device:chr_file r_file_perms;
+
+allow ucommsvr sysfs_tof_sensor:file { rw_file_perms setattr };
+allow ucommsvr sysfs:file r_file_perms;
