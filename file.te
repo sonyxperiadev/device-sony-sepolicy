@@ -15,7 +15,6 @@ type sysfs_bluetooth, sysfs_type, fs_type;
 type sysfs_pcc_profile, sysfs_type, fs_type;
 type sysfs_rtc, sysfs_type, fs_type;
 type sysfs_timekeep, sysfs_type, fs_type;
-type sysfs_odmcheck, sysfs_type, fs_type;
 
 type debugfs_clk, debugfs_type, fs_type;
 type debugfs_ion, debugfs_type, fs_type;
