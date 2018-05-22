@@ -21,8 +21,3 @@ allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;
 rw_dir_file(system_server, qmuxd_socket)
 allow system_server qmuxd_socket:sock_file { create unlink };
 unix_socket_connect(system_server, qmuxd, qmuxd)
-
-# xtra
-allow system_server location_data_file:sock_file write;
-allow system_server location_data_file:dir search;
-allow system_server location:unix_stream_socket connectto;
