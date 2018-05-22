@@ -123,7 +123,6 @@
 # data files
 # TODO: Modify binaries to use /data/vendor/*
 /data/time(/.*)?                       u:object_r:timekeep_vendor_data_file:s0
-/data/misc/netmgr(/.*)?                u:object_r:netmgr_data_file:s0
 /data/misc/radio(/.*)?                 u:object_r:radio_vendor_data_file:s0
 /data/misc/sensors(/.*)?               u:object_r:sensors_vendor_data_file:s0
 /data/vendor/netmgr(/.*)?              u:object_r:netmgr_data_file:s0
