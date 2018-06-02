@@ -19,3 +19,5 @@ type sd_block_device, dev_type;
 type smem_log_device, dev_type;
 type ta_block_device, dev_type;
 type fingerprint_device, dev_type;
+type ab_block_device, dev_type;
+type xbl_block_device, dev_type;
