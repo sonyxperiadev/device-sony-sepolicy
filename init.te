@@ -11,3 +11,13 @@ dontaudit init kernel:system module_request;
 # init_power.te
 allow init sysfs_devices_system_cpu:dir w_dir_perms;
 allow init sysfs_devices_system_cpu:file w_file_perms;
+
+allow init cgroup:file create;
+allow init proc_irq:dir { add_name write };
+allow init proc_irq:file create;
+allow init sysfs:dir add_name;
+allow init sysfs:file create;
+allow init sysfs_msm_subsys:dir { add_name write };
+allow init sysfs_msm_subsys:file create;
+allow init sysfs_msm_subsys_restart:dir { add_name write };
+allow init sysfs_msm_subsys_restart:file create;
