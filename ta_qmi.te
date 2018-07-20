@@ -11,3 +11,5 @@ unix_socket_connect(ta_qmi, tad, tad)
 wakelock_use(ta_qmi)
 
 dontaudit ta_qmi self:capability { dac_override };
+
+allow ta_qmi self:capability net_raw;

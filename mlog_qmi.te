@@ -5,3 +5,5 @@ init_daemon_domain(mlog_qmi)
 
 allow mlog_qmi self:socket create_socket_perms;
 allowxperm mlog_qmi self:socket ioctl msm_sock_ipc_ioctls;
+
+allow mlog_qmi self:capability net_raw;
