@@ -21,3 +21,6 @@ allow init sysfs_msm_subsys:dir { add_name write };
 allow init sysfs_msm_subsys:file create;
 allow init sysfs_msm_subsys_restart:dir { add_name write };
 allow init sysfs_msm_subsys_restart:file create;
+allow init sysfs_devices_system_cpu:file create;
+allow init sysfs_zram:dir { add_name write };
+allow init sysfs_zram:file create;
