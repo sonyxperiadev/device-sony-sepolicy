@@ -8,6 +8,11 @@ genfscon sysfs /devices/soc/soc:qcom,memlat-cpu4      u:object_r:sysfs_msm_subsy
 genfscon sysfs /devices/mdss_dsi_panel/pcc_profile    u:object_r:sysfs_pcc_profile:s0
 genfscon sysfs /devices/virtual/smdpkt                u:object_r:sysfs_msm_subsys:s0
 
+genfscon sysfs /devices/platform/soc/soc:qcom,cpubw                     u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,mincpubw                  u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,memlat-cpu0               u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,memlat-cpu4               u:object_r:sysfs_msm_subsys:s0
+
 genfscon sysfs /class/uio                                               u:object_r:sysfs_uio:s0
 genfscon sysfs /devices/soc/soc:bt_wcn3990                              u:object_r:sysfs_bluetooth_writable:s0
 genfscon sysfs /devices/soc/soc:qcom,gpubw                              u:object_r:sysfs_msm_subsys:s0
@@ -30,6 +35,12 @@ genfscon sysfs /module/subsystem_restart                                u:object
 genfscon sysfs /kernel/boot_adsp/boot                                   u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /kernel/boot_slpi/boot                                   u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /module/msm_performance                                  u:object_r:sysfs_msm_subsys:s0
+
+genfscon sysfs /devices/platform/soc/soc:bt_wcn3990                     u:object_r:sysfs_bluetooth_writable:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,gpubw                     u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,kgsl-hyp                  u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,ipa_fws@1e08000           u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/0.qcom,rmtfs_sharedmem             u:object_r:sysfs_rmtfs:s0
 
 genfscon sysfs /module/diagchar                                         u:object_r:sysfs_diag:s0
 genfscon sysfs /kernel/irq_helper/irq_blacklist_on                      u:object_r:sysfs_irq:s0
