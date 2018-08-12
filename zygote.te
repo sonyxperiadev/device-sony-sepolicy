@@ -1,1 +1,1 @@
-allow zygote cgroup:file create;
+allow zygote cgroup:file rw_file_perms;

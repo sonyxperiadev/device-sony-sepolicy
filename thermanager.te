@@ -3,7 +3,7 @@ type thermanager_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(thermanager)
 
-rw_dir_file(thermanager, sysfs_devices_system_cpu)
-rw_dir_file(thermanager, sysfs_leds)
-rw_dir_file(thermanager, sysfs_msm_subsys)
-rw_dir_file(thermanager, sysfs_thermal)
+r_dir_rw_file(thermanager, sysfs_devices_system_cpu)
+r_dir_rw_file(thermanager, sysfs_leds)
+r_dir_rw_file(thermanager, sysfs_msm_subsys)
+r_dir_rw_file(thermanager, sysfs_thermal)
