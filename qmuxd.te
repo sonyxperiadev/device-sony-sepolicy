@@ -14,4 +14,4 @@ allowxperm qmuxd self:socket ioctl msm_sock_ipc_ioctls;
 wakelock_use(qmuxd)
 
 r_dir_file(qmuxd, sysfs_soc)
-rw_dir_file(qmuxd, sysfs_msm_subsys)
+r_dir_rw_file(qmuxd, sysfs_msm_subsys)

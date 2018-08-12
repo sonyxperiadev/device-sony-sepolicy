@@ -3,6 +3,6 @@ dontaudit surfaceflinger kernel:system module_request;
 
 allow surfaceflinger debugfs_ion:dir search;
 
-rw_dir_file(surfaceflinger, sysfs_graphics)
+r_dir_rw_file(surfaceflinger, sysfs_graphics)
 
 binder_call(surfaceflinger, hal_camera_default)
