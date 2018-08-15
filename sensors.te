@@ -8,8 +8,6 @@ allow sensors self:capability {
     # Change own perms to (nobody,nobody)
     setuid
     setgid
-    # Access /data/misc/sensors/debug and /data/system/sensors/settings
-    dac_override
     net_bind_service
 };
 

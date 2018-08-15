@@ -4,21 +4,20 @@ allow init configfs:file rw_file_perms;
 allow init configfs:lnk_file { create unlink };
 
 allow init { firmware_file bt_firmware_file persist_file qdsp_file }:dir mounton;
-allow init proc_irq:file w_file_perms;
 
 dontaudit init kernel:system module_request;
 
 # init_power.te
-allow init sysfs_devices_system_cpu:dir w_dir_perms;
-allow init sysfs_devices_system_cpu:file w_file_perms;
+# TODO: Test necesssity
+# r_dir_rw_file(init, sysfs_devices_system_cpu)
+# allow init sysfs_devices_system_cpu:file create;
 
-allow init cgroup:file create;
-allow init proc_irq:dir { add_name write };
-allow init proc_irq:file create;
-allow init sysfs_msm_subsys:dir { add_name write };
+allow init cgroup:file rw_file_perms;
+
+# TODO: This is not the right substitution.
+r_dir_rw_file(init, proc_irq)
+
+# TODO: File creation on sysfs?
 allow init sysfs_msm_subsys:file create;
-allow init sysfs_msm_subsys_restart:dir { add_name write };
 allow init sysfs_msm_subsys_restart:file create;
-allow init sysfs_devices_system_cpu:file create;
-allow init sysfs_zram:dir { add_name write };
 allow init sysfs_zram:file create;

@@ -3,11 +3,12 @@ type msm_irqbalanced_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(msm_irqbalanced);
 
-allow msm_irqbalanced self:capability { dac_override setgid setuid };
+# TODO: Does this still need dac_override?
+allow msm_irqbalanced self:capability { setgid setuid };
 
 allow msm_irqbalanced sysfs_devices_system_cpu:file rw_file_perms;
-allow msm_irqbalanced proc_irq:dir rw_dir_perms;
-allow msm_irqbalanced proc_irq:file create_file_perms;
+# TODO: This is not the right substitution.
+r_dir_rw_file(msm_irqbalanced, proc_irq)
 allow msm_irqbalanced sysfs_irq:file r_file_perms;
 allow msm_irqbalanced proc_stat:file r_file_perms;
 allow msm_irqbalanced proc_interrupts:file r_file_perms;
