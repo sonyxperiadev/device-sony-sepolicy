@@ -8,7 +8,7 @@ allow init-qcom-devstart-sh { vendor_file vendor_shell_exec vendor_toolbox_exec 
 # Set the sys.qcom.devup property
 set_prop(init-qcom-devstart-sh, system_prop)
 
-# Set boot_adsp and boot_slpi to 1
+# Set boot_adsp, boot_cdsp and boot_slpi to 1
 allow init-qcom-devstart-sh sysfs_msm_subsys:file w_file_perms;
 
 r_dir_rw_file(init-qcom-devstart-sh, sysfs)
