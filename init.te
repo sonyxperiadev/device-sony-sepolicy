@@ -7,17 +7,11 @@ allow init { firmware_file bt_firmware_file persist_file qdsp_file }:dir mounton
 
 dontaudit init kernel:system module_request;
 
-# init_power.te
-# TODO: Test necesssity
-# r_dir_rw_file(init, sysfs_devices_system_cpu)
-# allow init sysfs_devices_system_cpu:file create;
+# Ignore all accidental O_CREAT open() calls on unsupported filesystems:
+dontaudit init { sysfs_type proc_type }:file create;
 
-allow init cgroup:file rw_file_perms;
+# Allow the init process to read and write default_smp_affinity:
+allow init proc_irq:file rw_file_perms;
 
-# TODO: This is not the right substitution.
-r_dir_rw_file(init, proc_irq)
-
-# TODO: File creation on sysfs?
-allow init sysfs_msm_subsys:file create;
-allow init sysfs_msm_subsys_restart:file create;
-allow init sysfs_zram:file create;
+# enable_ramdumps:
+allow init sysfs_msm_subsys_restart:file rw_file_perms;

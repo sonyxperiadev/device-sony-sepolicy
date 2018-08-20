@@ -11,4 +11,5 @@ set_prop(init-qcom-devstart-sh, system_prop)
 # Set boot_adsp, boot_cdsp and boot_slpi to 1
 allow init-qcom-devstart-sh sysfs_msm_subsys:file w_file_perms;
 
-r_dir_rw_file(init-qcom-devstart-sh, sysfs)
+# Ignore O_CREAT flag in bash file redirection:
+dontaudit init-qcom-devstart-sh sysfs_msm_subsys:file create;
