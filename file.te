@@ -67,8 +67,8 @@ type keylayout_file, file_type, vendor_file_type;
 typeattribute sysfs_batteryinfo mlstrustedobject;
 
 # msm_irqbalance
-type proc_irq, proc_type;
-type sysfs_irq, sysfs_type;
+type proc_irq, proc_type, fs_type;
+type sysfs_irq, sysfs_type, fs_type;
 type irqbalance_socket, file_type;
 
 # /sys/kernel/boot_wlan/boot_wlan

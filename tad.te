@@ -58,10 +58,6 @@ allow tad self:capability {
     net_bind_service
 };
 
-# RFS UID and GIDs were changed and moved from old values to new ones OEM range.
-# The below permissions are required to recursively update the folder ownership
-# to the new values in the OEM range.
-
 #For access to the kmsg device
 allow tad kmsg_device:chr_file w_file_perms;
 
