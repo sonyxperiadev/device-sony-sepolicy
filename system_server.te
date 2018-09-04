@@ -13,7 +13,6 @@ allow system_server audioserver:file w_file_perms;
 allow system_server hal_audio_default:file w_file_perms;
 
 allow system_server netmgrd_socket:dir r_dir_perms;
-unix_socket_connect(system_server, netmgrd, netmgrd)
 allow system_server self:socket ioctl;
 allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;
 
