@@ -52,7 +52,7 @@ type rfs_shared_hlos_file, file_type, data_file_type;
 type nfc_vendor_data_file, file_type, data_file_type;
 type radio_vendor_data_file, file_type, data_file_type, core_data_file_type, mlstrustedobject;
 type sensors_vendor_data_file, file_type, data_file_type, core_data_file_type;
-type timekeep_vendor_data_file, file_type, data_file_type, core_data_file_type;
+type timekeep_vendor_data_file, file_type, data_file_type;
 
 type vendor_firmware_file, vendor_file_type, file_type;
 
