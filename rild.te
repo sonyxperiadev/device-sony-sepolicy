@@ -5,8 +5,6 @@ unix_socket_connect(rild, qmuxd, qmuxd)
 allow rild netmgrd_socket:dir search;
 unix_socket_connect(rild, netmgrd, netmgrd)
 
-allow rild { mediaserver_service audioserver_service }:service_manager find;
-
 allow rild per_mgr_service:service_manager find;
 
 allow rild self:socket ioctl;
