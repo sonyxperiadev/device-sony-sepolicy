@@ -1,5 +1,3 @@
-binder_use(rild)
-
 allow rild qmuxd_socket:dir w_dir_perms;
 allow rild qmuxd_socket:sock_file create_file_perms;
 unix_socket_connect(rild, qmuxd, qmuxd)
