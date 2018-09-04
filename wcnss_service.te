@@ -7,8 +7,6 @@ net_domain(wcnss_service)
 binder_use(wcnss_service)
 binder_call(wcnss_service, per_mgr)
 
-allow wcnss_service per_mgr_service:service_manager find;
-
 allow wcnss_service proc_net:file w_file_perms;
 
 allow wcnss_service self:capability {
