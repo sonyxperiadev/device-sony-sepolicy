@@ -6,8 +6,6 @@ init_daemon_domain(timekeep)
 # Grant permission to set system time and to set the real-time lock
 allow timekeep self:capability { fowner sys_time };
 
-allow timekeep timekeep_vendor_data_file:file create_file_perms;
-
 set_prop(timekeep, timekeep_prop)
 
 r_dir_file(timekeep, sysfs_msm_subsys)
