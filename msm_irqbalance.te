@@ -1,0 +1,16 @@
+type msm_irqbalance, domain;
+type msm_irqbalance_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(msm_irqbalance);
+
+allow msm_irqbalance self:capability { setgid setuid };
+
+# Allow to read and write files in /sys/devices/system/cpu/:
+allow msm_irqbalance sysfs_devices_system_cpu:file rw_file_perms;
+
+# Allow msm_irqbalance to search irq and set SMP affinity:
+r_dir_rw_file(msm_irqbalance, proc_irq)
+
+allow msm_irqbalance sysfs_irq:file r_file_perms;
+allow msm_irqbalance proc_stat:file r_file_perms;
+allow msm_irqbalance proc_interrupts:file r_file_perms;
