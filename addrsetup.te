@@ -5,6 +5,7 @@ init_daemon_domain(addrsetup)
 
 unix_socket_connect(addrsetup, tad, tad)
 
+allow addrsetup { wifi_data_file bluetooth_data_file }:dir create_dir_perms;
 allow addrsetup { wifi_data_file bluetooth_data_file }:file create_file_perms;
 
 allow addrsetup sysfs_addrsetup:file rw_file_perms;
