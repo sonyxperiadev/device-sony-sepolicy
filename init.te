@@ -13,5 +13,10 @@ dontaudit init { sysfs_type proc_type }:file create;
 # Allow the init process to read and write default_smp_affinity:
 allow init proc_irq:file rw_file_perms;
 
+# Led trigger
+allow init sysfs_msm_subsys:file create_file_perms;
+
 # enable_ramdumps:
 allow init sysfs_msm_subsys_restart:file rw_file_perms;
+
+
