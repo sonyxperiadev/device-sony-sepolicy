@@ -1,0 +1,1 @@
+allow servicemanager rild:dir r_dir_perms;

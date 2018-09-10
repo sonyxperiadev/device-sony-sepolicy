@@ -1,3 +1,6 @@
+binder_call(rild, per_mgr)
+binder_call(rild, servicemanager)
+
 allow rild qmuxd_socket:dir w_dir_perms;
 allow rild qmuxd_socket:sock_file create_file_perms;
 unix_socket_connect(rild, qmuxd, qmuxd)
@@ -5,5 +8,12 @@ unix_socket_connect(rild, qmuxd, qmuxd)
 allow rild netmgrd_socket:dir search;
 unix_socket_connect(rild, netmgrd, netmgrd)
 
+allow rild per_mgr_service:service_manager find;
+
 allow rild self:socket ioctl;
 allowxperm rild self:socket ioctl msm_sock_ipc_ioctls;
+
+allow rild radio_vendor_data_file:dir rw_dir_perms;
+allow rild radio_vendor_data_file:file create_file_perms;
+
+allow rild radio_data_file:dir r_dir_perms;
