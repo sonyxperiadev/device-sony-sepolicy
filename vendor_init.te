@@ -1,0 +1,16 @@
+allow vendor_init {
+    audio_data_file
+    bluetooth_data_file
+    camera_data_file
+    dhcp_data_file
+    radio_vendor_data_file
+    rootfs
+    sensors_vendor_data_file
+    system_data_file
+    wifi_data_file
+}:dir create_dir_perms;
+
+allow vendor_init device:file create_file_perms;
+allow vendor_init kernel:system { module_request };
+allow vendor_init proc:file rw_file_perms;
+allow vendor_init radio_vendor_data_file:file create_file_perms;
