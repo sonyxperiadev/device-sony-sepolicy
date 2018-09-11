@@ -45,7 +45,7 @@ type persist_time_file, file_type;
 
 type rfs_system_file, file_type, vendor_file_type;
 
-type netmgr_data_file, file_type, data_file_type;
+type netmgr_vendor_data_file, file_type, data_file_type;
 type rfs_file, file_type, data_file_type;
 type rfs_shared_hlos_file, file_type, data_file_type;
 
