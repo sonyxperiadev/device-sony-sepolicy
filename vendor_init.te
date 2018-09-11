@@ -1,3 +1,5 @@
+typeattribute vendor_init data_between_core_and_vendor_violators;
+
 allow vendor_init {
     audio_data_file
     bluetooth_data_file
@@ -10,7 +12,5 @@ allow vendor_init {
     wifi_data_file
 }:dir create_dir_perms;
 
-allow vendor_init device:file create_file_perms;
-allow vendor_init kernel:system { module_request };
-allow vendor_init proc:file rw_file_perms;
 allow vendor_init radio_vendor_data_file:file create_file_perms;
+dontaudit vendor_init kernel:system module_request;
