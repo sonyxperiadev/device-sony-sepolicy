@@ -126,10 +126,12 @@
 # TODO: Modify binaries to use /data/vendor/*
 /data/vendor/radio(/.*)?               u:object_r:radio_vendor_data_file:s0
 /data/vendor/sensors(/.*)?             u:object_r:sensors_vendor_data_file:s0
-/data/vendor/netmgr(/.*)?              u:object_r:netmgr_data_file:s0
+/data/vendor/netmgr(/.*)?              u:object_r:netmgr_vendor_data_file:s0
 /data/vendor/nfc(/.*)?                 u:object_r:nfc_vendor_data_file:s0
 /data/vendor/time(/.*)?                u:object_r:timekeep_vendor_data_file:s0
-/data/vendor/location(/.*)?            u:object_r:location_data_file:s0
+/data/vendor/location(/.*)?            u:object_r:location_vendor_data_file:s0
+/data/vendor/bluetooth(/.*)?           u:object_r:bluetooth_vendor_data_file:s0
+/data/vendor/wifi(/.*)?                u:object_r:wifi_vendor_data_file:s0
 
 # /
 /dsp(/.*)?                u:object_r:qdsp_file:s0

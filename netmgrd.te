@@ -36,8 +36,8 @@ wakelock_use(netmgrd)
 domain_auto_trans(netmgrd, netutils_wrapper_exec, netutils_wrapper)
 
 allow netmgrd proc_net:file rw_file_perms;
-allow netmgrd netmgr_data_file:dir rw_dir_perms;
-allow netmgrd netmgr_data_file:file create_file_perms;
+allow netmgrd netmgr_vendor_data_file:dir rw_dir_perms;
+allow netmgrd netmgr_vendor_data_file:file create_file_perms;
 
 # Allow execution of commands in shell
 allow netmgrd system_file:file x_file_perms;

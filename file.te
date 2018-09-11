@@ -23,7 +23,7 @@ type debugfs_rmt_storage, debugfs_type, fs_type;
 type debugfs_mdp, debugfs_type, fs_type;
 type debugfs_icnss, debugfs_type, fs_type;
 
-type location_data_file, file_type, data_file_type;
+type location_vendor_data_file, file_type, data_file_type;
 
 type qmuxd_socket, file_type;
 type netmgrd_socket, file_type;
@@ -45,14 +45,16 @@ type persist_time_file, file_type;
 
 type rfs_system_file, file_type, vendor_file_type;
 
-type netmgr_data_file, file_type, data_file_type;
+type netmgr_vendor_data_file, file_type, data_file_type;
 type rfs_file, file_type, data_file_type;
 type rfs_shared_hlos_file, file_type, data_file_type;
 
 type nfc_vendor_data_file, file_type, data_file_type;
-type radio_vendor_data_file, file_type, data_file_type, core_data_file_type, mlstrustedobject;
-type sensors_vendor_data_file, file_type, data_file_type, core_data_file_type;
+type radio_vendor_data_file, file_type, data_file_type, mlstrustedobject;
+type sensors_vendor_data_file, file_type, data_file_type;
 type timekeep_vendor_data_file, file_type, data_file_type;
+type wifi_vendor_data_file, file_type, data_file_type;
+type bluetooth_vendor_data_file, file_type, data_file_type;
 
 type vendor_firmware_file, vendor_file_type, file_type;
 
