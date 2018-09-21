@@ -1,6 +1,5 @@
 r_dir_file(ueventd, firmware_file)
 r_dir_file(ueventd, persist_file)
-r_dir_file(ueventd, wifi_vendor_data_file)
 
 allow ueventd {
     { sysfs_type - usermodehelper }
