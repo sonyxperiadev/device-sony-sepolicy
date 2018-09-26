@@ -110,6 +110,16 @@
 /(system/vendor|vendor|odm)/lib(64)?/libdrmutils\.so                  u:object_r:same_process_hal_file:s0
 /(system/vendor|vendor|odm)/lib(64)?/libdrm\.so                       u:object_r:same_process_hal_file:s0
 
+# libOpenCL and its dependencies
+/(system/vendor|vendor|odm)/lib(64)?/(egl/)?libq3dtools_adreno\.so    u:object_r:same_process_hal_file:s0
+/(system/vendor|vendor|odm)/lib(64)?/libOpenCL\.so                    u:object_r:same_process_hal_file:s0
+
+# loaded by native loader (zygote) for all processes
+/(system/vendor|vendor|odm)/lib(64)?/libadsprpc\.so                   u:object_r:same_process_hal_file:s0
+/(system/vendor|vendor|odm)/lib(64)?/libcdsprpc\.so                   u:object_r:same_process_hal_file:s0
+/(system/vendor|vendor|odm)/lib(64)?/libsdsprpc\.so                   u:object_r:same_process_hal_file:s0
+/(system/vendor|vendor|odm)/lib(64)?/libgrallocutils\.so              u:object_r:same_process_hal_file:s0
+
 # RenderScript dependencies.
 # To test: run cts -m CtsRenderscriptTestCases
 /(system/vendor|vendor|odm)/lib(64)?/libRSDriver_adreno\.so           u:object_r:same_process_hal_file:s0
