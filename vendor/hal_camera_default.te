@@ -11,6 +11,7 @@ binder_call(hal_camera_default, system_server)
 binder_call(hal_camera_default, hal_graphics_allocator)
 
 set_prop(hal_camera_default, camera_prop)
+set_prop(hal_camera_default, vendor_camera_prop)
 
 allow hal_camera_default sysfs_camera:dir r_dir_perms;
 allow hal_camera_default sysfs_camera:file r_file_perms;
