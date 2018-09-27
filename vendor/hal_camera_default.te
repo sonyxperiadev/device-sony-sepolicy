@@ -28,3 +28,6 @@ allow hal_camera_default cashsvr_socket:sock_file write;
 allow hal_camera_default sysfs_msm_subsys:dir r_dir_perms;
 allow hal_camera_default sysfs_msm_subsys:file r_file_perms;
 r_dir_file(hal_camera_default, sysfs_soc)
+
+allow hal_camera_default camera_vendor_data_file:dir rw_dir_perms;
+allow hal_camera_default camera_vendor_data_file:file create_file_perms;
