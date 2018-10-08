@@ -6,12 +6,10 @@ init_daemon_domain(per_mgr);
 
 add_service(per_mgr, per_mgr_service)
 
-binder_use(per_mgr)
-
-binder_call(per_mgr, per_mgr)
+vndbinder_use(per_mgr)
+binder_call(per_mgr, hal_gnss)
 binder_call(per_mgr, per_proxy)
 binder_call(per_mgr, rild)
-binder_call(per_mgr, sensors)
 binder_call(per_mgr, wcnss_service)
 
 allow per_mgr self:capability net_bind_service;
