@@ -13,6 +13,7 @@ type sysfs_addrsetup, sysfs_type, fs_type;
 type sysfs_bluetooth, sysfs_type, fs_type;
 type sysfs_pcc_profile, sysfs_type, fs_type;
 type sysfs_timekeep, sysfs_type, fs_type;
+type sysfs_usb_supply, sysfs_type, fs_type;
 
 type debugfs_clk, debugfs_type, fs_type;
 type debugfs_ion, debugfs_type, fs_type;

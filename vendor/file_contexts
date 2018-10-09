@@ -29,6 +29,7 @@
 /dev/smem_log                                   u:object_r:smem_log_device:s0
 /dev/fingerprint                                u:object_r:fingerprint_device:s0
 /dev/dri/card0                                  u:object_r:graphics_device:s0
+/dev/wlan                                       u:object_r:wlan_device:s0
 
 # dev socket nodes
 /dev/socket/qmux_audio(/.*)?                    u:object_r:qmuxd_socket:s0
