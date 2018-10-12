@@ -8,4 +8,5 @@ r_dir_file(hal_bluetooth_default, persist_file)
 r_dir_file(hal_bluetooth_default, bt_firmware_file)
 r_dir_file(hal_bluetooth_default, vendor_firmware_file)
 rw_dir_file(hal_bluetooth_default, bluetooth_data_file)
+allow hal_bluetooth_default bluetooth_data_file:file create_file_perms;
 rw_dir_file(hal_bluetooth_default, sysfs_bluetooth)
