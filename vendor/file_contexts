@@ -60,6 +60,7 @@
 /odm/bin/rmt_storage                            u:object_r:rmt_storage_exec:s0
 /odm/bin/sct_service                            u:object_r:sct_exec:s0
 /odm/bin/sensors\.qcom                          u:object_r:sensors_exec:s0
+/odm/bin/sscrpcd                                u:object_r:sscrpcd_exec:s0
 /odm/bin/tad_static                             u:object_r:tad_exec:s0
 /odm/bin/ta_qmi_service                         u:object_r:ta_qmi_exec:s0
 /odm/bin/tftp_server                            u:object_r:tad_exec:s0
