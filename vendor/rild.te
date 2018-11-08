@@ -18,3 +18,6 @@ unix_socket_connect(rild, netmgrd, netmgrd)
 
 allow rild self:socket ioctl;
 allowxperm rild self:socket ioctl msm_sock_ipc_ioctls;
+
+allow rild default_android_service:service_manager find;
+allow rild secure_element:binder call;

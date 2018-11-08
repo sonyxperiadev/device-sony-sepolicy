@@ -61,3 +61,4 @@ allow tad kmsg_device:chr_file w_file_perms;
 #Prevent other domains from accessing RFS data files.
 neverallow { domain -tad -kernel -recovery -init -vendor_init userdebug_or_eng(`-su') } rfs_file:dir create_dir_perms;
 neverallow { domain -tad -kernel -recovery -init -vendor_init userdebug_or_eng(`-su') } rfs_file:file create_file_perms;
+allow tad proc_cmdline:file { open read };

@@ -15,3 +15,7 @@ allow init proc_irq:file rw_file_perms;
 
 # enable_ramdumps:
 allow init sysfs_msm_subsys_restart:file rw_file_perms;
+
+allow init nativetest_data_file:dir { getattr open read };
+allow init nativetest_data_file:file getattr;
+allow init sysfs_msm_subsys:file { open setattr write };

@@ -42,3 +42,6 @@ allow hal_gnss_qti self:netlink_route_socket { bind create nlmsg_read read write
 # libqdi and have all its clients use netlink route
 # sockets.
 dontaudit hal_gnss_qti self:udp_socket create;
+
+allow hal_gnss_qti kernel:system module_request;
+allow hal_gnss_qti sysfs:file { open read };

@@ -13,6 +13,8 @@ allow rmt_storage self:capability {
     sys_admin
 };
 
+allow rmt_storage kernel:system module_request;
+
 allow rmt_storage modem_block_device:blk_file rw_file_perms;
 allow rmt_storage uio_device:chr_file rw_file_perms;
 allow rmt_storage block_device:dir { open read search };
