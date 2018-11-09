@@ -32,6 +32,7 @@ type powerhal_socket, file_type;
 type cashsvr_socket, file_type;
 type qdsp_file, file_type, mlstrustedobject;
 type tad_socket, file_type;
+type ims_socket, file_type;
 
 type firmware_file, fs_type, contextmount_type;
 type bt_firmware_file, fs_type, contextmount_type;

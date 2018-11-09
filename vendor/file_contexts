@@ -48,6 +48,9 @@
 /odm/bin/hw/android\.hardware\.gatekeeper@1\.0-service-qti u:object_r:hal_gatekeeper_qti_exec:s0
 /odm/bin/adsprpcd                               u:object_r:adsprpcd_exec:s0
 /odm/bin/cdsprpcd                               u:object_r:cdsprpcd_exec:s0
+/odm/bin/ims_rtp_daemon                         u:object_r:hal_imsrtp_exec:s0
+/odm/bin/imsdatadaemon                          u:object_r:ims_exec:s0
+/odm/bin/imsqmidaemon                           u:object_r:ims_exec:s0
 /odm/bin/irsc_util                              u:object_r:irsc_util_exec:s0
 /odm/bin/mlog_qmi_service                       u:object_r:mlog_qmi_exec:s0
 /odm/bin/msm_irqbalance                         u:object_r:msm_irqbalance_exec:s0
