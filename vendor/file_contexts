@@ -150,6 +150,12 @@
 /data/vendor/audio(/.*)?               u:object_r:audio_vendor_data_file:s0
 /data/vendor/camera(/.*)?              u:object_r:camera_vendor_data_file:s0
 
+# TODO: Remove them once no need to maintain the backward compatibility. (b/111219177)
+/persist                             u:object_r:rootfs:s0
+/firmware                            u:object_r:rootfs:s0
+/bt_firmware                         u:object_r:rootfs:s0
+/dsp                                 u:object_r:rootfs:s0
+
 # /
 /(system/vendor|vendor)/dsp(/.*)?              u:object_r:qdsp_file:s0
 
