@@ -5,6 +5,7 @@ init_daemon_domain(tad)
 
 allow tad block_device:dir { getattr search };
 allow tad ta_block_device:blk_file rw_file_perms;
+allow tad mnt_vendor_file:dir search;
 
 # Read access to pseudo filesystems.
 r_dir_file(tad, proc)
@@ -45,7 +46,7 @@ allow tad persist_rfs_file:dir create_dir_perms;
 allow tad persist_rfs_file:file create_file_perms;
 
 #For firmware entries in /firmware to read NHLOS.bin files ( only perms to read and get attributes).
-r_dir_file(tad, firmware_file)
+r_dir_file(tad, vendor_firmware_file)
 
 #For dropping permisions from root and wakelock
 allow tad self:capability {

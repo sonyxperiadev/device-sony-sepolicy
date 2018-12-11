@@ -1,4 +1,4 @@
-r_dir_file(ueventd, firmware_file)
+r_dir_file(ueventd, vendor_firmware_file)
 r_dir_file(ueventd, persist_file)
 
 allow ueventd {

@@ -10,4 +10,5 @@ allow sscrpcd self:capability {
 
 allow sscrpcd persist_sensors_file:dir { open read search };
 allow sscrpcd persist_sensors_file:file { getattr open read };
+allow sscrpcd qdsp_device:chr_file { open read };
 allow sscrpcd qdsp_device:chr_file ioctl;

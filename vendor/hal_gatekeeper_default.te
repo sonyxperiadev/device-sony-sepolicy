@@ -1,4 +1,4 @@
-allow hal_gatekeeper_default firmware_file:dir search;
+allow hal_gatekeeper_default vendor_firmware_file:dir search;
 
 get_prop(hal_gatekeeper_default, tee_listener_prop)
 set_prop(hal_gatekeeper_default, keymaster_prop)

@@ -160,8 +160,8 @@
 /(system/vendor|vendor)/dsp(/.*)?              u:object_r:qdsp_file:s0
 
 # files in firmware
-/(system/vendor|vendor)/firmware_mnt(/.*)?     u:object_r:firmware_file:s0
-/(system/vendor|vendor)/bt_firmware(/.*)?      u:object_r:bt_firmware_file:s0
+/(system/vendor|vendor)/firmware_mnt(/.*)?     u:object_r:vendor_firmware_file:s0
+/(system/vendor|vendor)/bt_firmware(/.*)?      u:object_r:vendor_firmware_file:s0
 
 # /persist
 /mnt/vendor/persist(/.*)?            u:object_r:persist_file:s0

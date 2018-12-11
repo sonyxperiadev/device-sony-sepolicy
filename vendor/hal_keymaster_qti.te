@@ -34,4 +34,4 @@ init_daemon_domain(hal_keymaster_qti)
 allow hal_keymaster_qti tee_listener_prop:file r_file_perms;
 
 # allow tee to load firmware images
-r_dir_file(hal_keymaster_qti, firmware_file)
+r_dir_file(hal_keymaster_qti, vendor_firmware_file)
