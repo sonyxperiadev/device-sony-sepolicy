@@ -7,6 +7,8 @@ allow hal_bluetooth_default bluetooth_vendor_data_file:file create_file_perms;
 allow hal_bluetooth_default kernel:system module_request;
 allow hal_bluetooth_default self:socket create;
 
+allow hal_bluetooth_default vendor_default_prop:property_service set;
+
 set_prop(hal_bluetooth_default, wc_prop)
 set_prop(hal_bluetooth_default, bluetooth_prop)
 
