@@ -13,3 +13,4 @@ type sensors_prop, property_type;
 type vendor_usb_prop, property_type;
 type vendor_usb_config_prop, property_type;
 type vendor_radio_prop, property_type;
+type vendor_device_prop, property_type;
