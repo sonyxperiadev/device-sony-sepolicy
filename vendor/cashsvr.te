@@ -3,6 +3,7 @@ type cashsvr_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(cashsvr)
 
+# For dropping permissions
 allow cashsvr self:capability { chown setuid };
 
 allow cashsvr cashsvr_socket:dir rw_dir_perms;
@@ -12,4 +13,5 @@ allow cashsvr input_device:dir search;
 allow cashsvr input_device:chr_file r_file_perms;
 
 allow cashsvr sysfs_tof_sensor:file { rw_file_perms setattr };
-allow cashsvr sysfs:file r_file_perms;
+allow cashsvr sysfs_rgbc_sensor:file { rw_file_perms setattr };
+allow cashsvr sysfs_input_name:file r_file_perms;
