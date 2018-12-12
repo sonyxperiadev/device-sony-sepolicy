@@ -3,6 +3,7 @@ type mlog_qmi_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(mlog_qmi)
 
+allow mlog_qmi kernel:system module_request;
 allow mlog_qmi self:socket create_socket_perms;
 allowxperm mlog_qmi self:socket ioctl msm_sock_ipc_ioctls;
 
