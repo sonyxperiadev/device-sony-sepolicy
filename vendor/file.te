@@ -14,6 +14,7 @@ type sysfs_bluetooth, sysfs_type, fs_type;
 type sysfs_pcc_profile, sysfs_type, fs_type;
 type sysfs_timekeep, sysfs_type, fs_type;
 type sysfs_usb_supply, sysfs_type, fs_type;
+type sysfs_input_name, sysfs_type, fs_type;
 
 type debugfs_clk, debugfs_type, fs_type;
 type debugfs_ion, debugfs_type, fs_type;
@@ -79,3 +80,5 @@ type sysfs_boot_wlan, fs_type, sysfs_type;
 
 # ToF sensor
 type sysfs_tof_sensor, fs_type, sysfs_type;
+# RGBCIR sensor
+type sysfs_rgbc_sensor, fs_type, sysfs_type;
