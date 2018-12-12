@@ -6,6 +6,8 @@
 allow hal_bootctl_default block_device:dir r_dir_perms;
 
 # Edit the attributes stored in the GPT.
+allow hal_bootctl_default block_device:blk_file getattr;
+allow hal_bootctl_default gpt_block_device:blk_file rw_file_perms;
 allow hal_bootctl_default boot_block_device:blk_file rw_file_perms;
 allow hal_bootctl_default misc_block_device:blk_file rw_file_perms;
 allow hal_bootctl_default root_block_device:blk_file rw_file_perms;
