@@ -165,7 +165,8 @@
 /data/vendor/time(/.*)?                u:object_r:timekeep_vendor_data_file:s0
 /data/vendor/location(/.*)?            u:object_r:location_vendor_data_file:s0
 /data/vendor/bluetooth(/.*)?           u:object_r:bluetooth_vendor_data_file:s0
-/data/vendor/wifi(/.*)?                u:object_r:wifi_vendor_data_file:s0
+/data/vendor/wifi/hostapd(/.*)?        u:object_r:hostapd_data_file:s0
+/data/vendor/wifi/wpa(/.*)?            u:object_r:wpa_data_file:s0
 /data/vendor/audio(/.*)?               u:object_r:audio_vendor_data_file:s0
 /data/vendor/camera(/.*)?              u:object_r:camera_vendor_data_file:s0
 
