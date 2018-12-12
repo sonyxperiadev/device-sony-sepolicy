@@ -9,3 +9,4 @@ allow per_proxy per_mgr_service:service_manager find;
 vndbinder_use(per_proxy)
 binder_call(per_proxy, per_mgr)
 r_dir_file(per_proxy, sysfs_msm_subsys)
+r_dir_file(per_proxy, sysfs_esoc)

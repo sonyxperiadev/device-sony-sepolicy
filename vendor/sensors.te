@@ -25,3 +25,4 @@ allow sensors sysfs_soc:dir r_dir_perms;
 allow sensors sysfs_soc:file r_file_perms;
 
 r_dir_file(sensors, sysfs_msm_subsys)
+r_dir_file(sensors, sysfs_esoc)
