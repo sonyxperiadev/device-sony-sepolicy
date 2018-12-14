@@ -5,6 +5,7 @@ init_daemon_domain(ims)
 net_domain(ims)
 
 get_prop(ims, hwservicemanager_prop)
+set_prop(ims, qcom_ims_prop)
 
 unix_socket_connect(ims, netmgrd, netmgrd)
 

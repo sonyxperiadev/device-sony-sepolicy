@@ -8,7 +8,8 @@ wc_transport.              u:object_r:wc_prop:s0
 persist.sys.timeadjust     u:object_r:timekeep_prop:s0
 adb.network.port.es        u:object_r:adbtcpes_prop:s0
 persist.dispcal.setting    u:object_r:dispcal_prop:s0
-sys.ims.                   u:object_r:qcom_ims_prop:s0
+vendor.ims.                u:object_r:qcom_ims_prop:s0
+persist.vendor.ims.        u:object_r:qcom_ims_prop:s0
 persist.vendor.radio.      u:object_r:vendor_radio_prop:s0
 ro.vendor.ril.             u:object_r:vendor_radio_prop:s0
 sensors.                   u:object_r:sensors_prop:s0

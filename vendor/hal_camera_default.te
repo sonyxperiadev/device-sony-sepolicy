@@ -1,6 +1,9 @@
 vndbinder_use(hal_camera_default);
 allow hal_camera_default qdisplay_service:service_manager find;
 
+allow hal_camera_default self:socket { create ioctl read write };
+allowxperm hal_camera self:socket ioctl { IPC_ROUTER_IOCTL_LOOKUP_SERVER IPC_ROUTER_IOCTL_BIND_CONTROL_PORT };
+
 allow hal_camera_default {
      fwk_display_hwservice
      hal_graphics_mapper_hwservice
@@ -35,3 +38,5 @@ r_dir_file(hal_camera_default, sysfs_esoc)
 
 allow hal_camera_default camera_vendor_data_file:dir rw_dir_perms;
 allow hal_camera_default camera_vendor_data_file:file create_file_perms;
+
+allow hal_camera_default kernel:system module_request;
