@@ -14,3 +14,11 @@ set_prop(system_app, timekeep_prop)
 # For android setttings
 binder_call(system_app, per_mgr)
 binder_call(system_app, wificond)
+
+# This is a neverallow anyways, so ignore it
+dontaudit system_app perfprofd:binder call;
+
+allow system_app fs_bpf:dir search;
+allow system_app proc_pagetypeinfo:file r_file_perms;
+allow system_app sysfs_zram:dir search;
+allow system_app sysfs_zram:file r_file_perms;
