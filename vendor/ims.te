@@ -8,6 +8,7 @@ get_prop(ims, hwservicemanager_prop)
 set_prop(ims, qcom_ims_prop)
 
 unix_socket_connect(ims, netmgrd, netmgrd)
+unix_socket_connect(ims, qmuxd, qmuxd)
 
 allow ims self:capability net_bind_service;
 
@@ -18,6 +19,12 @@ allow ims netmgrd_socket:dir search;
 allow ims netmgrd_socket:sock_file w_file_perms;
 allowxperm ims self:socket ioctl msm_sock_ipc_ioctls;
 allowxperm ims self:udp_socket ioctl RMNET_IOCTL_EXTENDED;
+
+allow ims qmuxd_socket:dir create_dir_perms;
+allow ims qmuxd_socket:sock_file create_file_perms;
+
+r_dir_file(ims, sysfs_msm_subsys)
+r_dir_file(ims, sysfs_soc)
 
 hwbinder_use(ims)
 
