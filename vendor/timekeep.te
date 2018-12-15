@@ -1,14 +1,22 @@
+# Policy for the timekeep.c oneshot system service
+# Gets called once during init by vendor timekeep.rc and restores
+# clock from persist.sys.timeadjust property, reads
+# /sys/class/rtc/rtc0/since_epoch
 type timekeep, domain;
 type timekeep_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(timekeep)
 
-# Grant permission to set system time and to set the real-time lock
+# Grant permission to set system time and to set the real-time clock
 allow timekeep self:capability { fowner sys_time };
 
+# Write to /data/vendor/time/ats_2
 allow timekeep timekeep_vendor_data_file:dir rw_dir_perms;
 allow timekeep timekeep_vendor_data_file:file create_file_perms;
 
+# Set persist.sys.timeadjust
 set_prop(timekeep, timekeep_prop)
 
-r_dir_file(timekeep, sysfs_msm_subsys)
+# Read /sys/class/rtc/rtc0/since_epoch
+allow timekeep sysfs_rtc:dir search;
+allow timekeep sysfs_rtc:{ file lnk_file } r_file_perms;

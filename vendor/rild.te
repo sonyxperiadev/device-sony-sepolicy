@@ -1,5 +1,7 @@
 vndbinder_use(rild)
+
 binder_call(rild, per_mgr)
+binder_call(rild, qcrilam_app);
 
 allow rild per_mgr_service:service_manager find;
 

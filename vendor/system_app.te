@@ -7,10 +7,18 @@ r_dir_rw_file(system_app, sysfs_pcc_profile)
 set_prop(system_app, adbtcpes_prop)
 set_prop(system_app, dispcal_prop)
 
-# TimeKeep Java service
-allow system_app timekeep_vendor_data_file:dir create_dir_perms;
-allow system_app timekeep_vendor_data_file:file create_file_perms;
+# Different system_apps read this value, independent from timekeep.c or
+# TimeKeep.java, so keep it in here
 set_prop(system_app, timekeep_prop)
 
+# For android setttings
 binder_call(system_app, per_mgr)
 binder_call(system_app, wificond)
+
+# This is a neverallow anyways, so ignore it
+dontaudit system_app perfprofd:binder call;
+
+allow system_app fs_bpf:dir search;
+allow system_app proc_pagetypeinfo:file r_file_perms;
+allow system_app sysfs_zram:dir search;
+allow system_app sysfs_zram:file r_file_perms;

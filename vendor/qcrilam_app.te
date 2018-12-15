@@ -1,0 +1,19 @@
+type qcrilam_app, domain;
+
+app_domain(qcrilam_app)
+
+# Needed to get access to /data/data/com.sony.qcrilam
+# Only getattr and search are requested since qcrilam does not write to its own directory
+# /data/data/com.sony.qcrilam only has two empty subdirs
+dontaudit qcrilam_app app_data_file:dir { getattr search };
+
+# Acccess to its own service and broadcasts
+allow qcrilam_app activity_service:service_manager find;
+# Find media.audio_flinger
+allow qcrilam_app audioserver_service:service_manager find;
+
+# Find the vendor.qti.hardware.radio.am::IQcRilAudio HIDL service
+allow qcrilam_app vnd_qcrilhook_hwservice:hwservice_manager find;
+
+# Interact with rild
+binder_call(qcrilam_app, rild)
