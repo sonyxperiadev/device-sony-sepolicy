@@ -32,7 +32,7 @@ type qmuxd_socket, file_type;
 type netmgrd_socket, file_type;
 type powerhal_socket, file_type;
 type cashsvr_socket, file_type;
-type qdsp_file, file_type, vendor_file_type, mlstrustedobject;
+type adsprpcd_file, file_type, vendor_file_type, mlstrustedobject;
 type tad_socket, file_type;
 type ims_socket, file_type;
 

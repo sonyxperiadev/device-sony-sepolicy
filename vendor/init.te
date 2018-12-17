@@ -3,7 +3,7 @@ allow init tmpfs:lnk_file create;
 allow init configfs:file rw_file_perms;
 allow init configfs:lnk_file { create unlink };
 
-allow init { mnt_vendor_file vendor_firmware_file qdsp_file }:dir mounton;
+allow init { mnt_vendor_file vendor_firmware_file adsprpcd_file }:dir mounton;
 allow init vendor_firmware_file:filesystem { mount relabelfrom };
 
 dontaudit init kernel:system module_request;
