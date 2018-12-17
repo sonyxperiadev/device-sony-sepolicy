@@ -30,3 +30,6 @@ allow per_mgr ssr_device:chr_file { open read };
 r_dir_file(per_mgr, sysfs_msm_subsys)
 r_dir_file(per_mgr, sysfs_esoc)
 allow per_mgr device:dir search;
+
+# TODO: To be decided if necessary
+dontaudit per_mgr kernel:system module_request;
