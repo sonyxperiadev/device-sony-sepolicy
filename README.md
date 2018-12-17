@@ -16,3 +16,26 @@ Failure to include the above may result in your patch being rejected.
 This sepolicy also requires device specific `file_contexts` and `genfs_contexts`
 that can be found in each platform's git repository.
 
+# License
+See `LICENSE.md`.
+
+# Formatting Tips
+
+**General**
+
+- Group declarations of the same type together
+- When adding file permissions, first the `dir` line, then the `file` line
+- Use macros whenever possible
+  (look for `te_macros`, `global_macros` in `system/sepolicy/public/`)
+
+**Recommended Order**
+
+1. Documentation, if any
+2. `domain`, `mydomain_exec`
+3. `init_daemon_domain` or `app_domain`
+4. `typeattribute` violation declarations
+5. `binder_use()` and equivalents
+6. `binder_call()` and equivalents
+7. `add_service()` and equivalents, `hal_server_domain()`
+7. File permissions
+8. `dontaudit`
