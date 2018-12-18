@@ -77,6 +77,10 @@ type proc_irq, proc_type, fs_type;
 type sysfs_irq, sysfs_type, fs_type;
 type irqbalance_socket, file_type;
 
+# /proc/sys/*
+type proc_kernel_printk, proc_type, fs_type;
+type proc_swappiness, proc_type, fs_type;
+
 # /sys/kernel/boot_wlan/boot_wlan
 type sysfs_boot_wlan, fs_type, sysfs_type;
 
