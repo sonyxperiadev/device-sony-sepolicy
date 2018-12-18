@@ -62,7 +62,7 @@ type audio_vendor_data_file, file_type, data_file_type;
 type camera_vendor_data_file, file_type, data_file_type;
 type ipa_vendor_data_file, file_type, data_file_type;
 
-#diag sysfs files
+# diag sysfs files
 type sysfs_diag, fs_type, sysfs_type;
 
 # input files

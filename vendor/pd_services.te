@@ -1,3 +1,4 @@
+# pd_mapper is used by msm8998 and sdm845 to control the modem
 type pd_mapper, domain;
 
 type pd_mapper_exec, exec_type, vendor_file_type, file_type;

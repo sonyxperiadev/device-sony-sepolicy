@@ -13,4 +13,3 @@ allow sscrpcd persist_sensors_file:dir create_dir_perms;
 allow sscrpcd persist_sensors_file:file create_file_perms;
 allow sscrpcd qdsp_device:chr_file { open read };
 allow sscrpcd qdsp_device:chr_file ioctl;
-
