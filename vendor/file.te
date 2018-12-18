@@ -33,6 +33,7 @@ type netmgrd_socket, file_type;
 type powerhal_socket, file_type;
 type cashsvr_socket, file_type;
 type adsprpcd_file, file_type, vendor_file_type, mlstrustedobject;
+type ipacm_socket, file_type;
 type tad_socket, file_type;
 type ims_socket, file_type;
 
@@ -59,6 +60,7 @@ type timekeep_vendor_data_file, file_type, data_file_type;
 type bluetooth_vendor_data_file, file_type, data_file_type;
 type audio_vendor_data_file, file_type, data_file_type;
 type camera_vendor_data_file, file_type, data_file_type;
+type ipa_vendor_data_file, file_type, data_file_type;
 
 #diag sysfs files
 type sysfs_diag, fs_type, sysfs_type;
