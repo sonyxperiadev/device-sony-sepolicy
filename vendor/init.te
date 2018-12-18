@@ -10,6 +10,8 @@ dontaudit init kernel:system module_request;
 # Ignore all accidental O_CREAT open() calls on unsupported filesystems:
 dontaudit init { sysfs_type proc_type }:file create;
 
+allow init msm_irqbalance_exec:file execute;
+
 # Allow the init process to read and write default_smp_affinity:
 allow init proc_irq:file rw_file_perms;
 
