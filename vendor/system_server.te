@@ -22,5 +22,6 @@ allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;
 # radio
 rw_dir_file(system_server, qmuxd_socket)
 
-# rtc
-allow system_server sysfs_msm_subsys:file r_file_perms;
+# rtc: hctosys gets acessed by AlarmManagerService via system_server
+allow system_server sysfs_rtc:dir r_dir_perms;
+allow system_server sysfs_rtc:{ file lnk_file } r_file_perms;
