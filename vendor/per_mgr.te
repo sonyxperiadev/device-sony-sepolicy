@@ -6,16 +6,7 @@ init_daemon_domain(per_mgr);
 
 add_service(per_mgr, per_mgr_service)
 
-# TODO(b/vndswitch): Remove once per_mgr uses vendor binder and
-# per_mgr_service is a vndservice_manager_type
-typeattribute per_mgr binder_in_vendor_violators;
-
-# TODO(b/vndswitch): Enable once per_proxy uses vendor binder
-#vndbinder_use(per_mgr)
-
-# TODO(b/vndswitch): Remove once per_proxy uses vendor binder
-binder_use(per_mgr)
-
+vndbinder_use(per_mgr)
 binder_call(per_mgr, hal_gnss)
 binder_call(per_mgr, per_proxy)
 binder_call(per_mgr, rild)
@@ -29,7 +20,3 @@ allow per_mgr ssr_device:chr_file { open read };
 
 r_dir_file(per_mgr, sysfs_msm_subsys)
 r_dir_file(per_mgr, sysfs_esoc)
-allow per_mgr device:dir search;
-
-# TODO: To be decided if necessary
-dontaudit per_mgr kernel:system module_request;
