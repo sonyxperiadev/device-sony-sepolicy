@@ -15,6 +15,10 @@ allow hal_gnss_qti qmuxd_socket:dir w_dir_perms;
 allow hal_gnss_qti qmuxd_socket:sock_file create_file_perms;
 unix_socket_connect(hal_gnss_qti, qmuxd, qmuxd)
 
+userdebug_or_eng(`
+  allow hal_gnss_qti diag_device:chr_file { read write };
+')
+
 binder_call(hal_gnss_qti, per_mgr)
 
 # /data/vendor/location
