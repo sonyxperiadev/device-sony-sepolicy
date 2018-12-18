@@ -1,2 +1,4 @@
 # For the camera app
 get_prop(appdomain, camera_prop)
+# All sorts of domains request this, and granting access should be harmless
+get_prop(appdomain, vendor_camera_prop)
