@@ -86,6 +86,7 @@
 /(system/vendor|vendor)/bin/thermanager                                                      u:object_r:thermanager_exec:s0
 /(system/vendor|vendor)/bin/timekeep                                                         u:object_r:timekeep_exec:s0
 /(system/vendor|vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.sony u:object_r:hal_fingerprint_default_exec:s0
+/(system/vendor|vendor)/bin/hw/android\.hardware\.bluetooth@1\.0-service-qti                 u:object_r:hal_bluetooth_default_exec:s0
 /(system/vendor|vendor)/bin/hw/android\.hardware\.gnss@1\.1-service-qti                      u:object_r:hal_gnss_qti_exec:s0
 /(system/vendor|vendor)/bin/hw/android\.hardware\.light@2\.0-service\.sony                   u:object_r:hal_light_default_exec:s0
 /(system/vendor|vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.clearkey                 u:object_r:hal_drm_clearkey_exec:s0
