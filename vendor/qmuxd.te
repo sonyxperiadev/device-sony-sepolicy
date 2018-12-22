@@ -15,3 +15,5 @@ wakelock_use(qmuxd)
 
 r_dir_file(qmuxd, sysfs_soc)
 r_dir_rw_file(qmuxd, sysfs_msm_subsys)
+
+set_prop(qmuxd, vendor_radio_prop)

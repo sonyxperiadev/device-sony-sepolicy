@@ -1,7 +1,6 @@
 # symlink /sdcard to backing block
-allow init tmpfs:lnk_file create;
 allow init configfs:file rw_file_perms;
-allow init configfs:lnk_file { create unlink };
+allow init {tmpfs configfs }:lnk_file create_file_perms;
 
 allow init { mnt_vendor_file vendor_firmware_file adsprpcd_file }:dir mounton;
 allow init vendor_firmware_file:filesystem { mount relabelfrom };
@@ -20,3 +19,5 @@ allow init sysfs_msm_subsys_restart:file rw_file_perms;
 allow init nativetest_data_file:dir { getattr open read };
 allow init nativetest_data_file:file getattr;
 allow init sysfs_msm_subsys:file { open setattr write };
+
+allow init socket_device:sock_file create_file_perms;
