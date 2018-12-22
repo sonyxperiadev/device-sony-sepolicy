@@ -8,3 +8,4 @@ vendor.qti.hardware.radio.uim_remote_client::IUimRemoteServiceClient    u:object
 vendor.qti.hardware.radio.uim_remote_server::IUimRemoteServiceServer    u:object_r:hal_telephony_hwservice:s0
 vendor.qti.hardware.radio.uim::IUim                                     u:object_r:hal_telephony_hwservice:s0
 vendor.qti.hardware.radio.lpa::IUimLpa                                  u:object_r:hal_telephony_hwservice:s0
+vendor.qti.hardware.radio.qtiradio::IQtiRadio                           u:object_r:hal_telephony_hwservice:s0
