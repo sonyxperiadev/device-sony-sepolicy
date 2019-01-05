@@ -8,7 +8,7 @@ type timekeep_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(timekeep)
 
 # Grant permission to set system time and to set the real-time clock
-allow timekeep self:capability { fowner sys_time };
+allow timekeep self:capability sys_time;
 
 # Write to /data/vendor/time/ats_2
 allow timekeep timekeep_vendor_data_file:dir rw_dir_perms;
