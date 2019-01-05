@@ -2,7 +2,7 @@
 # SELinux policy variable definitions
 LOCAL_SEPOLICY := device/sony/sepolicy
 
-BOARD_SEPOLICY_DIRS += \
+BOARD_VENDOR_SEPOLICY_DIRS += \
     $(LOCAL_SEPOLICY)/vendor
 
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
