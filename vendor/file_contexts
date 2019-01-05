@@ -90,6 +90,7 @@
 /(system/vendor|vendor)/bin/hw/android\.hardware\.gnss@1\.1-service-qti                      u:object_r:hal_gnss_qti_exec:s0
 /(system/vendor|vendor)/bin/hw/android\.hardware\.light@2\.0-service\.sony                   u:object_r:hal_light_default_exec:s0
 /(system/vendor|vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.clearkey                 u:object_r:hal_drm_clearkey_exec:s0
+/(system/vendor|vendor)/bin/hw/android\.hardware\.health@2\.0-service\.sony                  u:object_r:hal_health_default_exec:s0
 
 # sysfs paths
 # ToF sensor for CASH
@@ -186,6 +187,7 @@
 
 # /persist
 /mnt/vendor/persist(/.*)?            u:object_r:persist_file:s0
+/mnt/vendor/persist/battery(/.*)?    u:object_r:persist_battery_file:s0
 /mnt/vendor/persist/data(/.*)?       u:object_r:persist_data_file:s0
 /mnt/vendor/persist/display(/.*)?    u:object_r:persist_display_file:s0
 /mnt/vendor/persist/drm(/.*)?        u:object_r:persist_drm_file:s0
