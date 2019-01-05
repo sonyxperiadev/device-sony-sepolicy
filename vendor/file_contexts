@@ -42,6 +42,7 @@
 /dev/socket/powerhal(/.*)?                      u:object_r:powerhal_socket:s0
 /dev/socket/tad                                 u:object_r:tad_socket:s0
 /dev/socket/cashsvr(/.*)?                       u:object_r:cashsvr_socket:s0
+/dev/socket/ipacm_log_file                      u:object_r:ipacm_socket:s0
 
 # files in /odm
 /odm/bin/hw/android\.hardware\.keymaster@3\.0-service-qti u:object_r:hal_keymaster_qti_exec:s0
@@ -115,7 +116,7 @@
 # Input device names, mainly for CASH to enumerate
 /sys/devices/virtual/input/input[0-9]+/name                                                  u:object_r:sysfs_input_name:s0
 # RTC
-/sys/class/rtc/rtc[0-9]+(/.*)?                                                               u:object_r:sysfs_rtc:s0
+/sys/class/rtc(/.*)?                                                                         u:object_r:sysfs_rtc:s0
 
 ###############################################
 # same-process HAL files and their dependencies
@@ -171,6 +172,7 @@
 /data/vendor/bluetooth(/.*)?           u:object_r:bluetooth_vendor_data_file:s0
 /data/vendor/audio(/.*)?               u:object_r:audio_vendor_data_file:s0
 /data/vendor/camera(/.*)?              u:object_r:camera_vendor_data_file:s0
+/data/vendor/ipa(/.*)?                 u:object_r:ipa_vendor_data_file:s0
 
 # TODO: Remove them once no need to maintain the backward compatibility. (b/111219177)
 /persist                             u:object_r:rootfs:s0
@@ -178,7 +180,7 @@
 /bt_firmware                         u:object_r:rootfs:s0
 /dsp                                 u:object_r:rootfs:s0
 
-# /
+# adsp firmware
 /(system/vendor|vendor)/dsp(/.*)?              u:object_r:adsprpcd_file:s0
 
 # files in firmware

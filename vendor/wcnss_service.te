@@ -1,3 +1,4 @@
+# Qualcomm odm (W)CNSS wlan/modem service
 type wcnss_service, domain;
 type wcnss_service_exec, exec_type, vendor_file_type, file_type;
 

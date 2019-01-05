@@ -6,4 +6,5 @@ init_daemon_domain(rdclean);
 userdebug_or_eng(`
   allow rdclean ramdump_block_device:blk_file rw_file_perms;
   allow rdclean { vendor_shell_exec vendor_toolbox_exec }:file rx_file_perms;
+  allow rdclean block_device:dir search;
 ')

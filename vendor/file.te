@@ -33,6 +33,7 @@ type netmgrd_socket, file_type;
 type powerhal_socket, file_type;
 type cashsvr_socket, file_type;
 type adsprpcd_file, file_type, vendor_file_type, mlstrustedobject;
+type ipacm_socket, file_type;
 type tad_socket, file_type;
 type ims_socket, file_type;
 
@@ -60,8 +61,9 @@ type timekeep_vendor_data_file, file_type, data_file_type;
 type bluetooth_vendor_data_file, file_type, data_file_type;
 type audio_vendor_data_file, file_type, data_file_type;
 type camera_vendor_data_file, file_type, data_file_type;
+type ipa_vendor_data_file, file_type, data_file_type;
 
-#diag sysfs files
+# diag sysfs files
 type sysfs_diag, fs_type, sysfs_type;
 
 # input files
@@ -75,6 +77,10 @@ typeattribute sysfs_batteryinfo mlstrustedobject;
 type proc_irq, proc_type, fs_type;
 type sysfs_irq, sysfs_type, fs_type;
 type irqbalance_socket, file_type;
+
+# /proc/sys/*
+type proc_kernel_printk, proc_type, fs_type;
+type proc_swappiness, proc_type, fs_type;
 
 # /sys/kernel/boot_wlan/boot_wlan
 type sysfs_boot_wlan, fs_type, sysfs_type;

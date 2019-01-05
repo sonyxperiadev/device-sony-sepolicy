@@ -2,6 +2,7 @@ vendor.display.config::IDisplayConfig                                   u:object
 vendor.nxp.nxpnfc::INxpNfc                                              u:object_r:nxpnfc_hwservice:s0
 vendor.nxp.nxpese::INxpEse                                              u:object_r:nxpese_hwservice:s0
 vendor.qti.imsrtpservice::IRTPService                                   u:object_r:hal_imsrtp_hwservice:s0
+# HIDL interface for com.sony.QcRilAm
 vendor.qti.hardware.radio.am::IQcRilAudio                               u:object_r:vnd_qcrilhook_hwservice:s0
 vendor.qti.hardware.radio.ims::IImsRadio                                u:object_r:vnd_ims_radio_hwservice:s0
 vendor.qti.hardware.radio.uim_remote_client::IUimRemoteServiceClient    u:object_r:hal_telephony_hwservice:s0

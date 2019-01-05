@@ -10,14 +10,21 @@ dontaudit init kernel:system module_request;
 # Ignore all accidental O_CREAT open() calls on unsupported filesystems:
 dontaudit init { sysfs_type proc_type }:file create;
 
+allow init msm_irqbalance_exec:file execute;
+
 # Allow the init process to read and write default_smp_affinity:
 allow init proc_irq:file rw_file_perms;
 
+# Mount and read/write to devices
+allow init device:dir { mounton rw_dir_perms };
+# /dev/cpuset/*
+allow init device:file rw_file_perms;
+
+allow init sysfs_msm_subsys:file { open setattr write };
 # enable_ramdumps:
 allow init sysfs_msm_subsys_restart:file rw_file_perms;
 
 allow init nativetest_data_file:dir { getattr open read };
 allow init nativetest_data_file:file getattr;
-allow init sysfs_msm_subsys:file { open setattr write };
 
 allow init socket_device:sock_file create_file_perms;
