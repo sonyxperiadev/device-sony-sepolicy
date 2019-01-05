@@ -24,5 +24,7 @@ allow vendor_init proc_irq:file write;
 allow vendor_init proc_kernel_printk:file write;
 
 allow vendor_init persist_file:lnk_file read;
+# Create and chown /(mnt/vendor/)persist/battery/ folder for health HAL
+allow vendor_init persist_battery_file:dir create_dir_perms;
 
 allow vendor_init device:file { create write };
