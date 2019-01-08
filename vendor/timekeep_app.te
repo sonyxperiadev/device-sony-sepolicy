@@ -20,7 +20,7 @@ allow timekeep_app timekeep_vendor_data_file:file create_file_perms;
 # Read /sys/class/rtc/rtc0/since_epoch
 allow timekeep_app sysfs_rtc:dir { search };
 allow timekeep_app sysfs_rtc:{ file lnk_file } r_file_perms;
-allow timekeep sysfs_msm_subsys:dir search;
+allow timekeep_app sysfs_msm_subsys:dir search;
 
 # Set the persist.sys.timeadjust property
 set_prop(timekeep_app, timekeep_prop)
