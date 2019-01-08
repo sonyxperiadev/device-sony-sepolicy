@@ -1,2 +1,2 @@
 allow hal_wifi_supplicant_default proc_net:file w_file_perms;
-allow hal_wifi_supplicant_default vendor_data_file:dir search;
+allow hal_wifi_supplicant_default wifi_vendor_data_file:dir search;

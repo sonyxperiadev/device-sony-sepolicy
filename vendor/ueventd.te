@@ -1,5 +1,8 @@
+typeattribute ueventd data_between_core_and_vendor_violators;
+
 r_dir_file(ueventd, vendor_firmware_file)
 r_dir_file(ueventd, persist_file)
+r_dir_file(ueventd, wifi_vendor_data_file)
 
 allow ueventd {
     { sysfs_type - usermodehelper }
