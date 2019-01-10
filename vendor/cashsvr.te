@@ -21,3 +21,5 @@ dontaudit cashsvr sysfs_msm_subsys:dir r_dir_perms;
 dontaudit cashsvr sysfs_msm_subsys:file r_file_perms;
 dontaudit cashsvr sysfs:dir r_dir_perms;
 dontaudit cashsvr sysfs:file r_file_perms;
+
+set_prop(cashsvr, vendor_camera_prop)
