@@ -1,0 +1,4 @@
+# TODO(b/77868789): Android bug to work around
+# Happens while tethering
+allow dnsmasq netd:fifo_file getattr;
+allow dnsmasq netd:unix_stream_socket getattr;
