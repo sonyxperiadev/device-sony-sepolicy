@@ -3,6 +3,8 @@
 # Register timerfd to periodically check (battery) health
 allow hal_health_default self:capability2 wake_alarm;
 
+# Resolve path in /mnt/vendor/
+allow hal_health_default mnt_vendor_file:dir search;
 # Write battery cycles and capacity to /{mnt/vendor/}persist/battery/
 allow hal_health_default persist_battery_file:dir rw_dir_perms;
 allow hal_health_default persist_battery_file:file create_file_perms;
