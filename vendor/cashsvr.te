@@ -15,3 +15,11 @@ allow cashsvr input_device:chr_file r_file_perms;
 allow cashsvr sysfs_tof_sensor:file { rw_file_perms setattr };
 allow cashsvr sysfs_rgbc_sensor:file { rw_file_perms setattr };
 allow cashsvr sysfs_input_name:file r_file_perms;
+
+# Ignore overzealous probing
+dontaudit cashsvr sysfs_msm_subsys:dir r_dir_perms;
+dontaudit cashsvr sysfs_msm_subsys:file r_file_perms;
+dontaudit cashsvr sysfs:dir r_dir_perms;
+dontaudit cashsvr sysfs:file r_file_perms;
+
+set_prop(cashsvr, vendor_camera_prop)

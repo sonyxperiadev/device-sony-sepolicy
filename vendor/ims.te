@@ -9,6 +9,7 @@ set_prop(ims, qcom_ims_prop)
 
 unix_socket_connect(ims, netmgrd, netmgrd)
 unix_socket_connect(ims, qmuxd, qmuxd)
+unix_socket_connect(ims, property, init)
 
 allow ims self:capability net_bind_service;
 
