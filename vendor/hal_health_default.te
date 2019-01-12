@@ -8,7 +8,10 @@ allow hal_health_default mnt_vendor_file:dir search;
 # Write battery cycles and capacity to /{mnt/vendor/}persist/battery/
 allow hal_health_default persist_battery_file:dir rw_dir_perms;
 allow hal_health_default persist_battery_file:file create_file_perms;
+
 # Resolve the underlying path of /sys/class/power_supply/battery/
 # and traverse /persist/ paths
-allow hal_health_default { sysfs_msm_subsys persist_file }:dir search;
+allow hal_health_default persist_file:dir search;
 allow hal_health_default sysfs_batteryinfo:file r_file_perms;
+
+r_dir_file(hal_health_default, sysfs_msm_subsys)
