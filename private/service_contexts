@@ -1,0 +1,7 @@
+# TODO(b/vndswitch): Remove this once per_mgr uses vendor binder.
+# vendor.qcom.PeripheralManager needs to be defined here
+# in the "private"(=platform) policy, since it is currently regognozed
+# as a regular platform/framework service and will thus be ignored
+# when defined in vendor/{vnd,}service_contexts
+vendor.qcom.PeripheralManager           u:object_r:per_mgr_service:s0
+
