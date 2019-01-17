@@ -5,10 +5,18 @@ type wcnss_service_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(wcnss_service)
 net_domain(wcnss_service)
 
+# TODO(b/vndswitch): Remove once per_mgr uses vendor binder and
+# per_mgr_service is a vndservice_manager_type
+not_full_treble(`
+  typeattribute wcnss_service binder_in_vendor_violators;
+')
+
 vndbinder_use(wcnss_service)
 binder_call(wcnss_service, per_mgr)
 
-allow wcnss_service per_mgr_service:service_manager find;
+not_full_treble(`
+  allow wcnss_service per_mgr_service:service_manager find;
+')
 allow wcnss_service proc_net:file rw_file_perms;
 
 allow wcnss_service self:capability {
