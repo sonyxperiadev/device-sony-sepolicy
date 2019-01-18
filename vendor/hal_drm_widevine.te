@@ -1,0 +1,2 @@
+# Access /data/mediadrm/* and /data/misc/media/*
+r_dir_file(hal_drm_widevine, media_data_file)
