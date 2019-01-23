@@ -34,3 +34,5 @@ allow per_mgr device:dir search;
 
 r_dir_file(per_mgr, sysfs_msm_subsys)
 r_dir_file(per_mgr, sysfs_esoc)
+
+dontaudit per_mgr kernel:system module_request;
