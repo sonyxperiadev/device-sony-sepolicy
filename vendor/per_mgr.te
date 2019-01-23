@@ -30,6 +30,9 @@ allow per_mgr self:capability net_bind_service;
 allow per_mgr self:socket create_socket_perms;
 allowxperm per_mgr self:socket ioctl msm_sock_ipc_ioctls;
 allow per_mgr ssr_device:chr_file { open read };
+allow per_mgr device:dir search;
 
 r_dir_file(per_mgr, sysfs_msm_subsys)
 r_dir_file(per_mgr, sysfs_esoc)
+
+dontaudit per_mgr kernel:system module_request;
