@@ -14,6 +14,7 @@ set_prop(system_app, timekeep_prop)
 # For android setttings
 binder_call(system_app, per_mgr)
 binder_call(system_app, wificond)
+binder_call(system_app, update_engine)
 
 # This is a neverallow anyways, so ignore it
 dontaudit system_app perfprofd:binder call;
