@@ -16,6 +16,7 @@ genfscon sysfs /class/devfreq                         u:object_r:sysfs_msm_subsy
 genfscon sysfs /devices/soc/soc:qcom,memlat-cpu0      u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/soc/soc:qcom,memlat-cpu4      u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/mdss_dsi_panel/pcc_profile    u:object_r:sysfs_pcc_profile:s0
+genfscon sysfs /devices/dsi_panel_driver/pcc_profile  u:object_r:sysfs_pcc_profile:s0
 genfscon sysfs /devices/virtual/smdpkt                u:object_r:sysfs_msm_subsys:s0
 
 genfscon sysfs /devices/platform/soc/soc:qcom,cpubw                     u:object_r:sysfs_msm_subsys:s0
