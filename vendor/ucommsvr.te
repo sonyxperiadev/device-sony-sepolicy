@@ -1,14 +1,28 @@
+# Ucomm Server
+# Used by the Xperia Touch "blanc" projector, loire platform
+# Controls the ToF sensor, communicates over sockets
 type ucommsvr, domain;
 type ucommsvr_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(ucommsvr)
 
+# For dropping permissions
 allow ucommsvr self:capability { chown setuid };
+
+allow ucommsvr ucommsvr_socket:dir rw_dir_perms;
+allow ucommsvr ucommsvr_socket:sock_file create_file_perms;
 
 allow ucommsvr serial_device:chr_file rw_file_perms;
 
 allow ucommsvr input_device:dir search;
 allow ucommsvr input_device:chr_file r_file_perms;
 
+allow ucommsvr sysfs_input_name:file r_file_perms;
+allow ucommsvr sysfs_input_control:file { rw_file_perms setattr };
 allow ucommsvr sysfs_tof_sensor:file { rw_file_perms setattr };
-allow ucommsvr sysfs:file r_file_perms;
+
+# Ignore overzealous probing
+dontaudit ucommsvr sysfs_msm_subsys:dir r_dir_perms;
+dontaudit ucommsvr sysfs_msm_subsys:file r_file_perms;
+dontaudit ucommsvr sysfs:dir r_dir_perms;
+dontaudit ucommsvr sysfs:file r_file_perms;
