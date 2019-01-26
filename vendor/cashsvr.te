@@ -1,3 +1,6 @@
+# CASH - Camera Augmented Sensing Helper - Server part
+# Controls the ToF and RGBCIR sensors on loire platform and newer
+# Communicates with the camera HAL over sockets
 type cashsvr, domain;
 type cashsvr_exec, exec_type, vendor_file_type, file_type;
 
@@ -12,9 +15,10 @@ allow cashsvr cashsvr_socket:sock_file create_file_perms;
 allow cashsvr input_device:dir search;
 allow cashsvr input_device:chr_file r_file_perms;
 
+allow cashsvr sysfs_input_name:file r_file_perms;
+allow cashsvr sysfs_input_control:file { rw_file_perms setattr };
 allow cashsvr sysfs_tof_sensor:file { rw_file_perms setattr };
 allow cashsvr sysfs_rgbc_sensor:file { rw_file_perms setattr };
-allow cashsvr sysfs_input_name:file r_file_perms;
 
 # Ignore overzealous probing
 dontaudit cashsvr sysfs_msm_subsys:dir r_dir_perms;
