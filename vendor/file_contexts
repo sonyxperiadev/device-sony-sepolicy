@@ -42,6 +42,7 @@
 /dev/socket/powerhal(/.*)?                      u:object_r:powerhal_socket:s0
 /dev/socket/tad                                 u:object_r:tad_socket:s0
 /dev/socket/cashsvr(/.*)?                       u:object_r:cashsvr_socket:s0
+/dev/socket/ucommsvr(/.*)?                      u:object_r:ucommsvr_socket:s0
 /dev/socket/ipacm_log_file                      u:object_r:ipacm_socket:s0
 
 # files in /odm
