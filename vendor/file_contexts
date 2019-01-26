@@ -95,28 +95,17 @@
 /(system/vendor|vendor)/bin/hw/android\.hardware\.health@2\.0-service\.sony                  u:object_r:hal_health_default_exec:s0
 
 # sysfs paths
+# Input device control nodes, mainly for CASH to control power
+/sys/devices/virtual/input/input[0-9]+/chip_id                                               u:object_r:sysfs_input_control:s0
+/sys/devices/virtual/input/input[0-9]+/chip_pow                                              u:object_r:sysfs_input_control:s0
+# Input device names, mainly for CASH to enumerate
+/sys/devices/virtual/input/input[0-9]+/name                                                  u:object_r:sysfs_input_name:s0
 # ToF sensor for CASH
 /sys/devices/virtual/input/input[0-9]+/enable_ps_sensor                                      u:object_r:sysfs_tof_sensor:s0
 /sys/devices/virtual/input/input[0-9]+/set_use_case                                          u:object_r:sysfs_tof_sensor:s0
 # RGBCIR sensor for CASH
-/sys/devices/virtual/input/input[0-9]+/als_Itime                                             u:object_r:sysfs_rgbc_sensor:s0
-/sys/devices/virtual/input/input[0-9]+/als_all                                               u:object_r:sysfs_rgbc_sensor:s0
-/sys/devices/virtual/input/input[0-9]+/als_auto_gain                                         u:object_r:sysfs_rgbc_sensor:s0
-/sys/devices/virtual/input/input[0-9]+/als_blue                                              u:object_r:sysfs_rgbc_sensor:s0
-/sys/devices/virtual/input/input[0-9]+/als_channel                                           u:object_r:sysfs_rgbc_sensor:s0
-/sys/devices/virtual/input/input[0-9]+/als_clear                                             u:object_r:sysfs_rgbc_sensor:s0
-/sys/devices/virtual/input/input[0-9]+/als_gain                                              u:object_r:sysfs_rgbc_sensor:s0
-/sys/devices/virtual/input/input[0-9]+/als_green                                             u:object_r:sysfs_rgbc_sensor:s0
-/sys/devices/virtual/input/input[0-9]+/als_persist                                           u:object_r:sysfs_rgbc_sensor:s0
-/sys/devices/virtual/input/input[0-9]+/als_power_state                                       u:object_r:sysfs_rgbc_sensor:s0
-/sys/devices/virtual/input/input[0-9]+/als_red                                               u:object_r:sysfs_rgbc_sensor:s0
-/sys/devices/virtual/input/input[0-9]+/als_thres                                             u:object_r:sysfs_rgbc_sensor:s0
-/sys/devices/virtual/input/input[0-9]+/als_thresh_deltaP                                     u:object_r:sysfs_rgbc_sensor:s0
-/sys/devices/virtual/input/input[0-9]+/chip_id                                               u:object_r:sysfs_rgbc_sensor:s0
-/sys/devices/virtual/input/input[0-9]+/chip_pow                                              u:object_r:sysfs_rgbc_sensor:s0
-# Input device names, mainly for CASH to enumerate
-/sys/devices/virtual/input/input[0-9]+/name                                                  u:object_r:sysfs_input_name:s0
-# RTC
+/sys/devices/virtual/input/input[0-9]+/als_(.*)+                                             u:object_r:sysfs_rgbc_sensor:s0
+# Real-time-clock
 /sys/class/rtc(/.*)?                                                                         u:object_r:sysfs_rtc:s0
 
 ###############################################
