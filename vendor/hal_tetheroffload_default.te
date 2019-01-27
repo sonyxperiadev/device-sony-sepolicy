@@ -1,0 +1,17 @@
+# ipacm tethering
+
+# Associate netdomain to use for accessing internet sockets
+net_domain(hal_tetheroffload_default)
+
+binder_call(hal_tetheroffload_default, system_server)
+
+# Register to hwbinder service
+hwbinder_use(hal_tetheroffload_default)
+add_hwservice(hal_tetheroffload_default, hal_tetheroffload_hwservice)
+get_prop(hal_tetheroffload_default, hwservicemanager_prop)
+
+allow hal_tetheroffload_default system_server:netlink_netfilter_socket { getattr read setopt write };
+
+# Allow creating and modifying the PID file
+allow hal_tetheroffload_default ipa_vendor_data_file:dir create_dir_perms;
+allow hal_tetheroffload_default ipa_vendor_data_file:file create_file_perms;
