@@ -9,14 +9,22 @@ init_daemon_domain(cashsvr)
 # For dropping permissions
 allow cashsvr self:capability { chown setuid };
 
+# Connect to the tad daemon by using libta.so
+unix_socket_connect(cashsvr, tad, tad)
+
 allow cashsvr cashsvr_socket:dir rw_dir_perms;
 allow cashsvr cashsvr_socket:sock_file create_file_perms;
+
+# Write calibrations to /data/vendor/cashsvr/
+rw_dir_file(cashsvr, cashsvr_vendor_data_file)
+allow cashsvr cashsvr_vendor_data_file:file create_file_perms;
 
 allow cashsvr input_device:dir search;
 allow cashsvr input_device:chr_file r_file_perms;
 
 allow cashsvr sysfs_input_name:file r_file_perms;
 allow cashsvr sysfs_input_control:file { rw_file_perms setattr };
+
 allow cashsvr sysfs_tof_sensor:file { rw_file_perms setattr };
 allow cashsvr sysfs_rgbc_sensor:file { rw_file_perms setattr };
 
