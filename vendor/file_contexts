@@ -104,6 +104,8 @@
 # ToF sensor for CASH
 /sys/devices/virtual/input/input[0-9]+/enable_ps_sensor                                      u:object_r:sysfs_tof_sensor:s0
 /sys/devices/virtual/input/input[0-9]+/set_use_case                                          u:object_r:sysfs_tof_sensor:s0
+/sys/devices/virtual/input/input[0-9]+/set_ref_spads                                         u:object_r:sysfs_tof_sensor:s0
+/sys/devices/virtual/input/input[0-9]+/set_um_offset                                         u:object_r:sysfs_tof_sensor:s0
 # RGBCIR sensor for CASH
 /sys/devices/virtual/input/input[0-9]+/als_(.*)+                                             u:object_r:sysfs_rgbc_sensor:s0
 # Real-time-clock
