@@ -1,6 +1,0 @@
-# TODO(b/healthd_deprecation): Remove healthd policy
-# and replace with hal_health_default once migration is complete
-allow healthd self:capability2 wake_alarm;
-allow healthd sysfs_batteryinfo:file r_file_perms;
-allow healthd sysfs_usb_supply:file r_file_perms;
-allow healthd sysfs_msm_subsys:file { getattr open read };
