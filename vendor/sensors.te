@@ -15,6 +15,9 @@ allow sensors persist_sensors_file:dir rw_dir_perms;
 allow sensors persist_sensors_file:file create_file_perms;
 allow sensors persist_file:dir { getattr search };
 
+# Search /data
+allow sensors system_data_file:dir getattr;
+# Read/write /data/vendor/sensors/*
 allow sensors sensors_vendor_data_file:dir create_dir_perms;
 allow sensors sensors_vendor_data_file:file create_file_perms;
 
