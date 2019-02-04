@@ -12,6 +12,11 @@ not_full_treble(`
 ')
 
 vndbinder_use(wcnss_service)
+# TODO(b/vndswitch): Remove once per_mgr uses vendor binder
+not_full_treble(`
+  binder_use(wcnss_service)
+')
+
 binder_call(wcnss_service, per_mgr)
 
 not_full_treble(`
