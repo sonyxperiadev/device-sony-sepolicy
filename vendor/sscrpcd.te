@@ -13,3 +13,8 @@ allow sscrpcd persist_sensors_file:dir create_dir_perms;
 allow sscrpcd persist_sensors_file:file create_file_perms;
 allow sscrpcd qdsp_device:chr_file { open read };
 allow sscrpcd qdsp_device:chr_file ioctl;
+allow sscrpcd ion_device:chr_file read;
+allow sscrpcd self:socket create;
+allow sscrpcd sysfs_msm_subsys:dir { read search };
+allow sscrpcd mnt_vendor_file:dir search;
+allow sscrpcd sysfs_soc:dir search;
