@@ -1,0 +1,2 @@
+# TODO(b/124102550): Remove once fixed upstream
+allow system_server thermal_service:service_manager find;
