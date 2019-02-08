@@ -94,6 +94,7 @@
 /(system/vendor|vendor)/bin/hw/android\.hardware\.light@2\.0-service\.sony                   u:object_r:hal_light_default_exec:s0
 /(system/vendor|vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.clearkey                 u:object_r:hal_drm_clearkey_exec:s0
 /(system/vendor|vendor)/bin/hw/android\.hardware\.health@2\.0-service\.sony                  u:object_r:hal_health_default_exec:s0
+/(system/vendor|vendor)/bin/hw/android\.hardware\.usb@1\.0-service\.basic                    u:object_r:hal_usb_default_exec:s0
 
 # sysfs paths
 # Input device control nodes, mainly for CASH to control power
