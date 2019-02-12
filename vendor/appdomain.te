@@ -2,3 +2,6 @@
 get_prop(appdomain, camera_prop)
 # All sorts of domains request this, and granting access should be harmless
 get_prop(appdomain, vendor_camera_prop)
+# Allow diagnostics apps to read thermals
+allow appdomain sysfs_thermal:dir { search read open };
+allow appdomain sysfs_thermal:file { getattr read open };
