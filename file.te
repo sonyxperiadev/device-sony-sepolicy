@@ -31,6 +31,7 @@ type qmuxd_socket, file_type;
 type netmgrd_socket, file_type;
 type powerhal_socket, file_type;
 type cashsvr_socket, file_type;
+type adsprpcd_file, file_type, mlstrustedobject;
 type qdsp_file, file_type, mlstrustedobject;
 type tad_socket, file_type;
 

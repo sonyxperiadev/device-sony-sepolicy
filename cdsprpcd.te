@@ -5,4 +5,4 @@ init_daemon_domain(cdsprpcd)
 
 allow cdsprpcd ion_device:chr_file { open read };
 allow cdsprpcd qdsp_device:chr_file { ioctl open read };
-allow cdsprpcd qdsp_file:dir { getattr read };
+allow cdsprpcd adsprpcd_file:dir { getattr read };

@@ -137,7 +137,7 @@
 /data/vendor/camera(/.*)?              u:object_r:camera_data_file:s0
 
 # /
-/dsp(/.*)?                u:object_r:qdsp_file:s0
+/dsp(/.*)?                u:object_r:adsprpcd_file:s0
 
 # files in firmware
 /firmware(/.*)?           u:object_r:firmware_file:s0
