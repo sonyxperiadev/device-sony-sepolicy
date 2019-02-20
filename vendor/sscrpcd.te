@@ -18,3 +18,4 @@ allow sscrpcd self:socket create;
 allow sscrpcd sysfs_msm_subsys:dir { read search };
 allow sscrpcd mnt_vendor_file:dir search;
 allow sscrpcd sysfs_soc:dir search;
+allow sscrpcd sysfs_soc:file r_file_perms;
