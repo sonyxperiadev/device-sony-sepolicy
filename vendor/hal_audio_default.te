@@ -9,3 +9,5 @@ allow hal_audio_default audio_vendor_data_file:file create_file_perms;
 r_dir_file(hal_audio_default, sysfs_soc)
 
 allow hal_audio_default hal_power_hwservice:hwservice_manager find;
+
+get_prop(hal_audio_default, bluetooth_prop)
