@@ -14,7 +14,8 @@ type sysfs_addrsetup, sysfs_type, fs_type;
 type sysfs_bluetooth, sysfs_type, fs_type;
 type sysfs_pcc_profile, sysfs_type, fs_type;
 type sysfs_rtc, sysfs_type, fs_type;
-type sysfs_timekeep, sysfs_type, fs_type;
+type sysfs_input_name, sysfs_type, fs_type;
+type sysfs_input_control, sysfs_type, fs_type;
 
 type debugfs_clk, debugfs_type, fs_type;
 type debugfs_ion, debugfs_type, fs_type;
@@ -26,11 +27,13 @@ type debugfs_mdp, debugfs_type, fs_type;
 type debugfs_icnss, debugfs_type, fs_type;
 
 type location_data_file, file_type, data_file_type;
+type cashsvr_vendor_data_file, file_type, data_file_type;
 
 type qmuxd_socket, file_type;
 type netmgrd_socket, file_type;
 type powerhal_socket, file_type;
 type cashsvr_socket, file_type;
+type ucommsvr_socket, file_type;
 type adsprpcd_file, file_type, mlstrustedobject;
 type qdsp_file, file_type, mlstrustedobject;
 type tad_socket, file_type;
@@ -79,3 +82,5 @@ type sysfs_boot_wlan, fs_type, sysfs_type;
 
 # ToF sensor
 type sysfs_tof_sensor, fs_type, sysfs_type;
+# RGBCIR sensor
+type sysfs_rgbc_sensor, fs_type, sysfs_type;
