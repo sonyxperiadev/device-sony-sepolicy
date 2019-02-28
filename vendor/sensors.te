@@ -22,7 +22,7 @@ allow sensors sensors_vendor_data_file:dir create_dir_perms;
 allow sensors sensors_vendor_data_file:file create_file_perms;
 
 # Access config files
-allow sensors mnt_vendor_file:dir search;
+allow sensors mnt_vendor_file:dir { getattr search };
 
 allow sensors sensors_device:chr_file r_file_perms;
 
