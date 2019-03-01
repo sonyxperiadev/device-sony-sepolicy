@@ -1,0 +1,15 @@
+type init-qcom-cdspstart-sh, domain;
+type init-qcom-cdspstart-sh_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(init-qcom-cdspstart-sh)
+
+allow init-qcom-cdspstart-sh { vendor_file vendor_shell_exec vendor_toolbox_exec }:file rx_file_perms;
+
+# Set the vendor.qcom.cdspup property
+set_prop(init-qcom-cdspstart-sh, vendor_device_prop)
+
+# Set boot_cdsp, boot_cdsp and boot_slpi to 1
+allow init-qcom-cdspstart-sh sysfs_msm_subsys:file w_file_perms;
+
+# Ignore O_CREAT flag in bash file redirection:
+dontaudit init-qcom-cdspstart-sh sysfs_msm_subsys:file create;
