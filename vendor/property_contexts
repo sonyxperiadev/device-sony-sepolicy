@@ -24,3 +24,4 @@ vendor.qcom.adspup         u:object_r:vendor_device_prop:s0
 vendor.qcom.cdspup         u:object_r:vendor_device_prop:s0
 ro.vendor.bt.              u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.bt.         u:object_r:vendor_bluetooth_prop:s0
+persist.vendor.powerhal.   u:object_r:vendor_powerhal_prop:s0
