@@ -41,6 +41,7 @@
 /dev/socket/powerhal(/.*)?                      u:object_r:powerhal_socket:s0
 /dev/socket/tad                                 u:object_r:tad_socket:s0
 /dev/socket/cashsvr(/.*)?                       u:object_r:cashsvr_socket:s0
+/dev/socket/ucommsvr(/.*)?                      u:object_r:ucommsvr_socket:s0
 
 # files in /odm
 /odm/bin/hw/android\.hardware\.keymaster@3\.0-service-qti u:object_r:hal_keymaster_qti_exec:s0
@@ -85,8 +86,20 @@
 /(system/vendor|vendor)/bin/hw/android\.hardware\.light@2\.0-service\.sony                   u:object_r:hal_light_default_exec:s0
 
 # sysfs paths
+# Input device control nodes, mainly for CASH to control power
+/sys/devices/virtual/input/input[0-9]+/chip_id                                               u:object_r:sysfs_input_control:s0
+/sys/devices/virtual/input/input[0-9]+/chip_pow                                              u:object_r:sysfs_input_control:s0
+# Input device names, mainly for CASH to enumerate
+/sys/devices/virtual/input/input[0-9]+/name                                                  u:object_r:sysfs_input_name:s0
+# ToF sensor for CASH
 /sys/devices/virtual/input/input[0-9]+/enable_ps_sensor                                      u:object_r:sysfs_tof_sensor:s0
 /sys/devices/virtual/input/input[0-9]+/set_use_case                                          u:object_r:sysfs_tof_sensor:s0
+/sys/devices/virtual/input/input[0-9]+/set_ref_spads                                         u:object_r:sysfs_tof_sensor:s0
+/sys/devices/virtual/input/input[0-9]+/set_um_offset                                         u:object_r:sysfs_tof_sensor:s0
+# RGBCIR sensor for CASH
+/sys/devices/virtual/input/input[0-9]+/als_(.*)+                                             u:object_r:sysfs_rgbc_sensor:s0
+# Real-time-clock
+/sys/class/rtc(/.*)?                                                                         u:object_r:sysfs_rtc:s0
 
 ###############################################
 # same-process HAL files and their dependencies
@@ -135,6 +148,7 @@
 /data/vendor/bluetooth/logs(/.*)?      u:object_r:bluetooth_logs_data_file:s0
 /data/vendor/audio(/.*)?               u:object_r:audio_data_file:s0
 /data/vendor/camera(/.*)?              u:object_r:camera_data_file:s0
+/data/vendor/cashsvr(/.*)?             u:object_r:cashsvr_vendor_data_file:s0
 
 # /
 /dsp(/.*)?                u:object_r:adsprpcd_file:s0
