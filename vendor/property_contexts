@@ -6,6 +6,7 @@ persist.dispcal.setting         u:object_r:dispcal_prop:s0
 persist.net.doxlat              u:object_r:net_radio_prop:s0
 persist.sys.timeadjust          u:object_r:timekeep_prop:s0
 persist.vendor.bt.              u:object_r:vendor_bluetooth_prop:s0
+persist.vendor.bluetooth.       u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.camera.          u:object_r:vendor_camera_prop:s0
 persist.vendor.ims.             u:object_r:qcom_ims_prop:s0
 persist.vendor.powerhal.        u:object_r:vendor_powerhal_prop:s0
