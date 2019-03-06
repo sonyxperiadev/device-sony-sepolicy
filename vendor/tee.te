@@ -22,3 +22,8 @@ typeattribute tee data_between_core_and_vendor_violators;
 allow tee system_data_file:dir r_dir_perms;
 allow tee fingerprintd_data_file:dir rw_dir_perms;
 allow tee fingerprintd_data_file:file create_file_perms;
+
+# Create folders in /data/* and automatically label them
+type_transition tee system_data_file:{ dir file } tee_data_file;
+allow tee system_data_file:dir { add_name write };
+allow tee tee_data_file:dir { create setattr };
