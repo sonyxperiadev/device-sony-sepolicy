@@ -14,6 +14,7 @@ persist.vendor.usb.             u:object_r:vendor_usb_prop:s0
 persist.vendor.usb.config       u:object_r:vendor_usb_config_prop:s0
 ro.vendor.bt.                   u:object_r:vendor_bluetooth_prop:s0
 ro.vendor.ril.                  u:object_r:vendor_radio_prop:s0
+ro.wifi.                        u:object_r:vendor_wifi_prop:s0
 sensors.                        u:object_r:sensors_prop:s0
 sys.keymaster.loaded            u:object_r:keymaster_prop:s0
 sys.listeners.registered        u:object_r:tee_listener_prop:s0
