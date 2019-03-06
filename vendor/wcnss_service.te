@@ -43,3 +43,5 @@ r_dir_file(wcnss_service, wifi_vendor_data_file)
 
 allow wcnss_service sysfs_soc:dir search;
 allow wcnss_service sysfs_soc:file r_file_perms;
+
+dontaudit wcnss_service kernel:system module_request;
