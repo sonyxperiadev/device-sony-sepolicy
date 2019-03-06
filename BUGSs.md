@@ -14,5 +14,4 @@
   vndservice_manager_type
 - b/77868789: netd tethering: Remove once fixed upstream
 - b/867711: webview_zygote: Fix socket call to parent in code
-- b/867710: crash_dump: Remove once fixed upstream
 - b/124102550: system_server: Remove once fixed upstream
