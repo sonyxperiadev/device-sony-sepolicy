@@ -62,6 +62,8 @@ genfscon sysfs /kernel/boot_wlan/boot_wlan                              u:object
 
 genfscon debugfs /kgsl/proc                           u:object_r:debugfs_kgsl:s0
 genfscon debugfs /clk/debug_suspend                   u:object_r:debugfs_clk:s0
+genfscon debugfs /wlan                                u:object_r:debugfs_wlan:s0
+genfscon debugfs /wlan0                               u:object_r:debugfs_wlan:s0
 
 genfscon debugfs /rpm_stats                           u:object_r:debugfs_rpm:s0
 genfscon debugfs /rpm_master_stats                    u:object_r:debugfs_rpm:s0
