@@ -1,5 +1,4 @@
 type sysfs_camera, sysfs_type, fs_type;
-type sysfs_clkscale, sysfs_type, fs_type;
 type sysfs_console_suspend, sysfs_type, fs_type;
 type sysfs_esoc, sysfs_type, fs_type;
 type sysfs_fingerprint, sysfs_type, fs_type;
@@ -16,7 +15,6 @@ type sysfs_timestamp_switch, sysfs_type, fs_type;
 type sysfs_addrsetup, sysfs_type, fs_type;
 type sysfs_bluetooth, sysfs_type, fs_type;
 type sysfs_pcc_profile, sysfs_type, fs_type;
-type sysfs_timekeep, sysfs_type, fs_type;
 type sysfs_usb_supply, sysfs_type, fs_type;
 type sysfs_input_name, sysfs_type, fs_type;
 type sysfs_input_control, sysfs_type, fs_type;

@@ -1,3 +1,0 @@
-# TODO(b/867710): Remove this once fixed upstream.
-# See https://r.android.com/867710
-allow crash_dump resourcecache_data_file:file read;
