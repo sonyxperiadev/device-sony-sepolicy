@@ -32,6 +32,8 @@ wakelock_use(tad)
 #To create the folders in /persist
 allow tad persist_file:dir create_dir_perms;
 
+allow tad vendor_data_file:dir create_dir_perms;
+
 #For system folder entries
 r_dir_file(tad, rfs_system_file)
 allow tad rfs_system_file:lnk_file r_file_perms;
@@ -51,6 +53,7 @@ r_dir_file(tad, vendor_firmware_file)
 
 #For dropping permisions from root and wakelock
 allow tad self:capability {
+    chown
     setuid
     setgid
     setpcap
