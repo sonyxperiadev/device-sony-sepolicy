@@ -17,11 +17,11 @@ r_dir_file(tad, proc)
 
 #The files created by tftp_server process in the /data folder will have type rfs_file
 type_transition tad system_data_file:{ dir file } rfs_file;
-type_transition tad system_data_file:dir rfs_shared_hlos_file "hlos_rfs";
+#Same for files in /data/vendor/
+type_transition tad vendor_data_file:{ dir file } rfs_file;
 
 #The files created by tftp_server process in the /persist folder will have type persist_rfs_file
 type_transition tad persist_rfs_file:{ dir file } persist_rfs_file;
-type_transition tad persist_rfs_file:dir persist_rfs_file "hlos_rfs";
 
 #For QMI sockets and IPCR Sockets
 allow tad self:socket create_socket_perms_no_ioctl;
@@ -29,22 +29,16 @@ allow tad self:socket create_socket_perms_no_ioctl;
 #For Wakelocks
 wakelock_use(tad)
 
-#To create the folders in /persist
-allow tad persist_file:dir create_dir_perms;
-
-allow tad vendor_data_file:dir create_dir_perms;
-
 #For system folder entries
 r_dir_file(tad, rfs_system_file)
 allow tad rfs_system_file:lnk_file r_file_perms;
 
 #For data folder entries
+allow tad vendor_data_file:dir { add_name write };
 allow tad rfs_file:dir create_dir_perms;
 allow tad rfs_file:file create_file_perms;
 
-allow tad rfs_shared_hlos_file:dir create_dir_perms;
-allow tad rfs_shared_hlos_file:file create_file_perms;
-
+allow tad persist_file:dir search;
 allow tad persist_rfs_file:dir create_dir_perms;
 allow tad persist_rfs_file:file create_file_perms;
 
