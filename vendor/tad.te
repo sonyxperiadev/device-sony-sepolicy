@@ -17,7 +17,6 @@ r_dir_file(tad, proc)
 
 #The files created by tftp_server process in the /data folder will have type rfs_file
 type_transition tad system_data_file:{ dir file } rfs_file;
-type_transition tad system_data_file:dir rfs_shared_hlos_file "hlos_rfs";
 #Same for files in /data/vendor/
 type_transition tad vendor_data_file:{ dir file } rfs_file;
 
@@ -38,9 +37,6 @@ allow tad rfs_system_file:lnk_file r_file_perms;
 allow tad vendor_data_file:dir { add_name write };
 allow tad rfs_file:dir create_dir_perms;
 allow tad rfs_file:file create_file_perms;
-
-allow tad rfs_shared_hlos_file:dir create_dir_perms;
-allow tad rfs_shared_hlos_file:file create_file_perms;
 
 allow tad persist_file:dir search;
 allow tad persist_rfs_file:dir create_dir_perms;
