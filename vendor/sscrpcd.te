@@ -22,3 +22,5 @@ allow sscrpcd sysfs_msm_subsys:dir { search open read };
 allow sscrpcd sysfs_msm_subsys:file { open read };
 allow sscrpcd sysfs_soc:dir search;
 allow sscrpcd sysfs_soc:file r_file_perms;
+
+dontaudit sscrpcd kernel:system module_request;
