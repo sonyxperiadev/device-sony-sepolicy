@@ -4,3 +4,7 @@ userdebug_or_eng(`
 ')
 
 dontaudit kernel kernel:system module_request;
+
+# A kernel worker has to read from /d/wlan{,0}/,
+# otherwise debug files are not created there.
+r_dir_file(kernel, debugfs_wlan)
