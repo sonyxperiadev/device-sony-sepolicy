@@ -114,6 +114,8 @@
 /sys/devices/virtual/input/input[0-9]+/als_(.*)+                                             u:object_r:sysfs_rgbc_sensor:s0
 # Real-time-clock
 /sys/class/rtc(/.*)?                                                                         u:object_r:sysfs_rtc:s0
+# Disk schedulers
+/sys/block/[^/]+/queue(/.*)?                                                                 u:object_r:sysfs_block_queue:s0
 
 ###############################################
 # same-process HAL files and their dependencies
