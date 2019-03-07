@@ -20,4 +20,6 @@ allow addrsetup wpa_data_file:file create_file_perms;
 allow addrsetup sysfs_addrsetup:file rw_file_perms;
 
 allow addrsetup self:capability { net_admin net_raw };
-allow addrsetup self:udp_socket create;
+allow addrsetup self:udp_socket { create ioctl };
+# If compiled with BRCFMAC:
+allowxperm addrsetup self:udp_socket ioctl SIOCSIFHWADDR;
