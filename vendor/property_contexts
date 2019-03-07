@@ -24,6 +24,7 @@ vendor.ims.                     u:object_r:qcom_ims_prop:s0
 vendor.qcom.adspup              u:object_r:vendor_device_prop:s0
 vendor.qcom.cdspup              u:object_r:vendor_device_prop:s0
 vendor.qcom.devup               u:object_r:vendor_device_prop:s0
+vendor.sys.keymaster.loaded     u:object_r:keymaster_prop:s0
 vendor.sys.listeners.           u:object_r:tee_listener_prop:s0
 vendor.usb.                     u:object_r:vendor_usb_prop:s0
 vendor.usb.config               u:object_r:vendor_usb_config_prop:s0
