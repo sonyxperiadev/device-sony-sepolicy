@@ -31,3 +31,4 @@ r_dir_file(sensors, sysfs_soc)
 r_dir_file(sensors, sysfs_esoc)
 
 dontaudit sensors kernel:system { module_request };
+dontaudit sensors diag_device:chr_file rw_file_perms;
