@@ -4,18 +4,23 @@ type sscrpcd_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(sscrpcd)
 
-allow sscrpcd self:capability {
-    net_bind_service
-};
+allow sscrpcd self:capability net_bind_service;
+
+allow sscrpcd self:socket create;
+
+allow sscrpcd qdsp_device:chr_file { open read ioctl };
+allow sscrpcd ion_device:chr_file { open read ioctl };
 
 allow sscrpcd persist_file:dir search;
 allow sscrpcd persist_sensors_file:dir create_dir_perms;
 allow sscrpcd persist_sensors_file:file create_file_perms;
-allow sscrpcd qdsp_device:chr_file { open read };
-allow sscrpcd qdsp_device:chr_file ioctl;
-allow sscrpcd ion_device:chr_file read;
-allow sscrpcd self:socket create;
-allow sscrpcd sysfs_msm_subsys:dir { read search };
-allow sscrpcd mnt_vendor_file:dir search;
+allow sscrpcd mnt_vendor_file:dir { search open read };
+allow sscrpcd vendor_file:dir read;
+allow sscrpcd adsprpcd_file:dir read;
+
+allow sscrpcd sysfs_msm_subsys:dir { search open read };
+allow sscrpcd sysfs_msm_subsys:file { open read };
 allow sscrpcd sysfs_soc:dir search;
 allow sscrpcd sysfs_soc:file r_file_perms;
+
+dontaudit sscrpcd kernel:system module_request;
