@@ -10,6 +10,7 @@ type timekeep_prop, property_type;
 type vendor_bluetooth_prop, property_type;
 type vendor_camera_prop, property_type;
 type vendor_device_prop, property_type;
+type vendor_peripheral_prop, property_type;
 type vendor_powerhal_prop, property_type;
 type vendor_radio_prop, property_type;
 type vendor_usb_config_prop, property_type;

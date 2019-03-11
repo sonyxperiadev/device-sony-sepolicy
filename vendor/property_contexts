@@ -21,6 +21,7 @@ sensors.                        u:object_r:sensors_prop:s0
 sys.keymaster.loaded            u:object_r:keymaster_prop:s0
 sys.listeners.registered        u:object_r:tee_listener_prop:s0
 vendor.ims.                     u:object_r:qcom_ims_prop:s0
+vendor.peripheral.              u:object_r:vendor_peripheral_prop:s0
 vendor.qcom.adspup              u:object_r:vendor_device_prop:s0
 vendor.qcom.cdspup              u:object_r:vendor_device_prop:s0
 vendor.qcom.devup               u:object_r:vendor_device_prop:s0
