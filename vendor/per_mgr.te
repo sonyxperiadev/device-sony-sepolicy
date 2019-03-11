@@ -25,6 +25,8 @@ not_full_treble(`
   add_service(per_mgr, per_mgr_service)
 ')
 
+set_prop(per_mgr, vendor_peripheral_prop)
+
 allow per_mgr self:capability net_bind_service;
 
 allow per_mgr self:socket create_socket_perms;
