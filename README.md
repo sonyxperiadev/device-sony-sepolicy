@@ -37,5 +37,9 @@ See `LICENSE.md`.
 5. `binder_use()` and equivalents
 6. `binder_call()` and equivalents
 7. `add_service()` and equivalents, `hal_server_domain()`
-7. File permissions
-8. `dontaudit`
+8. Miscellaneous things like `wakelock_use()` and `capability`
+9. `get/set_prop()`
+10. `unix_socket_connect()` and other socket stuff
+11. `device` access
+11. File permissions, ioctl
+12. `dontaudit`
