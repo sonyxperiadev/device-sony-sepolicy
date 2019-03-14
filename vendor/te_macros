@@ -15,3 +15,33 @@ define(`r_dir_rw_file', `
 allow $1 $2:dir r_dir_perms;
 allow $1 $2:{ file lnk_file } rw_file_perms;
 ')
+
+# Shim macros until Q comes out officially
+
+###########################################
+# TODO(b/q-compat): Remove once available through Q
+# compat_hal_attribute_hwservice(attribute, service)
+# Ability for domain to get a service to hwservice_manager
+# and find it. It also creates a neverallow preventing
+# others from adding it.
+#
+# Used to pair hal_foo_client with hal_foo_hwservice
+define(`compat_hal_attribute_hwservice', `
+  allow $1_client $2:hwservice_manager find;
+  add_hwservice($1_server, $2)
+  # Guarded by build_test_only() on Q:
+  #neverallow { domain -$1_client -$1_server } $2:hwservice_manager find;
+')
+
+###########################################
+# TODO(b/q-compat): Remove once available through Q
+# compat_hal_attribute_hwservice_client(attribute, service)
+# Ability for domain to get a service to hwservice_manager
+# and find it. It also creates a neverallow preventing
+# others from adding it.
+#
+# Used to pair hal_foo_client with hal_foo_hwservice
+define(`compat_hal_attribute_hwservice_client', `
+  allow $1_client $2:hwservice_manager find;
+  neverallow { domain -$1_client -$1_server } $2:hwservice_manager find;
+')
