@@ -18,3 +18,5 @@
 - b/q-compat: Remove compat te_macros once they're officially
   available through Q
 - b/netutils-lock: Remove lock on xtables.lock once netutils wrappers are available
+- b/netmgrd-system: Remove system file access once netmgrd does no longer
+  execute system files
