@@ -20,6 +20,9 @@ r_dir_file(hal_graphics_composer_default, sysfs_msm_subsys)
 allow hal_graphics_composer_default sysfs_mdss_mdp_caps:file r_file_perms;
 # Access /sys/devices/virtual/graphics/fb0
 r_dir_rw_file(hal_graphics_composer_default, sysfs_graphics)
+# Access /mnt/vendor/persist/display
+allow hal_graphics_composer_default mnt_vendor_file:dir search;
+r_dir_file(hal_graphics_composer_default, persist_display_file)
 
 # HWC_UeventThread
 allow hal_graphics_composer_default self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
