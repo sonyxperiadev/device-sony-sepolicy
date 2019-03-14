@@ -9,9 +9,6 @@ not_full_treble(`
 net_domain(netmgrd)
 init_daemon_domain(netmgrd)
 
-# Allow netutils usage
-domain_auto_trans(netmgrd, netutils_wrapper_exec, netutils_wrapper)
-
 hwbinder_use(netmgrd)
 binder_call(netmgrd, netd)
 
