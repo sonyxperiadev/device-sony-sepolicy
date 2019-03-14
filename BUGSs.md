@@ -17,3 +17,4 @@
 - b/124102550: system_server: Remove once fixed upstream
 - b/q-compat: Remove compat te_macros once they're officially
   available through Q
+- b/netutils-lock: Remove lock on xtables.lock once netutils wrappers are available

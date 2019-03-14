@@ -62,6 +62,7 @@ allow netmgrd netmgr_vendor_data_file:file create_file_perms;
 allow netmgrd system_file:file x_file_perms;
 
 # Acquire lock on /system/etc/xtables.lock
+# TODO(b/netutils-lock): Required till netutils wrappers are available
 not_full_treble(`
   allow netmgrd system_file:file lock;
 ')
