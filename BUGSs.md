@@ -18,3 +18,5 @@
 - b/netutils-lock: Remove lock on xtables.lock once netutils wrappers are available
 - b/netmgrd-system: Remove system file access once netmgrd does no longer
   execute system files
+- b/idc-kl: Remove vendor_idc_file and vendor_keylayout_file labels as they are
+  labeled by AOSP already in Q
