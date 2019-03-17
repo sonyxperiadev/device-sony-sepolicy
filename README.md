@@ -2,14 +2,13 @@
 
 This sepolicy is suitable for SODP supported devices when building on AOSP. Where
 possible, we follow the structure, style, and naming conventions found in the sepolicy
-written for Google devices. The current best comparison is the `wahoo` sepolicy.
+written for Google devices.
 
 When submitting patches please include the following in the commit message:
 
 1. The AVC denial you wish to resolve
 2. Why you think this is the correct sepolicy
 3. Steps to reproduce the denial
-4. Ping @AdFad666 for review.
 
 Failure to include the above may result in your patch being rejected.
 
@@ -33,13 +32,15 @@ See `LICENSE.md`.
 1. Documentation, if any
 2. `domain`, `mydomain_exec`
 3. `init_daemon_domain` or `app_domain`
-4. `typeattribute` violation declarations
-5. `binder_use()` and equivalents
-6. `binder_call()` and equivalents
-7. `add_service()` and equivalents, `hal_server_domain()`
-8. Miscellaneous things like `wakelock_use()` and `capability`
-9. `get/set_prop()`
-10. `unix_socket_connect()` and other socket stuff
-11. `device` access
-11. File permissions, ioctl
-12. `dontaudit`
+3. `hal_server_domain()` and equivalents
+5. `typeattribute` violation declarations
+6. `binder_use()` and equivalents
+7. `binder_call()` and equivalents
+8. `add_service()` and equivalents
+9. Miscellaneous things like `wakelock_use()` and `capability`
+10. `get/set_prop()`
+11. `unix_socket_connect()` and other socket stuff
+12. `device` access
+13. File permissions, ioctl
+14. `kernel` and module requests
+15. `dontaudit`
