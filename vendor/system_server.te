@@ -1,14 +1,14 @@
+binder_call(system_server, hal_camera_default)
+binder_call(system_server, hal_tetheroffload_default)
+
 allow system_server self:socket ioctl;
 allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;
 
-binder_call(system_server, hal_camera_default)
-
 allow system_server wlan_device:chr_file rw_file_perms;
-binder_call(system_server, hal_tetheroffload_default)
 
-# input files
-r_dir_file(system_server, idc_file)
-r_dir_file(system_server, keylayout_file)
+# Input files in /vendor/usr/
+r_dir_file(system_server, vendor_idc_file)
+r_dir_file(system_server, vendor_keylayout_file)
 
 # Allow system_server to write to /proc/<pid>/timerslack_ns
 allow system_server appdomain:file w_file_perms;

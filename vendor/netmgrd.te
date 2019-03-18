@@ -1,11 +1,36 @@
 type netmgrd, domain;
 type netmgrd_exec, exec_type, vendor_file_type, file_type;
+# TODO(b/netmgrd-system): Remove this once netutils does not
+# execute system files,
+not_full_treble(`
+  typeattribute netmgrd vendor_executes_system_violators;
+')
 
 net_domain(netmgrd)
 init_daemon_domain(netmgrd)
 
+# Allow netutils usage
+domain_auto_trans(netmgrd, netutils_wrapper_exec, netutils_wrapper)
+
+hwbinder_use(netmgrd)
+binder_call(netmgrd, netd)
+
+# Allow netmgrd to use netd HAL
+allow netmgrd system_net_netd_hwservice:hwservice_manager find;
+
+wakelock_use(netmgrd)
+
+allow netmgrd self:capability {
+    net_admin
+    net_raw
+    setgid
+    setpcap
+    setuid
+};
+
 set_prop(netmgrd, net_radio_prop)
 set_prop(netmgrd, net_rmnet_prop)
+get_prop(netmgrd, hwservicemanager_prop)
 
 # communicate with netd
 unix_socket_connect(netmgrd, netd, netd)
@@ -24,6 +49,10 @@ allow netmgrd qmuxd_socket:dir w_dir_perms;
 allow netmgrd qmuxd_socket:sock_file create_file_perms;
 unix_socket_connect(netmgrd, qmuxd, qmuxd)
 
+userdebug_or_eng(`
+  allow netmgrd diag_device:chr_file { read write };
+')
+
 allow netmgrd sysfs_net:dir r_dir_perms;
 allow netmgrd sysfs_net:file rw_file_perms;
 
@@ -31,35 +60,26 @@ r_dir_file(netmgrd, sysfs_msm_subsys)
 r_dir_file(netmgrd, sysfs_soc)
 r_dir_file(netmgrd, sysfs_esoc)
 
-wakelock_use(netmgrd)
-
-# Allow netutils usage
-domain_auto_trans(netmgrd, netutils_wrapper_exec, netutils_wrapper)
-
 allow netmgrd proc_net:file rw_file_perms;
+
 allow netmgrd netmgr_vendor_data_file:dir rw_dir_perms;
 allow netmgrd netmgr_vendor_data_file:file create_file_perms;
 
 # Allow execution of commands in shell
-allow netmgrd system_file:file x_file_perms;
+# TODO(b/netmgrd-system): Remove this once netmgrd does not execute
+# system files, it's a neverallow on Q without
+# vendor_executes_system_violators
+not_full_treble(`
+  allow netmgrd system_file:file x_file_perms;
+')
 
 # Acquire lock on /system/etc/xtables.lock
-# Required till netutils wrappers are available
-not_full_treble(`allow netmgrd system_file:file lock;')
-
-allow netmgrd self:capability { net_admin net_raw setgid setpcap setuid };
+# TODO(b/netutils-lock): Required till netutils wrappers are available
+not_full_treble(`
+  allow netmgrd system_file:file lock;
+')
 
 allow netmgrd vendor_toolbox_exec:file rx_file_perms;
 
-# Allow netmgrd to use netd HAL
-allow netmgrd system_net_netd_hwservice:hwservice_manager find;
-get_prop(netmgrd, hwservicemanager_prop)
-binder_call(netmgrd, netd)
-hwbinder_use(netmgrd)
-
 dontaudit netmgrd kernel:system module_request;
 dontaudit netmgrd self:system module_request;
-
-userdebug_or_eng(`
-  allow netmgrd diag_device:chr_file { read write };
-')
