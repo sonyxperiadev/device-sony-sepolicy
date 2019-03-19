@@ -1,5 +1,3 @@
 type qdisplay_service,             vndservice_manager_type;
-# TODO(b/vndswitch): Re-enable once per_mgr uses vndbinder,
-# then also remove the label from private/service_contexts
-#type per_mgr_service,              vndservice_manager_type;
+type per_mgr_service,              vndservice_manager_type;
 type qcrilam_service,              vndservice_manager_type;

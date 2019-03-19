@@ -4,22 +4,11 @@ type per_proxy_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(per_proxy)
 
-# TODO(b/vndswitch): Remove once per_proxy uses vendor binder
-not_full_treble(`
-  typeattribute per_proxy binder_in_vendor_violators;
-')
-
 vndbinder_use(per_proxy)
-# TODO(b/vndswitch): Remove once per_proxy uses vendor binder
-not_full_treble(`
-  binder_use(per_proxy)
-')
 
 binder_call(per_proxy, per_mgr)
 
-not_full_treble(`
-  allow per_proxy per_mgr_service:service_manager find;
-')
+allow per_proxy per_mgr_service:service_manager find;
 
 r_dir_file(per_proxy, sysfs_msm_subsys)
 r_dir_file(per_proxy, sysfs_esoc)
