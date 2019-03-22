@@ -28,7 +28,7 @@ allow netmgrd self:capability {
     setuid
 };
 
-set_prop(netmgrd, net_radio_prop)
+set_prop(netmgrd, vendor_net_prop)
 set_prop(netmgrd, net_rmnet_prop)
 get_prop(netmgrd, hwservicemanager_prop)
 
