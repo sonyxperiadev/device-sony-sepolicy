@@ -1,0 +1,1 @@
+allow usbd system_file:dir { open read };

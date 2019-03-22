@@ -1,0 +1,1 @@
+allow thermalserviced system_file:dir { open read };
