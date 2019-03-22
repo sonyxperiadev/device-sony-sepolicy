@@ -18,3 +18,5 @@
   execute system files
 - b/idc-kl: Remove vendor_idc_file and vendor_keylayout_file labels as they are
   labeled by AOSP already in Q
+- b/compatible: Remove all not_compatible_property() macros and update labels
+  once all devices use "compatible" props
