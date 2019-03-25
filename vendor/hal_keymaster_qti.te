@@ -32,6 +32,7 @@ type hal_keymaster_qti_exec, exec_type, file_type, vendor_file_type;
 init_daemon_domain(hal_keymaster_qti)
 
 get_prop(hal_keymaster_qti, tee_listener_prop)
+get_prop(hal_keymaster_qti, vendor_tee_listener_prop)
 
 # allow tee to load firmware images
 r_dir_file(hal_keymaster_qti, vendor_firmware_file)
