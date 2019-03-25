@@ -9,6 +9,9 @@ init_daemon_domain(cashsvr)
 # For dropping permissions
 allow cashsvr self:capability { chown setuid };
 
+# Set camera props, read persist.vendor.cash.*
+set_prop(cashsvr, vendor_camera_prop)
+
 # Connect to the tad daemon by using libta.so
 unix_socket_connect(cashsvr, tad, tad)
 
@@ -33,6 +36,3 @@ dontaudit cashsvr sysfs_msm_subsys:dir r_dir_perms;
 dontaudit cashsvr sysfs_msm_subsys:file r_file_perms;
 dontaudit cashsvr sysfs:dir r_dir_perms;
 dontaudit cashsvr sysfs:file r_file_perms;
-
-# Set camera props, read persist.cash.*
-set_prop(cashsvr, vendor_camera_prop)
