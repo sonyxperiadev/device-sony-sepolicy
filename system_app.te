@@ -5,7 +5,9 @@ r_dir_file(system_app, selinuxfs)
 rw_dir_file(system_app, sysfs_graphics)
 rw_dir_file(system_app, sysfs_pcc_profile)
 set_prop(system_app, adbtcpes_prop)
+set_prop(system_app, vendor_adbtcpes_prop)
 set_prop(system_app, dispcal_prop)
+set_prop(system_app, vendor_dispcal_prop)
 
 # TimeKeep Java service
 allow system_app timekeep_vendor_data_file:dir create_dir_perms;
