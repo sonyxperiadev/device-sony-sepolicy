@@ -9,7 +9,7 @@ set_prop(system_app, vendor_dispcal_prop)
 
 # Different system_apps read this value, independent from timekeep.c or
 # TimeKeep.java, so keep it in here
-set_prop(system_app, timekeep_prop)
+set_prop(system_app, vendor_timekeep_prop)
 
 # For android setttings
 binder_call(system_app, per_mgr)

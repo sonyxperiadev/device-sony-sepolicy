@@ -1,7 +1,7 @@
 # Policy for the TimeKeep Java app. It listens to a BootReceiver
 # or TIME_SET event and calculates the offset between the rtc clock
 # in /sys/class/rtc0/since_epoch and the current device time and stores that
-# value in /data/vendor/time/ats_2 and as persist.sys.timeadjust.
+# value in /data/vendor/time/ats_2 and as persist.vendor.timeadjust.
 type timekeep_app, domain;
 
 app_domain(timekeep_app)
@@ -22,5 +22,5 @@ allow timekeep_app sysfs_rtc:dir { search };
 allow timekeep_app sysfs_rtc:{ file lnk_file } r_file_perms;
 allow timekeep_app sysfs_msm_subsys:dir search;
 
-# Set the persist.sys.timeadjust property
-set_prop(timekeep_app, timekeep_prop)
+# Set the persist.vendor.timeadjust property
+set_prop(timekeep_app, vendor_timekeep_prop)
