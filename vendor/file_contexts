@@ -212,12 +212,18 @@
 /(system/vendor|vendor)/bt_firmware(/.*)?      u:object_r:vendor_firmware_file:s0
 
 # /persist
-/mnt/vendor/persist(/.*)?            u:object_r:persist_file:s0
-/mnt/vendor/persist/battery(/.*)?    u:object_r:persist_battery_file:s0
-/mnt/vendor/persist/data(/.*)?       u:object_r:persist_data_file:s0
-/mnt/vendor/persist/display(/.*)?    u:object_r:persist_display_file:s0
-/mnt/vendor/persist/drm(/.*)?        u:object_r:persist_drm_file:s0
-/mnt/vendor/persist/hlos_rfs(/.*)?   u:object_r:persist_rfs_file:s0
-/mnt/vendor/persist/rfs(/.*)?        u:object_r:persist_rfs_file:s0
-/mnt/vendor/persist/sensors(/.*)?    u:object_r:persist_sensors_file:s0
-/mnt/vendor/persist/time(/.*)?       u:object_r:persist_time_file:s0
+/mnt/vendor/persist(/.*)?                      u:object_r:persist_file:s0
+/mnt/vendor/persist/alarm(/.*)?                u:object_r:persist_alarm_file:s0
+/mnt/vendor/persist/battery(/.*)?              u:object_r:persist_battery_file:s0
+/mnt/vendor/persist/bluetooth(/.*)?            u:object_r:persist_bluetooth_file:s0
+/mnt/vendor/persist/bms(/.*)?                  u:object_r:persist_battery_file:s0
+/mnt/vendor/persist/data(/.*)?                 u:object_r:persist_data_file:s0
+/mnt/vendor/persist/display(/.*)?              u:object_r:persist_display_file:s0
+/mnt/vendor/persist/drm(/.*)?                  u:object_r:persist_drm_file:s0
+/mnt/vendor/persist/hlos_rfs(/.*)?             u:object_r:persist_rfs_file:s0
+/mnt/vendor/persist/hvdcp_opti(/.*)?           u:object_r:persist_hvdcp_file:s0
+/mnt/vendor/persist/misc(/.*)?                 u:object_r:persist_misc_file:s0
+/mnt/vendor/persist/rfs(/.*)?                  u:object_r:persist_rfs_file:s0
+/mnt/vendor/persist/secnvm(/.*)?               u:object_r:persist_secnvm_file:s0
+/mnt/vendor/persist/sensors(/.*)?              u:object_r:persist_sensors_file:s0
+/mnt/vendor/persist/time(/.*)?                 u:object_r:persist_time_file:s0
