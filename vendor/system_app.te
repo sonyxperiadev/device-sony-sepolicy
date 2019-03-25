@@ -5,7 +5,7 @@ r_dir_file(system_app, selinuxfs)
 r_dir_rw_file(system_app, sysfs_graphics)
 r_dir_rw_file(system_app, sysfs_pcc_profile)
 set_prop(system_app, adbtcpes_prop)
-set_prop(system_app, dispcal_prop)
+set_prop(system_app, vendor_dispcal_prop)
 
 # Different system_apps read this value, independent from timekeep.c or
 # TimeKeep.java, so keep it in here

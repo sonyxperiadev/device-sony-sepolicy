@@ -2,11 +2,11 @@ adb.network.port.es             u:object_r:adbtcpes_prop:s0
 net.r_rmnet_data0               u:object_r:net_rmnet_prop:s0
 persist.camera.                 u:object_r:camera_prop:s0
 persist.cash.                   u:object_r:vendor_camera_prop:s0
-persist.dispcal.setting         u:object_r:dispcal_prop:s0
 persist.sys.timeadjust          u:object_r:timekeep_prop:s0
 persist.vendor.bluetooth.       u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.bt.              u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.camera.          u:object_r:vendor_camera_prop:s0
+persist.vendor.dispcal.         u:object_r:vendor_dispcal_prop:s0
 persist.vendor.ims.             u:object_r:qcom_ims_prop:s0
 persist.vendor.net.             u:object_r:vendor_net_prop:s0
 persist.vendor.powerhal.        u:object_r:vendor_powerhal_prop:s0
