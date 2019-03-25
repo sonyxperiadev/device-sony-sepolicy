@@ -1,4 +1,6 @@
 allow hal_gatekeeper_default vendor_firmware_file:dir search;
 
 get_prop(hal_gatekeeper_default, tee_listener_prop)
+get_prop(hal_gatekeeper_default, vendor_tee_listener_prop)
 set_prop(hal_gatekeeper_default, keymaster_prop)
+set_prop(hal_gatekeeper_default, vendor_keymaster_prop)

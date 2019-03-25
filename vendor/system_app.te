@@ -1,10 +1,16 @@
+# Needed for system_app to *write* non-core properties:
+# - persist.vendor.dispcal.setting
+# - persist.vendor.timeadjust
+# - vendor.adb.network.port.es
+typeattribute system_app system_writes_vendor_properties_violators;
+
 # SELinux status
 r_dir_file(system_app, selinuxfs)
 
 # ExtendedSettings props
 r_dir_rw_file(system_app, sysfs_graphics)
 r_dir_rw_file(system_app, sysfs_pcc_profile)
-set_prop(system_app, adbtcpes_prop)
+set_prop(system_app, vendor_adbtcpes_prop)
 set_prop(system_app, vendor_dispcal_prop)
 
 # Different system_apps read this value, independent from timekeep.c or

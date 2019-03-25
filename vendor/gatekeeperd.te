@@ -1,1 +1,7 @@
+# Needed for gatekeeperd to *write* non-core properties:
+# - sys.keymaster.loaded
+# - vendor.sys.keymaster.loaded
+typeattribute gatekeeperd system_writes_vendor_properties_violators;
+
 set_prop(gatekeeperd, keymaster_prop)
+set_prop(gatekeeperd, vendor_keymaster_prop)

@@ -1,6 +1,8 @@
 hal_client_domain(hal_audio_default, hal_power)
 
-get_prop(hal_audio_default, bluetooth_prop)
+not_compatible_property(`
+  get_prop(hal_audio_default, bluetooth_prop)
+')
 
 # RQBalance-Powerhal
 allow hal_audio_default hal_power_default:unix_stream_socket connectto;
