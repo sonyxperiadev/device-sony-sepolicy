@@ -1,10 +1,10 @@
-type adbtcpes_prop, property_type;
 type camera_prop, property_type;
 type keymaster_prop, property_type;
 type net_rmnet_prop, property_type;
 type qcom_ims_prop, property_type;
 type sensors_prop, property_type;
 type tee_listener_prop, property_type;
+type vendor_adbtcpes_prop, property_type;
 type vendor_bluetooth_prop, property_type;
 type vendor_camera_prop, property_type;
 type vendor_device_prop, property_type;
