@@ -182,6 +182,9 @@
 /data/vendor/time(/.*)?                u:object_r:timekeep_vendor_data_file:s0
 /data/vendor/wifi(/.*)?                u:object_r:wifi_vendor_data_file:s0
 
+# Misc data files (WARNING: violates core<->vendor boundaries)
+/data/misc/egistec(/.*)?               u:object_r:egistec_misc_data_file:s0
+
 # TODO: Remove them once no need to maintain the backward compatibility. (b/111219177)
 /persist                             u:object_r:rootfs:s0
 /firmware                            u:object_r:rootfs:s0
