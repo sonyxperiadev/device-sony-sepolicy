@@ -1,7 +1,12 @@
-set_prop(cameraserver, vendor_camera_prop)
+# Needed for cameraserver to *write* non-core properties:
+# - persist.vendor.cash.*
+typeattribute cameraserver system_writes_vendor_properties_violators;
 
-allow cameraserver system_server:unix_stream_socket { read write };
+# Note: This is a neverallow without system_writes_vendor_properties_violators
+set_prop(cameraserver, vendor_camera_prop)
 
 allow cameraserver device:dir { open read };
 allow cameraserver gpu_device:chr_file rw_file_perms;
 allow cameraserver video_device:chr_file { ioctl open read write };
+
+allow cameraserver system_server:unix_stream_socket { read write };
