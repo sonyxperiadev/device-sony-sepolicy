@@ -3,4 +3,4 @@ allow shell sysfs_msm_subsys:dir search;
 
 # Allow non-root to tune powerhal and CASH
 set_prop(shell, vendor_powerhal_prop)
-set_prop(shell, vendor_camera_prop)
+set_prop(shell, vendor_cash_prop)
