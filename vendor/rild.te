@@ -5,6 +5,11 @@ binder_call(rild, qcrilam_app);
 
 allow rild per_mgr_service:service_manager find;
 
+not_compatible_property(`
+  set_prop(rild, radio_prop)
+')
+set_prop(rild, vendor_radio_prop)
+
 allow rild radio_vendor_data_file:dir create_dir_perms;
 allow rild radio_vendor_data_file:file create_file_perms;
 
@@ -20,8 +25,6 @@ unix_socket_connect(rild, netmgrd, netmgrd)
 
 add_hwservice(rild, vnd_ims_radio_hwservice)
 add_hwservice(rild, vnd_qcrilhook_hwservice)
-
-set_prop(rild, vendor_radio_prop)
 
 allow rild self:socket ioctl;
 allowxperm rild self:socket ioctl msm_sock_ipc_ioctls;
