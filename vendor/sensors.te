@@ -8,6 +8,10 @@ allow sensors self:capability {
     net_bind_service
 };
 
+userdebug_or_eng(`
+  allow sensors diag_device:chr_file rw_file_perms;
+')
+
 allow sensors self:socket create_socket_perms;
 allowxperm sensors self:socket ioctl msm_sock_ipc_ioctls;
 
@@ -31,3 +35,4 @@ r_dir_file(sensors, sysfs_soc)
 r_dir_file(sensors, sysfs_esoc)
 
 dontaudit sensors kernel:system { module_request };
+dontaudit sensors diag_device:chr_file rw_file_perms;
