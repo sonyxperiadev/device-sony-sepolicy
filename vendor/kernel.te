@@ -1,7 +1,9 @@
-# for diag over socket
 userdebug_or_eng(`
+  # for diag over socket
   allow kernel self:socket create;
 ')
+# Ignore in user builds
+dontaudit kernel self:socket create;
 
 dontaudit kernel kernel:system module_request;
 
