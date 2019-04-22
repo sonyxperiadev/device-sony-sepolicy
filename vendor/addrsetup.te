@@ -23,3 +23,5 @@ allow addrsetup self:capability { net_admin net_raw };
 allow addrsetup self:udp_socket { create ioctl };
 # If compiled with BRCFMAC:
 allowxperm addrsetup self:udp_socket ioctl SIOCSIFHWADDR;
+
+dontaudit addrsetup kernel:system module_request;
