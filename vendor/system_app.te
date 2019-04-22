@@ -25,6 +25,8 @@ binder_call(system_app, update_engine)
 # This is a neverallow anyways, so ignore it
 dontaudit system_app perfprofd:binder call;
 
+allow system_app self:netlink_kobject_uevent_socket { bind create read setopt };
+
 allow system_app fs_bpf:dir search;
 allow system_app proc_pagetypeinfo:file r_file_perms;
 allow system_app sysfs_zram:dir search;
