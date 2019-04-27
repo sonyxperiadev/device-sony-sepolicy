@@ -1,0 +1,9 @@
+type restorecon_persist, domain;
+type restorecon_persist_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(restorecon_persist)
+
+# Clear security.restorecon_last xattr from /mnt/vendor/persist/sensors/
+allow restorecon_persist persist_file:dir setattr;
+# Execute /vendor/bin/toybox_vendor
+allow restorecon_persist vendor_toolbox_exec:file execute_no_trans;

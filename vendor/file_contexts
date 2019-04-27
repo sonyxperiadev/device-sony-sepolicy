@@ -85,6 +85,7 @@
 /(system/vendor|vendor)/bin/init\.qcom\.adspstart\.sh                                        u:object_r:init-qcom-adspstart-sh_exec:s0
 /(system/vendor|vendor)/bin/init\.qcom\.cdspstart\.sh                                        u:object_r:init-qcom-cdspstart-sh_exec:s0
 /(system/vendor|vendor)/bin/init\.qcom\.ipastart\.sh                                         u:object_r:init-qcom-ipastart-sh_exec:s0
+/(system/vendor|vendor)/bin/restorecon_persist\.sh                                           u:object_r:restorecon_persist_exec:s0
 /(system/vendor|vendor)/bin/initlight                                                        u:object_r:initlight_exec:s0
 /(system/vendor|vendor)/bin/ipacm                                                            u:object_r:hal_tetheroffload_default_exec:s0
 /(system/vendor|vendor)/bin/ucommsvr                                                         u:object_r:ucommsvr_exec:s0
