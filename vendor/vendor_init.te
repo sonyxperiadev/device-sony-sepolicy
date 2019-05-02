@@ -38,4 +38,9 @@ allow vendor_init persist_file:lnk_file read;
 # Create and chown /(mnt/vendor/)persist/battery/ folder for health HAL
 allow vendor_init persist_battery_file:dir create_dir_perms;
 
+# Relabel /mnt/vendor/persist/ files
+allow vendor_init unlabeled:{ dir file } { getattr setattr relabelfrom };
+# Execute /vendor/bin/toybox_vendor
+allow vendor_init vendor_toolbox_exec:file execute_no_trans;
+
 allow vendor_init device:file { create write };
