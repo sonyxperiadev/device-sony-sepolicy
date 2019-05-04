@@ -34,7 +34,7 @@ r_dir_file(tad, rfs_system_file)
 allow tad rfs_system_file:lnk_file r_file_perms;
 
 #For data folder entries
-allow tad vendor_data_file:dir { add_name write };
+allow tad vendor_data_file:dir { add_name setattr write };
 allow tad rfs_file:dir create_dir_perms;
 allow tad rfs_file:file create_file_perms;
 
