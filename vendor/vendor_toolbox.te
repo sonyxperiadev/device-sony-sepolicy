@@ -1,0 +1,4 @@
+# /vendor/bin/(toybox_vendor|toolbox)
+type vendor_toolbox, domain;
+
+init_daemon_domain(vendor_toolbox)
