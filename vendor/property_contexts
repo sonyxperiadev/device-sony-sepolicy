@@ -25,7 +25,7 @@ vendor.ims.                     u:object_r:qcom_ims_prop:s0
 vendor.peripheral.              u:object_r:vendor_peripheral_prop:s0
 vendor.qcom.adspup              u:object_r:vendor_device_prop:s0
 vendor.qcom.cdspup              u:object_r:vendor_device_prop:s0
-vendor.qcom.devup               u:object_r:vendor_device_prop:s0
+vendor.qcom.slpiup              u:object_r:vendor_device_prop:s0
 vendor.rild.                    u:object_r:vendor_radio_prop:s0
 vendor.sys.keymaster.loaded     u:object_r:vendor_keymaster_prop:s0
 vendor.sys.listeners.           u:object_r:vendor_tee_listener_prop:s0
