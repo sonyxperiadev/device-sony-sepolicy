@@ -81,7 +81,7 @@
 /(system/vendor|vendor)/usr/keylayout(/.*)?                                                  u:object_r:vendor_keylayout_file:s0
 /(system/vendor|vendor)/bin/macaddrsetup                                                     u:object_r:addrsetup_exec:s0
 /(system/vendor|vendor)/bin/rdclean\.sh                                                      u:object_r:rdclean_exec:s0
-/(system/vendor|vendor)/bin/init\.qcom\.devstart\.sh                                         u:object_r:init-qcom-devstart-sh_exec:s0
+/(system/vendor|vendor)/bin/init\.qcom\.slpistart\.sh                                        u:object_r:init-qcom-slpistart-sh_exec:s0
 /(system/vendor|vendor)/bin/init\.qcom\.adspstart\.sh                                        u:object_r:init-qcom-adspstart-sh_exec:s0
 /(system/vendor|vendor)/bin/init\.qcom\.cdspstart\.sh                                        u:object_r:init-qcom-cdspstart-sh_exec:s0
 /(system/vendor|vendor)/bin/init\.qcom\.ipastart\.sh                                         u:object_r:init-qcom-ipastart-sh_exec:s0
