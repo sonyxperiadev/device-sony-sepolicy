@@ -8,6 +8,7 @@ typeattribute system_app system_writes_vendor_properties_violators;
 r_dir_file(system_app, selinuxfs)
 
 # ExtendedSettings props
+r_dir_rw_file(system_app, sysfs_glove_mode)
 r_dir_rw_file(system_app, sysfs_graphics)
 r_dir_rw_file(system_app, sysfs_pcc_profile)
 set_prop(system_app, vendor_adbtcpes_prop)
