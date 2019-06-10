@@ -7,6 +7,7 @@ type sysfs_console_suspend, sysfs_type, fs_type;
 type sysfs_diag, fs_type, sysfs_type;
 type sysfs_esoc, sysfs_type, fs_type;
 type sysfs_fingerprint, sysfs_type, fs_type;
+type sysfs_glove_mode, sysfs_type, fs_type;
 type sysfs_graphics, sysfs_type, fs_type;
 type sysfs_input_control, sysfs_type, fs_type;
 type sysfs_input_name, sysfs_type, fs_type;

@@ -117,6 +117,10 @@
 /sys/class/rtc(/.*)?                                                                         u:object_r:sysfs_rtc:s0
 # Disk schedulers
 /sys/block/[^/]+/queue(/.*)?                                                                 u:object_r:sysfs_block_queue:s0
+# Glove mode:
+# Clearpad: /sys/devices/virtual/input/clearpad/glove:
+/sys/devices/virtual/input/input[0-9]+/glove                                                 u:object_r:sysfs_glove_mode:s0
+/sys/devices/virtual/input/lge_touch/glove_mode                                              u:object_r:sysfs_glove_mode:s0
 
 ###############################################
 # same-process HAL files and their dependencies
