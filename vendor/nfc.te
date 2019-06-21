@@ -1,3 +1,6 @@
 # Data file accesses.
 allow nfc nfc_vendor_data_file:dir create_dir_perms;
 allow nfc nfc_vendor_data_file:file create_file_perms;
+
+# Read /vendor/etc/libnfc-nci.conf
+allow nfc vendor_configs_file:file r_file_perms;
