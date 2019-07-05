@@ -14,3 +14,6 @@ allow hal_health_default { sysfs_msm_subsys persist_file }:dir search;
 allow hal_health_default sysfs_usb_supply:file r_file_perms;
 # Read or restore battery statistics
 allow hal_health_default sysfs_batteryinfo:file rw_file_perms;
+# Read storage stats and emmc health
+allow hal_health_default sysfs_mmc:dir search;
+allow hal_health_default sysfs_mmc:file r_file_perms;
