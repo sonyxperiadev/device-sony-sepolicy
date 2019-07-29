@@ -1,10 +1,13 @@
-# for diag over socket
 userdebug_or_eng(`
+  # for diag over socket
   allow kernel self:socket create;
+  # A kernel worker has to read from /d/wlan{,0}/,
+  # otherwise debug files are not created there.
+  r_dir_file(kernel, debugfs_wlan)
 ')
+# Ignore in user builds
+dontaudit kernel self:socket create;
 
 dontaudit kernel kernel:system module_request;
-
-# A kernel worker has to read from /d/wlan{,0}/,
-# otherwise debug files are not created there.
-r_dir_file(kernel, debugfs_wlan)
+dontaudit kernel debugfs_wlan:dir r_dir_perms;
+dontaudit kernel debugfs_wlan:file r_file_perms;
