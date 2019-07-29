@@ -1,0 +1,10 @@
+# /vendor/bin/(toybox_vendor|toolbox)
+type vendor_toolbox, domain;
+
+init_daemon_domain(vendor_toolbox)
+
+# Remove "security.*" xattrs from /mnt/vendor/persist/
+allow vendor_toolbox mnt_vendor_file:dir search;
+allow vendor_toolbox { persist_file mnt_vendor_file }:dir { setattr };
+
+allow vendor_toolbox self:global_capability_class_set sys_admin;
