@@ -49,6 +49,7 @@ genfscon sysfs /kernel/boot_adsp/boot                                   u:object
 genfscon sysfs /kernel/boot_cdsp/boot                                   u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /kernel/boot_slpi/boot                                   u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /module/msm_performance                                  u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /module/usb_f_mtp                                        u:object_r:sysfs_mtp:s0
 
 genfscon sysfs /devices/platform/soc/soc:bt_wcn3990                     u:object_r:sysfs_bluetooth_writable:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,gpubw                     u:object_r:sysfs_msm_subsys:s0

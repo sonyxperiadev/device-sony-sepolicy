@@ -15,6 +15,7 @@ type sysfs_irq, sysfs_type, fs_type;
 type sysfs_mdss_mdp_caps, sysfs_type, fs_type;
 type sysfs_msm_subsys, sysfs_type, fs_type;
 type sysfs_msm_subsys_restart, sysfs_type, fs_type;
+type sysfs_mtp, sysfs_type, fs_type;
 type sysfs_pcc_profile, sysfs_type, fs_type;
 type sysfs_rgbc_sensor, fs_type, sysfs_type;
 type sysfs_rmtfs, sysfs_type, fs_type;
