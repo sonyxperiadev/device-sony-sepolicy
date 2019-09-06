@@ -6,6 +6,7 @@ init_daemon_domain(tad)
 allow tad kernel:system module_request;
 allow tad block_device:dir { getattr search };
 allow tad ta_block_device:blk_file rw_file_perms;
+allowxperm tad ta_block_device:blk_file ioctl BLKGETSIZE;
 allow tad mnt_vendor_file:dir search;
 
 # Read access to pseudo filesystems.
