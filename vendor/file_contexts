@@ -76,9 +76,6 @@
 # files in /vendor
 /(system/vendor|vendor)/rfs(/.*)?                                                            u:object_r:rfs_system_file:s0
 /(system/vendor|vendor)/firmware(/.*)?                                                       u:object_r:vendor_firmware_file:s0
-# TODO(b/idc-kl): These are labeled by AOSP already in Q
-/(system/vendor|vendor)/usr/idc(/.*)?                                                        u:object_r:vendor_idc_file:s0
-/(system/vendor|vendor)/usr/keylayout(/.*)?                                                  u:object_r:vendor_keylayout_file:s0
 /(system/vendor|vendor)/bin/macaddrsetup                                                     u:object_r:addrsetup_exec:s0
 /(system/vendor|vendor)/bin/rdclean\.sh                                                      u:object_r:rdclean_exec:s0
 /(system/vendor|vendor)/bin/init\.qcom\.slpistart\.sh                                        u:object_r:init-qcom-slpistart-sh_exec:s0
@@ -231,3 +228,7 @@
 /mnt/vendor/persist/secnvm(/.*)?               u:object_r:persist_secnvm_file:s0
 /mnt/vendor/persist/sensors(/.*)?              u:object_r:persist_sensors_file:s0
 /mnt/vendor/persist/time(/.*)?                 u:object_r:persist_time_file:s0
+
+# legacy system/vendor:
+/(system/)?vendor/usr/idc(/.*)?                u:object_r:vendor_idc_file:s0
+/(system/)?vendor/usr/keylayout(/.*)?          u:object_r:vendor_keylayout_file:s0
