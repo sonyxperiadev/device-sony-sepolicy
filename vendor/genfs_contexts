@@ -36,12 +36,10 @@ genfscon sysfs /class/thermal                                           u:object
 genfscon sysfs /devices/virtual/thermal                                 u:object_r:sysfs_thermal:s0
 genfscon sysfs /module/msm_thermal                                      u:object_r:sysfs_thermal:s0
 genfscon sysfs /module/printk/parameters/console_suspend                u:object_r:sysfs_console_suspend:s0
-genfscon sysfs /module/tcp_cubic/parameters                             u:object_r:sysfs_net:s0
 genfscon sysfs /module/diagchar/parameters/timestamp_switch             u:object_r:sysfs_timestamp_switch:s0
 genfscon sysfs /devices/virtual/graphics/fb0                            u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/virtual/graphics/fb1                            u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/virtual/graphics/fb2                            u:object_r:sysfs_graphics:s0
-genfscon sysfs /devices/virtual/net                                     u:object_r:sysfs_net:s0
 genfscon sysfs /devices/soc0                                            u:object_r:sysfs_soc:s0
 genfscon sysfs /bus/msm_subsys                                          u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /module/subsystem_restart                                u:object_r:sysfs_msm_subsys_restart:s0
