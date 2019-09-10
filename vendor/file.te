@@ -81,11 +81,6 @@ type wifi_vendor_data_file, file_type, data_file_type;
 
 type egistec_misc_data_file, file_type, data_file_type, core_data_file_type;
 
-# Input files in /vendor/usr/
-# TODO(b/idc-kl): These are labeled by AOSP already in Q
-type vendor_idc_file, file_type, vendor_file_type;
-type vendor_keylayout_file, file_type, vendor_file_type;
-
 # Battery Stats file
 typeattribute sysfs_batteryinfo mlstrustedobject;
 
