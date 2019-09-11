@@ -1,6 +1,7 @@
 # socket ioctls
 define(`RMNET_IOCTL_EXTENDED', `0x000089FD')
 
+# TODO (b/deprecate-old-ipc-router): Remove 4.9 ipc-router compatibility `socket' when kernel 4.14 is final
 # socket ioctls defined in the kernel in include/uapi/linux/msm_ipc.h
 define(`IPC_ROUTER_IOCTL_GET_VERSION', `0x0000c300')
 define(`IPC_ROUTER_IOCTL_GET_MTU', `0x0000c301')

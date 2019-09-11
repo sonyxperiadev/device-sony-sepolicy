@@ -13,11 +13,12 @@ unix_socket_connect(ims, property, init)
 
 allow ims self:capability net_bind_service;
 
-allow ims self:socket create_socket_perms;
+qrtr_socket_create(ims)
 allow ims ims_socket:sock_file write;
 allow ims self:netlink_generic_socket create_socket_perms_no_ioctl;
 allow ims netmgrd_socket:dir search;
 allow ims netmgrd_socket:sock_file w_file_perms;
+# TODO (b/deprecate-old-ipc-router): Remove 4.9 ipc-router compatibility `socket' when kernel 4.14 is final
 allowxperm ims self:socket ioctl msm_sock_ipc_ioctls;
 allowxperm ims self:udp_socket ioctl RMNET_IOCTL_EXTENDED;
 

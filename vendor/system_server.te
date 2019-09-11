@@ -1,9 +1,6 @@
 binder_call(system_server, hal_camera_default)
 binder_call(system_server, hal_tetheroffload_default)
 
-allow system_server self:socket ioctl;
-allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;
-
 allow system_server wlan_device:chr_file rw_file_perms;
 
 # Input files in /vendor/usr/
@@ -16,7 +13,8 @@ allow system_server audioserver:file w_file_perms;
 allow system_server hal_audio_default:file w_file_perms;
 
 allow system_server netmgrd_socket:dir r_dir_perms;
-allow system_server self:socket ioctl;
+qrtr_socket_create(system_server)
+# TODO (b/deprecate-old-ipc-router): Remove 4.9 ipc-router compatibility `socket' when kernel 4.14 is final
 allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;
 
 # radio

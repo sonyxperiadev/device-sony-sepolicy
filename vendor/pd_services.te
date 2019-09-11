@@ -10,7 +10,8 @@ allow pd_mapper self:capability { setgid setpcap setuid net_bind_service };
 
 allow pd_mapper { vendor_firmware_file vendor_file }:dir r_dir_perms;
 
-allow pd_mapper self:socket create_socket_perms;
+qrtr_socket_create(pd_mapper)
+# TODO (b/deprecate-old-ipc-router): Remove 4.9 ipc-router compatibility `socket' when kernel 4.14 is final
 allowxperm pd_mapper self:socket ioctl IPC_ROUTER_IOCTL_BIND_CONTROL_PORT;
 
 r_dir_file(pd_mapper, sysfs_msm_subsys)
