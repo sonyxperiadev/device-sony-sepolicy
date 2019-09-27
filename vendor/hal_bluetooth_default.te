@@ -10,6 +10,7 @@ allow hal_bluetooth_default bluetooth_vendor_data_file:dir create_dir_perms;
 allow hal_bluetooth_default bluetooth_vendor_data_file:file create_file_perms;
 
 allow hal_bluetooth_default kernel:system module_request;
+allow hal_bluetooth_default self:qipcrtr_socket create_socket_perms_no_ioctl;
 allow hal_bluetooth_default self:socket create;
 
 set_prop(hal_bluetooth_default, wc_prop)
