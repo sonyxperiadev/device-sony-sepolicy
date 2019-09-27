@@ -17,7 +17,8 @@ set_prop(per_mgr, vendor_peripheral_prop)
 
 allow per_mgr self:capability net_bind_service;
 
-allow per_mgr self:socket create_socket_perms;
+qrtr_socket_create(per_mgr)
+# TODO (b/deprecate-old-ipc-router): Remove 4.9 ipc-router compatibility `socket' when kernel 4.14 is final
 allowxperm per_mgr self:socket ioctl msm_sock_ipc_ioctls;
 allow per_mgr ssr_device:chr_file { open read };
 allow per_mgr device:dir search;

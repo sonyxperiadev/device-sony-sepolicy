@@ -12,7 +12,8 @@ add_hwservice(hal_imsrtp, hal_imsrtp_hwservice)
 
 unix_socket_connect(hal_imsrtp, ims, ims)
 
-allow hal_imsrtp self:socket create_socket_perms;
+qrtr_socket_create(hal_imsrtp)
+# TODO (b/deprecate-old-ipc-router): Remove 4.9 ipc-router compatibility `socket' when kernel 4.14 is final
 allowxperm hal_imsrtp self:socket ioctl msm_sock_ipc_ioctls;
 
 allow hal_imsrtp self:capability net_bind_service;

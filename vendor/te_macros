@@ -15,3 +15,13 @@ define(`r_dir_rw_file', `
 allow $1 $2:dir r_dir_perms;
 allow $1 $2:{ file lnk_file } rw_file_perms;
 ')
+
+#####################################
+# qrtr_socket_create(domain)
+# Allow the specified domain to create and access
+# a qipcrtr_socket.
+define(`qrtr_socket_create', `
+allow $1 self:qipcrtr_socket create_socket_perms_no_ioctl;
+# TODO (b/deprecate-old-ipc-router): Remove 4.9 ipc-router compatibility `socket' when kernel 4.14 is final
+allow $1 self:socket create_socket_perms;
+')

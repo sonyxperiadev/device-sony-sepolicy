@@ -28,7 +28,8 @@ allow hal_gnss_qti location_vendor_data_file:fifo_file { open read setattr write
 allow hal_gnss_qti location_vendor_data_file:dir create_dir_perms;
 allow hal_gnss_qti location_vendor_data_file:sock_file write;
 
-allow hal_gnss_qti self:socket create_socket_perms;
+qrtr_socket_create(hal_gnss_qti)
+# TODO (b/deprecate-old-ipc-router): Remove 4.9 ipc-router compatibility `socket' when kernel 4.14 is final
 allowxperm hal_gnss_qti self:socket ioctl msm_sock_ipc_ioctls;
 
 unix_socket_connect(hal_gnss_qti, netmgrd, netmgrd)

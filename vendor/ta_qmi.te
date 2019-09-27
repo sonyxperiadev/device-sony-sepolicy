@@ -5,7 +5,8 @@ init_daemon_domain(ta_qmi)
 
 allow ta_qmi kernel:system module_request;
 
-allow ta_qmi self:socket create_socket_perms;
+qrtr_socket_create(ta_qmi)
+# TODO (b/deprecate-old-ipc-router): Remove 4.9 ipc-router compatibility `socket' when kernel 4.14 is final
 allowxperm ta_qmi self:socket ioctl msm_sock_ipc_ioctls;
 
 unix_socket_connect(ta_qmi, tad, tad)

@@ -26,6 +26,7 @@ unix_socket_connect(rild, netmgrd, netmgrd)
 add_hwservice(rild, vnd_ims_radio_hwservice)
 add_hwservice(rild, vnd_qcrilhook_hwservice)
 
+# TODO (b/deprecate-old-ipc-router): Remove 4.9 ipc-router compatibility `socket' when kernel 4.14 is final
 allow rild self:socket ioctl;
 allowxperm rild self:socket ioctl msm_sock_ipc_ioctls;
 
