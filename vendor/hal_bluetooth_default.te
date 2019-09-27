@@ -10,6 +10,10 @@ allow hal_bluetooth_default bluetooth_vendor_data_file:dir create_dir_perms;
 allow hal_bluetooth_default bluetooth_vendor_data_file:file create_file_perms;
 
 allow hal_bluetooth_default kernel:system module_request;
+qrtr_socket_create(hal_bluetooth_default)
+# TODO (b/deprecate-old-ipc-router):
+# Test if this socket is for the (now deprecated) 4.9 ipc-router, since there
+# is no allowxperm for msm_sock_ipc_ioctls.
 allow hal_bluetooth_default self:socket create;
 
 set_prop(hal_bluetooth_default, wc_prop)
