@@ -228,6 +228,9 @@
 /mnt/vendor/persist/sensors(/.*)?              u:object_r:persist_sensors_file:s0
 /mnt/vendor/persist/time(/.*)?                 u:object_r:persist_time_file:s0
 
-# legacy system/vendor:
-/(system/)?vendor/usr/idc(/.*)?                u:object_r:vendor_idc_file:s0
-/(system/)?vendor/usr/keylayout(/.*)?          u:object_r:vendor_keylayout_file:s0
+# Supplement AOSP sepolicy for legacy devices' /system/vendor paths:
+# TODO(b/aosp-keylayout): Remove once https://r.android.com/1140902 has landed
+# in Android R
+/(vendor|system/vendor)/usr/keylayout(/.*)?\.kl       u:object_r:vendor_keylayout_file:s0
+/(vendor|system/vendor)/usr/keychars(/.*)?\.kcm       u:object_r:vendor_keychars_file:s0
+/(vendor|system/vendor)/usr/idc(/.*)?\.idc            u:object_r:vendor_idc_file:s0
