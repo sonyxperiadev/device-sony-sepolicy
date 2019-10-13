@@ -15,8 +15,6 @@
 - b/124102550: system_server: Remove once fixed upstream
 - b/compatible: Remove all not_compatible_property() macros and update labels
   once all devices use "compatible" props
-- b/core-sp-hal: Remove sp-hal file labels once audioserver/cameraserver and
-  their associated libs no longer access vendor files
 - b/deprecate-old-ipc-router: Remove 4.9 ipc-router compatibility `socket'
   when kernel 4.14 is final. ioctl defines and macros can be removed as well.
 - b/aosp-keylayout: Remove once https://r.android.com/1140902 has landed in
