@@ -30,10 +30,6 @@ allow tad self:socket create_socket_perms_no_ioctl;
 #For Wakelocks
 wakelock_use(tad)
 
-#For system folder entries
-r_dir_file(tad, rfs_system_file)
-allow tad rfs_system_file:lnk_file r_file_perms;
-
 #For data folder entries
 allow tad vendor_data_file:dir { add_name setattr write };
 allow tad rfs_file:dir create_dir_perms;
