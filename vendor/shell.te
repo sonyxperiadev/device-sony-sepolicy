@@ -6,6 +6,8 @@ typeattribute shell system_writes_vendor_properties_violators;
 # Allow non-root to tune powerhal and CASH
 set_prop(shell, vendor_powerhal_prop)
 set_prop(shell, vendor_cash_prop)
+# Set persist.vendor.health.fake_storage for debugging
+set_prop(shell, vendor_health_prop)
 
 # To allow non-root to find power_supply management info
 allow shell sysfs_msm_subsys:dir search;

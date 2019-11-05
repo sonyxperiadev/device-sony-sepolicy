@@ -9,6 +9,11 @@ allow vold {
       persist_block_device
 }:blk_file getattr;
 
+# Vold would have access to /sys/block/mmcblk0 because it can
+# access all of u:r:sysfs:s0. But since we have labeled the
+# mmc nodes differently, vold needs access to the new labels:
+allow vold sysfs_mmc:file w_file_perms;
+
 # Load crypto modules
 allow vold kernel:system module_request;
 
