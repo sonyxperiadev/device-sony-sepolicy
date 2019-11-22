@@ -23,3 +23,5 @@ type ab_block_device, dev_type;
 type xbl_block_device, dev_type;
 type wlan_device, dev_type;
 type gpt_block_device, dev_type;
+type dtbo_block_device, dev_type;
+type vbmeta_block_device, dev_type;
