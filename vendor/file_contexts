@@ -208,7 +208,7 @@
 /dsp                                 u:object_r:rootfs:s0
 
 # adsp firmware
-/(system/vendor|vendor|odm)/dsp(/.*)?          u:object_r:adsprpcd_file:s0
+/(system/vendor|vendor|odm)/lib/rfsa/adsp(/.*)?          u:object_r:adsprpcd_file:s0
 
 # files in firmware
 /(system/vendor|vendor)/firmware_mnt(/.*)?     u:object_r:vendor_firmware_file:s0
