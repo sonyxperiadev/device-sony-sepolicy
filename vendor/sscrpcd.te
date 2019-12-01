@@ -6,6 +6,8 @@ init_daemon_domain(sscrpcd)
 
 allow sscrpcd self:capability net_bind_service;
 
+allow sscrpcd self:qipcrtr_socket create_socket_perms_no_ioctl;
+# TODO (b/deprecate-old-ipc-router): Remove 4.9 ipc-router compatibility `socket' when kernel 4.14 is final
 allow sscrpcd self:socket create;
 
 allow sscrpcd qdsp_device:chr_file { open read ioctl };

@@ -17,3 +17,5 @@ allow qcrilam_app vnd_qcrilhook_hwservice:hwservice_manager find;
 
 # Interact with rild
 binder_call(qcrilam_app, rild)
+
+allow qcrilam_app cgroup:file w_file_perms;

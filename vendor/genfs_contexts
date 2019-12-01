@@ -62,6 +62,7 @@ genfscon sysfs /bus/mmc/devices/mmc0:0001                               u:object
 genfscon sysfs /module/diagchar                                         u:object_r:sysfs_diag:s0
 genfscon sysfs /kernel/irq_helper/irq_blacklist_on                      u:object_r:sysfs_irq:s0
 genfscon sysfs /kernel/boot_wlan/boot_wlan                              u:object_r:sysfs_boot_wlan:s0
+genfscon sysfs /kernel/wlan/power_stats                                 u:object_r:sysfs_wlan_power_stats:s0
 
 genfscon sysfs /power/rpmh_stats/master_stats                           u:object_r:sysfs_rpm:s0
 genfscon sysfs /power/system_sleep/stats                                u:object_r:sysfs_system_sleep_stats:s0

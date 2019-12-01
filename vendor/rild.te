@@ -9,6 +9,7 @@ not_compatible_property(`
   set_prop(rild, radio_prop)
 ')
 set_prop(rild, vendor_radio_prop)
+get_prop(rild, vendor_net_prop)
 
 allow rild radio_vendor_data_file:dir create_dir_perms;
 allow rild radio_vendor_data_file:file create_file_perms;
@@ -25,6 +26,7 @@ unix_socket_connect(rild, netmgrd, netmgrd)
 
 add_hwservice(rild, vnd_ims_radio_hwservice)
 add_hwservice(rild, vnd_qcrilhook_hwservice)
+add_hwservice(rild, vnd_data_connection_hwservice)
 
 qrtr_socket_create(rild)
 # TODO (b/deprecate-old-ipc-router): Remove 4.9 ipc-router compatibility `socket' when kernel 4.14 is final
