@@ -72,6 +72,7 @@ type audio_vendor_data_file, file_type, data_file_type;
 type bluetooth_vendor_data_file, file_type, data_file_type;
 type camera_vendor_data_file, file_type, data_file_type;
 type cashsvr_vendor_data_file, file_type, data_file_type;
+type display_vendor_data_file, file_type, data_file_type;
 type ipa_vendor_data_file, file_type, data_file_type;
 type location_vendor_data_file, file_type, data_file_type;
 type netmgr_vendor_data_file, file_type, data_file_type;

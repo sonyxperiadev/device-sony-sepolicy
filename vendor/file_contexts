@@ -193,8 +193,9 @@
 # data files
 /data/vendor/audio(/.*)?               u:object_r:audio_vendor_data_file:s0
 /data/vendor/bluetooth(/.*)?           u:object_r:bluetooth_vendor_data_file:s0
-/data/vendor/cashsvr(/.*)?             u:object_r:cashsvr_vendor_data_file:s0
 /data/vendor/camera(/.*)?              u:object_r:camera_vendor_data_file:s0
+/data/vendor/cashsvr(/.*)?             u:object_r:cashsvr_vendor_data_file:s0
+/data/vendor/display(/.*)?             u:object_r:display_vendor_data_file:s0
 /data/vendor/ipa(/.*)?                 u:object_r:ipa_vendor_data_file:s0
 /data/vendor/location(/.*)?            u:object_r:location_vendor_data_file:s0
 /data/vendor/netmgr(/.*)?              u:object_r:netmgr_vendor_data_file:s0
