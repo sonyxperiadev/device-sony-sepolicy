@@ -1,6 +1,7 @@
-type hal_display_config_hwservice, hwservice_manager_type;
-type nxpnfc_hwservice,             hwservice_manager_type;
-type nxpese_hwservice,             hwservice_manager_type;
-type vnd_qcrilhook_hwservice,      hwservice_manager_type;
-type hal_imsrtp_hwservice,         hwservice_manager_type;
-type vnd_ims_radio_hwservice,      hwservice_manager_type;
+type hal_display_config_hwservice,      hwservice_manager_type;
+type nxpnfc_hwservice,                  hwservice_manager_type;
+type nxpese_hwservice,                  hwservice_manager_type;
+type vnd_qcrilhook_hwservice,           hwservice_manager_type;
+type hal_imsrtp_hwservice,              hwservice_manager_type;
+type vnd_ims_radio_hwservice,           hwservice_manager_type;
+type vnd_data_connection_hwservice,     hwservice_manager_type;
