@@ -11,3 +11,6 @@ vendor.qti.hardware.radio.uim::IUim                                     u:object
 vendor.qti.hardware.radio.lpa::IUimLpa                                  u:object_r:hal_telephony_hwservice:s0
 vendor.qti.hardware.radio.qtiradio::IQtiRadio                           u:object_r:hal_telephony_hwservice:s0
 vendor.qti.hardware.data.connection::IDataConnection                    u:object_r:vnd_data_connection_hwservice:s0
+# QTI HAL interfaces for display services:
+vendor.qti.hardware.display.mapper::IQtiMapper                          u:object_r:hal_graphics_mapper_hwservice:s0
+vendor.qti.hardware.display.allocator::IQtiAllocator                    u:object_r:hal_graphics_allocator_hwservice:s0
