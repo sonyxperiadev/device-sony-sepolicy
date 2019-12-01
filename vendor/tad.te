@@ -25,6 +25,8 @@ type_transition tad vendor_data_file:{ dir file } rfs_file;
 type_transition tad persist_rfs_file:{ dir file } persist_rfs_file;
 
 #For QMI sockets and IPCR Sockets
+allow tad self:qipcrtr_socket create_socket_perms_no_ioctl;
+# TODO (b/deprecate-old-ipc-router): Remove 4.9 ipc-router compatibility `socket' when kernel 4.14 is final
 allow tad self:socket create_socket_perms_no_ioctl;
 
 #For Wakelocks
