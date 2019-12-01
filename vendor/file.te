@@ -25,6 +25,7 @@ type sysfs_system_sleep_stats, sysfs_type, fs_type;
 type sysfs_timestamp_switch, sysfs_type, fs_type;
 type sysfs_tof_sensor, fs_type, sysfs_type;
 type sysfs_usb_supply, sysfs_type, fs_type;
+type sysfs_wlan_power_stats, fs_type, sysfs_type;
 
 type debugfs_clk, debugfs_type, fs_type;
 type debugfs_icnss, debugfs_type, fs_type;
