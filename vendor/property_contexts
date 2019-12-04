@@ -32,4 +32,5 @@ vendor.sys.keymaster.loaded     u:object_r:vendor_keymaster_prop:s0
 vendor.sys.listeners.           u:object_r:vendor_tee_listener_prop:s0
 vendor.usb.                     u:object_r:vendor_usb_prop:s0
 vendor.usb.config               u:object_r:vendor_usb_config_prop:s0
+vendor.wlan.                    u:object_r:vendor_wifi_prop:s0
 wc_transport.                   u:object_r:wc_prop:s0
