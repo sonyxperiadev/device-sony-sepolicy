@@ -6,6 +6,8 @@ userdebug_or_eng(`
   r_dir_file(kernel, debugfs_wlan)
 ')
 
+r_dir_file(kernel, debugfs_ipc_logging)
+
 allow kernel self:qipcrtr_socket create_socket_perms_no_ioctl;
 
 # Ignore in user builds
