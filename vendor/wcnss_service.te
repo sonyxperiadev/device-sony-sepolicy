@@ -30,6 +30,7 @@ allow wcnss_service vendor_firmware_file:dir search;
 
 r_dir_file(wcnss_service, sysfs_msm_subsys)
 r_dir_file(wcnss_service, wifi_vendor_data_file)
+r_dir_file(wcnss_service, sysfs_esoc)
 
 allow wcnss_service sysfs_soc:dir search;
 allow wcnss_service sysfs_soc:file r_file_perms;

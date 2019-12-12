@@ -30,6 +30,7 @@ type sysfs_wlan_power_stats, fs_type, sysfs_type;
 type debugfs_clk, debugfs_type, fs_type;
 type debugfs_icnss, debugfs_type, fs_type;
 type debugfs_ion, debugfs_type, fs_type;
+type debugfs_ipc_logging, debugfs_type, fs_type;
 type debugfs_ipc, debugfs_type, fs_type;
 type debugfs_kgsl, debugfs_type, fs_type;
 type debugfs_mdp, debugfs_type, fs_type;
