@@ -16,6 +16,8 @@ allow hal_bootctl_default modem_block_device:blk_file getattr;
 allow hal_bootctl_default system_block_device:blk_file getattr;
 allow hal_bootctl_default ramdump_block_device:blk_file getattr;
 allow hal_bootctl_default adsprpcd_block_device:blk_file getattr;
+allow hal_bootctl_default dtbo_block_device:blk_file getattr;
+allow hal_bootctl_default vbmeta_block_device:blk_file getattr;
 
 # Write to the XBL devices.
 allow hal_bootctl_default xbl_block_device:blk_file rw_file_perms;

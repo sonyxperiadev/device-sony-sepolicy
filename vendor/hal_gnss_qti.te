@@ -23,6 +23,8 @@ dontaudit hal_gnss_qti diag_device:chr_file { read write };
 
 binder_call(hal_gnss_qti, per_mgr)
 
+get_prop(hal_gnss_qti, vendor_net_prop)
+
 # /data/vendor/location
 allow hal_gnss_qti location_vendor_data_file:fifo_file { open read setattr write };
 allow hal_gnss_qti location_vendor_data_file:dir create_dir_perms;
