@@ -28,6 +28,11 @@ allow ims qmuxd_socket:sock_file create_file_perms;
 r_dir_file(ims, sysfs_msm_subsys)
 r_dir_file(ims, sysfs_soc)
 
+userdebug_or_eng(`
+  allow ims diag_device:chr_file { read write };
+')
+
 hwbinder_use(ims)
 
 dontaudit ims kernel:system module_request;
+dontaudit ims diag_device:chr_file { read write };
