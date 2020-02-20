@@ -1,0 +1,5 @@
+type dpm, domain;
+type dpm_exec, exec_type, vendor_file_type, file_type;
+
+net_domain(dpm)
+init_daemon_domain(dpm)

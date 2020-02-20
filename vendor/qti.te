@@ -1,0 +1,5 @@
+type qti, domain;
+type qti_exec, exec_type, vendor_file_type, file_type;
+
+net_domain(qti)
+init_daemon_domain(qti)

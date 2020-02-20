@@ -1,0 +1,5 @@
+type adpl, domain;
+type adpl_exec, exec_type, vendor_file_type, file_type;
+
+net_domain(adpl)
+init_daemon_domain(adpl)
