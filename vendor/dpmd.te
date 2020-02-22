@@ -1,4 +1,36 @@
 type dpmd, domain;
 type dpmd_exec, exec_type, vendor_file_type, file_type;
 
+net_domain(dpmd)
 init_daemon_domain(dpmd)
+
+hwbinder_use(dpmd)
+get_prop(dpmd, hwservicemanager_prop)
+
+# Allow to find and use com.qualcomm.qti.dpmd.api::IdpmQmi
+allow dpmd vnd_qti_dpm_hwservice:hwservice_manager find;
+
+# Allow to talk to IdpmQmi over binder
+binder_call(dpmd, dpmqmimgr)
+
+# For netutils to be able to write their stdout stderr to the pipes opened by dpmd
+allow netutils_wrapper dpmd:fd use;
+# allow netutils_wrapper dpmd:fifo_file { getattr read write append };
+# allow netutils_wrapper dpmd:file r_file_perms;
+allow netutils_wrapper dpmd:unix_stream_socket { read write };
+
+allow dpmd proc_net:file rw_file_perms;
+
+# W dpmd    : denied { dac_override } for capability=1 scontext=u:r:dpmd:s0 tcontext=u:r:dpmd:s0 tclass=capability
+# W dpmd    : denied { dac_override } for capability=1 scontext=u:r:dpmd:s0 tcontext=u:r:dpmd:s0 tclass=capability
+# E Diag_Lib:  Diag_LSM_Init: Failed to open handle to diag driver, error = 13
+# E Diag_Lib:  Diag_LSM_Init: Failed to open handle to diag driver, error = 13
+# W dpmd    : denied { write } for name="tcp_syn_retries" scontext=u:r:dpmd:s0 tcontext=u:object_r:proc_net:s0 tclass=file
+# W iptables-wrappe: denied { use } for path="socket:[59044]" scontext=u:r:netutils_wrapper:s0 tcontext=u:r:dpmd:s0 tclass=fd
+# W iptables-wrappe: denied { read write } for path="socket:[60646]" scontext=u:r:netutils_wrapper:s0 tcontext=u:r:dpmd:s0 tclass=unix_stream_socket
+# W iptables-wrappe: denied { read write } for path="socket:[60651]" scontext=u:r:netutils_wrapper:s0 tcontext=u:r:dpmd:s0 tclass=unix_stream_socket
+# W iptables-wrappe: denied { read write } for path="socket:[60654]" scontext=u:r:netutils_wrapper:s0 tcontext=u:r:dpmd:s0 tclass=unix_stream_socket
+# W iptables-wrappe: denied { use } for path="/system/bin/netutils-wrapper-1.0" scontext=u:r:netutils_wrapper:s0 tcontext=u:r:dpmd:s0 tclass=fd
+
+
+# 02-22 19:03:20.679  3441  3441 W dpmd    : type=1400 audit(0.0:218): avc: denied { wake_alarm } for capability=35 scontext=u:r:dpmd:s0 tcontext=u:r:dpmd:s0 tclass=capability2 permissive=0
