@@ -3,3 +3,11 @@ type dpmqmimgr_exec, exec_type, vendor_file_type, file_type;
 
 net_domain(dpmqmimgr)
 init_daemon_domain(dpmqmimgr)
+
+hwbinder_use(dpmqmimgr)
+get_prop(dpmqmimgr, hwservicemanager_prop)
+add_hwservice(dpmqmimgr, vnd_qti_dpm_hwservice)
+
+allow dpmqmimgr self:qipcrtr_socket create_socket_perms_no_ioctl;
+
+r_dir_file(dpmqmimgr, sysfs_msm_subsys)

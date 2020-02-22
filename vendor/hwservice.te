@@ -5,6 +5,7 @@ type nxpnfc_hwservice,                  hwservice_manager_type;
 type vnd_data_connection_hwservice,     hwservice_manager_type;
 type vnd_ims_radio_hwservice,           hwservice_manager_type;
 type vnd_qcrilhook_hwservice,           hwservice_manager_type;
+type vnd_qti_dpm_hwservice,             hwservice_manager_type;
 type vnd_qti_ims_callinfo_hwservice,    hwservice_manager_type;
 type vnd_qti_imscms_hwservice,          hwservice_manager_type;
 type vnd_qti_uce_hwservice,             hwservice_manager_type;
