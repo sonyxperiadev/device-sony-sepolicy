@@ -34,3 +34,15 @@ allow $1 self:qipcrtr_socket create_socket_perms_no_ioctl;
 # TODO (b/deprecate-old-ipc-router): Remove 4.9 ipc-router compatibility `socket' when kernel 4.14 is final
 allow $1 self:socket create_socket_perms;
 ')
+
+#####################################
+# rw_diag_device(domain)
+# Allow the specified domain rw_file_perms to diag_device
+# in userdebug or eng builds, donotaudit otherwise.
+define(`rw_diag_device', `
+userdebug_or_eng(`
+  allow $1 diag_device:chr_file rw_file_perms;
+')
+# Ignore in user builds
+dontaudit $1 diag_device:chr_file rw_file_perms;
+')

@@ -21,11 +21,8 @@ allow hal_imsrtp self:capability net_bind_service;
 r_dir_file(hal_imsrtp, sysfs_msm_subsys)
 r_dir_file(hal_imsrtp, sysfs_soc)
 
-userdebug_or_eng(`
-  allow hal_imsrtp diag_device:chr_file { read write };
-')
+rw_diag_device(hal_imsrtp)
 
 get_prop(hal_imsrtp, qcom_ims_prop)
 
 dontaudit hal_imsrtp kernel:system module_request;
-dontaudit hal_imsrtp diag_device:chr_file { read write };
