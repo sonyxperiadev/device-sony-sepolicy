@@ -1,4 +1,27 @@
 type dpmd, domain;
 type dpmd_exec, exec_type, vendor_file_type, file_type;
 
+net_domain(dpmd)
 init_daemon_domain(dpmd)
+
+hwbinder_use(dpmd)
+get_prop(dpmd, hwservicemanager_prop)
+
+# Allow to find and use com.qualcomm.qti.dpmd.api::IdpmQmi
+allow dpmd vnd_qti_dpm_hwservice:hwservice_manager find;
+
+# Allow to talk to IdpmQmi over binder
+binder_call(dpmd, dpmqmimgr)
+
+# Register timerfd
+allow dpmd self:capability2 wake_alarm;
+
+# For netutils to be able to write their stdout stderr to the pipes opened by dpmd
+allow netutils_wrapper dpmd:fd use;
+# allow netutils_wrapper dpmd:fifo_file { getattr read write append };
+# allow netutils_wrapper dpmd:file r_file_perms;
+allow netutils_wrapper dpmd:unix_stream_socket { read write };
+
+rw_diag_device(dpmd)
+
+allow dpmd proc_net:file rw_file_perms;
