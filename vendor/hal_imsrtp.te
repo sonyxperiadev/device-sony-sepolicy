@@ -20,6 +20,7 @@ allow hal_imsrtp self:capability net_bind_service;
 
 r_dir_file(hal_imsrtp, sysfs_msm_subsys)
 r_dir_file(hal_imsrtp, sysfs_soc)
+r_dir_file(hal_imsrtp, sysfs_esoc)
 
 rw_diag_device(hal_imsrtp)
 
