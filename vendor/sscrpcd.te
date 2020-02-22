@@ -20,9 +20,8 @@ allow sscrpcd mnt_vendor_file:dir { search open read };
 allow sscrpcd vendor_file:dir read;
 allow sscrpcd adsprpcd_file:dir read;
 
-allow sscrpcd sysfs_msm_subsys:dir { search open read };
-allow sscrpcd sysfs_msm_subsys:file { open read };
-allow sscrpcd sysfs_soc:dir search;
-allow sscrpcd sysfs_soc:file r_file_perms;
+r_dir_file(sscrpcd, sysfs_msm_subsys)
+r_dir_file(sscrpcd, sysfs_soc)
+r_dir_file(sscrpcd, sysfs_esoc)
 
 dontaudit sscrpcd kernel:system module_request;
