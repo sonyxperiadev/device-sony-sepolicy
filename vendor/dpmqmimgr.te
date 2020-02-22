@@ -11,3 +11,4 @@ add_hwservice(dpmqmimgr, vnd_qti_dpm_hwservice)
 allow dpmqmimgr self:qipcrtr_socket create_socket_perms_no_ioctl;
 
 r_dir_file(dpmqmimgr, sysfs_msm_subsys)
+r_dir_file(dpmqmimgr, sysfs_esoc)
