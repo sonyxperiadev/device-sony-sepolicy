@@ -63,6 +63,7 @@
 /odm/bin/pm-service                             u:object_r:per_mgr_exec:s0
 /odm/bin/pm-proxy                               u:object_r:per_proxy_exec:s0
 /odm/bin/pd-mapper                              u:object_r:pd_mapper_exec:s0
+/odm/bin/hw/qcrild                              u:object_r:qcrild_exec:s0
 /odm/bin/qmuxd                                  u:object_r:qmuxd_exec:s0
 /odm/bin/dataadpl                               u:object_r:adpl_exec:s0
 /odm/bin/dataqti                                u:object_r:qti_exec:s0
