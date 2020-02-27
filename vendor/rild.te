@@ -11,9 +11,7 @@ not_compatible_property(`
 set_prop(rild, vendor_radio_prop)
 set_prop(rild, vendor_net_prop)
 
-allow rild radio_vendor_data_file:dir create_dir_perms;
-allow rild radio_vendor_data_file:file create_file_perms;
-
+create_dir_file(rild, radio_vendor_data_file)
 # odm/radio/qcril_database/qcril.db
 allow rild vendor_file:file { ioctl lock };
 
