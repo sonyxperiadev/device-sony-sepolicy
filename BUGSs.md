@@ -21,3 +21,5 @@
   when kernel 4.14 is final. ioctl defines and macros can be removed as well.
 - b/aosp-keylayout: Remove once https://r.android.com/1140902 has landed in
   Android R
+- b/qcrild: Remove qcrild_exec label and rild domain transition when odm-v5 is
+  released
