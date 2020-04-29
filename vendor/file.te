@@ -12,6 +12,7 @@ type sysfs_graphics, sysfs_type, fs_type;
 type sysfs_input_control, sysfs_type, fs_type;
 type sysfs_input_name, sysfs_type, fs_type;
 type sysfs_irq, sysfs_type, fs_type;
+type sysfs_mac_address, sysfs_type, fs_type;
 type sysfs_mdss_mdp_caps, sysfs_type, fs_type;
 type sysfs_mmc, sysfs_type, fs_type;
 type sysfs_msm_subsys, sysfs_type, fs_type;
