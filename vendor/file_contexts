@@ -68,6 +68,7 @@
 /odm/bin/qmuxd                                  u:object_r:qmuxd_exec:s0
 /odm/bin/qrtr-ns                                u:object_r:qrtr_exec:s0
 /odm/bin/qseecomd                               u:object_r:tee_exec:s0
+/odm/bin/qti                                    u:object_r:qti_exec:s0
 /odm/bin/rmt_storage                            u:object_r:rmt_storage_exec:s0
 /odm/bin/sct_service                            u:object_r:sct_exec:s0
 /odm/bin/sensors\.qcom                          u:object_r:sensors_exec:s0
