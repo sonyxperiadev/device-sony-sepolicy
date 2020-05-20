@@ -47,7 +47,8 @@
 /dev/socket/ipacm_log_file                      u:object_r:ipacm_socket:s0
 
 # files in /odm
-/odm/bin/hw/android\.hardware\.keymaster@4\.0-service-qti u:object_r:hal_keymaster_default_exec:s0
+/odm/bin/hw/vendor\.somc\.hardware\.modemswitcher@1\.0-service    u:object_r:hal_modemsw_default_exec:s0
+/odm/bin/hw/android\.hardware\.keymaster@4\.0-service-qti         u:object_r:hal_keymaster_default_exec:s0
 /odm/bin/adpl                                   u:object_r:adpl_exec:s0
 /odm/bin/adsprpcd                               u:object_r:adsprpcd_exec:s0
 /odm/bin/cdsprpcd                               u:object_r:cdsprpcd_exec:s0
@@ -72,6 +73,7 @@
 /odm/bin/rmt_storage                            u:object_r:rmt_storage_exec:s0
 /odm/bin/sct_service                            u:object_r:sct_exec:s0
 /odm/bin/sensors\.qcom                          u:object_r:sensors_exec:s0
+/odm/bin/sony-modem-switcher                    u:object_r:modemsw_exec:s0
 /odm/bin/sscrpcd                                u:object_r:sscrpcd_exec:s0
 /odm/bin/tad_static                             u:object_r:tad_exec:s0
 /odm/bin/ta_qmi_service                         u:object_r:ta_qmi_exec:s0
