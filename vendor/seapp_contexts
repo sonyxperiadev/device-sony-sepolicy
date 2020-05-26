@@ -1,7 +1,5 @@
-# To assign a custom domain to system-level app, it needs to be a priv-app.
-# Otherwise it will stay a platform_app regardless of the domain specified here.
 user=system seinfo=platform name=com.sony.timekeep domain=timekeep_app type=app_data_file
-user=system seinfo=platform name=com.sony.qcrilam domain=qcrilam_app type=app_data_file
+user=_app seinfo=platform name=com.sony.qcrilam domain=qcrilam_app type=app_data_file
 # Why app_data_file and not system_app_data_file?
 # Because some daemon needs access to /data/data/com.sony.{timekeep,qcrilam}
 # This happens with system_app_data_file:
