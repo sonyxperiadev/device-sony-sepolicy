@@ -41,6 +41,7 @@
 /dev/socket/qmux_gps(/.*)?                      u:object_r:qmuxd_socket:s0
 /dev/socket/qmux_nfc(/.*)?                      u:object_r:qmuxd_socket:s0
 /dev/socket/qmux_radio(/.*)?                    u:object_r:qmuxd_socket:s0
+/dev/socket/qti_dpm_uds_file                    u:object_r:qti_dpm_uds_socket:s0
 /dev/socket/msm_irqbalance                      u:object_r:irqbalance_socket:s0
 /dev/socket/netmgr(/.*)?                        u:object_r:netmgrd_socket:s0
 /dev/socket/powerhal(/.*)?                      u:object_r:powerhal_socket:s0
@@ -209,6 +210,7 @@
 /data/vendor/bluetooth(/.*)?           u:object_r:bluetooth_vendor_data_file:s0
 /data/vendor/camera(/.*)?              u:object_r:camera_vendor_data_file:s0
 /data/vendor/cashsvr(/.*)?             u:object_r:cashsvr_vendor_data_file:s0
+/data/vendor/dataqti(/.*)?             u:object_r:dataqti_vendor_data_file:s0
 /data/vendor/display(/.*)?             u:object_r:display_vendor_data_file:s0
 /data/vendor/ipa(/.*)?                 u:object_r:ipa_vendor_data_file:s0
 /data/vendor/location(/.*)?            u:object_r:location_vendor_data_file:s0

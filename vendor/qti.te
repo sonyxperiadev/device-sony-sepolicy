@@ -2,3 +2,17 @@ type qti, domain;
 type qti_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(qti)
+
+allow qti qti_dpm_uds_socket:sock_file write;
+allow qti self:qipcrtr_socket create_socket_perms_no_ioctl;
+
+allow qti dpl_ctl_device:chr_file rw_file_perms;
+allow qti rmnet_device:chr_file rw_file_perms;
+
+r_dir_file(qti, sysfs_esoc)
+r_dir_file(qti, sysfs_msm_subsys)
+r_dir_file(qti, sysfs_soc)
+
+rw_diag_device(qti)
+
+r_dir_file(qti, dataqti_vendor_data_file)

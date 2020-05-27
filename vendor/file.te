@@ -46,6 +46,7 @@ type irqbalance_socket, file_type;
 type netmgrd_socket, file_type;
 type powerhal_socket, file_type;
 type qmuxd_socket, file_type;
+type qti_dpm_uds_socket, file_type;
 type tad_socket, file_type;
 type ucommsvr_socket, file_type;
 
@@ -73,6 +74,7 @@ type audio_vendor_data_file, file_type, data_file_type;
 type bluetooth_vendor_data_file, file_type, data_file_type;
 type camera_vendor_data_file, file_type, data_file_type;
 type cashsvr_vendor_data_file, file_type, data_file_type;
+type dataqti_vendor_data_file, file_type, data_file_type;
 type display_vendor_data_file, file_type, data_file_type;
 type ipa_vendor_data_file, file_type, data_file_type;
 type location_vendor_data_file, file_type, data_file_type;
