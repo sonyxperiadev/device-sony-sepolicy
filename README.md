@@ -35,8 +35,9 @@ See `LICENSE.md`.
 3. `hal_server_domain()` and equivalents
 5. `typeattribute` violation declarations
 6. `binder_use()` and equivalents
-7. `binder_call()` and equivalents
-8. `add_service()` and equivalents
+   `get_prop(..., hwservicemanager_prop)` goes here too
+7. `add_service()` and equivalents
+8. `binder_call()`, finding services and equivalents
 9. Miscellaneous things like `wakelock_use()` and `capability`
 10. `get/set_prop()`
 11. `unix_socket_connect()` and other socket stuff
