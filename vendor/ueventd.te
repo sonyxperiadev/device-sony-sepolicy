@@ -5,7 +5,16 @@ typeattribute ueventd data_between_core_and_vendor_violators;
 r_dir_file(ueventd, vendor_firmware_file)
 r_dir_file(ueventd, persist_file)
 r_dir_file(ueventd, wifi_vendor_data_file)
-allow ueventd firmware_file:lnk_file read;
+
+# The following line is here for posterity and grepping reasons only.
+# GSIs still ship with this label on /firmware, which is marked as bug
+# b/36764215 over at AOSP. The symlink should not be used and all our
+# platforms have ueventd firmware_directories extended in
+# /vendor/uevent.rc to direct to /vendor/firmware_mnt/image/, yet
+# /firwmare is searched first due to:
+# https://android.googlesource.com/platform/system/core/+/android-10.0.0_r33/rootdir/ueventd.rc#1
+# Hide this denial as any use of the link is misleading and wrong:
+dontaudit ueventd firmware_file:lnk_file read;
 
 allow ueventd {
     { sysfs_type - usermodehelper }
