@@ -17,6 +17,7 @@ allow init proc_irq:file rw_file_perms;
 
 # Mount and read/write to devices
 allow init device:dir { mounton rw_dir_perms };
+allow init oemfs:dir mounton;
 # /dev/cpuset/*
 allow init device:file rw_file_perms;
 
