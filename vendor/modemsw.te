@@ -3,3 +3,17 @@ type modemsw_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(modemsw)
 
+hwbinder_use(modemsw)
+
+# Access miscta
+allow modemsw vnd_somc_miscta_hwservice:hwservice_manager find;
+binder_call(modemsw, hal_miscta_default)
+# Access modemsw service
+allow modemsw vnd_somc_modemswitcher_hwservice:hwservice_manager find;
+binder_call(modemsw, hal_modemsw_default)
+# Access allocator
+hal_client_domain(modemsw, hal_allocator)
+
+get_prop(modemsw, hwservicemanager_prop)
+get_prop(modemsw, vendor_somc_cust_prop)
+set_prop(modemsw, vendor_somc_modemswitcher_prop)
