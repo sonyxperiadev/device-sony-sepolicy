@@ -24,3 +24,4 @@ vendor.qti.hardware.display.allocator::IQtiAllocator                    u:object
 com.qualcomm.qti.dpm.api::IdpmQmi                                       u:object_r:vnd_qti_dpm_hwservice:s0
 # SoMC modem switcher:
 vendor.somc.hardware.miscta::IMisctaGlobal                              u:object_r:vnd_somc_miscta_hwservice:s0
+vendor.somc.hardware.modemswitcher::IModemSwitcher                      u:object_r:vnd_somc_modemswitcher_hwservice:s0
