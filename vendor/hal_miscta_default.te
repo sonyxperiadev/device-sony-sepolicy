@@ -1,2 +1,13 @@
+type hal_miscta_default, domain;
 type hal_miscta_default_exec, exec_type, file_type, vendor_file_type;
 
+init_daemon_domain(hal_miscta_default)
+
+hwbinder_use(hal_miscta_default)
+add_hwservice(hal_miscta_default, vnd_somc_miscta_hwservice)
+
+allow hal_miscta_default hidl_memory_hwservice:hwservice_manager find;
+
+get_prop(hal_miscta_default, hwservicemanager_prop)
+
+unix_socket_connect(hal_miscta_default, tad, tad)
