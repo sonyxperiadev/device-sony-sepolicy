@@ -1,2 +1,16 @@
+type hal_modemsw_default, domain;
 type hal_modemsw_default_exec, exec_type, file_type, vendor_file_type;
 
+init_daemon_domain(hal_modemsw_default)
+
+hwbinder_use(hal_modemsw_default)
+add_hwservice(hal_modemsw_default, vnd_somc_modemswitcher_hwservice)
+
+get_prop(hal_modemsw_default, hwservicemanager_prop)
+get_prop(hal_modemsw_default, vendor_radio_prop)
+
+allow hal_modemsw_default self:qipcrtr_socket create_socket_perms_no_ioctl;
+
+r_dir_file(hal_modemsw_default, sysfs_esoc)
+r_dir_file(hal_modemsw_default, sysfs_msm_subsys)
+r_dir_file(hal_modemsw_default, sysfs_soc)
