@@ -88,6 +88,7 @@ type nfc_vendor_data_file, file_type, data_file_type;
 type radio_vendor_data_file, file_type, data_file_type, mlstrustedobject;
 type sensors_vendor_data_file, file_type, data_file_type;
 type timekeep_vendor_data_file, file_type, data_file_type;
+type tzstorage_vendor_data_file, file_type, data_file_type;
 type wifi_vendor_data_file, file_type, data_file_type;
 
 type egistec_misc_data_file, file_type, data_file_type, core_data_file_type;
