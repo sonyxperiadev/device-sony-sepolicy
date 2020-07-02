@@ -57,6 +57,7 @@
 /odm/bin/adpl                                   u:object_r:adpl_exec:s0
 /odm/bin/adsprpcd                               u:object_r:adsprpcd_exec:s0
 /odm/bin/cdsprpcd                               u:object_r:cdsprpcd_exec:s0
+/odm/bin/cnd                                    u:object_r:cnd_exec:s0
 /odm/bin/dpmQmiMgr                              u:object_r:dpmqmimgr_exec:s0
 /odm/bin/dpmd                                   u:object_r:dpmd_exec:s0
 /odm/bin/ims_rtp_daemon                         u:object_r:hal_imsrtp_exec:s0
