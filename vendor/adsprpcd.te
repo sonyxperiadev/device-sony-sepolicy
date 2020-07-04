@@ -13,3 +13,10 @@ r_dir_file(adsprpcd, sysfs_soc)
 
 # For reading dir/files on /dsp
 r_dir_file(adsprpcd, adsprpcd_file)
+
+# For reading /mnt/vendor/
+allow adsprpcd mnt_vendor_file:dir r_dir_perms;
+# For reading /mnt/vendor/persist/
+allow adsprpcd persist_file:dir r_dir_perms;
+
+create_dir_file(adsprpcd, persist_sensors_file)
