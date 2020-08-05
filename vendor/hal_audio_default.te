@@ -1,4 +1,6 @@
 hal_client_domain(hal_audio_default, hal_power)
+allow hal_audio_default vnd_somc_miscta_hwservice:hwservice_manager find;
+binder_call(hal_audio_default, hal_miscta_default)
 
 not_compatible_property(`
   get_prop(hal_audio_default, bluetooth_prop)
