@@ -60,6 +60,7 @@
 /odm/bin/cnd                                    u:object_r:cnd_exec:s0
 /odm/bin/dpmQmiMgr                              u:object_r:dpmqmimgr_exec:s0
 /odm/bin/dpmd                                   u:object_r:dpmd_exec:s0
+/odm/bin/hvdcp_opti                             u:object_r:hvdcp_opti_exec:s0
 /odm/bin/ims_rtp_daemon                         u:object_r:hal_imsrtp_exec:s0
 /odm/bin/imsdatadaemon                          u:object_r:ims_exec:s0
 /odm/bin/imsqmidaemon                           u:object_r:ims_exec:s0
