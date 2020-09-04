@@ -33,6 +33,8 @@
 /dev/fingerprint                                u:object_r:fingerprint_device:s0
 /dev/dri/card0                                  u:object_r:graphics_device:s0
 /dev/wlan                                       u:object_r:wlan_device:s0
+/dev/qg                                         u:object_r:hvdcp_opti_device:s0
+/dev/qg_battery                                 u:object_r:hvdcp_opti_device:s0
 
 # dev socket nodes
 /dev/socket/adpl_cmd_uds_file                   u:object_r:adpl_dpm_uds_socket:s0

@@ -12,6 +12,9 @@ set_prop(hvdcp_opti, hvdcp_opti_prop)
 
 allow hvdcp_opti self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
 
+# Allow readwrite to /dev/qg{,_battery}
+allow hvdcp_opti hvdcp_opti_device:chr_file rw_file_perms;
+
 # Access persist files
 allow hvdcp_opti mnt_vendor_file:dir search;
 allow hvdcp_opti persist_file:dir search;
