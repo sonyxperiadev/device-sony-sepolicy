@@ -4,15 +4,18 @@ type hvdcp_opti_exec, exec_type, vendor_file_type, file_type;
 net_domain(hvdcp_opti)
 init_daemon_domain(hvdcp_opti)
 
-allow hvdcp_opti device:chr_file { getattr ioctl };
-allow hvdcp_opti init:unix_stream_socket connectto;
+# Misc features
+allow hvdcp_opti sysfs_wake_lock:file w_file_perms;
+allow hvdcp_opti self:capability2 { block_suspend wake_alarm };
+
+set_prop(hvdcp_opti, hvdcp_opti_prop)
+
+allow hvdcp_opti self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+
+# Access persist files
+allow hvdcp_opti mnt_vendor_file:dir search;
 allow hvdcp_opti persist_file:dir search;
 allow hvdcp_opti persist_hvdcp_file:dir search;
-allow hvdcp_opti property_socket:sock_file write;
-allow hvdcp_opti self:capability2 { block_suspend wake_alarm };
-allow hvdcp_opti self:netlink_kobject_uevent_socket { bind create getopt read setopt };
-allow hvdcp_opti sysfs_batteryinfo:dir search;
-allow hvdcp_opti sysfs_batteryinfo:file { getattr open read };
+
+r_dir_file(hvdcp_opti, sysfs_batteryinfo)
 allow hvdcp_opti sysfs_msm_subsys:dir search;
-allow hvdcp_opti sysfs_wake_lock:file { open write };
-allow hvdcp_opti vendor_default_prop:property_service set;

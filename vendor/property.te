@@ -1,4 +1,5 @@
 type camera_prop, property_type;
+type hvdcp_opti_prop, property_type;
 type keymaster_prop, property_type;
 type net_rmnet_prop, property_type;
 type qcom_ims_prop, property_type;

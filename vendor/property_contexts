@@ -5,6 +5,7 @@ persist.vendor.bt.              u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.camera.          u:object_r:vendor_camera_prop:s0
 persist.vendor.cash.            u:object_r:vendor_cash_prop:s0
 persist.vendor.dispcal.         u:object_r:vendor_dispcal_prop:s0
+persist.vendor.hvdcp_opti.      u:object_r:hvdcp_opti_prop:s0
 persist.vendor.health.          u:object_r:vendor_health_prop:s0
 persist.vendor.ims.             u:object_r:qcom_ims_prop:s0
 persist.vendor.net.             u:object_r:vendor_net_prop:s0
