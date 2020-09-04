@@ -1,0 +1,7 @@
+recovery_only(`
+  allow fastbootd {
+    dtbo_block_device
+    recovery_block_device
+    vbmeta_block_device
+  }:blk_file { w_file_perms getattr ioctl };
+')
