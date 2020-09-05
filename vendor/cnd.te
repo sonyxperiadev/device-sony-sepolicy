@@ -3,13 +3,15 @@ type cnd_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(cnd)
 
+hwbinder_use(cnd)
+
+# Host all services in hal_telephony hwservice attribute group
+hal_server_domain(cnd, hal_telephony)
+
 allow cnd self:udp_socket create_socket_perms;
 allow cnd self:qipcrtr_socket create_socket_perms_no_ioctl;
 
-hwbinder_use(cnd)
 get_prop(cnd, hwservicemanager_prop)
-add_hwservice(cnd, vnd_data_linklatency_hwservice)
-add_hwservice(cnd, vnd_data_factory_hwservice)
 
 r_dir_file(cnd, sysfs_msm_subsys)
 r_dir_file(cnd, sysfs_soc)
