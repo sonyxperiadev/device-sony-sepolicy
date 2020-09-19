@@ -7,8 +7,9 @@ app_domain(qcrilam_app)
 # /data/data/com.sony.qcrilam only has two empty subdirs
 dontaudit qcrilam_app app_data_file:dir { getattr search };
 
-# Acccess to its own service and broadcasts
-allow qcrilam_app activity_service:service_manager find;
+# Access services that should be available to all apps
+allow qcrilam_app app_api_service:service_manager find;
+
 # Find media.audio_flinger
 allow qcrilam_app audioserver_service:service_manager find;
 # Find isub
