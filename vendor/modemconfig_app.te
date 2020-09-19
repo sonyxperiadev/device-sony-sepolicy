@@ -7,11 +7,8 @@ app_domain(modemconfig_app)
 # /data/data/com.sony.modemconfig only has two empty subdirs
 dontaudit modemconfig_app app_data_file:dir { getattr search };
 
-# Acccess to its own service and broadcasts
-allow modemconfig_app activity_service:service_manager find;
-
-# Access telephony.registry service
-allow modemconfig_app registry_service:service_manager find;
+# Access services that should be available to all apps
+allow modemconfig_app app_api_service:service_manager find;
 
 # Access isub service
 allow modemconfig_app radio_service:service_manager find;
