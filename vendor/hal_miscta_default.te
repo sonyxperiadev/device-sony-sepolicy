@@ -6,7 +6,7 @@ init_daemon_domain(hal_miscta_default)
 hwbinder_use(hal_miscta_default)
 add_hwservice(hal_miscta_default, vnd_somc_miscta_hwservice)
 
-allow hal_miscta_default hidl_memory_hwservice:hwservice_manager find;
+hal_client_domain(hal_miscta_default, hal_allocator)
 
 get_prop(hal_miscta_default, hwservicemanager_prop)
 
