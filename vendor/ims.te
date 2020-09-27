@@ -5,6 +5,7 @@ init_daemon_domain(ims)
 net_domain(ims)
 
 add_hwservice(ims, vnd_qti_ims_callinfo_hwservice)
+add_hwservice(ims, vnd_qti_ims_factory_hwservice)
 add_hwservice(ims, vnd_qti_imscms_hwservice)
 add_hwservice(ims, vnd_qti_uce_hwservice)
 
