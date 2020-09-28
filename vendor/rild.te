@@ -33,13 +33,3 @@ allow rild self:socket ioctl;
 allowxperm rild self:socket ioctl msm_sock_ipc_ioctls;
 
 hal_server_domain(rild, hal_secure_element)
-
-########### TEMPORARY ###########
-# b/qcrild:
-# Unfortunately ODM V4 is released with the wrong label on /odm/bin/hw/qcrild,
-# before we identified the issues of having a separate domain for legacy rild
-# and qcrild (see previous commits for more details). This re-adds that label
-# temporarily, and allows it to become the `rild' domain:
-type qcrild_exec, exec_type, vendor_file_type, file_type;
-domain_auto_trans(init, qcrild_exec, rild)
-######### END TEMPORARY #########
