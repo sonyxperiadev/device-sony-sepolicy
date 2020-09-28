@@ -20,6 +20,7 @@ vendor.qti.data.factory::IFactory                                       u:object
 vendor.qti.hardware.data.connection::IDataConnection                    u:object_r:vnd_data_connection_hwservice:s0
 vendor.qti.hardware.data.iwlan::IIWlan                                  u:object_r:vnd_data_iwlan_hwservice:s0
 vendor.qti.hardware.data.latency::ILinkLatency                          u:object_r:vnd_data_linklatency_hwservice:s0
+vendor.qti.hardware.slmadapter::ISlmAdapter                             u:object_r:vnd_data_slmadapter_hwservice:s0
 # QTI HAL interfaces for display services:
 vendor.qti.hardware.display.mapper::IQtiMapper                          u:object_r:hal_graphics_mapper_hwservice:s0
 vendor.qti.hardware.display.allocator::IQtiAllocator                    u:object_r:hal_graphics_allocator_hwservice:s0
