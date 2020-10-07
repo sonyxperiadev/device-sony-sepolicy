@@ -1,0 +1,4 @@
+hal_attribute_hwservice(hal_telephony, vnd_data_connection_hwservice)
+hal_attribute_hwservice(hal_telephony, vnd_data_iwlan_hwservice)
+hal_attribute_hwservice(hal_telephony, vnd_ims_radio_hwservice)
+hal_attribute_hwservice(hal_telephony, vnd_qcrilhook_hwservice)
