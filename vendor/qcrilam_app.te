@@ -15,9 +15,7 @@ allow qcrilam_app audioserver_service:service_manager find;
 allow qcrilam_app radio_service:service_manager find;
 
 # Find the vendor.qti.hardware.radio.am::IQcRilAudio HIDL service
-allow qcrilam_app vnd_qcrilhook_hwservice:hwservice_manager find;
-
-# Interact with rild
-binder_call(qcrilam_app, rild)
+# And grant binder access to the host (`rild`)
+hal_client_domain(qcrilam_app, hal_telephony)
 
 allow qcrilam_app cgroup:file w_file_perms;

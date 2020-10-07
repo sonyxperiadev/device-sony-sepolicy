@@ -4,7 +4,6 @@ vndbinder_use(rild)
 hal_server_domain(rild, hal_telephony)
 
 binder_call(rild, per_mgr)
-binder_call(rild, qcrilam_app);
 
 allow rild per_mgr_service:service_manager find;
 
