@@ -1,5 +1,8 @@
 vndbinder_use(rild)
 
+# Host all services in hal_telephony hwservice attribute group
+hal_server_domain(rild, hal_telephony)
+
 binder_call(rild, per_mgr)
 binder_call(rild, qcrilam_app);
 
@@ -21,11 +24,6 @@ unix_socket_connect(rild, qmuxd, qmuxd)
 
 allow rild netmgrd_socket:dir search;
 unix_socket_connect(rild, netmgrd, netmgrd)
-
-add_hwservice(rild, vnd_ims_radio_hwservice)
-add_hwservice(rild, vnd_qcrilhook_hwservice)
-add_hwservice(rild, vnd_data_connection_hwservice)
-add_hwservice(rild, vnd_data_iwlan_hwservice)
 
 qrtr_socket_create(rild)
 # TODO (b/deprecate-old-ipc-router): Remove 4.9 ipc-router compatibility `socket' when kernel 4.14 is final
