@@ -5,6 +5,13 @@ allow init {tmpfs configfs }:lnk_file create_file_perms;
 allow init { mnt_vendor_file vendor_firmware_file adsprpcd_file }:dir mounton;
 allow init vendor_firmware_file:filesystem { mount relabelfrom };
 
+# AOSP init only covers system_block_device, add our own:
+allow init {
+    boot_block_device
+    dtbo_block_device
+    vbmeta_block_device
+}:{ blk_file lnk_file } relabelto;
+
 dontaudit init kernel:system module_request;
 
 # Ignore all accidental O_CREAT open() calls on unsupported filesystems:
