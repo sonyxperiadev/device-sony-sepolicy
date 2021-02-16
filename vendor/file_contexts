@@ -147,7 +147,7 @@
 #
 /(system/vendor|vendor|odm)/lib(64)?/hw/gralloc\.msm89(52|96|98)\.so  u:object_r:same_process_hal_file:s0
 /(system/vendor|vendor|odm)/lib(64)?/hw/gralloc\.sdm(660|845)\.so     u:object_r:same_process_hal_file:s0
-/(system/vendor|vendor|odm)/lib(64)?/hw/gralloc\.sm(8150|6125)\.so    u:object_r:same_process_hal_file:s0
+/(system/vendor|vendor|odm)/lib(64)?/hw/gralloc\.sm(8[12]50|6125)\.so u:object_r:same_process_hal_file:s0
 /(system/vendor|vendor|odm)/lib(64)?/libqdMetaData(\.legacy)?\.so     u:object_r:same_process_hal_file:s0
 /(system/vendor|vendor|odm)/lib(64)?/libqservice\.so                  u:object_r:same_process_hal_file:s0
 /(system/vendor|vendor|odm)/lib(64)?/libqdutils\.so                   u:object_r:same_process_hal_file:s0
@@ -156,7 +156,7 @@
 
 /(system/vendor|vendor|odm)/lib(64)?/hw/vulkan\.msm89(52|96|98)\.so   u:object_r:same_process_hal_file:s0
 /(system/vendor|vendor|odm)/lib(64)?/hw/vulkan\.sdm(660|845)\.so      u:object_r:same_process_hal_file:s0
-/(system/vendor|vendor|odm)/lib(64)?/hw/vulkan\.sm(8150|6125)\.so     u:object_r:same_process_hal_file:s0
+/(system/vendor|vendor|odm)/lib(64)?/hw/vulkan\.sm(8[12]50|6125)\.so  u:object_r:same_process_hal_file:s0
 /(system/vendor|vendor|odm)/lib(64)?/hw/vulkan\.qcom\.so              u:object_r:same_process_hal_file:s0
 /(system/vendor|vendor|odm)/lib(64)?/(egl/)?libEGL_adreno\.so         u:object_r:same_process_hal_file:s0
 /(system/vendor|vendor|odm)/lib(64)?/(egl/)?libGLESv1_CM_adreno\.so   u:object_r:same_process_hal_file:s0
@@ -208,9 +208,12 @@
 /(system/vendor|vendor)/lib(64)?/camera\.device@3\.4-external-impl\.so                  u:object_r:same_process_hal_file:s0
 
 # Graphics mapper
-/(system/vendor|vendor)/lib(64)?/hw/android\.hardware\.graphics\.mapper@3\.0-impl-qti-display\.so       u:object_r:same_process_hal_file:s0
-/(system/vendor|vendor)/lib(64)?/vendor\.qti\.hardware\.display\.mapper@[0-9]+\.[0-9]+\.so              u:object_r:same_process_hal_file:s0
-/(system/vendor|vendor)/lib(64)?/vendor\.qti\.hardware\.display\.mapperextensions@1\.[0-9]+\.so         u:object_r:same_process_hal_file:s0
+/(system/vendor|vendor)/lib(64)?/hw/android\.hardware\.graphics\.mapper@[0-9]+\.[0-9]+-impl-qti-display\.so     u:object_r:same_process_hal_file:s0
+/(system/vendor|vendor)/lib(64)?/vendor\.qti\.hardware\.display\.mapper@[0-9]+\.[0-9]+\.so                      u:object_r:same_process_hal_file:s0
+/(system/vendor|vendor)/lib(64)?/vendor\.qti\.hardware\.display\.mapperextensions@[0-9]+\.[0-9]+\.so            u:object_r:same_process_hal_file:s0
+
+# Loaded into SurfaceFlinger
+/(system/vendor|vendor|odm)/lib(64)?/libgralloc\.qti\.so            u:object_r:same_process_hal_file:s0
 
 # data files
 /data/vendor/audio(/.*)?               u:object_r:audio_vendor_data_file:s0
