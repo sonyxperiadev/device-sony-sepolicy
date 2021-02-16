@@ -6,6 +6,7 @@ qrtr_socket_create(hal_camera_default)
 allowxperm hal_camera self:socket ioctl { IPC_ROUTER_IOCTL_LOOKUP_SERVER IPC_ROUTER_IOCTL_BIND_CONTROL_PORT };
 
 hal_client_domain(hal_camera_default, hal_graphics_allocator)
+hal_client_domain(hal_camera_default, hal_graphics_composer)
 
 set_prop(hal_camera_default, camera_prop)
 set_prop(hal_camera_default, vendor_camera_prop)
