@@ -5,6 +5,8 @@ net_domain(dpmqmimgr)
 init_daemon_domain(dpmqmimgr)
 
 hwbinder_use(dpmqmimgr)
+binder_call(dpmqmimgr, dpmd)
+
 get_prop(dpmqmimgr, hwservicemanager_prop)
 add_hwservice(dpmqmimgr, vnd_qti_dpm_hwservice)
 
