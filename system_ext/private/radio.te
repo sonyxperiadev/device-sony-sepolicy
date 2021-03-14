@@ -1,2 +1,4 @@
 # Connect to dpmd socket for DPMReceiver
 allow radio dpmd_socket:sock_file { write };
+
+allow radio dpmd:unix_stream_socket { connectto };
