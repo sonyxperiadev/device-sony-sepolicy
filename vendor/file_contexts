@@ -97,6 +97,11 @@
 /odm/bin/cnss-daemon                            u:object_r:wcnss_service_exec:s0
 /odm/firmware(/.*)?                             u:object_r:vendor_firmware_file:s0
 
+# Files on /odm to be bind-mounted to /system_ext
+/odm/system_ext/app(/.*)?                       u:object_r:vendor_app_file:s0
+/odm/system_ext/priv-app(/.*)?                  u:object_r:vendor_app_file:s0
+/odm/system_ext/framework(/.*)?                 u:object_r:vendor_framework_file:s0
+
 # files in /vendor
 /(system/vendor|vendor)/rfs(/.*)?                                                            u:object_r:rfs_system_file:s0
 /(system/vendor|vendor)/firmware(/.*)?                                                       u:object_r:vendor_firmware_file:s0
