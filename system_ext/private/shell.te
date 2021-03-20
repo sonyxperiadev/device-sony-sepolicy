@@ -1,5 +1,0 @@
-# DEBUG only: Allow reading dmesg from shell
-userdebug_or_eng(`
-  # Allow shell to read dmesg
-  allow system_server kernel:system syslog_read;
-')
