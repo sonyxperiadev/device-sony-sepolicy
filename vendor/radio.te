@@ -2,3 +2,6 @@
 allow radio dpmd_socket:sock_file { write };
 
 allow radio dpmd:unix_stream_socket { connectto };
+
+# Find com.qualcomm.qti.uceservice::IUceService
+allow radio vnd_qti_uce_hwservice:hwservice_manager { find };
