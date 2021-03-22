@@ -1,6 +1,0 @@
-# Extension policy for AOSP /system init to cope with
-# our own /odm/system_ext -> (/system)/system_ext symlinks
-
-# Read and mount symlinked files
-allow init vendor_firmware_file:filesystem { getattr };
-allow init { system_file system_lib_file }:file { mounton };
