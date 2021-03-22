@@ -1,3 +1,0 @@
-# Definition shared between vendor and system_ext sepolicy
-type vendor_firmware_file, file_type, vendor_file_type, contextmount_type;
-type dpmd_socket, file_type;

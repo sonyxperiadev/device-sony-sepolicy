@@ -35,4 +35,8 @@ allow init sysfs_msm_subsys_restart:file rw_file_perms;
 allow init nativetest_data_file:dir { getattr open read };
 allow init nativetest_data_file:file getattr;
 
+# Read and mount symlinked files
+allow init vendor_firmware_file:filesystem { getattr };
+allow init { system_file system_lib_file }:file { mounton };
+
 allow init socket_device:sock_file create_file_perms;
