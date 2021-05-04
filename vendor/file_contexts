@@ -2,6 +2,7 @@
 /dev/btpower                                    u:object_r:bt_device:s0
 /dev/diag                                       u:object_r:diag_device:s0
 /dev/dpl_ctrl                                   u:object_r:dpl_ctl_device:s0
+/dev/esoc-[0-9]+                                u:object_r:esoc_device:s0
 /dev/kgsl-3d0                                   u:object_r:gpu_device:s0
 /dev/rtc0                                       u:object_r:rtc_device:s0
 /dev/smd.*                                      u:object_r:smd_device:s0
