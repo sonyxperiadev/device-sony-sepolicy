@@ -15,3 +15,7 @@ r_dir_file(mdm_helper, sysfs_msm_subsys)
 
 # Needed to allow boot over PCIe
 allow mdm_helper mhi_device:chr_file rw_file_perms;
+
+#Needed by ks in order to access the efs sync partitions
+allow mdm_helper block_device:dir r_dir_perms;
+allow mdm_helper efs_boot_device:blk_file r_file_perms;
