@@ -1,0 +1,10 @@
+type qtidataservices_app, domain;
+
+app_domain(qtidataservices_app)
+
+# Find the vendor.qti.hardware.data.iwlan::IIWlan HIDL service
+# And grant binder access to the host (`rild`, `cnd`)
+hal_client_domain(qtidataservices_app, hal_telephony)
+
+# Access services that should be available to all apps
+allow qtidataservices_app app_api_service:service_manager find;
