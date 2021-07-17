@@ -1,0 +1,20 @@
+type qtidataservices_app, domain;
+app_domain(qtidataservices_app)
+net_domain(qtidataservices_app)
+
+get_prop(qtidataservices_app, vendor_default_prop)
+set_prop(qtidataservices_app, exported_radio_prop)
+
+# Find the vendor.qti.hardware.data.iwlan::IIWlan HIDL service
+# And grant binder access to the host (`rild`, `cnd`)
+hal_client_domain(qtidataservices_app, hal_telephony)
+allow qtidataservices_app radio_service:service_manager find;
+
+allow qtidataservices_app self:qipcrtr_socket create_socket_perms_no_ioctl;
+allow qtidataservices_app radio_data_file:dir r_dir_perms;
+allow qtidataservices_app app_api_service:service_manager find;
+
+allow qtidataservices_app sysfs_msm_subsys:dir r_dir_perms;
+allow qtidataservices_app sysfs_esoc:dir r_dir_perms;
+allow qtidataservices_app sysfs_soc:dir search;
+allow qtidataservices_app sysfs_soc:file r_file_perms;
