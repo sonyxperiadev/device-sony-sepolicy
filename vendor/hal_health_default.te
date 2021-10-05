@@ -14,7 +14,3 @@ allow hal_health_default sysfs_batteryinfo:file rw_file_perms;
 allow hal_health_default sysfs_mmc:dir search;
 allow hal_health_default sysfs_mmc:file r_file_perms;
 
-# Read persist.vendor.health.fake_storage for debugging
-userdebug_or_eng(`
-  get_prop(hal_health_default, vendor_health_prop)
-')
