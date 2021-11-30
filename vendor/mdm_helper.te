@@ -7,3 +7,7 @@ allow mdm_helper esoc_device:chr_file r_file_perms;
 
 r_dir_file(mdm_helper, sysfs_esoc)
 r_dir_file(mdm_helper, sysfs_msm_subsys)
+
+allow mdm_helper block_device:dir search;
+allow mdm_helper ks_exec:file execute_no_trans;
+allow mdm_helper sysfs_wake_lock:file { append open };
