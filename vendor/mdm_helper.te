@@ -5,6 +5,9 @@ init_daemon_domain(mdm_helper)
 
 wakelock_use(mdm_helper)
 
+# Allow mdm_helper to execute /vendor/bin/ks
+allow mdm_helper ks_exec:file execute_no_trans;
+
 allow mdm_helper esoc_device:chr_file r_file_perms;
 
 r_dir_file(mdm_helper, sysfs_esoc)
