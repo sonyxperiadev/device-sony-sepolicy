@@ -53,6 +53,7 @@
 /dev/socket/cashsvr(/.*)?                       u:object_r:cashsvr_socket:s0
 /dev/socket/ucommsvr(/.*)?                      u:object_r:ucommsvr_socket:s0
 /dev/socket/ipacm_log_file                      u:object_r:ipacm_socket:s0
+/dev/socket/ims_qmid                            u:object_r:ims_socket:s0
 /dev/socket/ims_datad                           u:object_r:ims_socket:s0
 /dev/socket/dpmd                                u:object_r:dpmd_socket:s0
 
