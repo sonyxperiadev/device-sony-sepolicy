@@ -42,3 +42,12 @@ persist.somc.cust.              u:object_r:vendor_somc_cust_prop:s0
 persist.somc.modemswitcher.     u:object_r:vendor_somc_modemswitcher_prop:s0
 persist.vendor.somc.            u:object_r:vendor_somc_cust_prop:s0
 sony.modemswitcher.             u:object_r:vendor_somc_modemswitcher_prop:s0
+
+# Shsusr
+persist.vendor.data.shsusr_load u:object_r:vendor_data_shsusr_prop:s0
+
+# RIL
+ctl.vendor.qcrild          u:object_r:vendor_ctl_qcrild_prop:s0
+
+# Qmipriod
+persist.vendor.data.qmipriod_load u:object_r:vendor_data_qmipriod_prop:s0

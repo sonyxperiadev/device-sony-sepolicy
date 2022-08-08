@@ -1,0 +1,14 @@
+type diag, domain;
+
+type diag_exec, exec_type, vendor_file_type, file_type;
+
+net_domain(diag)
+init_daemon_domain(diag)
+
+allow diag dpmd:binder call;
+allow diag hidl_base_hwservice:hwservice_manager add;
+allow diag hidl_memory_hwservice:hwservice_manager find;
+allow diag hwservicemanager:binder { call transfer };
+allow diag hwservicemanager_prop:file { getattr map open read };
+allow diag self:netlink_kobject_uevent_socket { bind create read };
+allow diag self:qipcrtr_socket { connect create getattr read setopt write };

@@ -1,0 +1,14 @@
+type port_bridge, domain;
+
+type port_bridge_exec, exec_type, vendor_file_type, file_type;
+
+allow port_bridge device:chr_file { ioctl };
+allow port_bridge sysfs:file { open read };
+allow port_bridge sysfs_msm_subsys:dir { open read search };
+allow port_bridge sysfs_msm_subsys:file { open read };
+allow port_bridge sysfs_soc:dir search;
+allow port_bridge sysfs_soc:file { getattr open read };
+
+net_domain(port_bridge)
+init_daemon_domain(port_bridge)
+

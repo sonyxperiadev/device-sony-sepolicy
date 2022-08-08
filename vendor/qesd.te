@@ -1,0 +1,7 @@
+type qesd, domain;
+
+type qesd_exec, exec_type, vendor_file_type, file_type;
+
+net_domain(qesd)
+init_daemon_domain(qesd)
+

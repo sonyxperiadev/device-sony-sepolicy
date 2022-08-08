@@ -1,0 +1,5 @@
+type shsusrd, domain;
+type shsusrd_exec, exec_type, vendor_file_type, file_type;
+
+net_domain(shsusrd)
+init_daemon_domain(shsusrd)

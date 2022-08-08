@@ -60,5 +60,9 @@ allow netmgrd netmgr_vendor_data_file:file create_file_perms;
 
 allow netmgrd vendor_toolbox_exec:file rx_file_perms;
 
+allow netmgrd diag:unix_stream_socket connectto;
+allow netmgrd self:tipc_socket { bind create };
+allow netmgrd sysfs:file { open read };
+
 dontaudit netmgrd kernel:system module_request;
 dontaudit netmgrd self:system module_request;

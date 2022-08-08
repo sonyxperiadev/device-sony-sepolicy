@@ -36,3 +36,5 @@ qrtr_socket_create(rmt_storage)
 allowxperm rmt_storage self:socket ioctl IPC_ROUTER_IOCTL_BIND_CONTROL_PORT;
 
 allow rmt_storage kmsg_device:chr_file w_file_perms;
+
+allow rmt_storage sysfs:file { open read };

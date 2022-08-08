@@ -4,6 +4,7 @@ vendor.nxp.nxpese::INxpEse                                              u:object
 # QTI IMS:
 com.qualcomm.qti.imscmservice::IImsCmService                            u:object_r:vnd_qti_imscms_hwservice:s0
 com.qualcomm.qti.uceservice::IUceService                                u:object_r:vnd_qti_uce_hwservice:s0
+com.qualcomm.qti.uceservice@2.3::IUceService                            u:object_r:vnd_qti_uce_hwservice:s0
 vendor.qti.ims.callinfo::IService                                       u:object_r:vnd_qti_ims_callinfo_hwservice:s0
 vendor.qti.ims.factory::IImsFactory                                     u:object_r:vnd_qti_ims_factory_hwservice:s0
 vendor.qti.imsrtpservice::IRTPService                                   u:object_r:hal_imsrtp_hwservice:s0

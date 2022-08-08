@@ -25,3 +25,6 @@ type vendor_usb_config_prop, vendor_property_type, property_type;
 type vendor_usb_prop, vendor_property_type, property_type;
 type vendor_wifi_prop, vendor_property_type, property_type;
 type wc_prop, vendor_property_type, property_type;
+type vendor_data_shsusr_prop, vendor_property_type, property_type;
+type vendor_ctl_qcrild_prop, vendor_property_type, property_type;
+type vendor_data_qmipriod_prop, vendor_property_type, property_type;

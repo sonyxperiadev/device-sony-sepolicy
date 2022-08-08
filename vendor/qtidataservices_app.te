@@ -8,3 +8,5 @@ hal_client_domain(qtidataservices_app, hal_telephony)
 
 # Access services that should be available to all apps
 allow qtidataservices_app app_api_service:service_manager find;
+
+allow qtidataservices_app radio_service:service_manager find;

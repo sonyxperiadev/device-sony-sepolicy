@@ -1,0 +1,5 @@
+type mdmmgr, domain;
+type mdmmgr_exec, exec_type, vendor_file_type, file_type;
+
+net_domain(mdmmgr)
+init_daemon_domain(mdmmgr)
