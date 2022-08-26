@@ -29,7 +29,6 @@ allow rmt_storage sysfs_rmtfs:dir search;
 allow rmt_storage sysfs_rmtfs:file r_file_perms;
 
 allow rmt_storage debugfs_rmt_storage:dir search;
-allow rmt_storage debugfs_rmt_storage:file w_file_perms;
 
 qrtr_socket_create(rmt_storage)
 # TODO (b/deprecate-old-ipc-router): Remove 4.9 ipc-router compatibility `socket' when kernel 4.14 is final
