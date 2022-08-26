@@ -1,12 +1,7 @@
 userdebug_or_eng(`
   # for diag over socket
   allow kernel self:socket create;
-  # A kernel worker has to read from /d/wlan{,0}/,
-  # otherwise debug files are not created there.
-  r_dir_file(kernel, debugfs_wlan)
 ')
-
-r_dir_file(kernel, debugfs_ipc_logging)
 
 allow kernel self:qipcrtr_socket create_socket_perms_no_ioctl;
 
@@ -14,5 +9,3 @@ allow kernel self:qipcrtr_socket create_socket_perms_no_ioctl;
 dontaudit kernel self:socket create;
 
 dontaudit kernel kernel:system module_request;
-dontaudit kernel debugfs_wlan:dir r_dir_perms;
-dontaudit kernel debugfs_wlan:file r_file_perms;
