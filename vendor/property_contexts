@@ -30,10 +30,10 @@ vendor.usb.config               u:object_r:vendor_usb_config_prop:s0
 vendor.wlan.                    u:object_r:vendor_wifi_prop:s0
 
 # Modemswitcher props. Not in the above list as they are about to be changed.
-persist.somc.cust.              u:object_r:vendor_somc_cust_prop:s0
-persist.somc.modemswitcher.     u:object_r:vendor_somc_modemswitcher_prop:s0
+persist.vendor.somc.cust.              u:object_r:vendor_somc_cust_prop:s0
+persist.vendor.somc.modemswitcher.     u:object_r:vendor_somc_modemswitcher_prop:s0
 persist.vendor.somc.            u:object_r:vendor_somc_cust_prop:s0
-sony.modemswitcher.             u:object_r:vendor_somc_modemswitcher_prop:s0
+vendor.sony.modemswitcher.             u:object_r:vendor_somc_modemswitcher_prop:s0
 
 # Shsusr
 persist.vendor.data.shsusr_load u:object_r:vendor_data_shsusr_prop:s0
