@@ -19,4 +19,6 @@ allow adsprpcd mnt_vendor_file:dir r_dir_perms;
 # For reading /mnt/vendor/persist/
 allow adsprpcd persist_file:dir r_dir_perms;
 
+allow adsprpcd dmabuf_system_heap_device:chr_file { ioctl open read };
+
 create_dir_file(adsprpcd, persist_sensors_file)
