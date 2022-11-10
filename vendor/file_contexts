@@ -72,6 +72,7 @@
 /odm/bin/diag-router                            u:object_r:diag_exec:s0
 /odm/bin/dpmQmiMgr                              u:object_r:dpmqmimgr_exec:s0
 /odm/bin/dpmd                                   u:object_r:dpmd_exec:s0
+/odm/bin/dspservice                             u:object_r:dspservice_exec:s0
 /odm/bin/hvdcp_opti                             u:object_r:hvdcp_opti_exec:s0
 /odm/bin/ims_rtp_daemon                         u:object_r:hal_imsrtp_exec:s0
 /odm/bin/imsdaemon                              u:object_r:ims_exec:s0

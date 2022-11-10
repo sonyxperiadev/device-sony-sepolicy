@@ -1,0 +1,19 @@
+type dspservice, domain;
+type dspservice_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(dspservice)
+
+allow dspservice ion_device:chr_file rw_file_perms;
+allow dspservice qdsp_device:chr_file r_file_perms;
+
+allow dspservice system_file:dir r_dir_perms;
+allow dspservice vendor_file:dir r_dir_perms;
+
+r_dir_file(dspservice, sysfs_soc)
+
+# For reading /mnt/vendor/
+allow dspservice mnt_vendor_file:dir r_dir_perms;
+
+allow dspservice hidl_base_hwservice:hwservice_manager add;
+allow dspservice hwservicemanager:binder { call transfer };
+allow dspservice hwservicemanager_prop:file { getattr map open read };
