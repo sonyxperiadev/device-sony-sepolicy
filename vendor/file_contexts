@@ -164,6 +164,8 @@
 # Clearpad: /sys/devices/virtual/input/clearpad/glove:
 /sys/devices/virtual/input/input[0-9]+/glove                                                 u:object_r:sysfs_glove_mode:s0
 /sys/devices/virtual/input/lge_touch/glove_mode                                              u:object_r:sysfs_glove_mode:s0
+# KGSL
+/sys/devices/platform/soc/[a-f0-9]+.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpu_model                    u:object_r:sysfs_kgsl_gpu_model:s0
 
 ###############################################
 # same-process HAL files and their dependencies

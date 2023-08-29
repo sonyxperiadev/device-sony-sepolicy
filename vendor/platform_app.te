@@ -1,1 +1,4 @@
 allow platform_app nfc_service:service_manager find;
+
+# allow platform_app to read kgsl gpu model
+allow platform_app sysfs_kgsl_gpu_model:file r_file_perms;

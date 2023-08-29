@@ -1,3 +1,6 @@
 allow priv_app sysfs_android_usb:file r_file_perms;
 
 allow priv_app sysfs_mac_address:file r_file_perms;
+
+# allow priv_app to read kgsl gpu model
+allow priv_app sysfs_kgsl_gpu_model:file r_file_perms;

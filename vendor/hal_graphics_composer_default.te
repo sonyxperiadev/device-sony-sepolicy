@@ -29,3 +29,6 @@ create_dir_file(hal_graphics_composer_default, display_vendor_data_file)
 
 # HWC_UeventThread
 allow hal_graphics_composer_default self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+
+# allow hal_graphics_composer_default to read kgsl gpu model
+allow hal_graphics_composer_default sysfs_kgsl_gpu_model:file r_file_perms;
