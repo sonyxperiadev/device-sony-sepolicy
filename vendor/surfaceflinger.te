@@ -3,6 +3,9 @@ dontaudit surfaceflinger kernel:system module_request;
 
 allow surfaceflinger debugfs_ion:dir search;
 
+# allow surfaceflinger to read kgsl gpu model
+allow surfaceflinger sysfs_kgsl_gpu_model:file r_file_perms;
+
 r_dir_rw_file(surfaceflinger, sysfs_graphics)
 
 binder_call(surfaceflinger, hal_camera_default)

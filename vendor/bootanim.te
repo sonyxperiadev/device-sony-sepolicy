@@ -1,0 +1,2 @@
+# allow bootanim to read kgsl gpu model
+allow bootanim sysfs_kgsl_gpu_model:file r_file_perms;

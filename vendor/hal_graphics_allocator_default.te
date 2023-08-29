@@ -1,3 +1,6 @@
 r_dir_file(hal_graphics_allocator_default, sysfs_graphics)
 r_dir_file(hal_graphics_allocator_default, sysfs_mdss_mdp_caps)
 r_dir_file(hal_graphics_allocator_default, sysfs_msm_subsys)
+
+# allow hal_graphics_allocator_default to read kgsl gpu model
+allow hal_graphics_allocator_default sysfs_kgsl_gpu_model:file r_file_perms;
