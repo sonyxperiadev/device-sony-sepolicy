@@ -53,6 +53,9 @@ r_dir_file(netmgrd, sysfs_msm_subsys)
 r_dir_file(netmgrd, sysfs_soc)
 r_dir_file(netmgrd, sysfs_esoc)
 
+allow netmgrd vendor_data_qmipriod_prop:property_service set;
+allow netmgrd vendor_data_shsusr_prop:property_service set;
+
 allow netmgrd proc_net:file rw_file_perms;
 
 allow netmgrd netmgr_vendor_data_file:dir rw_dir_perms;

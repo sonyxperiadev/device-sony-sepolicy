@@ -3,3 +3,9 @@ type qmipriod_exec, exec_type, vendor_file_type, file_type;
 
 net_domain(qmipriod)
 init_daemon_domain(qmipriod)
+
+allow qmipriod netmgrd_socket:dir { add_name search write };
+allow qmipriod netmgrd_socket:sock_file create;
+allow qmipriod self:qipcrtr_socket create;
+allow qmipriod vendor_data_file:dir { add_name write };
+allow qmipriod vendor_data_file:file { create getattr open write };

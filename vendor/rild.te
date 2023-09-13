@@ -30,6 +30,8 @@ allow rild socket_device:sock_file create;
 allow rild netmgrd_socket:dir search;
 unix_socket_connect(rild, netmgrd, netmgrd)
 
+allow rild socket_device:sock_file setattr;
+
 qrtr_socket_create(rild)
 # TODO (b/deprecate-old-ipc-router): Remove 4.9 ipc-router compatibility `socket' when kernel 4.14 is final
 allow rild self:socket ioctl;
