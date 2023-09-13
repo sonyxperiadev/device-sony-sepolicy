@@ -35,6 +35,10 @@ r_dir_file(ims, sysfs_msm_subsys)
 r_dir_file(ims, sysfs_soc)
 r_dir_file(ims, sysfs_esoc)
 
+allow ims diag:unix_stream_socket connectto;
+allow ims self:tipc_socket { bind create };
+allow ims sysfs:file { open read };
+
 rw_diag_device(ims)
 
 hwbinder_use(ims)

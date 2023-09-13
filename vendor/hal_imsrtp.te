@@ -18,6 +18,8 @@ allowxperm hal_imsrtp self:socket ioctl msm_sock_ipc_ioctls;
 
 allow hal_imsrtp self:capability net_bind_service;
 
+allow hal_imsrtp diag:unix_stream_socket connectto;
+
 r_dir_file(hal_imsrtp, sysfs_msm_subsys)
 r_dir_file(hal_imsrtp, sysfs_soc)
 r_dir_file(hal_imsrtp, sysfs_esoc)
