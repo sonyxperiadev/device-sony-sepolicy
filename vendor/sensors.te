@@ -24,6 +24,7 @@ allow sensors system_data_file:dir getattr;
 # Read/write /data/vendor/sensors/*
 allow sensors sensors_vendor_data_file:dir create_dir_perms;
 allow sensors sensors_vendor_data_file:file create_file_perms;
+allow sensors sensors_vendor_data_file:fifo_file { create open read };
 
 # Access config files
 allow sensors mnt_vendor_file:dir { getattr search };
