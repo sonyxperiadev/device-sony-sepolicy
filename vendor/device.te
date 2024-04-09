@@ -26,6 +26,5 @@ type fingerprint_device, dev_type;
 type ab_block_device, dev_type;
 type xbl_block_device, dev_type;
 type wlan_device, dev_type;
-type dtbo_block_device, dev_type;
 type vbmeta_block_device, dev_type;
 type hvdcp_opti_device, dev_type;
