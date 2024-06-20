@@ -8,7 +8,7 @@ init_daemon_domain(hvdcp_opti)
 allow hvdcp_opti sysfs_wake_lock:file w_file_perms;
 allow hvdcp_opti self:capability2 { block_suspend wake_alarm };
 
-set_prop(hvdcp_opti, hvdcp_opti_prop)
+set_prop(hvdcp_opti, vendor_hvdcp_opti_prop)
 
 allow hvdcp_opti self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
 
