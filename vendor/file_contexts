@@ -5,6 +5,7 @@
 /dev/esoc-[0-9]+                                u:object_r:esoc_device:s0
 /dev/kgsl-3d0                                   u:object_r:gpu_device:s0
 /dev/rtc0                                       u:object_r:rtc_device:s0
+/dev/smcinvoke                                  u:object_r:tee_device:s0
 /dev/smd.*                                      u:object_r:smd_device:s0
 /dev/ttyHS0                                     u:object_r:serial_device:s0
 /dev/ttyHS1                                     u:object_r:serial_device:s0
