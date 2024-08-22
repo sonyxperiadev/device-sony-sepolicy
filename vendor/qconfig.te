@@ -1,0 +1,5 @@
+type qconfig, domain;
+type qconfig_exec, exec_type, vendor_file_type, file_type;
+
+net_domain(qconfig)
+init_daemon_domain(qconfig)

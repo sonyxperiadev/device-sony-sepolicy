@@ -95,6 +95,7 @@
 /odm/bin/hw/qcrild                              u:object_r:rild_exec:s0
 /odm/bin/hw/qcrilNrd                            u:object_r:rild_exec:s0
 /odm/bin/qesdk-manager                          u:object_r:qesd_exec:s0
+/odm/bin/qconfigservice                         u:object_r:qconfig_exec:s0
 /odm/bin/qmuxd                                  u:object_r:qmuxd_exec:s0
 /odm/bin/qmipriod                               u:object_r:qmipriod_exec:s0
 /odm/bin/qrtr-ns                                u:object_r:qrtr_exec:s0
