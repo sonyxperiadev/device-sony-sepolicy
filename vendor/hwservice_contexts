@@ -31,3 +31,6 @@ com.qualcomm.qti.dpm.api::IdpmQmi                                       u:object
 # SoMC modem switcher:
 vendor.somc.hardware.miscta::IMisctaGlobal                              u:object_r:vnd_somc_miscta_hwservice:s0
 vendor.somc.hardware.modemswitcher::IModemSwitcher                      u:object_r:vnd_somc_modemswitcher_hwservice:s0
+# QTI camera:
+vendor.qti.hardware.camera.aon::IAONService                             u:object_r:hal_camera_hwservice:s0
+vendor.qti.hardware.camera.postproc::IPostProcService                   u:object_r:hal_camera_hwservice:s0
