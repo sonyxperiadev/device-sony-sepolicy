@@ -7,9 +7,6 @@ binder_call(rild, per_mgr)
 
 allow rild per_mgr_service:service_manager find;
 
-not_compatible_property(`
-  set_prop(rild, radio_prop)
-')
 set_prop(rild, vendor_radio_prop)
 set_prop(rild, vendor_net_prop)
 

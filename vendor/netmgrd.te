@@ -24,7 +24,6 @@ allow netmgrd self:capability {
 };
 
 set_prop(netmgrd, vendor_net_prop)
-set_prop(netmgrd, net_rmnet_prop)
 get_prop(netmgrd, hwservicemanager_prop)
 
 allow netmgrd netmgrd_socket:dir w_dir_perms;

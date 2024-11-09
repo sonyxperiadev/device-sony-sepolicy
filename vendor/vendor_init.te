@@ -1,12 +1,9 @@
 typeattribute vendor_init data_between_core_and_vendor_violators;
 
-# TODO(b/compatible): Remove once all devices use compatible props
 # Get vendor.rild.rilpath
 get_prop(vendor_init, vendor_radio_prop)
-# Set rild.rilpath
-not_compatible_property(`
-  set_prop(vendor_init, radio_prop)
-')
+# Set vendor.rild.rilpath
+set_prop(vendor_init, vendor_radio_prop)
 
 allow vendor_init {
     audio_data_file

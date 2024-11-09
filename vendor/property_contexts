@@ -1,5 +1,3 @@
-net.r_rmnet_data0               u:object_r:net_rmnet_prop:s0
-persist.camera.                 u:object_r:camera_prop:s0
 persist.vendor.bluetooth.       u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.bt.              u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.camera.          u:object_r:vendor_camera_prop:s0
@@ -15,13 +13,9 @@ persist.vendor.service.bdroid.  u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.timeadjust       u:object_r:vendor_timekeep_prop:s0
 persist.vendor.usb.             u:object_r:vendor_usb_prop:s0
 persist.vendor.usb.config       u:object_r:vendor_usb_config_prop:s0
-rild.                           u:object_r:radio_prop:s0
 ro.vendor.bt.                   u:object_r:vendor_bluetooth_prop:s0
 ro.vendor.ril.                  u:object_r:vendor_radio_prop:s0
-ro.wifi.                        u:object_r:vendor_wifi_prop:s0
-sensors.                        u:object_r:sensors_prop:s0
-sys.keymaster.loaded            u:object_r:keymaster_prop:s0
-sys.listeners.registered        u:object_r:tee_listener_prop:s0
+ro.vendor.wifi.                 u:object_r:vendor_wifi_prop:s0
 vendor.adb.network.port.es      u:object_r:vendor_adbtcpes_prop:s0
 vendor.ims.                     u:object_r:qcom_ims_prop:s0
 vendor.peripheral.              u:object_r:vendor_peripheral_prop:s0
@@ -35,7 +29,6 @@ vendor.sys.listeners.           u:object_r:vendor_tee_listener_prop:s0
 vendor.usb.                     u:object_r:vendor_usb_prop:s0
 vendor.usb.config               u:object_r:vendor_usb_config_prop:s0
 vendor.wlan.                    u:object_r:vendor_wifi_prop:s0
-wc_transport.                   u:object_r:wc_prop:s0
 
 # Modemswitcher props. Not in the above list as they are about to be changed.
 persist.vendor.somc.cust.              u:object_r:vendor_somc_cust_prop:s0
