@@ -3,5 +3,4 @@ allow hal_keymint_default vendor_firmware_file:dir search;
 type hal_keymint_exec, exec_type, file_type, vendor_file_type;
 domain_auto_trans(init, hal_keymint_exec, hal_keymint_default)
 
-get_prop(hal_keymint_default, tee_listener_prop)
 get_prop(hal_keymint_default, vendor_tee_listener_prop)
