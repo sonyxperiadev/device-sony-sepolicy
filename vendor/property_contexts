@@ -3,9 +3,9 @@ persist.vendor.bt.              u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.camera.          u:object_r:vendor_camera_prop:s0
 persist.vendor.cash.            u:object_r:vendor_cash_prop:s0
 persist.vendor.dispcal.         u:object_r:vendor_dispcal_prop:s0
-persist.vendor.hvdcp_opti.      u:object_r:hvdcp_opti_prop:s0
+persist.vendor.hvdcp_opti.      u:object_r:vendor_hvdcp_opti_prop:s0
 persist.vendor.health.          u:object_r:vendor_health_prop:s0
-persist.vendor.ims.             u:object_r:qcom_ims_prop:s0
+persist.vendor.ims.             u:object_r:vendor_qcom_ims_prop:s0
 persist.vendor.net.             u:object_r:vendor_net_prop:s0
 persist.vendor.powerhal.        u:object_r:vendor_powerhal_prop:s0
 persist.vendor.radio.           u:object_r:vendor_radio_prop:s0
@@ -17,7 +17,7 @@ ro.vendor.bt.                   u:object_r:vendor_bluetooth_prop:s0
 ro.vendor.ril.                  u:object_r:vendor_radio_prop:s0
 ro.vendor.wifi.                 u:object_r:vendor_wifi_prop:s0
 vendor.adb.network.port.es      u:object_r:vendor_adbtcpes_prop:s0
-vendor.ims.                     u:object_r:qcom_ims_prop:s0
+vendor.ims.                     u:object_r:vendor_qcom_ims_prop:s0
 vendor.peripheral.              u:object_r:vendor_peripheral_prop:s0
 vendor.qcom.adspup              u:object_r:vendor_device_prop:s0
 vendor.qcom.cdspup              u:object_r:vendor_device_prop:s0
