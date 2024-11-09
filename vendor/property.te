@@ -1,5 +1,5 @@
-type hvdcp_opti_prop, vendor_property_type, property_type;
-type qcom_ims_prop, vendor_property_type, property_type;
+type vendor_hvdcp_opti_prop, vendor_property_type, property_type;
+type vendor_qcom_ims_prop, vendor_property_type, property_type;
 type vendor_adbtcpes_prop, vendor_property_type, property_type;
 type vendor_bluetooth_prop, vendor_property_type, property_type;
 type vendor_camera_prop, vendor_property_type, property_type;
