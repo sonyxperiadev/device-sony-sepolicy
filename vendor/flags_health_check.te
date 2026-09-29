@@ -1,0 +1,6 @@
+# flags_health_check enumerates the entire property space as part of its
+# aconfig health-check logic, but per upstream system/sepolicy it is only
+# intended to read/write a narrow set of device_config_* properties.
+# Reads of unrelated (e.g. vendor-defined) properties are expected noise,
+# not a missing grant - silence them rather than expanding access.
+dontaudit flags_health_check property_type:file *;
