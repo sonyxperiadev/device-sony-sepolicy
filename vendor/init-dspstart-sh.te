@@ -1,0 +1,22 @@
+type vendor_dspstart, domain;
+type vendor_dspstart_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(vendor_dspstart)
+
+# execute shell utilities (log, setprop, sleep, read, etc.)
+allow vendor_dspstart vendor_toolbox_exec:file execute_no_trans;
+
+# /sys/kernel/boot_<dsp>/boot - trigger DSP boot
+allow vendor_dspstart vendor_sysfs_boot_dsp:file { open write getattr };
+
+# /sys/class/remoteproc/remoteprocN - directory + symlink traversal
+allow vendor_dspstart vendor_sysfs_rproc:dir { search open read };
+allow vendor_dspstart vendor_sysfs_rproc:lnk_file read;
+
+# /sys/devices/.../remoteprocN/name - identify the right remoteproc instance
+allow vendor_dspstart vendor_sysfs_rproc_name:file { open read getattr };
+
+# /sys/devices/.../remoteprocN/state - poll boot status
+allow vendor_dspstart vendor_sysfs_rproc_state:file { open read getattr };
+
+set_prop(vendor_dspstart, vendor_dsp_prop)

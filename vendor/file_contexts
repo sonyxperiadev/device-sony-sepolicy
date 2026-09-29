@@ -58,6 +58,11 @@
 /dev/socket/ims_datad                           u:object_r:ims_socket:s0
 /dev/socket/dpmd                                u:object_r:dpmd_socket:s0
 
+# remoteproc sysfs
+/sys/devices/platform/soc/[0-9a-f]+\.remoteproc-[^/]+/remoteproc/remoteproc[0-9]+/name     u:object_r:vendor_sysfs_rproc_name:s0
+/sys/devices/platform/soc/[0-9a-f]+\.remoteproc-[^/]+/remoteproc/remoteproc[0-9]+/recovery u:object_r:vendor_sysfs_rproc_recovery:s0
+/sys/devices/platform/soc/[0-9a-f]+\.remoteproc-[^/]+/remoteproc/remoteproc[0-9]+/state    u:object_r:vendor_sysfs_rproc_state:s0
+
 # files in /odm
 /odm/bin/hw/vendor\.qti\.spu@1\.0-service                         u:object_r:spu_exec:s0
 /odm/bin/hw/vendor\.qti\.hardware\.qseecom@1\.0-service           u:object_r:tee_exec:s0
@@ -131,9 +136,7 @@
 /(system/vendor|vendor)/firmware(/.*)?                                                       u:object_r:vendor_firmware_file:s0
 /(system/vendor|vendor)/bin/macaddrsetup                                                     u:object_r:addrsetup_exec:s0
 /(system/vendor|vendor)/bin/rdclean\.sh                                                      u:object_r:rdclean_exec:s0
-/(system/vendor|vendor)/bin/init\.qcom\.slpistart\.sh                                        u:object_r:init-qcom-slpistart-sh_exec:s0
-/(system/vendor|vendor)/bin/init\.qcom\.adspstart\.sh                                        u:object_r:init-qcom-adspstart-sh_exec:s0
-/(system/vendor|vendor)/bin/init\.qcom\.cdspstart\.sh                                        u:object_r:init-qcom-cdspstart-sh_exec:s0
+/(system/vendor|vendor)/bin/init\.qcom\.dspstart\.sh                                         u:object_r:vendor_dspstart_exec:s0
 /(system/vendor|vendor)/bin/init\.qcom\.ipastart\.sh                                         u:object_r:init-qcom-ipastart-sh_exec:s0
 /(system/vendor|vendor)/bin/initlight                                                        u:object_r:initlight_exec:s0
 /(system/vendor|vendor)/bin/ipacm                                                            u:object_r:hal_tetheroffload_default_exec:s0

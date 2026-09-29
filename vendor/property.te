@@ -6,6 +6,7 @@ type vendor_camera_prop, vendor_property_type, property_type;
 type vendor_cash_prop, vendor_property_type, property_type;
 type vendor_device_prop, vendor_property_type, property_type;
 type vendor_dispcal_prop, vendor_property_type, property_type;
+type vendor_dsp_prop, vendor_property_type, property_type;
 type vendor_health_prop, vendor_property_type, property_type;
 type vendor_keymaster_prop, vendor_property_type, property_type;
 type vendor_net_prop, vendor_property_type, property_type;

@@ -17,6 +17,7 @@ type sysfs_mdss_mdp_caps, sysfs_type, fs_type;
 type sysfs_mmc, sysfs_type, fs_type;
 type sysfs_msm_subsys, sysfs_type, fs_type;
 type sysfs_msm_subsys_restart, sysfs_type, fs_type;
+type vendor_sysfs_boot_dsp, sysfs_type, fs_type;
 type sysfs_pcc_profile, sysfs_type, fs_type;
 type sysfs_rgbc_sensor, fs_type, sysfs_type;
 type sysfs_rmtfs, sysfs_type, fs_type;
@@ -54,6 +55,12 @@ type ucommsvr_socket, file_type;
 type dpmd_socket, file_type;
 
 type vendor_firmware_file, file_type, vendor_file_type, contextmount_type;
+
+# remoteproc
+type vendor_sysfs_rproc, fs_type, sysfs_type;
+type vendor_sysfs_rproc_name, fs_type, sysfs_type;
+type vendor_sysfs_rproc_recovery, fs_type, sysfs_type;
+type vendor_sysfs_rproc_state, fs_type, sysfs_type;
 
 # TODO(b/36764215): remove this file when the generic system image
 # no longer has these directories. They are specific to QCOM.
