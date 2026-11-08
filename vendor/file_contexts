@@ -72,6 +72,7 @@
 /odm/bin/hw/vendor\.qti\.hardware\.qseecom@1\.0-service           u:object_r:tee_exec:s0
 /odm/bin/hw/vendor\.qti\.camera\.provider-service_64              u:object_r:hal_camera_default_exec:s0
 /odm/bin/hw/vendor\.qti\.media\.c2@1\.0-service                   u:object_r:c2_exec:s0
+/odm/bin/hw/vendor\.qti\.media\.c2audio@1\.0-service              u:object_r:c2_exec:s0
 /odm/bin/hw/vendor\.somc\.hardware\.modemswitcher@1\.0-service    u:object_r:hal_modemsw_default_exec:s0
 /odm/bin/hw/vendor\.somc\.hardware\.miscta@1\.0-service           u:object_r:hal_miscta_default_exec:s0
 /odm/bin/hw/android\.hardware\.authsecret@1\.0-service-qti        u:object_r:hal_authsecret_default_exec:s0
