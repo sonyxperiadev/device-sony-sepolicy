@@ -1,0 +1,12 @@
+type vendor_qcom_media, domain;
+type vendor_qcom_media_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(vendor_qcom_media)
+
+# execute shell utilities (log, setprop, read, etc.)
+allow vendor_qcom_media vendor_toolbox_exec:file execute_no_trans;
+
+# /sys/devices/platform/soc/<addr>.qcom,vidc/sku_version - read SKU
+allow vendor_qcom_media vendor_sysfs_vidc:file { open read getattr };
+
+set_prop(vendor_qcom_media, vendor_media_prop)

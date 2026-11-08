@@ -18,6 +18,7 @@ ro.vendor.ril.                  u:object_r:vendor_radio_prop:s0
 ro.vendor.wifi.                 u:object_r:vendor_wifi_prop:s0
 vendor.adb.network.port.es      u:object_r:vendor_adbtcpes_prop:s0
 vendor.ims.                     u:object_r:vendor_qcom_ims_prop:s0
+vendor.media.                   u:object_r:vendor_media_prop:s0
 vendor.peripheral.              u:object_r:vendor_peripheral_prop:s0
 vendor.qcom.adspup              u:object_r:vendor_dsp_prop:s0
 vendor.qcom.cdspup              u:object_r:vendor_dsp_prop:s0
