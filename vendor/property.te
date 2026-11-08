@@ -9,6 +9,7 @@ type vendor_dispcal_prop, vendor_property_type, property_type;
 type vendor_dsp_prop, vendor_property_type, property_type;
 type vendor_health_prop, vendor_property_type, property_type;
 type vendor_keymaster_prop, vendor_property_type, property_type;
+type vendor_media_prop, vendor_property_type, property_type;
 type vendor_net_prop, vendor_property_type, property_type;
 type vendor_peripheral_prop, vendor_property_type, property_type;
 type vendor_powerhal_prop, vendor_property_type, property_type;
